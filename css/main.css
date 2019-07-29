@@ -1811,7 +1811,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2ec762;
+  background: #ad8a1f;
 }
 .feed-link,
 .chat {
@@ -3036,4 +3036,11 @@ code {
   color: #ff2400;
   background: #fbf7f8;
   margin: 2px;
+}
+body {
+  background: url("/images/scenery1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
 }
