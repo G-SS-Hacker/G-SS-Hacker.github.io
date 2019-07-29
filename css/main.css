@@ -1811,7 +1811,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d2a2ff;
+  background: #ff4900;
 }
 .feed-link,
 .chat {
@@ -3037,8 +3037,8 @@ code {
   background: #fbf7f8;
   margin: 2px;
 }
-body {
-  background: url("/images/o_001.jpg");
+.body {
+  background: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
