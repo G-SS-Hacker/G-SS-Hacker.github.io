@@ -120,18 +120,18 @@
 
 
 
-  <meta name="description" content="Welcome to a brand new world - Computational Thinking">
-<meta name="keywords" content="Computer Science,Computational Thinking">
+  <meta name="description" content="Easier but slower…">
+<meta name="keywords" content="C,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Introduction to Computational Thinking">
-<meta property="og:url" content="https://G-SS-Hacker.github.io/2019/07/30/计算思维导论/index.html">
+<meta property="og:title" content="Usage of memset() in c&#x2F;c++">
+<meta property="og:url" content="https://G-SS-Hacker.github.io/2019/08/01/C和C-中memset用法/index.html">
 <meta property="og:site_name" content="HACK IT!!!">
-<meta property="og:description" content="Welcome to a brand new world - Computational Thinking">
+<meta property="og:description" content="Easier but slower…">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T11:05:40.494Z">
+<meta property="og:updated_time" content="2019-08-01T09:17:24.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Introduction to Computational Thinking">
-<meta name="twitter:description" content="Welcome to a brand new world - Computational Thinking">
+<meta name="twitter:title" content="Usage of memset() in c&#x2F;c++">
+<meta name="twitter:description" content="Easier but slower…">
 
 
 
@@ -139,7 +139,7 @@
 
   
   
-  <link rel="canonical" href="https://G-SS-Hacker.github.io/2019/07/30/计算思维导论/">
+  <link rel="canonical" href="https://G-SS-Hacker.github.io/2019/08/01/C和C-中memset用法/">
 
 
 
@@ -149,7 +149,7 @@
   };
 </script>
 
-  <title>Introduction to Computational Thinking | HACK IT!!!</title>
+  <title>Usage of memset() in c/c++ | HACK IT!!!</title>
   
 
 
@@ -355,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/2019/07/30/计算思维导论/">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/2019/08/01/C和C-中memset用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="G-SS-Hacker">
@@ -372,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Introduction to Computational Thinking
+          <h1 class="post-title" itemprop="name headline">Usage of memset() in c/c++
 
               
             
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-07-30 18:41:16 / 修改时间：19:05:40" itemprop="dateCreated datePublished" datetime="2019-07-30T18:41:16+08:00">2019-07-30</time>
+              <time title="创建时间：2019-08-01 17:15:02 / 修改时间：17:17:24" itemprop="dateCreated datePublished" datetime="2019-08-01T17:15:02+08:00">2019-08-01</time>
             </span>
           
 
@@ -444,7 +444,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">699</span>
+              <span title="本文字数">1.1k</span>
             </span>
           
 
@@ -475,69 +475,41 @@
       
 
       
-        <p><font size="5">Welcome to a brand new world - Computational Thinking</font></p>
+        <p><font size="5">Easier but slower…</font></p>
 <a id="more"></a>
 
-<h1 id="计算思维导论"><a href="#计算思维导论" class="headerlink" title="计算思维导论"></a>计算思维导论</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
-<h2 id="计算思维的发展"><a href="#计算思维的发展" class="headerlink" title="计算思维的发展"></a>计算思维的发展</h2><ol>
-<li>计算机的思维：计算机室如何工作的？计算机的功能是如何越来越强大的?</li>
-<li>利用计算机的思维：现实世界的各种食物如何利用计算机进行控制和处理？</li>
-<li>计算思维：利用计算机科学的基础概念去求解问题、设计系统和理解人类行为，其本质是抽象与自动化。 </li>
-</ol>
-<hr>
-<h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ol>
-<li>概念与知识</li>
-<li>联想与贯通</li>
-<li>练习与实践 </li>
-</ol>
-<hr>
-<h2 id="人计算与机器计算的差别"><a href="#人计算与机器计算的差别" class="headerlink" title="人计算与机器计算的差别"></a>人计算与机器计算的差别</h2><h3 id="人计算："><a href="#人计算：" class="headerlink" title="人计算："></a>人计算：</h3><ol>
-<li>规则可能很复杂，但计算量却可能很小</li>
-<li>人需要知道具体的计算规则</li>
-<li>只能使用特定规则 </li>
-</ol>
-<h3 id="机器计算（自动计算）："><a href="#机器计算（自动计算）：" class="headerlink" title="机器计算（自动计算）："></a>机器计算（自动计算）：</h3><ol>
-<li>规则可能很简单，但计算量却可能很大</li>
-<li>机器也可以使用人的计算规则</li>
-<li>使用一般性的规则 </li>
-</ol>
-<hr>
-<h2 id="自动计算要解决的几个问题：表示-存储-执行"><a href="#自动计算要解决的几个问题：表示-存储-执行" class="headerlink" title="自动计算要解决的几个问题：表示-存储-执行"></a>自动计算要解决的几个问题：表示-存储-执行</h2><ol>
-<li>数据的表示</li>
-<li>计算规则的表示</li>
-<li>数据与计算规则的自动存储</li>
-<li>计算规则的自动执行</li>
-</ol>
-<hr>
-<h2 id="自动计算的发展历程"><a href="#自动计算的发展历程" class="headerlink" title="自动计算的发展历程"></a>自动计算的发展历程</h2><ol>
-<li>如算盘（计算辅助工具）：可以表示数据，不能自动计算</li>
-<li>帕斯卡机械计算机：自动计算，固定的计算规则</li>
-<li>巴贝奇机械计算机：特定程序，可有限变化的计算规则</li>
-<li>现代电子计算机：一般程序，任意可变的计算规则</li>
-</ol>
-<hr>
-<h2 id="电子计算机元器件的发展"><a href="#电子计算机元器件的发展" class="headerlink" title="电子计算机元器件的发展"></a>电子计算机元器件的发展</h2><ol>
-<li>电子管</li>
-<li>晶体管</li>
-<li>集成电路</li>
-<li>超大规模集成电路（VLSI） </li>
-</ol>
-<hr>
-<h2 id="计算机系统的组成"><a href="#计算机系统的组成" class="headerlink" title="计算机系统的组成"></a>计算机系统的组成</h2><ol>
-<li>运算器</li>
-<li>控制器</li>
-<li>存储器</li>
-<li>输入设备</li>
-<li>输出设备</li>
-</ol>
-<hr>
-<h2 id="计算机系统的发展趋势"><a href="#计算机系统的发展趋势" class="headerlink" title="计算机系统的发展趋势"></a>计算机系统的发展趋势</h2><ol>
-<li>微型化：可嵌入，可携带</li>
-<li>大型化：可进行大规模复杂计算</li>
-<li>智能化：理解自然语言，具有自适应性，自主完成复杂功能</li>
-<li>网络化：机-机相连，物-物相连，物-人相连，人-人相连，如：IoT，IBM提出”智慧地球”</li>
-</ol>
-<hr>
+<h1 id="C-C-中memset-的用法"><a href="#C-C-中memset-的用法" class="headerlink" title="C/C++中memset()的用法"></a>C/C++中memset()的用法</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
+<li>C：      <code>&lt;string.h&gt;</code></li>
+<li>C++：  <code>&lt;cstring&gt;</code></li>
+</ul>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p><code>void *memset(void *str, int c, size_t n)</code></p>
+<p>此处<code>size_t</code>变量类型等价于<code>long unsigned int</code>即无符号长整型，在32位机器上为32位，在64位机器为中64位。</p>
+<p>注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据</p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>复制字符 <strong>c</strong>（一个无符号字符）到参数 <strong>str</strong> 所指向的字符串的前 <strong>n</strong> 个字符。</p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
+<li><code>str</code> ——指向要填充的代码块</li>
+<li><code>c</code>——要被设置的值该值以 int 形式传递，但是函数在填充内存块时是使用该值的无符号字符形式。</li>
+<li><code>n</code>——要被设置为该值的字节数。</li>
+</ul>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>返回一个指向存储区 str 的指针。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="对字符串操作"><a href="#对字符串操作" class="headerlink" title="对字符串操作"></a>对字符串操作</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> str[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line">   <span class="built_in">strcpy</span>(str,<span class="string">"This is string.h library function"</span>);</span><br><span class="line">   <span class="built_in">puts</span>(str);</span><br><span class="line"></span><br><span class="line">   <span class="built_in">memset</span>(str,<span class="string">'$'</span>,<span class="number">7</span>);</span><br><span class="line">   <span class="built_in">puts</span>(str);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译并运行以上程序，得到结果如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This is <span class="built_in">string</span>.h library function</span><br><span class="line">$$$$$$$ <span class="built_in">string</span>.h library function</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h3><p>注意：<code>c</code>接收参数的范围0-255 ，该函数只能取<code>c</code>的<strong>后八位</strong>赋给你所指定的范围的每个字节</p>
+<h4 id="初始化为0"><a href="#初始化为0" class="headerlink" title="初始化为0"></a>初始化为0</h4><p><code>memset(arr, 0, sizeof(arr));</code></p>
+<h4 id="初始化为-1"><a href="#初始化为-1" class="headerlink" title="初始化为-1"></a>初始化为-1</h4><p><code>memset(arr, -1, sizeof(arr));</code>或<code>memset(arr, 0x7fffffff,sizeof(arr));</code></p>
+<h4 id="初始化为正无穷"><a href="#初始化为正无穷" class="headerlink" title="初始化为正无穷"></a>初始化为正无穷</h4><ul>
+<li>理论上的正无穷：<code>memset(arr, 0x7f, sizeof(arr));</code></li>
+<li>实际使用的正无穷：<code>memset(arr, 0x3f, sizeof(arr));</code></li>
+</ul>
+<p>注：D（decimal）——十进制，B（binary）——二进制，O（octor）——八进制，H（hex）——十六进制</p>
+<h4 id="初始化为负无穷"><a href="#初始化为负无穷" class="headerlink" title="初始化为负无穷"></a>初始化为负无穷</h4><ul>
+<li>理论上的负无穷：<code>memset(arr, 0x80, sizeof(arr));</code></li>
+<li>实际使用的负无穷：<code>memset(arr, 0xbf, sizeof(arr));</code></li>
+</ul>
+<p>注：此处要设置的值也可用二进制表示，如<code>0xbf</code>等价于<code>0b10111111</code></p>
 
       
     </div>
@@ -564,9 +536,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Computer-Science/" rel="tag"><i class="fa fa-tag"></i> Computer Science</a>
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C</a>
           
-            <a href="/tags/Computational-Thinking/" rel="tag"><i class="fa fa-tag"></i> Computational Thinking</a>
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
           
         </div>
       
@@ -579,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/29/Markdown需要转义的字符及其转义方法/" rel="next" title="Characters Needing Escaping in Markdown">
-                <i class="fa fa-chevron-left"></i> Characters Needing Escaping in Markdown
+              <a href="/2019/08/01/数据结构绪论/" rel="next" title="Introducion to Data Structure">
+                <i class="fa fa-chevron-left"></i> Introducion to Data Structure
               </a>
             
           </div>
@@ -588,10 +560,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/01/数据结构绪论/" rel="prev" title="Introducion to Data Structure">
-                Introducion to Data Structure <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -772,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算思维导论"><span class="nav-number">1.</span> <span class="nav-text">计算思维导论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算思维的发展"><span class="nav-number">1.1.</span> <span class="nav-text">计算思维的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习步骤"><span class="nav-number">1.2.</span> <span class="nav-text">学习步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#人计算与机器计算的差别"><span class="nav-number">1.3.</span> <span class="nav-text">人计算与机器计算的差别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#人计算："><span class="nav-number">1.3.1.</span> <span class="nav-text">人计算：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器计算（自动计算）："><span class="nav-number">1.3.2.</span> <span class="nav-text">机器计算（自动计算）：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动计算要解决的几个问题：表示-存储-执行"><span class="nav-number">1.4.</span> <span class="nav-text">自动计算要解决的几个问题：表示-存储-执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动计算的发展历程"><span class="nav-number">1.5.</span> <span class="nav-text">自动计算的发展历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电子计算机元器件的发展"><span class="nav-number">1.6.</span> <span class="nav-text">电子计算机元器件的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机系统的组成"><span class="nav-number">1.7.</span> <span class="nav-text">计算机系统的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机系统的发展趋势"><span class="nav-number">1.8.</span> <span class="nav-text">计算机系统的发展趋势</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-C-中memset-的用法"><span class="nav-number">1.</span> <span class="nav-text">C/C++中memset()的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#头文件"><span class="nav-number">1.1.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">1.2.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述"><span class="nav-number">1.3.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">1.4.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回值"><span class="nav-number">1.5.</span> <span class="nav-text">返回值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">1.6.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对字符串操作"><span class="nav-number">1.6.1.</span> <span class="nav-text">对字符串操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化数组"><span class="nav-number">1.6.2.</span> <span class="nav-text">初始化数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化为0"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">初始化为0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化为-1"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">初始化为-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化为正无穷"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">初始化为正无穷</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化为负无穷"><span class="nav-number">1.6.2.4.</span> <span class="nav-text">初始化为负无穷</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
