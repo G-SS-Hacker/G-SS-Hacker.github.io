@@ -129,7 +129,7 @@
 <meta property="og:description" content="A detailed introduction to C++ pointer variable, maybe helpful!!! ;-)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png">
-<meta property="og:updated_time" content="2019-08-05T14:18:19.498Z">
+<meta property="og:updated_time" content="2019-08-05T14:20:44.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ Pointer Variale">
 <meta name="twitter:description" content="A detailed introduction to C++ pointer variable, maybe helpful!!! ;-)">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-08-05 21:15:09 / 修改时间：22:18:19" itemprop="dateCreated datePublished" datetime="2019-08-05T21:15:09+08:00">2019-08-05</time>
+              <time title="创建时间：2019-08-05 21:15:09 / 修改时间：22:20:44" itemprop="dateCreated datePublished" datetime="2019-08-05T21:15:09+08:00">2019-08-05</time>
             </span>
           
 
@@ -484,8 +484,10 @@
 <h1 id="指针变量"><a href="#指针变量" class="headerlink" title="指针变量"></a>指针变量</h1><h2 id="指针变量的定义、赋值"><a href="#指针变量的定义、赋值" class="headerlink" title="指针变量的定义、赋值"></a>指针变量的定义、赋值</h2><p>对指针变量的类型说明，一般形式为：</p>
 <p><code>类型说明符 *变量名;</code></p>
 <p>其中，<em>表示这是一个*</em>指针变量<strong>，变量名即为定义的</strong>指针变量名<strong>，类型说明符表示</strong>该指针变量所指向的变量的数据类型**。</p>
-<h3 id="1、普通变量定义"><a href="#1、普通变量定义" class="headerlink" title="1、普通变量定义"></a><strong>1、普通变量定义</strong></h3><p><code>int a = 3;</code><br>定义了变量a，是<code>int</code>型的，值为3。内存中有一块内存空间是放<code>a</code>的值，对<code>a</code>的存取操作就是直接到这个内存空间存取。内存空间的位置叫<strong>地址</strong>，存放3的地址可以用<strong>取地址操作符</strong><code>&amp;</code>对<code>a</code>运算得到：<code>&amp;a</code>。</p>
-<h3 id="2、指针变量定义"><a href="#2、指针变量定义" class="headerlink" title="2、指针变量定义"></a><strong>2、指针变量定义</strong></h3><p><code>int *p = NULL;</code><br>定义了一个指针变量<code>p</code>，<code>p</code>指向一个内存空间，里面存放的是一个内存地址。现在赋值为<code>NULL</code>（其实就是0，表示<strong>特殊的空地址</strong>）。</p>
+<h3 id="1、普通变量定义"><a href="#1、普通变量定义" class="headerlink" title="1、普通变量定义"></a><strong>1、普通变量定义</strong></h3><p><code>int a = 3;</code></p>
+<p>定义了变量a，是<code>int</code>型的，值为3。内存中有一块内存空间是放<code>a</code>的值，对<code>a</code>的存取操作就是直接到这个内存空间存取。内存空间的位置叫<strong>地址</strong>，存放3的地址可以用<strong>取地址操作符</strong><code>&amp;</code>对<code>a</code>运算得到：<code>&amp;a</code>。</p>
+<h3 id="2、指针变量定义"><a href="#2、指针变量定义" class="headerlink" title="2、指针变量定义"></a><strong>2、指针变量定义</strong></h3><p><code>int *p = NULL;</code></p>
+<p>定义了一个指针变量<code>p</code>，<code>p</code>指向一个内存空间，里面存放的是一个内存地址。现在赋值为<code>NULL</code>（其实就是0，表示<strong>特殊的空地址</strong>）。</p>
 <h3 id="3、给指针变量p赋值"><a href="#3、给指针变量p赋值" class="headerlink" title="3、给指针变量p赋值"></a>3、给指针变量p赋值</h3><p><code>p = &amp;a;</code></p>
 <p><img src="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png" alt="C___pointer_vairable.png"></p>
 <p>即把<code>a</code>变量的内存空间地址（比如：XXX）给了<code>p</code>。显然，直接对<code>p</code>存取，操作的是地址。通过这个地址<strong>间接</strong>地操作，才是整数3。P的间接操作要使用指针操作符<code>“*”</code>，即<code>*p</code>的值才是3。设有指向整型变量的指针变量<code>p</code>，如要把整型变量<code>a</code>的地址赋予<code>p</code>可以有以下两种方式：</p>
