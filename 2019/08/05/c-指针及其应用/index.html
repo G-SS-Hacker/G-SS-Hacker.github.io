@@ -129,7 +129,7 @@
 <meta property="og:description" content="A detailed introduction to C++ pointer variable, maybe helpful!!! ;-)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png">
-<meta property="og:updated_time" content="2019-08-05T14:17:15.162Z">
+<meta property="og:updated_time" content="2019-08-05T14:18:19.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ Pointer Variale">
 <meta name="twitter:description" content="A detailed introduction to C++ pointer variable, maybe helpful!!! ;-)">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-08-05 21:15:09 / 修改时间：22:17:15" itemprop="dateCreated datePublished" datetime="2019-08-05T21:15:09+08:00">2019-08-05</time>
+              <time title="创建时间：2019-08-05 21:15:09 / 修改时间：22:18:19" itemprop="dateCreated datePublished" datetime="2019-08-05T21:15:09+08:00">2019-08-05</time>
             </span>
           
 
@@ -446,7 +446,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.2k</span>
+              <span title="本文字数">3.1k</span>
             </span>
           
 
@@ -525,7 +525,7 @@
 <td><code>cout&lt;&lt;*p;</code>结果是：<code>20</code></td>
 </tr>
 </tbody></table>
-<p>指针变量同普通变量一样，使用之前不仅要定义说明，而且必须被赋值具体的值，未经赋值的指针变量不能使用。如定义了<code>int a; int *p = &amp;a;</code>，则<code>*p</code>表示<code>p</code>指向的整型变量，而<code>p</code>中存放的是变量<code>a</code>占用单元的起始地址，所以<code>*p</code>实际上访问了变量<code>a</code>，也就是说<code>*p</code>$ \Longleftrightarrow $<code>a</code>。</p>
+<p>指针变量同普通变量一样，使用之前不仅要定义说明，而且必须被赋值具体的值，未经赋值的指针变量不能使用。如定义了<code>int a; int *p = &amp;a;</code>，则<code>*p</code>表示<code>p</code>指向的整型变量，而<code>p</code>中存放的是变量<code>a</code>占用单元的起始地址，所以<code>*p</code>实际上访问了变量<code>a</code>，也就是说<code>*p</code>等价于<code>a</code>。</p>
 <p><strong>【例1】输入两个不同的数，通过指针对两个数进行相加和相乘，并输出。</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, s, t, *pa, *pb;</span><br><span class="line">	pa = &amp;a; pb = &amp;b;</span><br><span class="line">	a = <span class="number">10</span>; b = <span class="number">20</span>;</span><br><span class="line">	s = *pa + *pb;</span><br><span class="line">	t = *pa * *pb;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"a = %d, b = %d\n"</span>, *pa, *pb);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"s = %d, t = %d\n"</span>, s, t);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
