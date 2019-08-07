@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="HACK IT!!!">
 <meta property="og:description" content="Josephus is a boring person!!!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-07T14:15:33.508Z">
+<meta property="og:updated_time" content="2019-08-07T14:18:12.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flavius Josephus Legend">
 <meta name="twitter:description" content="Josephus is a boring person!!!">
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-08-07 20:59:28 / 修改时间：22:15:33" itemprop="dateCreated datePublished" datetime="2019-08-07T20:59:28+08:00">2019-08-07</time>
+              <time title="创建时间：2019-08-07 20:59:28 / 修改时间：22:18:12" itemprop="dateCreated datePublished" datetime="2019-08-07T20:59:28+08:00">2019-08-07</time>
             </span>
           
 
@@ -496,7 +496,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) q.push(i);</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++) q.push(q.front()), q.pop(); <span class="comment">//每数一个就把它放到队尾</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,q.front());</span><br><span class="line">        q.pop(); <span class="comment">//队头出圈</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注：</p>
 <ul>
-<li>你也不用<code>stl</code>提供的队列，自己编写一个队列</li>
+<li>你也可以不用<code>stl</code>提供的队列，自己编写一个队列</li>
 <li>你也可以用<code>stl</code>提供的双端队列<code>deque</code>，不过据笔者观察除了装逼效果之外并没有其他用处</li>
 </ul>
 <h3 id="解法五：递归（运用递推公式）"><a href="#解法五：递归（运用递推公式）" class="headerlink" title="解法五：递归（运用递推公式）"></a>解法五：递归（运用递推公式）</h3><p>时间复杂度：O(n)</p>
