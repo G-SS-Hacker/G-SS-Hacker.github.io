@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="HACK IT!!!">
 <meta property="og:description" content="You wanna make your cycle easier? Just use memset()!!!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-05T09:13:06.157Z">
+<meta property="og:updated_time" content="2019-08-07T13:52:23.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Usage of memset() in c&#x2F;c++">
 <meta name="twitter:description" content="You wanna make your cycle easier? Just use memset()!!!">
@@ -413,7 +413,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-05 17:13:06" itemprop="dateModified" datetime="2019-08-05T17:13:06+08:00">2019-08-05</time>
+                <time title="修改时间：2019-08-07 21:52:23" itemprop="dateModified" datetime="2019-08-07T21:52:23+08:00">2019-08-07</time>
               </span>
             
           
@@ -485,10 +485,11 @@
       
 
       
-        <p><font size="5">You wanna make your cycle easier? Just use memset()!!!</font></p>
-<a id="more"></a>
+        <font size="5">You wanna make your cycle easier? Just use memset()!!!</font>
 
+<a id="more"></a>
 <h1 id="C-C-中memset-的用法"><a href="#C-C-中memset-的用法" class="headerlink" title="C/C++中memset()的用法"></a>C/C++中memset()的用法</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
+
 <h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
 <li>C：      <code>&lt;string.h&gt;</code></li>
 <li>C++：  <code>&lt;cstring&gt;</code></li>
@@ -504,10 +505,8 @@
 </ul>
 <h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>返回一个指向存储区 str 的指针。</p>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="对字符串操作"><a href="#对字符串操作" class="headerlink" title="对字符串操作"></a>对字符串操作</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> str[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line">   <span class="built_in">strcpy</span>(str,<span class="string">"This is string.h library function"</span>);</span><br><span class="line">   <span class="built_in">puts</span>(str);</span><br><span class="line"></span><br><span class="line">   <span class="built_in">memset</span>(str,<span class="string">'$'</span>,<span class="number">7</span>);</span><br><span class="line">   <span class="built_in">puts</span>(str);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>编译并运行以上程序，得到结果如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This is <span class="built_in">string</span>.h library function</span><br><span class="line">$$$$$$$ <span class="built_in">string</span>.h library function</span><br></pre></td></tr></table></figure>
-
 <h3 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h3><p>注意：<code>c</code>接收参数的范围0-255 ，该函数只能取<code>c</code>的<strong>后八位</strong>赋给你所指定的范围的每个字节</p>
 <h4 id="初始化为0"><a href="#初始化为0" class="headerlink" title="初始化为0"></a>初始化为0</h4><p><code>memset(arr, 0, sizeof(arr));</code></p>
 <h4 id="初始化为-1"><a href="#初始化为-1" class="headerlink" title="初始化为-1"></a>初始化为-1</h4><p><code>memset(arr, -1, sizeof(arr));</code>或<code>memset(arr, 0x7fffffff,sizeof(arr));</code></p>
