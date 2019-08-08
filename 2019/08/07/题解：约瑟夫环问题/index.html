@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="HACK IT!!!">
 <meta property="og:description" content="Josephus is a boring person!!!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-07T14:18:12.735Z">
+<meta property="og:updated_time" content="2019-08-08T02:58:43.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flavius Josephus Legend">
 <meta name="twitter:description" content="Josephus is a boring person!!!">
@@ -398,13 +398,23 @@
                 
               
 
-              <time title="创建时间：2019-08-07 20:59:28 / 修改时间：22:18:12" itemprop="dateCreated datePublished" datetime="2019-08-07T20:59:28+08:00">2019-08-07</time>
+              <time title="创建时间：2019-08-07 20:59:28" itemprop="dateCreated datePublished" datetime="2019-08-07T20:59:28+08:00">2019-08-07</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-08 10:58:43" itemprop="dateModified" datetime="2019-08-08T10:58:43+08:00">2019-08-08</time>
+              </span>
             
           
 
@@ -532,7 +542,7 @@
 <p>新环：<code>3 4   0 1 *2</code></p>
 <p>从新环推出旧环的幸运儿：<code>(2 + 3) % 6 = 5</code></p>
 <p>由上得，原序列<code>x</code>中第二次出圈的编号可以由新序列<code>x - 1</code>第一次出圈的编号通过特定的逆推运算得出。<strong>即在以<code>y</code>为出环报数值的约瑟夫环中，<code>x</code>人环的第<code>z</code>次出环编号可以由<code>x - 1</code>人环中的第<code>z - 1</code>次出环编号通过也定的运算推出。</strong></p>
-<p>幸运的是，第一次出环的编号是可以直接求出的，也就是说，对于任意次出环的编号，我们可以将之<strong>一直转化为第一次出环的编号问题</strong>，再一一迭代求出；也可以吧第一次出环的编号作为递归基础，通过递归求出。</p>
+<p>幸运的是，第一次出环的编号是可以直接求出的，也就是说，对于任意次出环的编号，我们可以将之<strong>一直转化为第一次出环的编号问题</strong>，再一一迭代求出；也可以把第一次出环的编号作为递归基础，通过递归求出。</p>
 <p>因此我们可以写出递推公式如下：</p>
 <script type="math/tex; mode=display">
 Josephus(x,y,z) = \begin{cases} [Josephus(x-1,y,z-1) + y] \% x ,& \text{z > 1} \\ (y-1)\%x , & \text{z = 1} \end{cases}</script><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上就是关于约瑟夫环问题的六种解法，并送上调试过的<code>C++</code>代码，作者水平不高，将就看看吧 ╮(╯_╰)╭</p>
