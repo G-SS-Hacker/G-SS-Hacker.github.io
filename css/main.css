@@ -1518,7 +1518,7 @@ pre .javascript .function {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #64ceaa;
+  background-color: #00bfff;
   visibility: hidden;
   transform: scaleX(0);
   transition-duration: 0.2s;
