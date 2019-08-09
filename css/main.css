@@ -1083,7 +1083,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #64ceaa;
 }
 .site-meta {
   margin: 0;
@@ -1211,7 +1211,7 @@ pre .javascript .function {
   animation: octocat-wave 560ms ease-in-out;
 }
 .github-corner > svg {
-  fill: #222;
+  fill: #44ceaa;
   color: #fff;
   position: absolute;
   top: 0;
@@ -1221,7 +1221,7 @@ pre .javascript .function {
 @media (max-width: 991px) {
   .github-corner > svg {
     fill: #fff;
-    color: #222;
+    color: #44ceaa;
   }
   .github-corner .github-corner:hover .octo-arm {
     animation: none;
