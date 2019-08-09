@@ -943,9 +943,9 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #555;
+  color: #44ceaa;
   background: #fff;
-  border: 2px solid #555;
+  border: 2px solid #44ceaa;
   text-decoration: none;
   border-radius: 2px;
   transition-property: background-color;
@@ -2559,7 +2559,7 @@ ul.breadcrumb li+li:last-child {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: #44ceaa;
 }
 @media (max-width: 991px) {
   .site-meta {
