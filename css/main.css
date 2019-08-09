@@ -273,7 +273,7 @@ span.exturl {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background-color: transparent;
-  color: #ee9100;
+  color: #666;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -281,7 +281,7 @@ span.exturl {
 }
 a:hover,
 span.exturl:hover {
-  color: #ff7f00;
+  color: #444;
   border-bottom-color: #222;
 }
 video {
@@ -1922,7 +1922,7 @@ pre .javascript .function {
 }
 .site-state-item-name {
   font-size: 13px;
-  color: #999;
+  color: #222;
 }
 .post-toc-empty {
   font-size: 14px;
