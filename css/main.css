@@ -1535,7 +1535,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
-  color: #999;
+  color: #ffa500;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
@@ -1691,8 +1691,8 @@ pre .javascript .function {
 }
 .sidebar a,
 .sidebar span.exturl {
-  color: #999;
-  border-bottom-color: #555;
+  color: #ffa500;
+  border-bottom-color: #ffa500;
 }
 .sidebar a:hover,
 .sidebar span.exturl:hover {
