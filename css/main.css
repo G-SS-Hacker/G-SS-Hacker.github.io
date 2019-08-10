@@ -1211,7 +1211,7 @@ pre .javascript .function {
   animation: octocat-wave 560ms ease-in-out;
 }
 .github-corner > svg {
-  fill: #222;
+  fill: #64ceaa;
   color: #fff;
   position: absolute;
   top: 0;
@@ -1221,7 +1221,7 @@ pre .javascript .function {
 @media (max-width: 991px) {
   .github-corner > svg {
     fill: #fff;
-    color: #222;
+    color: #64ceaa;
   }
   .github-corner .github-corner:hover .octo-arm {
     animation: none;
