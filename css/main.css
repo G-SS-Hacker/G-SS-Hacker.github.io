@@ -156,7 +156,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
-  color: #555;
+  color: #222;
   background: #eee;
 }
 @media (max-width: 991px) {
@@ -1506,7 +1506,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #222;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
