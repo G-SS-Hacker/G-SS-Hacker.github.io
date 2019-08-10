@@ -153,10 +153,10 @@ template {
 }
 body {
   position: relative;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
   line-height: 2;
-  color: #222;
+  color: #555;
   background: #eee;
 }
 @media (max-width: 991px) {
@@ -166,7 +166,7 @@ body {
 }
 @media (min-width: 1200px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -179,7 +179,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h1 {
   font-size: 22px;
@@ -273,7 +273,7 @@ span.exturl {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background-color: transparent;
-  color: #222;
+  color: #555;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -281,7 +281,7 @@ span.exturl {
 }
 a:hover,
 span.exturl:hover {
-  color: #000;
+  color: #222;
   border-bottom-color: #222;
 }
 video {
@@ -943,9 +943,9 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #fff;
-  background: #44ceaa;
-  border: 2px solid #44ceaa;
+  color: #555;
+  background: #fff;
+  border: 2px solid #555;
   text-decoration: none;
   border-radius: 2px;
   transition-property: background-color;
@@ -955,9 +955,9 @@ pre .javascript .function {
   line-height: 2;
 }
 .btn:hover {
-  border-color: #00bfff;
+  border-color: #222;
   color: #fff;
-  background: #00bfff;
+  background: #222;
 }
 .btn +.btn {
   margin: 0 0 8px 8px;
@@ -1083,7 +1083,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #64ceaa;
+  background: #222;
 }
 .site-meta {
   margin: 0;
@@ -1117,12 +1117,12 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 26px;
   font-weight: normal;
-  font-family: 'Comic Sans MS', "Lato", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Comic Sans MS', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
-  font-size: 18px;
-  color: #777;
+  font-size: 13px;
+  color: #ddd;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1207,64 +1207,11 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
-.my_post_copyright {
-
-  width: 85%;
-  max-width: 45em;
-  margin: 2.8em auto 0;
-  padding: 0.5em 1em;
-  border: 1px solid #d3d3d3;
-  font-size: 0.93rem;
-  line-height: 1.6em;
-  word-break: break-all;
-  background: rgba(255,255,255,0.4);
-
-}
-.my_post_copyright p {
-  margin: 0;
-}
-.my_post_copyright span {
-  display: inline-block;
-  width: 5.2em;
-  color: #333;
-  font-weight: bold;
-}
-.my_post_copyright .raw {
-  margin-left: 1em;
-  width: 5em;
-}
-.my_post_copyright a {
-  color: #808080;
-  border-bottom: 0;
-}
-.my_post_copyright a:hover {
-  color: #0593d3;
-  text-decoration: underline;
-}
-.my_post_copyright:hover .fa-clipboard {
-  color: #000;
-}
-.my_post_copyright .post-url:hover {
-  font-weight: normal;
-}
-.my_post_copyright .copy-path {
-  margin-left: 1em;
-  width: 1em;
-}
-@media (max-width: 767px) {
-  .my_post_copyright .copy-path {
-    display: none;
-  }
-}
-.my_post_copyright .copy-path:hover {
-  color: #808080;
-  cursor: pointer;
-}
 .github-corner :hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
 }
 .github-corner > svg {
-  fill: #44ceaa;
+  fill: #222;
   color: #fff;
   position: absolute;
   top: 0;
@@ -1274,7 +1221,7 @@ pre .javascript .function {
 @media (max-width: 991px) {
   .github-corner > svg {
     fill: #fff;
-    color: #44ceaa;
+    color: #222;
   }
   .github-corner .github-corner:hover .octo-arm {
     animation: none;
@@ -1330,7 +1277,7 @@ pre .javascript .function {
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .post-body span.exturl .fa {
   font-size: 14px;
@@ -1346,7 +1293,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1455,7 +1402,7 @@ pre .javascript .function {
   margin-left: -2px;
   width: 4px;
   height: 100%;
-  background: #64ceaa;
+  background: #f5f5f5;
   z-index: -1;
 }
 @media (max-width: 767px) {
@@ -1541,7 +1488,7 @@ pre .javascript .function {
 }
 .posts-collapse .post-title a,
 .posts-collapse .post-title span.exturl {
-  color: #222;
+  color: #666;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1559,7 +1506,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #222;
+  color: #555;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1571,7 +1518,7 @@ pre .javascript .function {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00bfff;
+  background-color: #000;
   visibility: hidden;
   transform: scaleX(0);
   transition-duration: 0.2s;
@@ -1588,8 +1535,8 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
-  color: #ffa500;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #999;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1715,6 +1662,53 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+.post-widgets {
+  border-top: 1px solid #eee;
+  padding-top: 9px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.post-widgets .post-meta-divider {
+  height: 25px;
+  color: #999;
+}
+.wp_rating {
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 6px;
+}
+.social-like {
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.vk_like {
+  width: 85px;
+  height: 21px;
+  padding-top: 7px;
+  align-self: center;
+}
+.fb_like {
+  height: 30px;
+  align-self: center;
+}
+.bdsharebuttonbox {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.bdsharebuttonbox a {
+  border: none;
+}
+.bdshare-slide-button-box a {
+  border: none;
+}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -1732,6 +1726,57 @@ pre .javascript .function {
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
+.my_post_copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 2.8em auto 0;
+  padding: 0.5em 1em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.my_post_copyright p {
+  margin: 0;
+}
+.my_post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #333;
+  font-weight: bold;
+}
+.my_post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.my_post_copyright a {
+  color: #808080;
+  border-bottom: 0;
+}
+.my_post_copyright a:hover {
+  color: #0593d3;
+  text-decoration: underline;
+}
+.my_post_copyright:hover .fa-clipboard {
+  color: #000;
+}
+.my_post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.my_post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+}
+@media (max-width: 767px) {
+  .my_post_copyright .copy-path {
+    display: none;
+  }
+}
+.my_post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1744,8 +1789,8 @@ pre .javascript .function {
 }
 .sidebar a,
 .sidebar span.exturl {
-  color: #ffa500;
-  border-bottom-color: #ffa500;
+  color: #999;
+  border-bottom-color: #555;
 }
 .sidebar a:hover,
 .sidebar span.exturl:hover {
@@ -1847,9 +1892,6 @@ pre .javascript .function {
   margin-bottom: 10px;
   border-bottom-color: #555;
   font-size: 13px;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 .links-of-author a:before,
 .links-of-author span.exturl:before {
@@ -1860,7 +1902,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #838796;
+  background: #049e90;
 }
 .feed-link,
 .chat {
@@ -1975,7 +2017,7 @@ pre .javascript .function {
 }
 .site-state-item-name {
   font-size: 13px;
-  color: #222;
+  color: #999;
 }
 .post-toc-empty {
   font-size: 14px;
@@ -2111,6 +2153,14 @@ pre .javascript .function {
   50%, 70% {
     transform: scale(1.1);
   }
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active:before {
+  top: 0.7em;
 }
 .local-search-pop-overlay {
   position: fixed;
@@ -2464,7 +2514,7 @@ ul.breadcrumb {
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 ul.breadcrumb li {
   display: inline;
@@ -2612,7 +2662,7 @@ ul.breadcrumb li+li:last-child {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #44ceaa;
+  background: #222;
 }
 @media (max-width: 991px) {
   .site-meta {
@@ -2819,6 +2869,7 @@ ul.breadcrumb li+li:last-child {
 }
 .links-of-author-item {
   margin: 5px 0 0;
+  width: 50%;
 }
 .links-of-author-item a,
 .links-of-author-item span.exturl {
@@ -2875,7 +2926,9 @@ ul.breadcrumb li+li:last-child {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   margin: 5px 0 0;
+  width: 50%;
   display: inline-block;
+  width: unset;
 }
 .links-of-blogroll-inline .links-of-blogroll-item a,
 .links-of-blogroll-inline .links-of-blogroll-item span.exturl {
@@ -3080,4 +3133,39 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.headband {
+  height: 3px;
+  background: #64ceaa;
+}
+.site-meta {
+  background: #64ceaa;
+}
+.btn {
+  color: #64ceaa;
+  background: #fff;
+  border: 2px solid #64ceaa;
+}
+.btn:hover {
+  border-color: #64ceaa;
+  color: #fff;
+  background: #64ceaa;
+}
+.posts-expand .post-title-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #64ceaa;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
