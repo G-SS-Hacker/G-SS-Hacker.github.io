@@ -273,7 +273,7 @@ span.exturl {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background-color: transparent;
-  color: #666;
+  color: #222;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -281,7 +281,7 @@ span.exturl {
 }
 a:hover,
 span.exturl:hover {
-  color: #444;
+  color: #000;
   border-bottom-color: #222;
 }
 video {
