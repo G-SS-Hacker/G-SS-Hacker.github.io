@@ -1115,14 +1115,14 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: normal;
   font-family: 'Comic Sans MS', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
-  font-size: 13px;
-  color: #ddd;
+  font-size: 18px;
+  color: #555;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1211,7 +1211,7 @@ pre .javascript .function {
   animation: octocat-wave 560ms ease-in-out;
 }
 .github-corner > svg {
-  fill: #64ceaa;
+  fill: #222;
   color: #fff;
   position: absolute;
   top: 0;
@@ -1221,7 +1221,7 @@ pre .javascript .function {
 @media (max-width: 991px) {
   .github-corner > svg {
     fill: #fff;
-    color: #64ceaa;
+    color: #222;
   }
   .github-corner .github-corner:hover .octo-arm {
     animation: none;
@@ -1892,6 +1892,9 @@ pre .javascript .function {
   margin-bottom: 10px;
   border-bottom-color: #555;
   font-size: 13px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 .links-of-author a:before,
 .links-of-author span.exturl:before {
@@ -1902,7 +1905,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #049e90;
+  background: #60ba77;
 }
 .feed-link,
 .chat {
@@ -3142,14 +3145,14 @@ body {
   background: #64ceaa;
 }
 .btn {
-  color: #64ceaa;
-  background: #fff;
+  color: #fff;
+  background: #64ceaa;
   border: 2px solid #64ceaa;
 }
 .btn:hover {
-  border-color: #64ceaa;
+  border-color: #00bfff;
   color: #fff;
-  background: #64ceaa;
+  background: #00bfff;
 }
 .posts-expand .post-title-link::before {
   content: "";
@@ -3158,7 +3161,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #64ceaa;
+  background-color: #00bfff;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);

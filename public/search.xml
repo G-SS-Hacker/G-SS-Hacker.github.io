@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Frequently-used Keyboard Accelerators of Typora]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F2019%2F08%2F12%2FTypora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8%2F</url>
+    <content type="text"><![CDATA[Use keyboard accelerators to accelerate your work. Typora常用快捷键大全 Guderian出品 .tg {border-collapse:collapse;border-spacing:0;}.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg .tg-m9r4{background-color:#ffffc7;text-align:left;vertical-align:top}.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}.tg .tg-0lax{text-align:left;vertical-align:top}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} 操作类型 操作 快捷键 文件操作 新建 Ctrl + N 新建窗口 Ctrl + Shift + N 打开 Ctrl + O 快速打开 Ctrl + P 保存 Ctrl + S 另存为 Ctrl + Shift + S 偏好设置 Ctrl + 逗号 关闭 Ctrl + W 编辑操作 选中当前行/句 Ctrl + L 选中当前格式文本 Ctrl + E 选中当前词 Ctrl + D 查找 Ctrl + F 替换 Ctrl + H 查找下一个 F3 查找上一个 Shift + F3 段落操作 提升标题等级 Ctrl + = 降低标题等级 Ctrl + - 格式操作 加粗 Ctrl +Ｂ 斜体 Ctrl + I 下划线 Ctrl + U 代码 Ctrl + Shift + ` 删除线 Alt + Shift + 5 超链接 Ctrl + K 图像 Ctrl + Shift + I 清除样式 Ctrl + \]]></content>
+      <categories>
+        <category>Summaries</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Think Before You Ask]]></title>
     <url>%2FG-SS-Hacker.github.io%2F2019%2F08%2F11%2F%E5%85%88%E6%80%9D%E8%80%83%EF%BC%8C%E5%86%8D%E6%8F%90%E9%97%AE%2F</url>
     <content type="text"><![CDATA[If you want something done right, do it yourself. 先思考，再提问 Guderian出品 自己动手，丰衣足食毛泽东曾经说过：“自己动手，丰衣足食。”关于求助这件事，其实很多时候看源代码或者帮助文档能解决很多问题，如果实在没有，一般你遇到的问题别人可能也遇到过，善用搜索引擎能解决更多问题。有一个说法:普通程序员 + google = 超级程序员。所以在平时要养成一些习惯，仔细阅读帮助文档，阅读源代码，善用搜索引擎，实在没辙了再提问。 在一些问答网站上，经常可见回答的一些缩写，很有趣也很有用，在此将其列举出来： RTFSC(Read the fucking source code) RTFM(Read the fucking manual) UTFH (Use The Fucking Help) STFW (Search The Fucking Web) STFG (Search The Fucking Google) GIYF (Google Is Your Friend) JFGI (Just Fucking Google It) UTSL (Use The Source Luke) RTFA (Read The Fucking Article) RTFE (Read The Fucking Email) RTFC (“Read The Fucking Code” or “Reboot The Fucking Computer”) RTFQ (Read The Fucking Question) LMGTFY (Let Me Google That For You) WIDGI (When In Doubt Google It) FIOTI (Find It On The Internet) 通常，给出这些答案的人已经通过这些办法找到了解决问题的关键，正在一边看一边敲键盘。这些回复意味着他认为：第一，你要的信息可以靠你自己的力量找到。第二，自已找要比别人喂到嘴里能学得更多。你不应该觉得这样就被冒犯了，按黑客的标准，他没有不理你就是在向你表示某种尊敬，你反而应该感谢他热切地想帮助你。 结束语 The tools we use have a profound influence on our thinking habits, and therefore, on our thinking abilities. ---from Edsger Dijkstra, 1972 Turing Awards receiver 我们使用的工具深刻地影响着我们的思维习惯，因此，也深刻影响着我们的思维能力。 ——艾兹格·迪科斯彻，1972年图灵奖得主]]></content>
