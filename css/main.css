@@ -1595,16 +1595,6 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
-.post-copyright {
-  margin: 2em 0 0;
-  padding: 0.5em 1em;
-  border-left: 3px solid #ff1700;
-  background-color: #f9f9f9;
-  list-style: none;
-}
-.post-copyright i.fa {
-  font-size: 15px;
-}
 .post-widgets {
   border-top: 1px solid #eee;
   padding-top: 9px;
@@ -1848,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8eff44;
+  background: #ff1b8c;
 }
 .feed-link,
 .chat {
@@ -3088,14 +3078,14 @@ body {
   background: #64ceaa;
 }
 .btn {
-  color: #fff;
-  background: #64ceaa;
+  color: #64ceaa;
+  background: #fff;
   border: 2px solid #64ceaa;
 }
 .btn:hover {
-  border-color: #00bfff;
-  color: #fff;
-  background: #00bfff;
+  border-color: #64ceaa;
+  color: #64ceaa;
+  background: #fff;
 }
 .posts-expand .post-title-link::before {
   content: "";
@@ -3104,7 +3094,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00bfff;
+  background-color: #64ceaa;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
