@@ -3145,14 +3145,14 @@ body {
   background: #64ceaa;
 }
 .btn {
-  color: #fff;
-  background: #64ceaa;
+  color: #64ceaa;
+  background: #fff;
   border: 2px solid #64ceaa;
 }
 .btn:hover {
-  border-color: #00bfff;
-  color: #fff;
-  background: #00bfff;
+  border-color: #64ceaa;
+  color: #64ceaa;
+  background: #fff;
 }
 .posts-expand .post-title-link::before {
   content: "";
@@ -3161,7 +3161,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00bfff;
+  background-color: #64ceaa;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
