@@ -1838,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1b8c;
+  background: #cb6278;
 }
 .feed-link,
 .chat {
@@ -3084,8 +3084,8 @@ body {
 }
 .btn:hover {
   border-color: #64ceaa;
-  color: #64ceaa;
-  background: #fff;
+  color: #fff;
+  background: #64ceaa;
 }
 .posts-expand .post-title-link::before {
   content: "";
@@ -3104,4 +3104,22 @@ body {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+.posts-collapse::after {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: -2px;
+  width: 4px;
+  height: 100%;
+  background: #64ceaa;
+  z-index: -1;
+}
+.footer {
+  font-size: 14px;
+  color: #555;
+}
+.with-love {
+  color: #555;
 }
