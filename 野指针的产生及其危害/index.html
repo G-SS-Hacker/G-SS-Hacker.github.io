@@ -141,19 +141,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="如果没有处理好野指针，甚至会招来计算机病毒！">
+  <meta name="description" content="如果没有处理好野指针，甚至会招来计算机病毒！ 野指针的产生及其危害 Guderian出品 野指针指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。 成因指针变量未初始化任何指针变量（无static修饰的局部变量）刚被创建时不会自动成为*NULL指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同">
 <meta name="keywords" content="C++,C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="野指针的产生及其危害">
 <meta property="og:url" content="https://G-SS-Hacker.github.io/野指针的产生及其危害/index.html">
 <meta property="og:site_name" content="HACK IT">
-<meta property="og:description" content="如果没有处理好野指针，甚至会招来计算机病毒！">
+<meta property="og:description" content="如果没有处理好野指针，甚至会招来计算机病毒！ 野指针的产生及其危害 Guderian出品 野指针指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。 成因指针变量未初始化任何指针变量（无static修饰的局部变量）刚被创建时不会自动成为*NULL指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png">
-<meta property="og:updated_time" content="2019-08-14T04:15:04.992Z">
+<meta property="og:updated_time" content="2019-09-19T02:19:50.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="野指针的产生及其危害">
-<meta name="twitter:description" content="如果没有处理好野指针，甚至会招来计算机病毒！">
+<meta name="twitter:description" content="如果没有处理好野指针，甚至会招来计算机病毒！ 野指针的产生及其危害 Guderian出品 野指针指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。 成因指针变量未初始化任何指针变量（无static修饰的局部变量）刚被创建时不会自动成为*NULL指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png">
 
 
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-14 12:15:04" itemprop="dateModified" datetime="2019-08-14T12:15:04+08:00">2019-08-14</time>
+                <time title="修改时间：2019-09-19 10:19:50" itemprop="dateModified" datetime="2019-09-19T10:19:50+08:00">2019-09-19</time>
               </span>
             
           
@@ -550,7 +550,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">861</span>
+              <span title="本文字数">859</span>
             </span>
           
 
@@ -581,10 +581,7 @@
       
 
       
-        <center><font size="5">如果没有处理好野指针，甚至会招来计算机病毒！</font></center>
-
-<p><img src="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png" alt></p>
-<a id="more"></a>
+        <p><center><font size="5">如果没有处理好野指针，甚至会招来计算机病毒！</font></center><br><img src="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png" alt></p>
 <h1 id="野指针的产生及其危害"><a href="#野指针的产生及其危害" class="headerlink" title="野指针的产生及其危害"></a>野指针的产生及其危害</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br><strong>野指针</strong>指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。<p></p>
 <h2 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h2><h3 id="指针变量未初始化"><a href="#指针变量未初始化" class="headerlink" title="指针变量未初始化"></a>指针变量未初始化</h3><p>任何指针变量（无<code>static</code>修饰的局部变量）刚被创建时不会自动成为*<code>NULL</code>指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同时应当被初始化，要么将指针设置为<code>NULL</code>，要么让它指向合法的内存。如果没有初始化，编译器会报错。</p>
 <p>注：<code>NULL</code>指针是一个定义在标准库中的值为零的常量，其定义为：</p>
@@ -598,6 +595,7 @@
 <li>指向可用空间，但是这块空间刚好在用，造成数据错误</li>
 </ul>
 <hr>
+<a id="more"></a>
 <h2 id="规避"><a href="#规避" class="headerlink" title="规避"></a>规避</h2><h3 id="初始化时置NULL"><a href="#初始化时置NULL" class="headerlink" title="初始化时置NULL"></a>初始化时置NULL</h3><p>指针变量一定要初始化为<code>NULL</code>，因为任何指针变量（无<code>static</code>修饰的局部变量）刚被创建时不会自动成为<code>NULL</code>指针，它的缺省值是随机的。</p>
 <h3 id="释放时置NULL"><a href="#释放时置NULL" class="headerlink" title="释放时置NULL"></a>释放时置NULL</h3><p>当指针<code>p</code>指向的内存空间释放时，没有设置指针<code>p</code>的值为<code>NULL</code>。<code>delete</code>和<code>free</code>只是把内存空间释放了，但是并没有将指针<code>p</code>的值赋为<code>NULL</code>。通常判断一个指针是否合法，都是使用<code>if</code>语句测试该指针是否为<code>NULL</code>。例如（针对C++）：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">6</span>);</span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line"><span class="keyword">if</span>(p != <span class="literal">NULL</span>)	*p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
@@ -627,7 +625,7 @@
   <p><span>本文标题:</span>野指针的产生及其危害</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年08月05日 - 16:46:38</p>
-  <p><span>最后更新:</span>2019年08月14日 - 12:15:04</p>
+  <p><span>最后更新:</span>2019年09月19日 - 10:19:50</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/野指针的产生及其危害/" title="野指针的产生及其危害">https://G-SS-Hacker.github.io/野指针的产生及其危害/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/野指针的产生及其危害/" aria-label="复制成功！"></i></span>
   </p>
