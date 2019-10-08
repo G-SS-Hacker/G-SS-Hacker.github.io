@@ -490,7 +490,7 @@
                 
               
 
-              <time title="创建时间：2019-10-08 20:56:45 / 修改时间：21:01:50" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-08 20:56:45 / 修改时间：21:17:39" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
             </span>
           
 
@@ -568,8 +568,8 @@
 
       
         
-          
-            <h1 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570550725460&amp;di=64b195bbe7be7d8a0ec1e12b12441a3f&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1308%2F21%2Fc16%2F24723994_1377089720625_mthumb.jpg" alt></p>
+<h1 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于图 $ G = (V,E)$<sup><a href="#fn_1" id="reffn_1">1</a></sup>，可以用多种表示方法来表示，其中不同的表示方法分别适用与<strong>不同特点的图</strong>和<strong>对图进行不同的操作</strong>。在此介绍三种图的表示方法：<strong>邻接表</strong>、<strong>邻接矩阵</strong>和<strong>边集数组</strong>。</p>
 <h2 id="存图方法"><a href="#存图方法" class="headerlink" title="存图方法"></a>存图方法</h2><h3 id="1-邻接矩阵"><a href="#1-邻接矩阵" class="headerlink" title="1.邻接矩阵"></a>1.邻接矩阵</h3><p>邻接矩阵是一种<strong>简单、易用但有较大局限性</strong>的存图方式。由于图是由<strong>点集</strong>和<strong>边集</strong>两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一确定（假设无重边），我们很自然地可以想到使用一个$|V| <em> |V|$的方矩阵$A = (a_{ij})$来表示，对于<em>*无权图</em></em>，该矩阵满足：</p>
 <script type="math/tex; mode=display">
@@ -588,96 +588,15 @@ a_{ij} =
         \infin \ or \ 0\ or-1, \ (i, j) \notin E
     \end{array}
 \right.</script><hr>
-<p><strong>【例1】</strong></p>
-<p><strong>无向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg" alt></p>
-<p>上图对应的邻接矩阵表示如图：</p>
-<script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\4 & \infin & 2 & 2 \\\\5 & 2 & \infin & 3 \\\\7 & 2 & 3 & \infin\end{array} \right)</script><hr>
-<p><strong>【例2】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的邻接矩阵表示如图：</p>
-<script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\0 & \infin & 2 & 2 \\\\0 & 0 & \infin & 3 \\\\0 & 0 & 0 & \infin\end{array} \right)</script><hr>
-<p><strong>【例1】【例2】</strong>分别给出了<strong>无向无权图</strong>和<strong>有向无权图</strong>的邻接矩阵表示，不管一个图有多少条边，邻接矩阵的空间复杂度都为$O(V^2)$。</p>
-<p>不难看出，无向图的邻接矩阵是一个<strong>对称矩阵</strong>。由于在无向图中，边$(u,v)$与边$(v,u)$表示同一条边，无向图的邻接矩阵$A$就是自己的转置，即$A = A^T$。在存储时，可以只存放<strong>主对角线</strong>及其以上的这部分邻接矩阵（即半个矩阵），从而将图存储空间需求减少几乎一半。</p>
-<hr>
-<h3 id="2-邻接表"><a href="#2-邻接表" class="headerlink" title="2.邻接表"></a>2.邻接表</h3><p>邻接表是一种<strong>具有高度鲁棒性<sup><a href="#fn_ 2" id="reffn_ 2"> 2</a></sup>、适用于大多数情况</strong>的存图方法。对于图$ G = (V,E)$，其邻接表表示由一个包含$|V|$条链表的数组<code>Adj[]</code><sup><a href="#fn_ 3" id="reffn_ 3"> 3</a></sup>所构成，每个顶点有一条链表。对于每个顶点$u\in V$，邻接表<code>Adj[u]</code>包含所有与顶点$u$之间有边相连的顶点$v$，即<code>Adj[u]</code>包含图$G$中所有与$u$邻接的顶点。邻接表本质上是使用链表存边，一条链表代表着一个点发出的所有边，通过链表存储和遍历和一个顶点相连的所有边，并根据实际应用情况选择是否存储边权。</p>
-<p><strong>【例3】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的邻接表表示如图：</p>
-<p><img src="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg" alt></p>
-<p>不管是用<code>链式向前星</code>存图还是<code>vector</code>存图，邻接表的空间复杂度都为$O(E + V)$。</p>
-<h3 id="3-边集数组"><a href="#3-边集数组" class="headerlink" title="3.边集数组"></a>3.边集数组</h3><p>边集数组也是一种<strong>简单、易用但有较大局限性</strong>的存图方式。边集数组由一个一维结构体数组<code>e[]</code>构成，数组的每个数据元素由一条边的起点下标（<code>u</code>），终点下标（<code>v</code>）和权值（<code>w</code>）组成，如下图所示。不难看出，边集数组关注<strong>边的集合</strong>，而不关注<strong>点的集合</strong>。因此，使用这种存图方法在需要遍历图的边集时可以获得很高的效率，但是在遍历图的点集时效率简直是灾难。不论一个图有多少个顶点，边集数组的空间复杂度都为$O(E)$。</p>
-<p><strong>【例4】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的边集数组如下表所示：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th>u</th>
-<th>v</th>
-<th>w</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>e[1]</td>
-<td>1</td>
-<td>2</td>
-<td>4</td>
-</tr>
-<tr>
-<td>e[2]</td>
-<td>1</td>
-<td>4</td>
-<td>7</td>
-</tr>
-<tr>
-<td>e[3]</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-</tr>
-<tr>
-<td>e[4]</td>
-<td>3</td>
-<td>4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>e[5]</td>
-<td>3</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>e[6]</td>
-<td>2</td>
-<td>4</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>据观察，这种存图方法主要用于实现<strong>最小生成树</strong>的<code>Krusal</code>算法，其他情况下较少使用。</p>
-<hr>
-<blockquote id="fn_1">
-<sup>1</sup>. 图，graph，记为“G”；顶点，vertex，记为“V”；边，edge，记为“E”。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 2">
-<sup> 2</sup>. 鲁棒性，robust，即健壮性<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 3">
-<sup> 3</sup>. 邻接表，adjlist，记为”Adj”<a href="#reffn_ 3" title="Jump back to footnote [ 3] in the text."> &#8617;</a>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/图的表示/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
