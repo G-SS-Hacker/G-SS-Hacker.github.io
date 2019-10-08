@@ -303,7 +303,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">14</span></a>
+    <a href="/G-SS-Hacker.github.io/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">15</span></a>
 
   </li>
         
@@ -339,7 +339,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
         
@@ -429,6 +429,297 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/图的表示/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/图的表示/" class="post-title-link" itemprop="url">图的表示</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-08 20:56:45 / 修改时间：21:01:50" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2.3k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于图 $ G = (V,E)$<sup><a href="#fn_1" id="reffn_1">1</a></sup>，可以用多种表示方法来表示，其中不同的表示方法分别适用与<strong>不同特点的图</strong>和<strong>对图进行不同的操作</strong>。在此介绍三种图的表示方法：<strong>邻接表</strong>、<strong>邻接矩阵</strong>和<strong>边集数组</strong>。</p>
+<h2 id="存图方法"><a href="#存图方法" class="headerlink" title="存图方法"></a>存图方法</h2><h3 id="1-邻接矩阵"><a href="#1-邻接矩阵" class="headerlink" title="1.邻接矩阵"></a>1.邻接矩阵</h3><p>邻接矩阵是一种<strong>简单、易用但有较大局限性</strong>的存图方式。由于图是由<strong>点集</strong>和<strong>边集</strong>两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一确定（假设无重边），我们很自然地可以想到使用一个$|V| <em> |V|$的方矩阵$A = (a_{ij})$来表示，对于<em>*无权图</em></em>，该矩阵满足：</p>
+<script type="math/tex; mode=display">
+a_{ij} = 
+\left\{
+    \begin{array}{}
+        1, \ (i, j) \in E\\
+        0, \ (i, j) \notin E
+    \end{array}
+\right.</script><p>对于<strong>带权图</strong>，该矩阵满足：</p>
+<script type="math/tex; mode=display">
+a_{ij} = 
+\left\{
+    \begin{array}{}
+        w, \ (i, j) \in E\\
+        \infin \ or \ 0\ or-1, \ (i, j) \notin E
+    \end{array}
+\right.</script><hr>
+<p><strong>【例1】</strong></p>
+<p><strong>无向带权图</strong>示例如下图所示：</p>
+<p><img src="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg" alt></p>
+<p>上图对应的邻接矩阵表示如图：</p>
+<script type="math/tex; mode=display">
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\4 & \infin & 2 & 2 \\\\5 & 2 & \infin & 3 \\\\7 & 2 & 3 & \infin\end{array} \right)</script><hr>
+<p><strong>【例2】</strong></p>
+<p><strong>有向带权图</strong>示例如下图所示：</p>
+<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
+<p>上图对应的邻接矩阵表示如图：</p>
+<script type="math/tex; mode=display">
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\0 & \infin & 2 & 2 \\\\0 & 0 & \infin & 3 \\\\0 & 0 & 0 & \infin\end{array} \right)</script><hr>
+<p><strong>【例1】【例2】</strong>分别给出了<strong>无向无权图</strong>和<strong>有向无权图</strong>的邻接矩阵表示，不管一个图有多少条边，邻接矩阵的空间复杂度都为$O(V^2)$。</p>
+<p>不难看出，无向图的邻接矩阵是一个<strong>对称矩阵</strong>。由于在无向图中，边$(u,v)$与边$(v,u)$表示同一条边，无向图的邻接矩阵$A$就是自己的转置，即$A = A^T$。在存储时，可以只存放<strong>主对角线</strong>及其以上的这部分邻接矩阵（即半个矩阵），从而将图存储空间需求减少几乎一半。</p>
+<hr>
+<h3 id="2-邻接表"><a href="#2-邻接表" class="headerlink" title="2.邻接表"></a>2.邻接表</h3><p>邻接表是一种<strong>具有高度鲁棒性<sup><a href="#fn_ 2" id="reffn_ 2"> 2</a></sup>、适用于大多数情况</strong>的存图方法。对于图$ G = (V,E)$，其邻接表表示由一个包含$|V|$条链表的数组<code>Adj[]</code><sup><a href="#fn_ 3" id="reffn_ 3"> 3</a></sup>所构成，每个顶点有一条链表。对于每个顶点$u\in V$，邻接表<code>Adj[u]</code>包含所有与顶点$u$之间有边相连的顶点$v$，即<code>Adj[u]</code>包含图$G$中所有与$u$邻接的顶点。邻接表本质上是使用链表存边，一条链表代表着一个点发出的所有边，通过链表存储和遍历和一个顶点相连的所有边，并根据实际应用情况选择是否存储边权。</p>
+<p><strong>【例3】</strong></p>
+<p><strong>有向带权图</strong>示例如下图所示：</p>
+<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
+<p>上图对应的邻接表表示如图：</p>
+<p><img src="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg" alt></p>
+<p>不管是用<code>链式向前星</code>存图还是<code>vector</code>存图，邻接表的空间复杂度都为$O(E + V)$。</p>
+<h3 id="3-边集数组"><a href="#3-边集数组" class="headerlink" title="3.边集数组"></a>3.边集数组</h3><p>边集数组也是一种<strong>简单、易用但有较大局限性</strong>的存图方式。边集数组由一个一维结构体数组<code>e[]</code>构成，数组的每个数据元素由一条边的起点下标（<code>u</code>），终点下标（<code>v</code>）和权值（<code>w</code>）组成，如下图所示。不难看出，边集数组关注<strong>边的集合</strong>，而不关注<strong>点的集合</strong>。因此，使用这种存图方法在需要遍历图的边集时可以获得很高的效率，但是在遍历图的点集时效率简直是灾难。不论一个图有多少个顶点，边集数组的空间复杂度都为$O(E)$。</p>
+<p><strong>【例4】</strong></p>
+<p><strong>有向带权图</strong>示例如下图所示：</p>
+<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
+<p>上图对应的边集数组如下表所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>u</th>
+<th>v</th>
+<th>w</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e[1]</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>e[2]</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr>
+<td>e[3]</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>e[4]</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>e[5]</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>e[6]</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>据观察，这种存图方法主要用于实现<strong>最小生成树</strong>的<code>Krusal</code>算法，其他情况下较少使用。</p>
+<hr>
+<blockquote id="fn_1">
+<sup>1</sup>. 图，graph，记为“G”；顶点，vertex，记为“V”；边，edge，记为“E”。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_ 2">
+<sup> 2</sup>. 鲁棒性，robust，即健壮性<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_ 3">
+<sup> 3</sup>. 邻接表，adjlist，记为”Adj”<a href="#reffn_ 3" title="Jump back to footnote [ 3] in the text."> &#8617;</a>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1322,321 +1613,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/Typora常用快捷键大全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/Typora常用快捷键大全/" class="post-title-link" itemprop="url">Typora常用快捷键大全</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-12 13:48:16" itemprop="dateCreated datePublished" datetime="2019-08-12T13:48:16+08:00">2019-08-12</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-02 20:24:21" itemprop="dateModified" datetime="2019-10-02T20:24:21+08:00">2019-10-02</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">1.5k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><center><font size="5">Life is short, you need shortcuts</font></center><br><img src="https://i.loli.net/2019/10/02/EmLBQfI6HrVnPXd.jpg" alt></p>
-<h1 id="Typora常用快捷键大全"><a href="#Typora常用快捷键大全" class="headerlink" title="Typora常用快捷键大全"></a>Typora常用快捷键大全</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-m9r4{background-color:#ffffc7;text-align:left;vertical-align:top}<br>.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}<br>.tg .tg-0lax{text-align:left;vertical-align:top}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style></p>
-<table class="tg">
-  <tr>
-    <th class="tg-m9r4">操作类型</th>
-    <th class="tg-ncd7">操作</th>
-    <th class="tg-ncd7">快捷键</th>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="8">文件操作</td>
-    <td class="tg-0pky">新建</td>
-    <td class="tg-0pky">Ctrl + N</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">新建窗口<br></td>
-    <td class="tg-0pky">Ctrl + Shift + N</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">打开</td>
-    <td class="tg-0pky">Ctrl + O</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">快速打开</td>
-    <td class="tg-0lax">Ctrl + P</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">保存<br></td>
-    <td class="tg-0lax">Ctrl + S</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">另存为</td>
-    <td class="tg-0lax">Ctrl + Shift + S</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">偏好设置</td>
-    <td class="tg-0lax">Ctrl + 逗号</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">关闭</td>
-    <td class="tg-0lax">Ctrl + W</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="7">编辑操作</td>
-    <td class="tg-0lax">选中当前行/句</td>
-    <td class="tg-0lax">Ctrl + L</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">选中当前格式文本</td>
-    <td class="tg-0lax">Ctrl + E</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">选中当前词</td>
-    <td class="tg-0lax">Ctrl + D</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">查找<br></td>
-    <td class="tg-0lax">Ctrl + F</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">替换</td>
-    <td class="tg-0lax">Ctrl + H<br></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">查找下一个</td>
-    <td class="tg-0lax">F3</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">查找上一个</td>
-    <td class="tg-0lax">Shift + F3</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="2">段落操作</td>
-    <td class="tg-0lax">提升标题等级</td>
-    <td class="tg-0lax">Ctrl + =</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">降低标题等级</td>
-    <td class="tg-0lax">Ctrl + -</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax" rowspan="8">格式操作</td>
-    <td class="tg-0lax">加粗</td>
-    <td class="tg-0lax">Ctrl +Ｂ</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">斜体</td>
-    <td class="tg-0lax">Ctrl + I<br></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">下划线<br></td>
-    <td class="tg-0lax">Ctrl + U</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">代码</td>
-    <td class="tg-0lax">Ctrl + Shift + `</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">删除线</td>
-    <td class="tg-0lax">Alt + Shift + 5</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">超链接</td>
-    <td class="tg-0lax">Ctrl + K</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">图像<br></td>
-    <td class="tg-0lax">Ctrl + Shift + I</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">清除样式</td>
-    <td class="tg-0lax">Ctrl + \</td>
-  </tr>
-</table>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/Typora常用快捷键大全/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1685,7 +1661,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1751,7 +1727,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1860,7 +1838,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">26k</span>
   
 
   
@@ -1869,7 +1847,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">22 分钟</span>
+    <span title="站点阅读时长">24 分钟</span>
   
 </div>
 
@@ -2380,6 +2358,8 @@
   
     
       
+        
+      
     
       
     
@@ -2391,6 +2371,46 @@
     
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

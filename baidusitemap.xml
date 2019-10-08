@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA/</loc>
+    <lastmod>2019-10-08</lastmod>
+  </url>  <url>
     <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/Markdown%E9%9C%80%E8%A6%81%E8%BD%AC%E4%B9%89%E7%9A%84%E5%AD%97%E7%AC%A6%E5%8F%8A%E5%85%B6%E8%BD%AC%E4%B9%89%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-10-02</lastmod>
   </url>  <url>
@@ -25,6 +28,9 @@
     <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/c-%E6%8C%87%E9%92%88%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2019-10-02</lastmod>
   </url>  <url>
+    <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/%E9%A2%98%E8%A7%A3%EF%BC%9A%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2019-10-02</lastmod>
+  </url>  <url>
     <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/%E5%85%88%E6%80%9D%E8%80%83%EF%BC%8C%E5%86%8D%E6%8F%90%E9%97%AE/</loc>
     <lastmod>2019-09-28</lastmod>
   </url>  <url>
@@ -44,9 +50,6 @@
     <lastmod>2019-09-22</lastmod>
   </url>  <url>
     <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2019-09-22</lastmod>
-  </url>  <url>
-    <loc>https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/%E9%A2%98%E8%A7%A3%EF%BC%9A%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2019-09-22</lastmod>
   </url>
 </urlset>
