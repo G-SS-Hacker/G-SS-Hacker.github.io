@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
-<meta property="og:updated_time" content="2019-10-09T09:29:40.321Z">
+<meta property="og:updated_time" content="2019-10-09T10:13:40.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的表示">
 <meta name="twitter:description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，">
@@ -514,7 +514,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-09 17:29:40" itemprop="dateModified" datetime="2019-10-09T17:29:40+08:00">2019-10-09</time>
+                <time title="修改时间：2019-10-09 18:13:40" itemprop="dateModified" datetime="2019-10-09T18:13:40+08:00">2019-10-09</time>
               </span>
             
           
@@ -612,14 +612,14 @@ a_{ij} =
 <p><img src="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg" alt></p>
 <p>上图对应的邻接矩阵表示如图：</p>
 <script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\4 & \infin & 2 & 2 \\\\5 & 2 & \infin & 3 \\\\7 & 2 & 3 & \infin\end{array} \right)</script><hr>
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\4 & \infty & 2 & 2 \\\\5 & 2 & \infty & 3 \\\\7 & 2 & 3 & \infty\end{array} \right)</script><hr>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">4</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">5</span>, <span class="number">2</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>【例2】</strong></p>
 <p><strong>有向带权图</strong>示例如下图所示：</p>
 <p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
 <p>上图对应的邻接矩阵表示如图：</p>
 <script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\0 & \infin & 2 & 2 \\\\0 & 0 & \infin & 3 \\\\0 & 0 & 0 & \infin\end{array} \right)</script><hr>
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\0 & \infty & 2 & 2 \\\\0 & 0 & \infty & 3 \\\\0 & 0 & 0 & \infty\end{array} \right)</script><hr>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>【例1】【例2】</strong>分别给出了<strong>无向无权图</strong>和<strong>有向无权图</strong>的邻接矩阵表示，不管一个图有多少条边，邻接矩阵的空间复杂度都为$O(V^2)$。</p>
 <p>不难看出，无向图的邻接矩阵是一个<strong>对称矩阵</strong>。由于在无向图中，边$(u,v)$与边$(v,u)$表示同一条边，无向图的邻接矩阵$A$就是自己的转置，即$A = A^T$。在存储时，可以只存放<strong>主对角线</strong>及其以上的这部分邻接矩阵（即半个矩阵），从而将图存储空间需求减少几乎一半。</p>
@@ -719,7 +719,7 @@ a_{ij} =
   <p><span>本文标题:</span>图的表示</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年10月08日 - 20:56:45</p>
-  <p><span>最后更新:</span>2019年10月09日 - 17:29:40</p>
+  <p><span>最后更新:</span>2019年10月09日 - 18:13:40</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/图的表示/" title="图的表示">https://G-SS-Hacker.github.io/图的表示/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/图的表示/" aria-label="复制成功！"></i></span>
   </p>
