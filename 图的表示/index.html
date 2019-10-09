@@ -141,13 +141,13 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一">
+  <meta name="description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，">
 <meta name="keywords" content="C,C++,算法,数据结构,图论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图的表示">
 <meta property="og:url" content="https://G-SS-Hacker.github.io/图的表示/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一">
+<meta property="og:description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg">
@@ -155,10 +155,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
-<meta property="og:updated_time" content="2019-10-08T13:40:41.273Z">
+<meta property="og:updated_time" content="2019-10-09T09:29:40.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的表示">
-<meta name="twitter:description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一">
+<meta name="twitter:description" content="图的表示 Guderian出品  绪论对于图 $ G = (V,E)$1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，">
 <meta name="twitter:image" content="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png">
 
 
@@ -499,13 +499,23 @@
                 
               
 
-              <time title="创建时间：2019-10-08 20:56:45 / 修改时间：21:40:41" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-08 20:56:45" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-09 17:29:40" itemprop="dateModified" datetime="2019-10-09T17:29:40+08:00">2019-10-09</time>
+              </span>
             
           
 
@@ -545,7 +555,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">2.3k</span>
+              <span title="本文字数">2.9k</span>
             </span>
           
 
@@ -557,7 +567,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">2 分钟</span>
+              <span title="阅读时长">3 分钟</span>
             </span>
           
 
@@ -578,8 +588,8 @@
       
         <p><img src="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png" alt></p>
 <h1 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于图 $ G = (V,E)$<sup><a href="#fn_1" id="reffn_1">1</a></sup>，可以用多种表示方法来表示，其中不同的表示方法分别适用与<strong>不同特点的图</strong>和<strong>对图进行不同的操作</strong>。在此介绍三种图的表示方法：<strong>邻接表</strong>、<strong>邻接矩阵</strong>和<strong>边集数组</strong>。</p>
-<h2 id="存图方法"><a href="#存图方法" class="headerlink" title="存图方法"></a>存图方法</h2><h3 id="1-邻接矩阵"><a href="#1-邻接矩阵" class="headerlink" title="1.邻接矩阵"></a>1.邻接矩阵</h3><p>邻接矩阵是一种<strong>简单、易用但有较大局限性</strong>的存图方式。由于图是由<strong>点集</strong>和<strong>边集</strong>两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一确定（假设无重边），我们很自然地可以想到使用一个$|V| $ $*$ $ |V|$的方矩阵$A = (a_{ij})$来表示，对于<strong>无权图</strong>，该矩阵满足：</p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于图 $ G = (V,E)$<sup><a href="#fn_1" id="reffn_1">1</a></sup>，可以用多种表示方法来表示，其中不同的表示方法分别适用与<strong>不同特点的图</strong>和<strong>对图进行不同的操作</strong>。在此介绍三种图的表示方法：<strong>邻接表</strong>、<strong>邻接矩阵</strong>和<strong>边集数组</strong>，并将呈现三种存图方法的<code>C</code>和<code>C++</code>代码实现。</p>
+<h2 id="存图方法"><a href="#存图方法" class="headerlink" title="存图方法"></a>存图方法</h2><h3 id="1-邻接矩阵"><a href="#1-邻接矩阵" class="headerlink" title="1.邻接矩阵"></a>1.邻接矩阵</h3><p>邻接矩阵是一种<strong>简单、易用但有较大局限性</strong>的存图方式。由于图是由<strong>点集</strong>和<strong>边集</strong>两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一确定（假设无重边），我们很自然地可以想到使用一个$|V|$ $*$ $|V|$的方矩阵$A = (a_{ij})$来表示，对于<strong>无权图</strong>，该矩阵满足：</p>
 <script type="math/tex; mode=display">
 a_{ij} = 
 \left\{
@@ -602,13 +612,15 @@ a_{ij} =
 <p><img src="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg" alt></p>
 <p>上图对应的邻接矩阵表示如图：</p>
 <script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\4 & \infty& 2 & 2 \\\\5 & 2 & \infty & 3 \\\\7 & 2 & 3 & \infty\end{array} \right)</script><hr>
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\4 & \infin & 2 & 2 \\\\5 & 2 & \infin & 3 \\\\7 & 2 & 3 & \infin\end{array} \right)</script><hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">4</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">5</span>, <span class="number">2</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>【例2】</strong></p>
 <p><strong>有向带权图</strong>示例如下图所示：</p>
 <p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
 <p>上图对应的邻接矩阵表示如图：</p>
 <script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\0 & \infty & 2 & 2 \\\\0 & 0 & \infty & 3 \\\\0 & 0 & 0 & \infty\end{array} \right)</script><hr>
+\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infin & 4 & 5 & 7 \\\\0 & \infin & 2 & 2 \\\\0 & 0 & \infin & 3 \\\\0 & 0 & 0 & \infin\end{array} \right)</script><hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>【例1】【例2】</strong>分别给出了<strong>无向无权图</strong>和<strong>有向无权图</strong>的邻接矩阵表示，不管一个图有多少条边，邻接矩阵的空间复杂度都为$O(V^2)$。</p>
 <p>不难看出，无向图的邻接矩阵是一个<strong>对称矩阵</strong>。由于在无向图中，边$(u,v)$与边$(v,u)$表示同一条边，无向图的邻接矩阵$A$就是自己的转置，即$A = A^T$。在存储时，可以只存放<strong>主对角线</strong>及其以上的这部分邻接矩阵（即半个矩阵），从而将图存储空间需求减少几乎一半。</p>
 <hr>
@@ -674,12 +686,10 @@ a_{ij} =
 </tbody>
 </table>
 </div>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> m = <span class="number">6</span>;  <span class="comment">//m条边</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> u,v,w;</span><br><span class="line">&#125;;</span><br><span class="line">edge E[m] = &#123;</span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>&#125;, </span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>&#125;,</span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;,</span><br><span class="line">	&#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>&#125;,</span><br><span class="line">	&#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>&#125;,</span><br><span class="line">	&#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>据观察，这种存图方法主要用于实现<strong>最小生成树</strong>的<code>Krusal</code>算法，其他情况下较少使用。</p>
 <hr>
-<blockquote id="fn_1">
-<sup>1</sup>. 图，graph，记为“G”；顶点，vertex，记为“V”；边，edge，记为“E”。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 2">
+<h3 id="4-三种存图方法的比较"><a href="#4-三种存图方法的比较" class="headerlink" title="4.三种存图方法的比较"></a>4.三种存图方法的比较</h3><blockquote id="fn_ 2">
 <sup> 2</sup>. 鲁棒性，robust，即健壮性<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
 </blockquote>
 <blockquote id="fn_ 3">
@@ -709,7 +719,7 @@ a_{ij} =
   <p><span>本文标题:</span>图的表示</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年10月08日 - 20:56:45</p>
-  <p><span>最后更新:</span>2019年10月08日 - 21:40:41</p>
+  <p><span>最后更新:</span>2019年10月09日 - 17:29:40</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/图的表示/" title="图的表示">https://G-SS-Hacker.github.io/图的表示/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/图的表示/" aria-label="复制成功！"></i></span>
   </p>
@@ -1010,7 +1020,7 @@ a_{ij} =
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图的表示"><span class="nav-number">1.</span> <span class="nav-text">图的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绪论"><span class="nav-number">1.1.</span> <span class="nav-text">绪论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存图方法"><span class="nav-number">1.2.</span> <span class="nav-text">存图方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-邻接矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.邻接矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-邻接表"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.邻接表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-边集数组"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.边集数组</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图的表示"><span class="nav-number">1.</span> <span class="nav-text">图的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绪论"><span class="nav-number">1.1.</span> <span class="nav-text">绪论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存图方法"><span class="nav-number">1.2.</span> <span class="nav-text">存图方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-邻接矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.邻接矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-邻接表"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.邻接表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-边集数组"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.边集数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-三种存图方法的比较"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.三种存图方法的比较</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1050,7 +1060,7 @@ a_{ij} =
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">27k</span>
   
 
   
