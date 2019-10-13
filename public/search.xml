@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[高等数学公式]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[高等数学公式 Guderian出品 立方公式1.立方和公式$a^3+b^3=(a+b)(a^2-ab+b^2)$ 2.立方差公式$a^3-b^3=(a-b)(a^2+ab+b^2)$ 3.三项立方和公式$a^3+b^3+c^3-abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ac)$ 4.完全立方和公式$(a+b)^3=a^3+3a^2b+3ab^2+b^3$ $(a-b)^3=a^3-3a^2b+3ab^2-b^3$ 5.立方和累加$1^3+2^3+\ldots +n^3=[\frac{n(n+1)}{2}]^2=(1+2+\ldots+n)^2$ 和差化积公式$\sin \alpha+\sin \beta=2\sin \frac{\alpha+ \beta}{2} \cos \frac{\alpha- \beta}{2}$ $\sin \alpha-\sin\beta=2\cos \frac{\alpha+ \beta}{2}\sin \frac{\alpha- \beta}{2}$ $\cos \alpha+\cos \beta=2\cos \frac{\alpha + \beta}{2}\cos \frac{\alpha- \beta}{2}$ $\cos \alpha - \cos \beta=-2\sin \frac{\alpha+ \beta}{2}\sin \frac{\alpha- \beta}{2}$ 积化和差公式$\sin \alpha \sin \beta=\frac12[\sin(\alpha + \beta)+\sin(\alpha - \beta)]$ $\sin \alpha \cos \beta=\frac12[\sin(\alpha + \beta)-\sin(\alpha - \beta)]$ $\cos \alpha \sin \beta=\frac12[\cos(\alpha + \beta)+\cos(\alpha - \beta)]$ $\cos \alpha \cos \beta=\frac12[cos(\alpha + \beta)-cos(\alpha - \beta)]$ 万能公式$\sin \theta=\frac{2\tan \theta}{1+\tan^2\frac{\theta}{2}}$ $\cos \theta=\frac{1-\tan^2\frac{\theta}{2}}{1+\tan^2\frac{\theta}{2}}$ $\tan \theta=\frac{2\tan \frac{\theta}{2}}{1-\tan^2 \frac{\theta}{2}}$ ​ 平方和拓展$1^2+2^2+\ldots+n^2=\frac1{6}n(n+1)(2n+1)$ $1\times2+2\times3+\ldots+n(n+1)=n(n+1)(n+2)$ 裂项相消$\frac1{n(n+1)(n+2)}=\frac12[\frac1{n(n+1)}-\frac1{(n+1)(n+2)}]$]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常用等价无穷小]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%2F</url>
     <content type="text"><![CDATA[常用等价无穷小 Guderian出品 当$x\to0$时， $(1)\sin x \sim x$ $(2)\tan x \sim x$ $(3)\arcsin x \sim x$ $(4)\arctan x \sim x$ $(5)1-\cos x \sim \frac12 x^2$ $(6)a^x-1 \sim x \ln a$ $(7)e^x-1 \sim x$ $(8)(1+x)^a-1 \sim ax$ * $(9)\ln (1+x) \sim x$ $(10)\sqrt{1+x}-1 \sim \frac12x$ *. 见Bernoulli不等式：$(1+x)^n \ge 1+nx$ &#8617;]]></content>
@@ -32,8 +43,8 @@
       <tags>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -209,9 +220,9 @@
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
+        <tag>Python</tag>
         <tag>C#</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>
