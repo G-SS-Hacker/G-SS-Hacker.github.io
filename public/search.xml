@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用等价无穷小]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%2F</url>
+    <content type="text"><![CDATA[常用等价无穷小 Guderian出品 当$x\to0$时， $(1)\sin x \sim x$ $(2)\tan x \sim x$ $(3)\arcsin x \sim x$ $(4)\arctan x \sim x$ $(5)1-\cos x \sim \frac12 x^2$ $(6)a^x-1 \sim x \ln a$ $(7)e^x-1 \sim x$ $(8)(1+x)^a-1 \sim ax$ 1 $(9)\ln (1+x) \sim x$ $(10)\sqrt{1+x}-1 \sim \frac12x$ 1. 见Bernoulli不等式：$(1+x)^n \ge 1+nx$ &#8617;]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[导数基本公式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%AF%BC%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[导数基本公式 Guderian出品 $(1)(C)’ = 0$ $(2)(x^a)’=ax^{a-1}$ $(3)(a^x)’=a^xlna (a&gt;0且a\not=1)$ $(4)(e^x)’=e^x$ $(5)(log_ax)’=\frac{1}{xlna}(a&gt;0且a\not=1)$ $(6)(lnx)’=\frac1{x}$ $(7)(sinx)’=cosx$ $(8)(cosx)’=-sinx$ $(9)(tanx)’=\frac1{cos^2x}=sec^2x$ $(10)(cotx)’=\frac1{-sin^x}=-csc^2x$ $(11)(secx)’=secxtanx$ $(12)(cscx)’=-cscxcotx$ $(13)(arcsinx)’=\frac1{\sqrt{1-x^2}}$ $(14)(arccosx)’=-\frac1{\sqrt{1-x^2}}$ $(15)(arctanx)’=\frac1{1+x^2}$ $(16)(arccotx)’=-\frac1{1+x^2}$]]></content>
+    <content type="text"><![CDATA[导数基本公式 Guderian出品 $(1)(C)’ = 0$ $(2)(x^a)’=ax^{a-1}$ $(3)(a^x)’=a^x\ln a (a&gt;0且a\not=1)$ $(4)(e^x)’=e^x$ $(5)(\log_ax)’=\frac{1}{x\ln a}(a&gt;0且a\not=1)$ $(6)(\ln x)’=\frac1{x}$ $(7)(\sin x)’=\cos x$ $(8)(\cos x)’=-\sin x$ $(9)(\tan x)’=\frac1{\cos^2x}=\sec^2x$ $(10)(\cot x)’=\frac1{-\sin^x}=-\csc^2x$ $(11)(\sec x)’=\sec x\tan x$ $(12)(\csc x)’=-\csc x\cot x$ $(13)(\arcsin x)’=\frac1{\sqrt{1-x^2}}$ $(14)(\arccos x)’=-\frac1{\sqrt{1-x^2}}$ $(15)(\arctan x)’=\frac1{1+x^2}$ $(16)(\mathrm{arccot} x)’=-\frac1{1+x^2}$]]></content>
       <categories>
         <category>总结</category>
       </categories>
@@ -21,8 +32,8 @@
       <tags>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -198,9 +209,9 @@
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>C#</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>
