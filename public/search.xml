@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[常用等价无穷小]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%2F</url>
-    <content type="text"><![CDATA[常用等价无穷小 Guderian出品 当$x\to0$时， $(1)\sin x \sim x$ $(2)\tan x \sim x$ $(3)\arcsin x \sim x$ $(4)\arctan x \sim x$ $(5)1-\cos x \sim \frac12 x^2$ $(6)a^x-1 \sim x \ln a$ $(7)e^x-1 \sim x$ $(8)(1+x)^a-1 \sim ax$ * $(9)\ln (1+x) \sim x$ $(10)\sqrt{1+x}-1 \sim \frac12x$ *. 见Bernoulli不等式：$(1+x)^n \ge 1+nx$ &#8617;]]></content>
+    <content type="text"><![CDATA[常用等价无穷小 Guderian出品 基础版当$x\to0$时， $(1)\sin x \sim x$ $(2)\tan x \sim x$ $(3)\arcsin x \sim x$ $(4)\arctan x \sim x$ $(5)1-\cos x \sim \frac12 x^2$ $(6)a^x-1 \sim x \ln a$ $(7)e^x-1 \sim x$ $(8)(1+x)^a-1 \sim ax$ * $(9)\ln (1+x) \sim x$ $(10)\sqrt{1+x}-1 \sim \frac12x$ 进阶版当$x\to0$时， $(11)\log_a(1+x) \sim \frac{x}{\ln a}$ $(12)\sqrt[n]{1+x}-1\sim \frac{x}{n}$ $(13)x-\sin x\sim \frac16x^3$ $(14)\tan x-x\sim\frac13x^3$ $(15)\arcsin x-x\sim\frac16x^3$ $(16)x-\arctan x\sim \frac13x^3$ $(17)\tan x-\sin x\sim \frac12x^3$ *. 见Bernoulli不等式：$(1+x)^n \ge 1+nx$ &#8617;]]></content>
       <categories>
         <category>总结</category>
       </categories>
