@@ -490,7 +490,7 @@
                 
               
 
-              <time title="创建时间：2019-10-17 23:17:33 / 修改时间：23:21:49" itemprop="dateCreated datePublished" datetime="2019-10-17T23:17:33+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-17 23:17:33 / 修改时间：23:28:33" itemprop="dateCreated datePublished" datetime="2019-10-17T23:17:33+08:00">2019-10-17</time>
             </span>
           
 
@@ -569,9 +569,8 @@
       
         
           
-            <p><img src alt></p>
-<h1 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+            <p><img src="https://i.loli.net/2019/10/17/Q4afFcoLyVZz91B.jpg" alt></p>
+<h1 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <blockquote>
 <p>拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。</p>
 </blockquote>
@@ -579,11 +578,8 @@
 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于一个有向无环图$G=(V,E)$，其拓扑排序是其上顶点的一个线性排序：对于有向边$(u,v)\in E$，顶点$u$在排序中在顶点$v$的前面（如果$G$包含环路，则不可能产生一个线性排序）。可以将$G$上各顶点在一条水平线上从左向右排开，且图的所有边的指向也都是从左向右。拓扑排序并未各顶点上的排序，而是各顶点逻辑上的排序，这种排序可能有不止一种。在工程上，常把一个大规模工程的各个子工程抽象为一个AOV网，用拓扑排序解决工程的调度问题。下面用一个示例说明拓扑排序的具体应用：</p>
 <p>下图（a）表示的是某教授每天早上从起床后到上班前所发生的事情的AOV网。教授必须先完成某些活动，才能完成某些活动；而另一些活动则可以以任意次序完成。在图（a）中，有向边$(u,v)$表示的就是活动$u$必须在活动$v$前完成。图（b）将拓扑排序后的有向无环图在一条水平直线上展示出来。如图（b）所示，该有向无环图所有边的指向都是从左到右。</p>
 <p><img src="https://i.loli.net/2019/10/17/AtgWPhiQ15aXfOb.jpg" alt="a"></p>
-<center>（a）</center>
-
-<p><img src="https://i.loli.net/2019/10/17/ysW6329TM1YHjNF.jpg" alt="b"></p>
-<center>（b）</center>
-
+<p><center>（a）</center><br><img src="https://i.loli.net/2019/10/17/ysW6329TM1YHjNF.jpg" alt="b"></p>
+<p><center>（b）</center></p>
 <h2 id="拓扑排序算法"><a href="#拓扑排序算法" class="headerlink" title="拓扑排序算法"></a>拓扑排序算法</h2><h3 id="1-基于入度的拓扑排序"><a href="#1-基于入度的拓扑排序" class="headerlink" title="1. 基于入度的拓扑排序"></a>1. 基于入度的拓扑排序</h3><p><code>基于入度的拓扑排序算法</code>，又被称为<code>Kahn算法</code>。以下摘选<a href="https://en.wikipedia.org/wiki/Topological_sorting" target="_blank" rel="noopener">维基百科</a>上关于<code>Kahn算法</code>的伪代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TOPOLOGICAL-SORT(G)</span></span><br><span class="line">L ← Empty <span class="built_in">list</span> that will contain the sorted elements</span><br><span class="line">S ← Set of all nodes with no incoming edges</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> S is non-empty <span class="keyword">do</span></span><br><span class="line">    remove a node u from S</span><br><span class="line">    insert u into L</span><br><span class="line">    <span class="keyword">for</span> each node v with an edge e from u to v <span class="keyword">do</span></span><br><span class="line">        remove edge e from the graph</span><br><span class="line">        <span class="keyword">if</span> v has no other incoming edges then</span><br><span class="line">            insert v into S</span><br><span class="line"><span class="keyword">if</span> graph has edges then</span><br><span class="line">    <span class="keyword">return</span> error (graph has at least onecycle)</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">return</span> L (a topologically sortedorder)</span><br></pre></td></tr></table></figure>
 <p><code>Kahn算法</code>的基本思想是“走一步，看一步”。从以上伪代码不难看出<code>Kahn算法</code>的步骤：先统计所有顶点的入度，再把入度为零的顶点从图中分离出来，先放在集合$S$中，再从集合$S$中分别取出顶点放入线性表$L$中，然后把这个顶点指向的所有顶点的入度减<code>1</code>，并删除该顶点及所有与其相连的边。重复上述操作，直到所有顶点都被分离出来。若当集合$S$为空集时，线性表$L$中元素个数等于原来图中顶点的个数，则返回$L$，$L$中元素的排列即为该图的一种拓扑排序；若当集合$S$为空集时，线性表$L$中元素个数不等于原来图中顶点的个数，则意味着图中有闭环，返回错误信息，对图进行修改后再进行下一次拓扑排序。</p>
@@ -594,14 +590,9 @@
 <p><img src="https://i.loli.net/2019/10/17/6IbE1rwjioKMSkQ.jpg" alt></p>
 <p>以此类推，第三步到第五步的结果分别如图（3）（4）（5）所示（第六步时$G=\varnothing$），采用同样的步骤，直至$S=\varnothing$，算法结束。</p>
 <p><img src="https://i.loli.net/2019/10/17/HCvbkjRUXqcMZfx.jpg" alt></p>
-<center>（3）</center>
-
-<p><img src="https://i.loli.net/2019/10/17/BTOl3tF974ks5ZR.jpg" alt></p>
-<center>（4）</center>
-
-<p><img src="https://i.loli.net/2019/10/17/ieHNnwm9pJGChd4.jpg" alt></p>
-<center>（5）</center>
-
+<p><center>（3）</center><br><img src="https://i.loli.net/2019/10/17/BTOl3tF974ks5ZR.jpg" alt></p>
+<p><center>（4）</center><br><img src="https://i.loli.net/2019/10/17/ieHNnwm9pJGChd4.jpg" alt></p>
+<p><center>（5）</center></p>
 <h3 id="2-基于深度优先搜索的拓扑排序"><a href="#2-基于深度优先搜索的拓扑排序" class="headerlink" title="2. 基于深度优先搜索的拓扑排序"></a>2. 基于深度优先搜索的拓扑排序</h3><p><code>基于深度优先搜索的拓扑排序算法</code>同样见以下<a href="https://en.wikipedia.org/wiki/Topological_sorting" target="_blank" rel="noopener">维基百科</a>上关于该算法的伪代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TOPOLOGICAL-SORT(G)</span></span><br><span class="line">L ← Empty <span class="built_in">list</span> that will contain the sorted nodes</span><br><span class="line">S ← Set of all nodes with no outgoing edges</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each node v in S <span class="keyword">do</span></span><br><span class="line">    visit(v) </span><br><span class="line">    </span><br><span class="line"><span class="function">function <span class="title">visit</span><span class="params">(node v)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">if</span> v has <span class="keyword">not</span> been visited yet then</span></span><br><span class="line"><span class="function">        mark v as visited</span></span><br><span class="line"><span class="function">        <span class="keyword">for</span> each node u with an edge from u to v <span class="keyword">do</span></span></span><br><span class="line"><span class="function">            <span class="title">visit</span><span class="params">(u)</span></span></span><br><span class="line"><span class="function">        add u to L</span></span><br></pre></td></tr></table></figure>
 <p>这个算法的过程非常直观：先把出度为零的顶点从图中分离出来，放在集合$S$中，再从集合$S$中分别取出顶点，递归访问其父顶点，若该顶点未被访问，则标记为“已访问”；到达递归基础后，将当前顶点放入线性表$L$中，并逐步回溯。</p>
@@ -612,7 +603,7 @@
 <li><code>DFS(u)</code>未被调用，即$u$未被<code>mark</code>，在当前路搜索路径的<code>DFS</code>树上，$u$是$v$的子节点。</li>
 <li><code>DFS(u)</code>已被调用，即$u$已被<code>mark</code>，则可知<code>DFS(u)</code>在另一条已经完成的搜索路径上返回。</li>
 </ol>
-<p>对于这两种情况，$u$的返回都在$v$之前。  </p>
+<p>对于这两种情况，$u$的返回都在$v$之前，得证。</p>
 
           
         
