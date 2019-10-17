@@ -157,7 +157,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/10/17/HCvbkjRUXqcMZfx.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/17/BTOl3tF974ks5ZR.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/10/17/ieHNnwm9pJGChd4.jpg">
-<meta property="og:updated_time" content="2019-10-17T15:28:33.072Z">
+<meta property="og:updated_time" content="2019-10-17T15:31:01.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拓扑排序">
 <meta name="twitter:description" content="拓扑排序 Guderian出品   拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。  AOV网在工程领域，一个大规模工程常被拆分为多个子工程，这些子工程被称为活动（Activity），在有向图中以顶点（Vertex）表示活动，以有向边表示活动之间的先后关系，这样的有向图被称为AOV网（Activity On Verte">
@@ -501,7 +501,7 @@
                 
               
 
-              <time title="创建时间：2019-10-17 23:17:33 / 修改时间：23:28:33" itemprop="dateCreated datePublished" datetime="2019-10-17T23:17:33+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-17 23:17:33 / 修改时间：23:31:01" itemprop="dateCreated datePublished" datetime="2019-10-17T23:17:33+08:00">2019-10-17</time>
             </span>
           
 
@@ -591,6 +591,7 @@
 <p><center>（b）</center></p>
 <h2 id="拓扑排序算法"><a href="#拓扑排序算法" class="headerlink" title="拓扑排序算法"></a>拓扑排序算法</h2><h3 id="1-基于入度的拓扑排序"><a href="#1-基于入度的拓扑排序" class="headerlink" title="1. 基于入度的拓扑排序"></a>1. 基于入度的拓扑排序</h3><p><code>基于入度的拓扑排序算法</code>，又被称为<code>Kahn算法</code>。以下摘选<a href="https://en.wikipedia.org/wiki/Topological_sorting" target="_blank" rel="noopener">维基百科</a>上关于<code>Kahn算法</code>的伪代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TOPOLOGICAL-SORT(G)</span></span><br><span class="line">L ← Empty <span class="built_in">list</span> that will contain the sorted elements</span><br><span class="line">S ← Set of all nodes with no incoming edges</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> S is non-empty <span class="keyword">do</span></span><br><span class="line">    remove a node u from S</span><br><span class="line">    insert u into L</span><br><span class="line">    <span class="keyword">for</span> each node v with an edge e from u to v <span class="keyword">do</span></span><br><span class="line">        remove edge e from the graph</span><br><span class="line">        <span class="keyword">if</span> v has no other incoming edges then</span><br><span class="line">            insert v into S</span><br><span class="line"><span class="keyword">if</span> graph has edges then</span><br><span class="line">    <span class="keyword">return</span> error (graph has at least onecycle)</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">return</span> L (a topologically sortedorder)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p><code>Kahn算法</code>的基本思想是“走一步，看一步”。从以上伪代码不难看出<code>Kahn算法</code>的步骤：先统计所有顶点的入度，再把入度为零的顶点从图中分离出来，先放在集合$S$中，再从集合$S$中分别取出顶点放入线性表$L$中，然后把这个顶点指向的所有顶点的入度减<code>1</code>，并删除该顶点及所有与其相连的边。重复上述操作，直到所有顶点都被分离出来。若当集合$S$为空集时，线性表$L$中元素个数等于原来图中顶点的个数，则返回$L$，$L$中元素的排列即为该图的一种拓扑排序；若当集合$S$为空集时，线性表$L$中元素个数不等于原来图中顶点的个数，则意味着图中有闭环，返回错误信息，对图进行修改后再进行下一次拓扑排序。</p>
 <p>对于图（a）的例子，首先我们找到入度为零的顶点有“刷牙”和“喂猫”，则把这两个顶点放入集合$S$中，$S=\{“刷牙”, “喂猫”\}$，$L=\varnothing$。</p>
 <p>第一步、在$S$中选取”刷牙“并把该顶点从$S$中删除并放入线性表$L$中，”刷牙“与”洗脸“相连，删除相连的边，”洗脸“的入度减<code>1</code>，新的入度为<code>0</code>，把”洗脸“也放入$S$中。此时$S=\{“洗脸”, “喂猫”\}$，$L=“刷牙”$。</p>
@@ -637,7 +638,7 @@
   <p><span>本文标题:</span>拓扑排序</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年10月17日 - 23:17:33</p>
-  <p><span>最后更新:</span>2019年10月17日 - 23:28:33</p>
+  <p><span>最后更新:</span>2019年10月17日 - 23:31:01</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/拓扑排序/" title="拓扑排序">https://G-SS-Hacker.github.io/拓扑排序/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/拓扑排序/" aria-label="复制成功！"></i></span>
   </p>
