@@ -141,25 +141,26 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="图的表示 Guderian出品  绪论对于图 $G=(V,E)$ 1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么">
-<meta name="keywords" content="C,C++,数据结构,算法,图论">
+  <meta name="description" content="拓扑排序 Guderian出品    拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。  AOV网在工程领域，一个大规模工程常被拆分为多个子工程，这些子工程被称为活动（Activity），在有向图中以顶点（Vertex）表示活动，以有向边表示活动之间的先后关系，这样的有向图被称为AOV网（Activity On Vert">
+<meta name="keywords" content="-图论 -算法 -排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图的表示">
-<meta property="og:url" content="https://G-SS-Hacker.github.io/图的表示/index.html">
+<meta property="og:title" content="拓扑排序">
+<meta property="og:url" content="https://G-SS-Hacker.github.io/拓扑排序/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="图的表示 Guderian出品  绪论对于图 $G=(V,E)$ 1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么">
+<meta property="og:description" content="拓扑排序 Guderian出品    拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。  AOV网在工程领域，一个大规模工程常被拆分为多个子工程，这些子工程被称为活动（Activity），在有向图中以顶点（Vertex）表示活动，以有向边表示活动之间的先后关系，这样的有向图被称为AOV网（Activity On Vert">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg">
-<meta property="og:updated_time" content="2019-10-09T12:48:41.296Z">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/AtgWPhiQ15aXfOb.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/ysW6329TM1YHjNF.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/ErzPGWtTIp67jMk.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/6IbE1rwjioKMSkQ.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/HCvbkjRUXqcMZfx.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/BTOl3tF974ks5ZR.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/10/17/ieHNnwm9pJGChd4.jpg">
+<meta property="og:updated_time" content="2019-10-17T15:21:49.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图的表示">
-<meta name="twitter:description" content="图的表示 Guderian出品  绪论对于图 $G=(V,E)$ 1，可以用多种表示方法来表示，其中不同的表示方法分别适用与不同特点的图和对图进行不同的操作。在此介绍三种图的表示方法：邻接表、邻接矩阵和边集数组，并将呈现三种存图方法的C和C++代码实现。 存图方法1.邻接矩阵邻接矩阵是一种简单、易用但有较大局限性的存图方式。由于图是由点集和边集两部分组成，难以找到一种线性结构来同时表示两者，那么">
-<meta name="twitter:image" content="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png">
+<meta name="twitter:title" content="拓扑排序">
+<meta name="twitter:description" content="拓扑排序 Guderian出品    拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。  AOV网在工程领域，一个大规模工程常被拆分为多个子工程，这些子工程被称为活动（Activity），在有向图中以顶点（Vertex）表示活动，以有向边表示活动之间的先后关系，这样的有向图被称为AOV网（Activity On Vert">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/17/AtgWPhiQ15aXfOb.jpg">
 
 
 
@@ -167,7 +168,7 @@
 
   
   
-  <link rel="canonical" href="https://G-SS-Hacker.github.io/图的表示/">
+  <link rel="canonical" href="https://G-SS-Hacker.github.io/拓扑排序/">
 
 
 
@@ -177,7 +178,7 @@
   };
 </script>
 
-  <title>图的表示 | G-SS-Hacker</title>
+  <title>拓扑排序 | G-SS-Hacker</title>
   
 
 
@@ -456,7 +457,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/图的表示/">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/拓扑排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="G-SS-Hacker">
@@ -473,7 +474,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图的表示
+          <h1 class="post-title" itemprop="name headline">拓扑排序
 
               
             
@@ -499,23 +500,13 @@
                 
               
 
-              <time title="创建时间：2019-10-08 20:56:45" itemprop="dateCreated datePublished" datetime="2019-10-08T20:56:45+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-17 23:17:33 / 修改时间：23:21:49" itemprop="dateCreated datePublished" datetime="2019-10-17T23:17:33+08:00">2019-10-17</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-09 20:48:41" itemprop="dateModified" datetime="2019-10-09T20:48:41+08:00">2019-10-09</time>
-              </span>
             
           
 
@@ -555,7 +546,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">5.4k</span>
+              <span title="本文字数">2.8k</span>
             </span>
           
 
@@ -567,7 +558,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">5 分钟</span>
+              <span title="阅读时长">3 分钟</span>
             </span>
           
 
@@ -586,128 +577,50 @@
       
 
       
-        <p><img src="https://i.loli.net/2019/10/08/8NwDaiMFQ7kHndV.png" alt></p>
-<h1 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于图 $G=(V,E)$<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup>，可以用多种表示方法来表示，其中不同的表示方法分别适用与<strong>不同特点的图</strong>和<strong>对图进行不同的操作</strong>。在此介绍三种图的表示方法：<strong>邻接表</strong>、<strong>邻接矩阵</strong>和<strong>边集数组</strong>，并将呈现三种存图方法的<code>C</code>和<code>C++</code>代码实现。</p>
-<h2 id="存图方法"><a href="#存图方法" class="headerlink" title="存图方法"></a>存图方法</h2><h3 id="1-邻接矩阵"><a href="#1-邻接矩阵" class="headerlink" title="1.邻接矩阵"></a>1.邻接矩阵</h3><p>邻接矩阵是一种<strong>简单、易用但有较大局限性</strong>的存图方式。由于图是由<strong>点集</strong>和<strong>边集</strong>两部分组成，难以找到一种线性结构来同时表示两者，那么，由于每条特定的边都可由其两端顶点唯一确定（假设无重边），我们很自然地可以想到使用一个$|V|$ $*$ $|V|$的方矩阵$A = (a_{ij})$来表示，对于<strong>无权图</strong>，该矩阵满足：</p>
-<script type="math/tex; mode=display">
-a_{ij} = 
-\left\{
-    \begin{array}{}
-        1, \ (i, j) \in E\\
-        0, \ (i, j) \notin E
-    \end{array}
-\right.</script><p>对于<strong>带权图</strong>，该矩阵满足：</p>
-<script type="math/tex; mode=display">
-a_{ij} = 
-\left\{
-    \begin{array}{}
-        w, \ (i, j) \in E\\
-        \infty \ or \ 0\ or-1, \ (i, j) \notin E
-    \end{array}
-\right.</script><hr>
-<a id="more"></a>
-<p><strong>【例1】</strong></p>
-<p><strong>无向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/Q3LHBXuIGgOeztS.jpg" alt></p>
-<p>上图对应的邻接矩阵表示如图：</p>
-<script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\4 & \infty & 2 & 2 \\\\5 & 2 & \infty & 3 \\\\7 & 2 & 3 & \infty\end{array} \right)</script><hr>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;  <span class="comment">//正无穷</span></span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">4</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">5</span>, <span class="number">2</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><strong>【例2】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的邻接矩阵表示如图：</p>
-<script type="math/tex; mode=display">
-\mathbf{A} =\left( \begin{array}{ccc}a_{11} & a_{12} & a_{13} & a_{14} \\\\a_{21} & a_{22} & a_{23} & a_{24} \\\\a_{31} & a_{32} & a_{33} & a_{34} \\\\a_{41} & a_{42} & a_{43} & a_{44}\end{array} \right)\mathbf{} =\left( \begin{array}{ccc}\infty & 4 & 5 & 7 \\\\0 & \infty & 2 & 2 \\\\0 & 0 & \infty & 3 \\\\0 & 0 & 0 & \infty\end{array} \right)</script><hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;  <span class="comment">//正无穷</span></span><br><span class="line"><span class="keyword">int</span> G[n][n] = &#123;</span><br><span class="line">	&#123;inf, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, inf, <span class="number">2</span>, <span class="number">2</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, inf, <span class="number">3</span>&#125;, </span><br><span class="line">	&#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, inf&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><strong>【例1】【例2】</strong>分别给出了<strong>无向无权图</strong>和<strong>有向无权图</strong>的邻接矩阵表示，不管一个图有多少条边，邻接矩阵的空间复杂度都为$O(V^2)$。</p>
-<p>不难看出，无向图的邻接矩阵是一个<strong>对称矩阵</strong>。由于在无向图中，边$(u,v)$与边$(v,u)$表示同一条边，无向图的邻接矩阵$A$就是自己的转置，即$A = A^T$。在存储时，可以只存放<strong>主对角线</strong>及其以上的这部分邻接矩阵（即半个矩阵），从而将图存储空间需求减少几乎一半。</p>
-<p>邻接矩阵表示简单、容易理解，对已知的边操作的效率高（插入、删除、查询的时间复杂度都是$O(1)$。但是邻接矩阵的缺陷在于其空间复杂度巨大，在<strong>稠密图</strong>上邻接矩阵可以取得较好的利用率，但是在<strong>稀疏图</strong><sup><a href="#fn_ 2" id="reffn_ 2"> 2</a></sup>上使用邻接矩阵将会造成大量内存空间的浪费，很容易导致内存溢出。因此，在使用邻接矩阵存图时一定要格外注意内存空间的限制，不可盲目追求简单而忽略了内存空间的优化。</p>
-<hr>
-<h3 id="2-邻接表"><a href="#2-邻接表" class="headerlink" title="2.邻接表"></a>2.邻接表</h3><p>邻接表是一种<strong>具有高度鲁棒性</strong><sup><a href="#fn_ 3" id="reffn_ 3"> 3</a></sup><strong>、适用于大多数情况</strong>的存图方法。对于图$ G = (V,E)$，其邻接表表示由一个包含$|V|$条链表的数组<code>Adj[]</code><sup><a href="#fn_ 4" id="reffn_ 4"> 4</a></sup>所构成，每个顶点有一条链表。对于每个顶点$u\in V$，邻接表<code>Adj[u]</code>包含所有与顶点$u$之间有边相连的顶点$v$，即<code>Adj[u]</code>包含图$G$中所有与$u$邻接的顶点。邻接表本质上是使用链表存边，一条链表代表着一个点发出的所有边，通过链表存储和遍历和一个顶点相连的所有边，并根据实际应用情况选择是否存储边权。在<code>C/C++</code>中，实现邻接表的方法主要有两种：<code>链式向前星</code>和<code>vector</code>存图。</p>
-<p><strong>【例3】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的邻接表表示如图：</p>
-<p><img src="https://i.loli.net/2019/10/08/tX9s5WZrmzoIYES.jpg" alt></p>
-<p><code>链式向前星</code>存图法是利用了一种特殊的链表，这种链表具有普通链表链式存储的特征，但其插入新元素的方式却是“向前星”，即从链表表头插入元素，每次只更新表头，因此得名<code>链式向前星</code>。在使用<code>链式向前星</code>时，应很好的理解这种数据结构与普通链表的区别。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//链式向前星</span></span><br><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>, m = <span class="number">6</span>;  <span class="comment">//n个顶点，m条边</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> u, v, nxt;  <span class="comment">//nxt指向同一个顶点发出的另一条边</span></span><br><span class="line">&#125;E[n];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> head[m];  <span class="comment">//假设从0号顶点开始存储</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span>  <span class="comment">//改变编号为cnt的边</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	E[cnt].v = v;  <span class="comment">//出边指向v</span></span><br><span class="line">	E[cnt].w = w;  <span class="comment">//记录边权</span></span><br><span class="line">	E[cnt].nxt = head[u];  <span class="comment">//将其指向目前链表的表头（重要！）</span></span><br><span class="line">	head[u] = cnt++;  <span class="comment">//将表头更新为目前的编号（重要！）</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    add(<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>vector</code>存图实际上是利用了一个不定长的链表该存储从一个顶点出发的所有边的情况，与普通链表类似，<code>vector</code>也是从链表的尾端进行插入操作，因此<code>vector</code>存图法在理解难度上比<code>链式向前星</code>要简单。然而由于<code>C/C++</code>语言的原因，使用<code>vector</code>存图实际使用的内存比<code>链式向前星</code>的要大，因此内存溢出的风险也会更大。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vector存图，使用stl::pair版</span></span><br><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; E[n + <span class="number">1</span>];  <span class="comment">//int（first）为u，int（second）为v</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    E[u].push_back(&#123;v, w&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    add(<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;(<span class="keyword">int</span>)E[i].size(); j++)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;E[i][j].first&lt;&lt;<span class="string">" "</span>&lt;&lt;E[i][j].second&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vector存图，使用结构体版</span></span><br><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;  <span class="comment">//n个顶点</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> v, w;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt;E[n + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    E[u].push_back(&#123;v, w&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>);</span><br><span class="line">    add(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>);</span><br><span class="line">    add(<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    add(<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;(<span class="keyword">int</span>)E[i].size(); j++)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;E[i][j].v&lt;&lt;<span class="string">" "</span>&lt;&lt;E[i][j].w&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不管是用<code>链式向前星</code>存图还是<code>vector</code>存图，邻接表的空间复杂度都为$O(E + V)$。与邻接矩阵相比，邻接表的空间复杂度更小，空间利用率更高。但是邻接表使用链式结构存储边，这导致了对边操作的时间复杂度为$O(n)$，因此邻接表并不适用于需要频繁对边操作的情况；对于<strong>稠密图</strong>，邻接表的性能也不比邻接矩阵更占上风。然而，对于不需要频繁对边进行操作的<strong>稀疏图</strong>，使用邻接表存图比使用邻接矩阵存图可以期待更高的效率。综上，邻接表不失为一种性能优秀的存图方法。</p>
-<hr>
-<h3 id="3-边集数组"><a href="#3-边集数组" class="headerlink" title="3.边集数组"></a>3.边集数组</h3><p>边集数组也是一种<strong>简单、易用但有较大局限性</strong>的存图方式。边集数组由一个一维结构体数组<code>e[]</code>构成，数组的每个数据元素由一条边的起点下标（<code>u</code>），终点下标（<code>v</code>）和权值（<code>w</code>）组成，如下图所示。不难看出，边集数组关注<strong>边的集合</strong>，而不关注<strong>点的集合</strong>。因此，使用这种存图方法在需要遍历图的边集时可以获得很高的效率，但是在遍历图的点集时效率简直是灾难。不论一个图有多少个顶点，边集数组的空间复杂度都为$O(E)$。</p>
-<p><strong>【例4】</strong></p>
-<p><strong>有向带权图</strong>示例如下图所示：</p>
-<p><img src="https://i.loli.net/2019/10/08/2rLUQ5gi9NdXGIs.jpg" alt></p>
-<p>上图对应的边集数组如下表所示：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th>u</th>
-<th>v</th>
-<th>w</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>e[1]</td>
-<td>1</td>
-<td>2</td>
-<td>4</td>
-</tr>
-<tr>
-<td>e[2]</td>
-<td>1</td>
-<td>4</td>
-<td>7</td>
-</tr>
-<tr>
-<td>e[3]</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-</tr>
-<tr>
-<td>e[4]</td>
-<td>3</td>
-<td>4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>e[5]</td>
-<td>3</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>e[6]</td>
-<td>2</td>
-<td>4</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Run on C/C++</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> m = <span class="number">6</span>;  <span class="comment">//m条边</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> u, v, w;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">edge E[m] = &#123;</span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>&#125;, </span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>&#125;,</span><br><span class="line">	&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;,</span><br><span class="line">	&#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>&#125;,</span><br><span class="line">	&#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>&#125;,</span><br><span class="line">	&#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>据观察，这种存图方法主要用于实现<strong>最小生成树</strong>的<code>Krusal</code>算法，其他情况下较少使用。</p>
-<hr>
-<blockquote id="fn_ 1">
-<sup> 1</sup>. 图，graph，记为“G”；顶点，vertex，记为“V”；边，edge，记为“E”。<a href="#reffn_ 1" title="Jump back to footnote [ 1] in the text."> &#8617;</a>
+        <p><img src alt></p>
+<h1 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<blockquote>
+<p>拓扑是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。</p>
 </blockquote>
-<blockquote id="fn_ 2">
-<sup> 2</sup>. 稠密图与稀疏图的判断标准：(1)定性分析：稠密图的边数非常接近于完全图（即$n(n-1)$），而稀疏图的边数比完全图少得多。(2)定量分析：边数多于$nlogn$的图为稠密图，边数少于$nlogn$的图为稀疏图。<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 3">
-<sup> 3</sup>. 鲁棒性，robust，即健壮性<a href="#reffn_ 3" title="Jump back to footnote [ 3] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 4">
-<sup> 4</sup>. 邻接表，adjlist，记为”Adj”<a href="#reffn_ 4" title="Jump back to footnote [ 4] in the text."> &#8617;</a>
-</blockquote>
+<h2 id="AOV网"><a href="#AOV网" class="headerlink" title="AOV网"></a>AOV网</h2><p>在工程领域，一个大规模工程常被拆分为多个子工程，这些子工程被称为<strong>活动（Activity）</strong>，在有向图中以<strong>顶点（Vertex）</strong>表示活动，以有向边表示活动之间的先后关系，这样的有向图被称为<strong>AOV网（Activity On Vertex Network）</strong>。在AOV网中，如果出现了闭环，就意味着有若干个活动将被无限次重复，工程将永远无法完成；因此，一个具有实用价值的AOV网，必定是一个<strong>有向无环图（DAG，Directed Acyclic Graph）</strong>。</p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p>对于一个有向无环图$G=(V,E)$，其拓扑排序是其上顶点的一个线性排序：对于有向边$(u,v)\in E$，顶点$u$在排序中在顶点$v$的前面（如果$G$包含环路，则不可能产生一个线性排序）。可以将$G$上各顶点在一条水平线上从左向右排开，且图的所有边的指向也都是从左向右。拓扑排序并未各顶点上的排序，而是各顶点逻辑上的排序，这种排序可能有不止一种。在工程上，常把一个大规模工程的各个子工程抽象为一个AOV网，用拓扑排序解决工程的调度问题。下面用一个示例说明拓扑排序的具体应用：</p>
+<p>下图（a）表示的是某教授每天早上从起床后到上班前所发生的事情的AOV网。教授必须先完成某些活动，才能完成某些活动；而另一些活动则可以以任意次序完成。在图（a）中，有向边$(u,v)$表示的就是活动$u$必须在活动$v$前完成。图（b）将拓扑排序后的有向无环图在一条水平直线上展示出来。如图（b）所示，该有向无环图所有边的指向都是从左到右。</p>
+<p><img src="https://i.loli.net/2019/10/17/AtgWPhiQ15aXfOb.jpg" alt="a"></p>
+<center>（a）</center>
+
+<p><img src="https://i.loli.net/2019/10/17/ysW6329TM1YHjNF.jpg" alt="b"></p>
+<center>（b）</center>
+
+<h2 id="拓扑排序算法"><a href="#拓扑排序算法" class="headerlink" title="拓扑排序算法"></a>拓扑排序算法</h2><h3 id="1-基于入度的拓扑排序"><a href="#1-基于入度的拓扑排序" class="headerlink" title="1. 基于入度的拓扑排序"></a>1. 基于入度的拓扑排序</h3><p><code>基于入度的拓扑排序算法</code>，又被称为<code>Kahn算法</code>。以下摘选<a href="https://en.wikipedia.org/wiki/Topological_sorting" target="_blank" rel="noopener">维基百科</a>上关于<code>Kahn算法</code>的伪代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TOPOLOGICAL-SORT(G)</span></span><br><span class="line">L ← Empty <span class="built_in">list</span> that will contain the sorted elements</span><br><span class="line">S ← Set of all nodes with no incoming edges</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> S is non-empty <span class="keyword">do</span></span><br><span class="line">    remove a node u from S</span><br><span class="line">    insert u into L</span><br><span class="line">    <span class="keyword">for</span> each node v with an edge e from u to v <span class="keyword">do</span></span><br><span class="line">        remove edge e from the graph</span><br><span class="line">        <span class="keyword">if</span> v has no other incoming edges then</span><br><span class="line">            insert v into S</span><br><span class="line"><span class="keyword">if</span> graph has edges then</span><br><span class="line">    <span class="keyword">return</span> error (graph has at least onecycle)</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">return</span> L (a topologically sortedorder)</span><br></pre></td></tr></table></figure>
+<p><code>Kahn算法</code>的基本思想是“走一步，看一步”。从以上伪代码不难看出<code>Kahn算法</code>的步骤：先统计所有顶点的入度，再把入度为零的顶点从图中分离出来，先放在集合$S$中，再从集合$S$中分别取出顶点放入线性表$L$中，然后把这个顶点指向的所有顶点的入度减<code>1</code>，并删除该顶点及所有与其相连的边。重复上述操作，直到所有顶点都被分离出来。若当集合$S$为空集时，线性表$L$中元素个数等于原来图中顶点的个数，则返回$L$，$L$中元素的排列即为该图的一种拓扑排序；若当集合$S$为空集时，线性表$L$中元素个数不等于原来图中顶点的个数，则意味着图中有闭环，返回错误信息，对图进行修改后再进行下一次拓扑排序。</p>
+<p>对于图（a）的例子，首先我们找到入度为零的顶点有“刷牙”和“喂猫”，则把这两个顶点放入集合$S$中，$S=\{“刷牙”, “喂猫”\}$，$L=\varnothing$。</p>
+<p>第一步、在$S$中选取”刷牙“并把该顶点从$S$中删除并放入线性表$L$中，”刷牙“与”洗脸“相连，删除相连的边，”洗脸“的入度减<code>1</code>，新的入度为<code>0</code>，把”洗脸“也放入$S$中。此时$S=\{“洗脸”, “喂猫”\}$，$L=“刷牙”$。</p>
+<p><img src="https://i.loli.net/2019/10/17/ErzPGWtTIp67jMk.jpg" alt></p>
+<p>第二步、在$S$中选取“洗脸”并把该顶点从$S$中删除并放入线性表$L$中，“洗脸”与“吃饭”“更衣”相连，删除相连的边，”吃饭““更衣”的入度减<code>1</code>，新的入度为<code>0</code>，把”吃饭“”更衣“也放入$S$中。此时$S=\{“吃饭”, “更衣”, “喂猫”\}$，$L=“刷牙”\to“洗脸”$。</p>
+<p><img src="https://i.loli.net/2019/10/17/6IbE1rwjioKMSkQ.jpg" alt></p>
+<p>以此类推，第三步到第五步的结果分别如图（3）（4）（5）所示（第六步时$G=\varnothing$），采用同样的步骤，直至$S=\varnothing$，算法结束。</p>
+<p><img src="https://i.loli.net/2019/10/17/HCvbkjRUXqcMZfx.jpg" alt></p>
+<center>（3）</center>
+
+<p><img src="https://i.loli.net/2019/10/17/BTOl3tF974ks5ZR.jpg" alt></p>
+<center>（4）</center>
+
+<p><img src="https://i.loli.net/2019/10/17/ieHNnwm9pJGChd4.jpg" alt></p>
+<center>（5）</center>
+
+<h3 id="2-基于深度优先搜索的拓扑排序"><a href="#2-基于深度优先搜索的拓扑排序" class="headerlink" title="2. 基于深度优先搜索的拓扑排序"></a>2. 基于深度优先搜索的拓扑排序</h3><p><code>基于深度优先搜索的拓扑排序算法</code>同样见以下<a href="https://en.wikipedia.org/wiki/Topological_sorting" target="_blank" rel="noopener">维基百科</a>上关于该算法的伪代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TOPOLOGICAL-SORT(G)</span></span><br><span class="line">L ← Empty <span class="built_in">list</span> that will contain the sorted nodes</span><br><span class="line">S ← Set of all nodes with no outgoing edges</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each node v in S <span class="keyword">do</span></span><br><span class="line">    visit(v) </span><br><span class="line">    </span><br><span class="line"><span class="function">function <span class="title">visit</span><span class="params">(node v)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">if</span> v has <span class="keyword">not</span> been visited yet then</span></span><br><span class="line"><span class="function">        mark v as visited</span></span><br><span class="line"><span class="function">        <span class="keyword">for</span> each node u with an edge from u to v <span class="keyword">do</span></span></span><br><span class="line"><span class="function">            <span class="title">visit</span><span class="params">(u)</span></span></span><br><span class="line"><span class="function">        add u to L</span></span><br></pre></td></tr></table></figure>
+<p>这个算法的过程非常直观：先把出度为零的顶点从图中分离出来，放在集合$S$中，再从集合$S$中分别取出顶点，递归访问其父顶点，若该顶点未被访问，则标记为“已访问”；到达递归基础后，将当前顶点放入线性表$L$中，并逐步回溯。</p>
+<p>下证<code>基于DFS的拓扑排序算法</code>生成的是有向无环图的拓扑排序：</p>
+<p>在有向无环图$G=(V,E)$上运行<code>DFS</code>，只需证明对于任意一对顶点$(u,v)\in E$，$u$的返回在$v$之前即可。</p>
+<p>对边$(u,v)\in E $，在调用<code>DFS(v)</code>时，对于即将访问的$u$，不外乎以下两种情况：</p>
+<ol>
+<li><code>DFS(u)</code>未被调用，即$u$未被<code>mark</code>，在当前路搜索路径的<code>DFS</code>树上，$u$是$v$的子节点。</li>
+<li><code>DFS(u)</code>已被调用，即$u$已被<code>mark</code>，则可知<code>DFS(u)</code>在另一条已经完成的搜索路径上返回。</li>
+</ol>
+<p>对于这两种情况，$u$的返回都在$v$之前。  </p>
 
       
     </div>
@@ -729,12 +642,12 @@ a_{ij} =
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>图的表示</p>
+  <p><span>本文标题:</span>拓扑排序</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
-  <p><span>发布时间:</span>2019年10月08日 - 20:56:45</p>
-  <p><span>最后更新:</span>2019年10月09日 - 20:48:41</p>
-  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/图的表示/" title="图的表示">https://G-SS-Hacker.github.io/图的表示/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/图的表示/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年10月17日 - 23:17:33</p>
+  <p><span>最后更新:</span>2019年10月17日 - 23:21:49</p>
+  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/拓扑排序/" title="拓扑排序">https://G-SS-Hacker.github.io/拓扑排序/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/拓扑排序/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -773,15 +686,7 @@ a_{ij} =
         
         <div class="post-tags">
           
-            <a href="/G-SS-Hacker.github.io/tags/C/" rel="tag"><i class="fa fa-tag"></i> C</a>
-          
-            <a href="/G-SS-Hacker.github.io/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
-          
-            <a href="/G-SS-Hacker.github.io/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-          
-            <a href="/G-SS-Hacker.github.io/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-            <a href="/G-SS-Hacker.github.io/tags/图论/" rel="tag"><i class="fa fa-tag"></i> 图论</a>
+            <a href="/G-SS-Hacker.github.io/tags/图论-算法-排序/" rel="tag"><i class="fa fa-tag"></i> -图论 -算法 -排序</a>
           
         </div>
       
@@ -794,8 +699,8 @@ a_{ij} =
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/G-SS-Hacker.github.io/排序算法性能比较/" rel="next" title="排序算法性能比较">
-                <i class="fa fa-chevron-left"></i> 排序算法性能比较
+              <a href="/G-SS-Hacker.github.io/高等数学公式/" rel="next" title="高等数学公式">
+                <i class="fa fa-chevron-left"></i> 高等数学公式
               </a>
             
           </div>
@@ -803,10 +708,6 @@ a_{ij} =
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/G-SS-Hacker.github.io/导数基本公式/" rel="prev" title="导数基本公式">
-                导数基本公式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1039,7 +940,7 @@ a_{ij} =
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图的表示"><span class="nav-number">1.</span> <span class="nav-text">图的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绪论"><span class="nav-number">1.1.</span> <span class="nav-text">绪论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存图方法"><span class="nav-number">1.2.</span> <span class="nav-text">存图方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-邻接矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.邻接矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-邻接表"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.邻接表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-边集数组"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.边集数组</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#拓扑排序"><span class="nav-number">1.</span> <span class="nav-text">拓扑排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AOV网"><span class="nav-number">1.1.</span> <span class="nav-text">AOV网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绪论"><span class="nav-number">1.2.</span> <span class="nav-text">绪论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓扑排序算法"><span class="nav-number">1.3.</span> <span class="nav-text">拓扑排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基于入度的拓扑排序"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 基于入度的拓扑排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基于深度优先搜索的拓扑排序"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 基于深度优先搜索的拓扑排序</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
