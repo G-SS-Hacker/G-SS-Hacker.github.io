@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[高阶求导公式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E9%AB%98%E9%98%B6%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[高阶求导公式 Guderian出品 $ (1)(a^x)^{(n)}=a^x (\ln a),$ $ (e^{ax})^{(n)} = a^n e ^{ax} $ $(2)(\sin x)^{(n)}=\sin(x+\frac {n\pi}2)$ $(\cos x)^{(n)}=\cos(x+\frac{n\pi}2)$ $(3)(x^a)^{(n)}=a(a-1)\dots(a-n+1)x^{a-n},若n&gt;a，则导数等于零$ $(4)[\ln (x+a)]^{(n)}=(-1)^n \frac{(n-1)!}{(x+a)^n}，特别地，令a=0，(\ln x)^{(n)}=(-1)^n\frac{(n-1)!}{x^n}，难于记忆，手推即可$ $(6)Leibniz公式：[f(x)g(x)]^{(n)}=\sum_{k=0}^n C_n^kf^{(k)}(x)g^{(n-k)}(x)，c_n^k=\frac{n!}{k!(n-k)!)}，形式上类似牛顿二项展开$ $(7)(f(x)\pm g(x))^{(n)}=f^{(n)}(x)+g^{(n)}(x)$ $(8)(af(x))^{(n)}=af^{(n)}(x)$]]></content>
+    <content type="text"><![CDATA[高阶求导公式 Guderian出品 $ (1)(a^x)^{(n)}=a^x (\ln a)$ $ (2)(e^{ax})^{(n)} = a^n e ^{ax} $ $(3)(\sin x)^{(n)}=\sin(x+\frac {n\pi}2)$ $(4)(\cos x)^{(n)}=\cos(x+\frac{n\pi}2)$ $(5)(x^a)^{(n)}=a(a-1)\dots(a-n+1)x^{a-n},若n&gt;a，则导数等于零$ $(6)[\ln (x+a)]^{(n)}=(-1)^n \frac{(n-1)!}{(x+a)^n}，特别地，令a=0，(\ln x)^{(n)}=(-1)^n\frac{(n-1)!}{x^n}$ $(7)(\frac1{ax+b})$ $^{(n)}=$ $(-a)^{n} $ $\frac{n!}{(ax+b)^{n+1}}，$ $特别的，令a=1,(\frac1{x+b})=(-1)^n \frac{n!}{(x+b)^{n+1}}$ $(8)Leibniz公式：[f(x)g(x)]^{(n)}=\sum_{k=0}^n C_n^kf^{(k)}(x)g^{(n-k)}(x)，c_n^k=\frac{n!}{k!(n-k)!)}，形式上类似牛顿二项展开$ $(9)(f(x)\pm g(x))^{(n)}=f^{(n)}(x)+g^{(n)}(x)$ $(10)(af(x))^{(n)}=af^{(n)}(x)$]]></content>
       <categories>
         <category>总结</category>
       </categories>
