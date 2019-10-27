@@ -490,7 +490,7 @@
                 
               
 
-              <time title="创建时间：2019-10-27 14:37:35 / 修改时间：14:47:07" itemprop="dateCreated datePublished" datetime="2019-10-27T14:37:35+08:00">2019-10-27</time>
+              <time title="创建时间：2019-10-27 14:37:35 / 修改时间：14:50:59" itemprop="dateCreated datePublished" datetime="2019-10-27T14:37:35+08:00">2019-10-27</time>
             </span>
           
 
@@ -570,9 +570,7 @@
         
           
             <p><img src="https://i.loli.net/2019/10/27/y2VaJbGAj3O6uxW.png" alt></p>
-<h1 id="行列式章节总结"><a href="#行列式章节总结" class="headerlink" title="行列式章节总结"></a>行列式章节总结</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
-
-<p>行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题，为了让行列式计算与证明不那么难算，笔者下面尝试从题海中抽象出行列式计算和证明的常用算法和性质。笔者水平不高，各位将就看看吧。</p>
+<h1 id="行列式章节总结"><a href="#行列式章节总结" class="headerlink" title="行列式章节总结"></a>行列式章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题，为了让行列式计算与证明不那么难算，笔者下面尝试从题海中抽象出行列式计算和证明的常用算法和性质。笔者水平不高，各位将就看看吧。<p></p>
 <h2 id="行列式计算公式"><a href="#行列式计算公式" class="headerlink" title="行列式计算公式"></a>行列式计算公式</h2><p><strong>1.行列式定义</strong></p>
 <script type="math/tex; mode=display">
 \left|\begin{array}{cccc}
@@ -622,13 +620,13 @@ D_n=
 <p><strong>4.</strong> $|A’|=|A|,\quad A_{n\times n}$</p>
 <p><strong>5.</strong> $A^<em>A=AA^</em>=|A|E$</p>
 <p><strong>6.</strong>$A^{-1}=\frac{A^*}{|A|}$</p>
-<h2 id="分块矩阵的行列式"><a href="#分块矩阵的行列式" class="headerlink" title="分块矩阵的行列式"></a>分块矩阵的行列式</h2><p><strong>1.</strong>对角形</p>
+<h2 id="分块矩阵的行列式"><a href="#分块矩阵的行列式" class="headerlink" title="分块矩阵的行列式"></a>分块矩阵的行列式</h2><p><strong>1.对角形</strong></p>
 <p>对方阵$A_{11},A_{22},\dots A_{ss}$，只要满足主对角线（次对角线不成立）上的三角形，其构成的行列式结果为</p>
 <script type="math/tex; mode=display">
-|A_{11}||A_{22}|\dots |A_{ss}|</script><p><strong>2.</strong>$\left|\begin{array}{cccc} A &amp; B \ C &amp; D \end{array} \right|=|AD-CB|,\quad AC=CA$</p>
-<p>在非常严苛的条件下该等式成立。</p>
-<p><strong>3.</strong>$|\lambda E_m -AB|=\lambda^{m-n}|\lambda E_n-BA|,\quad A_{m \times n},\quad B_{n \times m},\quad m &gt; n$</p>
-<p>该公式的证明运用了分块方阵的<code>第三类初等变换</code>（第三类初等变换不改变分块方阵的行列式的值），这是一个重要的思想，常用与分块方阵的计算和证明中。</p>
+|A_{11}||A_{22}|\dots |A_{ss}|</script><p><strong>2.在非常严苛的条件下以下等式成立。</strong></p>
+<script type="math/tex; mode=display">
+\left|\begin{array}{cccc} A & B \\ C & D \end{array} \right|=|AD-CB|,\quad AC=CA</script><p><strong>3.</strong>$|\lambda E_m -AB|=\lambda^{m-n}|\lambda E_n-BA|,\quad A_{m \times n},\quad B_{n \times m},\quad m &gt; n$</p>
+<p>该公式的证明运用了分块方阵的<code>第三类初等变换</code>（第三类初等变换不改变分块方阵的行列式的值），这是一个重要的思想，常用于分块方阵的计算和证明中。</p>
 <p><strong>4.</strong>令$n=1$，$|\lambda E_m-\alpha \beta’|=\lambda^{m-1}|\lambda-\beta’\alpha|$，$\alpha$，$\beta$为$m\times 1$向量</p>
 <p><strong>5.</strong>令$\lambda=1$，$|E_m-AB|=|En-BA|$</p>
 <p><strong>6.</strong>令$m=n$，$|\lambda E_m-AB|=|\lambda E_n-BA|$</p>
