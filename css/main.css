@@ -1115,14 +1115,14 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
-  font-family: 'Comic Sans MS', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: $Arial;
 }
 .site-subtitle {
   margin-top: 10px;
-  font-size: 18px;
-  color: #555;
+  font-size: 16px;
+  color: #fff;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1838,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e36aec;
+  background: #21ff67;
 }
 .feed-link,
 .chat {
@@ -3122,4 +3122,20 @@ body {
 }
 .with-love {
   color: #555;
+}
+::selection {
+  background: #64ceaa;
+  color: #f7f7f7;
+}
+::-moz-selection {
+  background: #64ceaa;
+  color: #f7f7f7;
+}
+.site-title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 36px;
+  font-size: 26px;
+  font-weight: normal;
+  font-family: sans-serif, 'Comic Sans MS', "PingFang SC", "Microsoft YaHei";
 }

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[行列式章节总结]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E8%A1%8C%E5%88%97%E5%BC%8F%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[行列式章节总结 Guderian出品 行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题，为了让行列式计算与证明不那么难算，笔者下面尝试从题海中抽象出行列式计算和证明的常用算法和性质。笔者水平不高，各位将就看看吧。 行列式计算公式1.行列式定义 \left|\begin{array}{cccc} a_{11} & a_{12} & \dots & a_{1n}\\ a_{21} & a_{22} & \dots & a_{2n}\\ \vdots & \vdots & & \vdots\\ a_{n1} & a_{n2} & \dots & a_{nn}\\ \end{array}\right| = \sum(-1)^{t(p_1p_2\dots p_n)}a_{p_11}a_{p_22}\dots a_{p_nn}特别地，对于二阶和三阶行列式，可直接用对角线法则求出结果。 2.行列式展开定理 引理 如果$n$阶行列式$D$中第$i$行（列）所有元素除$a_{ij}$外都是零，那么，$D$等于$a_{ij}$与它的代数余子式$A_{ij}$的乘积，即$D=a_{ij}A_{ij}$。 展开定理 行列式等于它的任一行（列）的各元素与其代数余子式的乘积之和，即 D=a_{i1}A_{i1}+a_{i2}A_{i2}+\dots a_{in}A_{in},\quad i=1,2,\dots,n;\\ D=a_{1j}A_{1j}+a_{2j}A_{2j}+\dots a_{nj}A_{nj},\quad j=1,2,\dots,n.推论 行列式$D$的任一行（列）元素与另一行（列）对应元素的代数余子式乘积之和等于$0$，即 a_{i1}A_{j1}+a_{i2}A_{j2}+\dots a_{in}A_{jn}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n;\\ a_{1i}A_{1j}+a_{2i}A_{2j}+\dots a_{ni}A_{nj}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n.行列式结果等于$0$的定理常用于填空题和判断题。 3.范德蒙定理 范德蒙定理的证明用到了第二数学归纳法，在行列式和矩阵中，任何看起来可以用数学归纳法证明的题目（甚至包括一部分计算题），都可以用数学归纳法来做。 D_n= \left|\begin{array}{cccc} 1 & 1 & \dots & 1\\ x_1 & x_2 & \dots & x_n\\ x_1^2& x_2^2& \dots & x_n^2\\ \vdots & \vdots & & \vdots\\ x_1^{n-1} & x_2^{n-1} & \dots & x_n^{n-1}\\ \end{array}\right| = \prod_{1\leq j]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[高阶求导公式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E9%AB%98%E9%98%B6%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[高阶求导公式 Guderian出品 $ (1)(a^x)^{(n)}=a^x (\ln a)$ $ (2)(e^{ax})^{(n)} = a^n e ^{ax} $ $(3)(\sin x)^{(n)}=\sin(x+\frac {n\pi}2)$ $(4)(\cos x)^{(n)}=\cos(x+\frac{n\pi}2)$ $(5)(x^a)^{(n)}=a(a-1)\dots(a-n+1)x^{a-n},若n&gt;a，则导数等于零$ $(6)[\ln (x+a)]^{(n)}=(-1)^n \frac{(n-1)!}{(x+a)^n}，特别地，令a=0，(\ln x)^{(n)}=(-1)^n\frac{(n-1)!}{x^n}$ $(7)(\frac1{ax+b})^{(n)}=(-a)^{n} \frac{n!}{(ax+b)^{n+1}}，特别地，令a=1,(\frac1{x+b})=(-1)^n \frac{n!}{(x+b)^{n+1}}$ $(8)Leibniz公式：[f(x)g(x)]^{(n)}=\sum_{k=0}^n C_n^kf^{(k)}(x)g^{(n-k)}(x)，C_n^k=\frac{n!}{k!(n-k)!)}$ $(9)(f(x)\pm g(x))^{(n)}=f^{(n)}(x)+g^{(n)}(x)$ $(10)(af(x))^{(n)}=af^{(n)}(x)$]]></content>
@@ -19,11 +30,11 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-        <tag>图论</tag>
-        <tag>排序</tag>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>排序</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -68,10 +79,10 @@
       </categories>
       <tags>
         <tag>C</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-        <tag>图论</tag>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -187,7 +198,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C&C++ memset]]></title>
+    <title><![CDATA[C & C++ memset]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E4%B8%ADmemset%E7%94%A8%E6%B3%95%2F</url>
     <content type="text"><![CDATA[想更方便地初始化吗？Just use memset()!!! C/C++ memset() Guderian出品 头文件 C： &lt;string.h&gt; C++： &lt;cstring&gt; 声明void *memset(void *str, int c, size_t n) 此处size_t变量类型等价于long unsigned int即无符号长整型，在32位机器上为32位，在64位机器为中64位。 注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据 描述复制字符 c（一个无符号字符）到参数 str 所指向的字符串的前 n 个字符。 参数 str ——指向要填充的代码块 c——要被设置的值该值以 int 形式传递，但是函数在填充内存块时是使用该值的无符号字符形式。 n——要被设置为该值的字节数。 返回值返回一个指向存储区 str 的指针。 实例对字符串操作123456789101112131415#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main ()&#123; char str[50]; strcpy(str,"This is string.h library function"); puts(str); memset(str,'$',7); puts(str); return(0);&#125; 编译并运行以上程序，得到结果如下： 12This is string.h library function$$$$$$$ string.h library function 初始化数组注意：c接收参数的范围0-255 ，该函数只能取c的后八位赋给你所指定的范围的每个字节 初始化为0memset(arr, 0, sizeof(arr)); 初始化为-1memset(arr, -1, sizeof(arr));或memset(arr, 0x7fffffff,sizeof(arr)); 初始化为正无穷 理论上的正无穷：memset(arr, 0x7f, sizeof(arr)); 实际使用的正无穷：memset(arr, 0x3f, sizeof(arr)); 注：D（decimal）——十进制，B（binary）——二进制，O（octor）——八进制，H（hex）——十六进制 初始化为负无穷 理论上的负无穷：memset(arr, 0x80, sizeof(arr)); 实际使用的负无穷：memset(arr, 0xbf, sizeof(arr)); 注：此处要设置的值也可用二进制表示，如0xbf等价于0b10111111]]></content>
       <categories>
@@ -247,12 +258,12 @@
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
-        <tag>C</tag>
         <tag>Python</tag>
-        <tag>Pascal</tag>
-        <tag>Java</tag>
+        <tag>C</tag>
         <tag>C-plus-plus</tag>
         <tag>C-sharp</tag>
+        <tag>Pascal</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
