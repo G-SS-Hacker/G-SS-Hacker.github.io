@@ -339,7 +339,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">23</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">24</span></a>
 
   </li>
         
@@ -429,6 +429,281 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/矩阵章节总结/" class="post-title-link" itemprop="url">矩阵章节总结</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-28 21:43:02 / 修改时间：21:52:22" itemprop="dateCreated datePublished" datetime="2019-10-28T21:43:02+08:00">2019-10-28</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.8k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://i.loli.net/2019/10/28/kKgscBOaD8EHv2r.jpg" alt></p>
+<h1 id="矩阵章节总结"><a href="#矩阵章节总结" class="headerlink" title="矩阵章节总结"></a>矩阵章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给<code>Matlab</code>就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭<p></p>
+<h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><ol>
+<li><p>$\mathbf{AB}=\mathbf{BA}$时，矩阵运算满足<code>交换律</code>，故以下运算皆成立</p>
+<p>$(\mathrm{i})(\mathbf{A}\pm \mathbf{B})^2=\mathbf{A}^2 \pm 2\mathbf{AB} +\mathbf{B}^2$</p>
+<p>$(\mathrm{ii})(\mathbf{A}+\mathbf{B})(\mathbf{A}-\mathbf{B})=\mathbf{A}^2-\mathbf{B}^2$</p>
+<p>$(\mathrm{iii})(\mathbf{AB})^2=(\mathbf{BA})^2$</p>
+</li>
+<li><p>$\mathbf{A}^*，\mathbf{A}’，\mathbf{A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼</p>
+<p>$(\mathrm{i})(\mathbf{AB})’=\mathbf{B}’\mathbf{A}’$</p>
+<p>$(\mathrm{ii})(\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}$</p>
+<p>$(\mathrm{iii})(\mathbf{A}^*)^{-1}=(\mathbf{A}^{-1})^*$</p>
+</li>
+<li><p>带系数的情况</p>
+<p>$(\mathrm{i})|k\mathbf{A}|=k^n|\mathbf{A}|$</p>
+<p>$(\mathrm{ii})(k\mathbf{A})^{-1}=\frac1{k}\mathbf{A}^{-1}$</p>
+<p>$(\mathrm{iii})(k\mathbf{A})’=k\mathbf{A}’$</p>
+<p>$(\mathrm{iv})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$</p>
+</li>
+</ol>
+<h2 id="共轭矩阵"><a href="#共轭矩阵" class="headerlink" title="共轭矩阵"></a>共轭矩阵</h2><p>记住以下四个公式，以备突然考到</p>
+<p>$(\mathrm{i})\overline{\mathbf{A}+\mathbf{B}}=\overline{\mathbf{A}}+\overline{\mathbf{B}}$</p>
+<p>$(\mathrm{ii})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$</p>
+<p>$(\mathrm{iii})\overline{\mathbf{AB}}=\overline{\mathbf{A}}\overline{\mathbf{B}}$</p>
+<p>$(\mathrm{iv})|\overline{\mathbf{A}}|=\overline{|\mathbf{A}|}$</p>
+<p>简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭</p>
+<h2 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h2><ol>
+<li><p>看到$\mathbf{A}^*$，以下公式至少用其一</p>
+<p>$(\mathrm{i})\mathbf{A}^*\mathbf{A}=\mathbf{A}\mathbf{A}^*=|\mathbf{A}|\mathbf{E}$</p>
+<p>$(\mathrm{ii})\mathbf{A}^{-1}=\frac{\mathbf{A}^*}{|\mathbf{A}|}$</p>
+<p>$(\mathrm{iii})|\mathbf{A}|^*=|\mathbf{A}|^{n-2}\mathbf{A}$</p>
+<p>$(\mathrm{iv})(\mathbf{A}^*)^*=|\mathbf{A}|^{n-2}\mathbf{A}$</p>
+</li>
+<li><p>伴随矩阵的特殊性质：极端的伴随矩阵</p>
+<script type="math/tex; mode=display">
+\mathbf{R}(\mathbf{A}^\*)\begin{cases} 
+    n,\quad \mathbf{R}(\mathbf{A})=n\\
+    1,\quad \mathbf{R}(\mathbf{A})=n-1\\
+    0,\quad \mathbf{R}(\mathbf{A})<n-1
+\end{cases}</script></li>
+</ol>
+<h2 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h2><ol>
+<li><p>判断矩阵可逆的方法：</p>
+<p>$(\mathrm{i})\mathbf{AB}=\mathbf{BA}$</p>
+<p>$(\mathrm{ii})\mathbf{R}(\mathbf{A})=n$</p>
+<p>$(\mathrm{iii})|\mathbf{A}|=0$</p>
+<p>$(\mathrm{iv})\mathbf{A}=\mathbf{P}_1\mathbf{P}_2 \dots \mathbf{P}_k$</p>
+</li>
+<li><p>初变不变秩，不变奇异性</p>
+</li>
+<li><p>行阶梯、行最简、标准形</p>
+</li>
+<li><p>求逆方法：公式法、辅助矩阵法</p>
+</li>
+</ol>
+<h2 id="分块矩阵运算"><a href="#分块矩阵运算" class="headerlink" title="分块矩阵运算"></a>分块矩阵运算</h2><ol>
+<li><p>对角方阵求逆（仅对对角方阵有效）：</p>
+<script type="math/tex; mode=display">
+\left(\begin {array}{ccc}
+    \mathbf{A}_{11}& & & &\\
+     & \mathbf{A}_{22}& & &\\
+     & & \ddots & &\\
+     & & & \mathbf{A}_{ss}&
+\end {array}\right)^m
+=
+\left(\begin {array}{ccc}
+    \mathbf{A}_{11}^m& & & &\\
+     & \mathbf{A}_{22}^m& & &\\
+     & & \ddots & &\\
+     & & & \mathbf{A}_{ss}^m&
+\end {array}\right)</script></li>
+<li><p>特殊矩阵求逆矩阵，是否还应保持原来的顺序：</p>
+<p>$(\mathrm{i})$主对角：$\searrow$仍为$\searrow$</p>
+<p>$(\mathrm{ii})$次对角：$\swarrow$变为$\nearrow$</p>
+</li>
+<li><p>思想：运用<code>第三类初等变换</code></p>
+<script type="math/tex; mode=display">
+\left|\begin{array}{cccc} \mathbf{A} & \mathbf{C} \\ \mathbf{D} & \mathbf{B} \end{array} \right|=|\mathbf{A}||\mathbf{B}-\mathbf{DA}^{-1}\mathbf{C}|</script></li>
+<li><p>分块矩阵的秩（高频使用，按重要性降序排列）：</p>
+<p>$(\mathrm{i})R(A+B)\leq R(A)+R(B),\quad R(A-B)\leq R(A)+R(B)$</p>
+<p>$(\mathrm{ii})R(AB)\leq min\{R(A),R(B)\}$</p>
+<p>$(\mathrm{iii})R(A|B)\leq R(A)+R(B),\quad R(\frac{A}{B})\leq R(A)+R(B)$</p>
+<p>$(\mathrm{iv})R \left(\begin{array}{ccc} A &amp; 0\\0 &amp; B \end{array} \right)=R(A)+R(B)$</p>
+<p>$(\mathrm{v})R \left(\begin{array}{ccc} A &amp; C\\0 &amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等</p>
+<p>$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>图：刺客伍六七</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1285,219 +1560,6 @@ D_n=
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/常用等价无穷小/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/常用等价无穷小/" class="post-title-link" itemprop="url">常用等价无穷小</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-13 21:43:36" itemprop="dateCreated datePublished" datetime="2019-10-13T21:43:36+08:00">2019-10-13</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-16 00:48:29" itemprop="dateModified" datetime="2019-10-16T00:48:29+08:00">2019-10-16</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">569</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://i.loli.net/2019/10/13/z8NK7uv6wXtTFS5.jpg" alt></p>
-<h1 id="常用等价无穷小"><a href="#常用等价无穷小" class="headerlink" title="常用等价无穷小"></a>常用等价无穷小</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="基础版"><a href="#基础版" class="headerlink" title="基础版"></a>基础版</h2><p>当$x\to0$时，</p>
-<p>$(1)\sin x \sim x$</p>
-<p>$(2)\tan x \sim x$</p>
-<p>$(3)\arcsin x \sim x$</p>
-<p>$(4)\arctan x \sim x$</p>
-<p>$(5)1-\cos x \sim \frac12 x^2$</p>
-<p>$(6)a^x-1 \sim x \ln a$</p>
-<p>$(7)e^x-1 \sim x$</p>
-<p>$(8)(1+x)^a-1 \sim ax$<sup><a href="#fn_ *" id="reffn_ *"> *</a></sup></p>
-<p>$(9)\ln (1+x) \sim x$</p>
-<p>$(10)\sqrt{1+x}-1 \sim \frac12x$</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/常用等价无穷小/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1546,7 +1608,7 @@ D_n=
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1729,7 +1791,7 @@ D_n=
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">41k</span>
   
 
   
@@ -1738,7 +1800,7 @@ D_n=
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">35 分钟</span>
+    <span title="站点阅读时长">37 分钟</span>
   
 </div>
 

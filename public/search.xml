@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[矩阵章节总结]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E7%9F%A9%E9%98%B5%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[矩阵章节总结 Guderian出品 矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给Matlab就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭ 运算律 $\mathbf{AB}=\mathbf{BA}$时，矩阵运算满足交换律，故以下运算皆成立 $(\mathrm{i})(\mathbf{A}\pm \mathbf{B})^2=\mathbf{A}^2 \pm 2\mathbf{AB} +\mathbf{B}^2$ $(\mathrm{ii})(\mathbf{A}+\mathbf{B})(\mathbf{A}-\mathbf{B})=\mathbf{A}^2-\mathbf{B}^2$ $(\mathrm{iii})(\mathbf{AB})^2=(\mathbf{BA})^2$ $\mathbf{A}^*，\mathbf{A}’，\mathbf{A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼 $(\mathrm{i})(\mathbf{AB})’=\mathbf{B}’\mathbf{A}’$ $(\mathrm{ii})(\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}$ $(\mathrm{iii})(\mathbf{A}^*)^{-1}=(\mathbf{A}^{-1})^*$ 带系数的情况 $(\mathrm{i})|k\mathbf{A}|=k^n|\mathbf{A}|$ $(\mathrm{ii})(k\mathbf{A})^{-1}=\frac1{k}\mathbf{A}^{-1}$ $(\mathrm{iii})(k\mathbf{A})’=k\mathbf{A}’$ $(\mathrm{iv})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$ 共轭矩阵记住以下四个公式，以备突然考到 $(\mathrm{i})\overline{\mathbf{A}+\mathbf{B}}=\overline{\mathbf{A}}+\overline{\mathbf{B}}$ $(\mathrm{ii})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$ $(\mathrm{iii})\overline{\mathbf{AB}}=\overline{\mathbf{A}}\overline{\mathbf{B}}$ $(\mathrm{iv})|\overline{\mathbf{A}}|=\overline{|\mathbf{A}|}$ 简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭 伴随矩阵 看到$\mathbf{A}^*$，以下公式至少用其一 $(\mathrm{i})\mathbf{A}^*\mathbf{A}=\mathbf{A}\mathbf{A}^*=|\mathbf{A}|\mathbf{E}$ $(\mathrm{ii})\mathbf{A}^{-1}=\frac{\mathbf{A}^*}{|\mathbf{A}|}$ $(\mathrm{iii})|\mathbf{A}|^*=|\mathbf{A}|^{n-2}\mathbf{A}$ $(\mathrm{iv})(\mathbf{A}^*)^*=|\mathbf{A}|^{n-2}\mathbf{A}$ 伴随矩阵的特殊性质：极端的伴随矩阵 \mathbf{R}(\mathbf{A}^\*)\begin{cases} n,\quad \mathbf{R}(\mathbf{A})=n\\ 1,\quad \mathbf{R}(\mathbf{A})=n-1\\ 0,\quad \mathbf{R}(\mathbf{A})]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[行列式章节总结]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E8%A1%8C%E5%88%97%E5%BC%8F%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[行列式章节总结 Guderian出品 行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题。为了让行列式计算与证明不那么难算，笔者从题海中抽象出行列式计算和证明的常用算法和性质。作者水平不高，将就看看吧 ╮(╯_╰)╭ 行列式计算公式1.行列式定义 \left|\begin{array}{cccc} a_{11} & a_{12} & \dots & a_{1n}\\ a_{21} & a_{22} & \dots & a_{2n}\\ \vdots & \vdots & & \vdots\\ a_{n1} & a_{n2} & \dots & a_{nn}\\ \end{array}\right| = \sum(-1)^{t(p_1p_2\dots p_n)}a_{p_11}a_{p_22}\dots a_{p_nn}特别地，对于二阶和三阶行列式，可直接用对角线法则求出结果。 2.行列式展开定理 引理 如果$n$阶行列式$D$中第$i$行（列）所有元素除$a_{ij}$外都是零，那么，$D$等于$a_{ij}$与它的代数余子式$A_{ij}$的乘积，即$D=a_{ij}A_{ij}$。 展开定理 行列式等于它的任一行（列）的各元素与其代数余子式的乘积之和，即 D=a_{i1}A_{i1}+a_{i2}A_{i2}+\dots a_{in}A_{in},\quad i=1,2,\dots,n;\\ D=a_{1j}A_{1j}+a_{2j}A_{2j}+\dots a_{nj}A_{nj},\quad j=1,2,\dots,n.推论 行列式$D$的任一行（列）元素与另一行（列）对应元素的代数余子式乘积之和等于$0$，即 a_{i1}A_{j1}+a_{i2}A_{j2}+\dots a_{in}A_{jn}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n;\\ a_{1i}A_{1j}+a_{2i}A_{2j}+\dots a_{ni}A_{nj}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n.行列式结果等于$0$的定理常用于填空题和判断题。 3.范德蒙定理 范德蒙定理的证明用到了第二数学归纳法，在行列式和矩阵中，任何看起来可以用数学归纳法证明的题目（甚至包括一部分计算题），都可以用数学归纳法来做。 D_n= \left|\begin{array}{cccc} 1 & 1 & \dots & 1\\ x_1 & x_2 & \dots & x_n\\ x_1^2& x_2^2& \dots & x_n^2\\ \vdots & \vdots & & \vdots\\ x_1^{n-1} & x_2^{n-1} & \dots & x_n^{n-1}\\ \end{array}\right| = \prod_{1\leq j]]></content>
@@ -31,9 +42,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -80,8 +91,8 @@
       <tags>
         <tag>C</tag>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -258,9 +269,9 @@
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>Python</tag>
         <tag>C-sharp</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>

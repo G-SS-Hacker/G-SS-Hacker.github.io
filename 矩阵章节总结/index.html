@@ -141,21 +141,20 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="指针变量 Guderian出品  指针变量的定义、赋值对指针变量的类型说明，一般形式为： 类型说明符 *变量名; 其中，表示这是一个指针变量，变量名即为定义的指针变量名，类型说明符表示*该指针变量所指向的变量的数据类型。 1、普通变量定义int a = 3; 定义了变量a，是int型的，值为3。内存中有一块内存空间是放a的值，对a的存取操作就是直接到这个内存空间存取。内存空间的位置叫地址，存放3">
-<meta name="keywords" content="C-plus-plus">
+  <meta name="description" content="矩阵章节总结 Guderian出品 矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给Matlab就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就">
+<meta name="keywords" content="线性代数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++指针变量">
-<meta property="og:url" content="https://G-SS-Hacker.github.io/c-指针及其应用/index.html">
+<meta property="og:title" content="矩阵章节总结">
+<meta property="og:url" content="https://G-SS-Hacker.github.io/矩阵章节总结/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="指针变量 Guderian出品  指针变量的定义、赋值对指针变量的类型说明，一般形式为： 类型说明符 *变量名; 其中，表示这是一个指针变量，变量名即为定义的指针变量名，类型说明符表示*该指针变量所指向的变量的数据类型。 1、普通变量定义int a = 3; 定义了变量a，是int型的，值为3。内存中有一块内存空间是放a的值，对a的存取操作就是直接到这个内存空间存取。内存空间的位置叫地址，存放3">
+<meta property="og:description" content="矩阵章节总结 Guderian出品 矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给Matlab就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=588336344,1667439626&fm=26&gp=0.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png">
-<meta property="og:updated_time" content="2019-10-21T10:54:39.296Z">
+<meta property="og:image" content="https://i.loli.net/2019/10/28/kKgscBOaD8EHv2r.jpg">
+<meta property="og:updated_time" content="2019-10-28T13:52:22.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++指针变量">
-<meta name="twitter:description" content="指针变量 Guderian出品  指针变量的定义、赋值对指针变量的类型说明，一般形式为： 类型说明符 *变量名; 其中，表示这是一个指针变量，变量名即为定义的指针变量名，类型说明符表示*该指针变量所指向的变量的数据类型。 1、普通变量定义int a = 3; 定义了变量a，是int型的，值为3。内存中有一块内存空间是放a的值，对a的存取操作就是直接到这个内存空间存取。内存空间的位置叫地址，存放3">
-<meta name="twitter:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=588336344,1667439626&fm=26&gp=0.jpg">
+<meta name="twitter:title" content="矩阵章节总结">
+<meta name="twitter:description" content="矩阵章节总结 Guderian出品 矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给Matlab就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/28/kKgscBOaD8EHv2r.jpg">
 
 
 
@@ -163,7 +162,7 @@
 
   
   
-  <link rel="canonical" href="https://G-SS-Hacker.github.io/c-指针及其应用/">
+  <link rel="canonical" href="https://G-SS-Hacker.github.io/矩阵章节总结/">
 
 
 
@@ -173,7 +172,7 @@
   };
 </script>
 
-  <title>C++指针变量 | G-SS-Hacker</title>
+  <title>矩阵章节总结 | G-SS-Hacker</title>
   
 
 
@@ -452,7 +451,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/c-指针及其应用/">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="G-SS-Hacker">
@@ -469,7 +468,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++指针变量
+          <h1 class="post-title" itemprop="name headline">矩阵章节总结
 
               
             
@@ -495,23 +494,13 @@
                 
               
 
-              <time title="创建时间：2019-08-05 21:15:09" itemprop="dateCreated datePublished" datetime="2019-08-05T21:15:09+08:00">2019-08-05</time>
+              <time title="创建时间：2019-10-28 21:43:02 / 修改时间：21:52:22" itemprop="dateCreated datePublished" datetime="2019-10-28T21:43:02+08:00">2019-10-28</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-21 18:54:39" itemprop="dateModified" datetime="2019-10-21T18:54:39+08:00">2019-10-21</time>
-              </span>
             
           
 
@@ -551,7 +540,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.4k</span>
+              <span title="本文字数">1.8k</span>
             </span>
           
 
@@ -563,7 +552,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">3 分钟</span>
+              <span title="阅读时长">2 分钟</span>
             </span>
           
 
@@ -582,84 +571,97 @@
       
 
       
-        <p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=588336344,1667439626&amp;fm=26&amp;gp=0.jpg" alt></p>
-<h1 id="指针变量"><a href="#指针变量" class="headerlink" title="指针变量"></a>指针变量</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="指针变量的定义、赋值"><a href="#指针变量的定义、赋值" class="headerlink" title="指针变量的定义、赋值"></a>指针变量的定义、赋值</h2><p>对指针变量的类型说明，一般形式为：</p>
-<p><code>类型说明符 *变量名;</code></p>
-<p>其中，<em>表示这是一个<strong>指针变量</strong>，变量名即为定义的<strong>指针变量名</strong>，类型说明符表示<em>*该指针变量所指向的变量的数据类型</em></em>。</p>
-<h3 id="1、普通变量定义"><a href="#1、普通变量定义" class="headerlink" title="1、普通变量定义"></a><strong>1、普通变量定义</strong></h3><p><code>int a = 3;</code></p>
-<p>定义了变量<code>a</code>，是<code>int</code>型的，值为3。内存中有一块内存空间是放<code>a</code>的值，对<code>a</code>的存取操作就是直接到这个内存空间存取。内存空间的位置叫<strong>地址</strong>，存放3的地址可以用<strong>取地址操作符</strong><code>&amp;</code>对<code>a</code>运算得到：<code>&amp;a</code>。</p>
-<h3 id="2、指针变量定义"><a href="#2、指针变量定义" class="headerlink" title="2、指针变量定义"></a><strong>2、指针变量定义</strong></h3><p><code>int *p = NULL;</code></p>
-<p>定义了一个指针变量<code>p</code>，<code>p</code>指向一个内存空间，里面存放的是一个内存地址。现在赋值为<code>NULL</code>（其实就是0，表示<strong>特殊的空地址</strong>）。</p>
-<h3 id="3、给指针变量p赋值"><a href="#3、给指针变量p赋值" class="headerlink" title="3、给指针变量p赋值"></a>3、给指针变量p赋值</h3><p><code>p = &amp;a;</code></p>
-<p><img src="https://i.loli.net/2019/08/04/7LRzME9rpsk3bdo.png" alt></p>
-<a id="more"></a>
-<p>即把<code>a</code>变量的内存空间地址（比如：XXX）给了<code>p</code>。显然，直接对<code>p</code>存取，操作的是地址。通过这个地址<strong>间接</strong>地操作，才是整数3。P的间接操作要使用指针操作符<code>“*”</code>，即<code>*p</code>的值才是3。设有指向整型变量的指针变量<code>p</code>，如要把整型变量<code>a</code>的地址赋予<code>p</code>可以有以下两种方式：</p>
-<p>①指针变量初始化的方法</p>
-<p><code>int a; int *p = &amp;a;</code></p>
-<p>②赋值语句的方法</p>
-<p><code>int a; int *p; p = &amp;a;</code></p>
-<p>不允许把一个数赋予指针变量，故如下的赋值是错误的：<code>int *p；p = 1000；</code>。被赋值的指针变量前不能再加<code>“*”</code>说明符，故如下的赋值也是错误的：<code>*p = &amp;a；</code>。</p>
-<p><div class="text" style=" text-align:center;">指针的几个相关操作说明表</div><br>| 说明                               | 样例                             |<br>| ————————————————— | ————————————————|<br>| 指针定义：<code>类型说明符 *指针变量名</code> | <code>int *p;</code>                        |<br>| 取地址运算符：<code>&amp;</code>                  | <code>p = &amp;a;</code>                        |<br>| 间接运算符：<code>*</code>                    | <code>*p = 20;</code>                       |<br>| 指针变量直接存取的是内存地址       | <code>cout&lt;&lt;p;</code>结果可能是：<code>0x24ae9d</code> |<br>| 间接存取的才是存储类型的值         | <code>cout&lt;&lt;*p;</code>结果是：<code>20</code>          |</p>
-<p>指针变量同普通变量一样，使用之前不仅要定义说明，而且必须被赋值具体的值，未经赋值的指针变量不能使用。如定义了<code>int a; int *p = &amp;a;</code>，则<code>*p</code>表示<code>p</code>指向的整型变量，而<code>p</code>中存放的是变量<code>a</code>占用单元的起始地址，所以<code>*p</code>实际上访问了变量<code>a</code>，也就是说<code>*p</code>$ \Longleftrightarrow $<code>a</code>。</p>
-<p><strong>【例1】输入两个不同的数，通过指针对两个数进行相加和相乘，并输出。</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, s, t, *pa, *pb;</span><br><span class="line">	pa = &amp;a; pb = &amp;b;</span><br><span class="line">	a = <span class="number">10</span>; b = <span class="number">20</span>;</span><br><span class="line">	s = *pa + *pb;</span><br><span class="line">	t = *pa * *pb;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"a = %d, b = %d\n"</span>, *pa, *pb);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"s = %d, t = %d\n"</span>, s, t);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输出：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span>, b = <span class="number">20</span></span><br><span class="line">s = <span class="number">30</span>, t = <span class="number">200</span></span><br></pre></td></tr></table></figure>
-<h2 id="指针的引用与运算"><a href="#指针的引用与运算" class="headerlink" title="指针的引用与运算"></a>指针的引用与运算</h2><p>一般的，指针(<code>int *p</code>)与普通变量(<code>int a</code>)的对应关系为：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>指针变量</th>
-<th>普通变量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>p</code></td>
-<td><code>&amp;a</code></td>
-</tr>
-<tr>
-<td><code>*p</code></td>
-<td><code>a</code></td>
-</tr>
-<tr>
-<td><code>*p = 3</code></td>
-<td><code>a = 3</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>以下为指针的一些运算：</p>
-<h3 id="1、指针变量的初始化"><a href="#1、指针变量的初始化" class="headerlink" title="1、指针变量的初始化"></a><strong>1、指针变量的初始化</strong></h3><p><div class="text" style=" text-align:center;">指针的几个初始化操作说明表</div><br>| 方法                  | 说明                              |<br>| ——————————- | ————————————————- |<br>| <code>int *p = NULL;</code>      | <code>NULL</code>是特殊的地址0，叫零指针     |<br>| <code>int a; int *p = &amp;a;</code> | <code>p</code>初始化为<code>a</code>的地址              |<br>| <code>int *p = new(int);</code>  | 申请一个空间给<code>p</code>，<code>*p</code>内容不确定 |</p>
-<p>要强调的是，对于定义的局部指针变量，其内容（地址）是随机的，直接对它操作可能会破坏程序或系统内存的值，引发不可预测的错误。所有编程中指针变量要保证先初始化或赋值，给予正确的地址再使用，避免产生*<strong>野指针</strong>。</p>
-<h3 id="2、指针变量的-、-运算"><a href="#2、指针变量的-、-运算" class="headerlink" title="2、指针变量的+、-运算"></a><strong>2、指针变量的+、-运算</strong></h3><p>指针变量的内容是内存地址，它有两个常用的运算：加、减，这两个运算一般都是配合数组操作的。</p>
-<p><strong>【例2】输入N个整数，使用指针变量访问输出。</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">101</span>], n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	<span class="keyword">int</span> p = &amp;a[<span class="number">1</span>]; <span class="comment">//定义指针变量int p，初始化为数组开始元素的地址，即a[1];</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, *p);</span><br><span class="line">		p++; 	 <span class="comment">//p指向下一个数，详见说明</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输入：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">6</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p><strong>输出：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">6</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p><strong>【说明】</strong></p>
-<p><code>p++</code>的意思是“广义的加1”，不是<code>p</code>的值（地址）加1，而是根据类型<code>int</code>增加<code>sizeof（int）</code>，即刚好“<strong>跳过</strong>”一个整数的空间，达到下一个整数。</p>
-<p>类似的：</p>
-<p>①<code>p--</code>就是向前“跳过”一个整数的空间，达到前一个整数。</p>
-<p>②<code>(p + 3)</code>就是指向后面第3个整数的地址。</p>
-<h3 id="3、无类型指针"><a href="#3、无类型指针" class="headerlink" title="3、无类型指针"></a><strong>3、无类型指针</strong></h3><p>有时候，一个指针根据不同的情况，指向的内容是不同类型的值，我们可以<strong>先不明确</strong>定义它的类型，只是定义一个<strong>无类型</strong>的指针，以后根据需要再用<strong>强制类型转换</strong>的方法明确它的类型。</p>
-<p><strong>【例3】无类型指针运用举例。</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">3.5</span>;</span><br><span class="line"><span class="keyword">void</span> *p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	p = &amp;a; <span class="comment">//p的地址赋值</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*(<span class="keyword">int</span>*)p&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//必须明确p指向的空间的数据类型，详见说明</span></span><br><span class="line">	p = &amp;b;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*(<span class="keyword">double</span>*)p&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输出：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">3.5</span><br></pre></td></tr></table></figure>
-<p><strong>【说明】</strong></p>
-<p>必须明确<code>p</code>指向的空间的数据类型，<strong>类型不一样的不仅空间大小不相同，储存的格式也不同</strong>。如果把<code>cout&lt;&lt;*(double*)p&lt;&lt;endl;</code>改成<code>cout&lt;&lt;*(long long*)p&lt;&lt;endl;</code>输出的结果将是：<code>4615063718147915776</code>。</p>
-<h3 id="4、多重指针"><a href="#4、多重指针" class="headerlink" title="4、多重指针"></a><strong>4、多重指针</strong></h3><p>既然指针是指向其他类型的，指针本身也是一种类型。因此，C++允许递归地指针指向指针的指针——多重指针。</p>
-<p><strong>【例4】双重指针运用举例。</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line"><span class="keyword">int</span> **pp; <span class="comment">//定义双重指针</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	p = &amp;a; <span class="comment">//将p指向a</span></span><br><span class="line">	pp = &amp;p; <span class="comment">//将pp指向p</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d = %d = %d\n"</span>, a, *p, **pp); <span class="comment">//**pp通过2次间接访问了a的变量的值10</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输出：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> = <span class="number">10</span> = <span class="number">10</span></span><br></pre></td></tr></table></figure>
-<p><strong>【说明】</strong></p>
-<p>多重指针可以多次“间接”访问数据；竞赛上主要的应用是*<strong>动态的多维数组</strong>，功能十分强大！！！</p>
+        <p><img src="https://i.loli.net/2019/10/28/kKgscBOaD8EHv2r.jpg" alt></p>
+<h1 id="矩阵章节总结"><a href="#矩阵章节总结" class="headerlink" title="矩阵章节总结"></a>矩阵章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给<code>Matlab</code>就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭<p></p>
+<h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><ol>
+<li><p>$\mathbf{AB}=\mathbf{BA}$时，矩阵运算满足<code>交换律</code>，故以下运算皆成立</p>
+<p>$(\mathrm{i})(\mathbf{A}\pm \mathbf{B})^2=\mathbf{A}^2 \pm 2\mathbf{AB} +\mathbf{B}^2$</p>
+<p>$(\mathrm{ii})(\mathbf{A}+\mathbf{B})(\mathbf{A}-\mathbf{B})=\mathbf{A}^2-\mathbf{B}^2$</p>
+<p>$(\mathrm{iii})(\mathbf{AB})^2=(\mathbf{BA})^2$</p>
+</li>
+<li><p>$\mathbf{A}^*，\mathbf{A}’，\mathbf{A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼</p>
+<p>$(\mathrm{i})(\mathbf{AB})’=\mathbf{B}’\mathbf{A}’$</p>
+<p>$(\mathrm{ii})(\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}$</p>
+<p>$(\mathrm{iii})(\mathbf{A}^*)^{-1}=(\mathbf{A}^{-1})^*$</p>
+</li>
+<li><p>带系数的情况</p>
+<p>$(\mathrm{i})|k\mathbf{A}|=k^n|\mathbf{A}|$</p>
+<p>$(\mathrm{ii})(k\mathbf{A})^{-1}=\frac1{k}\mathbf{A}^{-1}$</p>
+<p>$(\mathrm{iii})(k\mathbf{A})’=k\mathbf{A}’$</p>
+<p>$(\mathrm{iv})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$</p>
+</li>
+</ol>
+<h2 id="共轭矩阵"><a href="#共轭矩阵" class="headerlink" title="共轭矩阵"></a>共轭矩阵</h2><p>记住以下四个公式，以备突然考到</p>
+<p>$(\mathrm{i})\overline{\mathbf{A}+\mathbf{B}}=\overline{\mathbf{A}}+\overline{\mathbf{B}}$</p>
+<p>$(\mathrm{ii})\overline{k\mathbf{A}}=\overline{k}\overline{\mathbf{A}}$</p>
+<p>$(\mathrm{iii})\overline{\mathbf{AB}}=\overline{\mathbf{A}}\overline{\mathbf{B}}$</p>
+<p>$(\mathrm{iv})|\overline{\mathbf{A}}|=\overline{|\mathbf{A}|}$</p>
+<p>简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭</p>
+<h2 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h2><ol>
+<li><p>看到$\mathbf{A}^*$，以下公式至少用其一</p>
+<p>$(\mathrm{i})\mathbf{A}^*\mathbf{A}=\mathbf{A}\mathbf{A}^*=|\mathbf{A}|\mathbf{E}$</p>
+<p>$(\mathrm{ii})\mathbf{A}^{-1}=\frac{\mathbf{A}^*}{|\mathbf{A}|}$</p>
+<p>$(\mathrm{iii})|\mathbf{A}|^*=|\mathbf{A}|^{n-2}\mathbf{A}$</p>
+<p>$(\mathrm{iv})(\mathbf{A}^*)^*=|\mathbf{A}|^{n-2}\mathbf{A}$</p>
+</li>
+<li><p>伴随矩阵的特殊性质：极端的伴随矩阵</p>
+<script type="math/tex; mode=display">
+\mathbf{R}(\mathbf{A}^\*)\begin{cases} 
+    n,\quad \mathbf{R}(\mathbf{A})=n\\
+    1,\quad \mathbf{R}(\mathbf{A})=n-1\\
+    0,\quad \mathbf{R}(\mathbf{A})<n-1
+\end{cases}</script></li>
+</ol>
+<h2 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h2><ol>
+<li><p>判断矩阵可逆的方法：</p>
+<p>$(\mathrm{i})\mathbf{AB}=\mathbf{BA}$</p>
+<p>$(\mathrm{ii})\mathbf{R}(\mathbf{A})=n$</p>
+<p>$(\mathrm{iii})|\mathbf{A}|=0$</p>
+<p>$(\mathrm{iv})\mathbf{A}=\mathbf{P}_1\mathbf{P}_2 \dots \mathbf{P}_k$</p>
+</li>
+<li><p>初变不变秩，不变奇异性</p>
+</li>
+<li><p>行阶梯、行最简、标准形</p>
+</li>
+<li><p>求逆方法：公式法、辅助矩阵法</p>
+</li>
+</ol>
+<h2 id="分块矩阵运算"><a href="#分块矩阵运算" class="headerlink" title="分块矩阵运算"></a>分块矩阵运算</h2><ol>
+<li><p>对角方阵求逆（仅对对角方阵有效）：</p>
+<script type="math/tex; mode=display">
+\left(\begin {array}{ccc}
+    \mathbf{A}_{11}& & & &\\
+     & \mathbf{A}_{22}& & &\\
+     & & \ddots & &\\
+     & & & \mathbf{A}_{ss}&
+\end {array}\right)^m
+=
+\left(\begin {array}{ccc}
+    \mathbf{A}_{11}^m& & & &\\
+     & \mathbf{A}_{22}^m& & &\\
+     & & \ddots & &\\
+     & & & \mathbf{A}_{ss}^m&
+\end {array}\right)</script></li>
+<li><p>特殊矩阵求逆矩阵，是否还应保持原来的顺序：</p>
+<p>$(\mathrm{i})$主对角：$\searrow$仍为$\searrow$</p>
+<p>$(\mathrm{ii})$次对角：$\swarrow$变为$\nearrow$</p>
+</li>
+<li><p>思想：运用<code>第三类初等变换</code></p>
+<script type="math/tex; mode=display">
+\left|\begin{array}{cccc} \mathbf{A} & \mathbf{C} \\ \mathbf{D} & \mathbf{B} \end{array} \right|=|\mathbf{A}||\mathbf{B}-\mathbf{DA}^{-1}\mathbf{C}|</script></li>
+<li><p>分块矩阵的秩（高频使用，按重要性降序排列）：</p>
+<p>$(\mathrm{i})R(A+B)\leq R(A)+R(B),\quad R(A-B)\leq R(A)+R(B)$</p>
+<p>$(\mathrm{ii})R(AB)\leq min\{R(A),R(B)\}$</p>
+<p>$(\mathrm{iii})R(A|B)\leq R(A)+R(B),\quad R(\frac{A}{B})\leq R(A)+R(B)$</p>
+<p>$(\mathrm{iv})R \left(\begin{array}{ccc} A &amp; 0\\0 &amp; B \end{array} \right)=R(A)+R(B)$</p>
+<p>$(\mathrm{v})R \left(\begin{array}{ccc} A &amp; C\\0 &amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等</p>
+<p>$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>图：刺客伍六七</p>
+</blockquote>
 
       
     </div>
@@ -681,12 +683,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>C++指针变量</p>
+  <p><span>本文标题:</span>矩阵章节总结</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
-  <p><span>发布时间:</span>2019年08月05日 - 21:15:09</p>
-  <p><span>最后更新:</span>2019年10月21日 - 18:54:39</p>
-  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/c-指针及其应用/" title="C++指针变量">https://G-SS-Hacker.github.io/c-指针及其应用/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/c-指针及其应用/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年10月28日 - 21:43:02</p>
+  <p><span>最后更新:</span>2019年10月28日 - 21:52:22</p>
+  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/矩阵章节总结/" title="矩阵章节总结">https://G-SS-Hacker.github.io/矩阵章节总结/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/矩阵章节总结/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -725,7 +727,7 @@
         
         <div class="post-tags">
           
-            <a href="/G-SS-Hacker.github.io/tags/C-plus-plus/" rel="tag"><i class="fa fa-tag"></i> C-plus-plus</a>
+            <a href="/G-SS-Hacker.github.io/tags/线性代数/" rel="tag"><i class="fa fa-tag"></i> 线性代数</a>
           
         </div>
       
@@ -738,8 +740,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/G-SS-Hacker.github.io/野指针的产生及其危害/" rel="next" title="野指针的产生及其危害">
-                <i class="fa fa-chevron-left"></i> 野指针的产生及其危害
+              <a href="/G-SS-Hacker.github.io/行列式章节总结/" rel="next" title="行列式章节总结">
+                <i class="fa fa-chevron-left"></i> 行列式章节总结
               </a>
             
           </div>
@@ -747,10 +749,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/G-SS-Hacker.github.io/题解：约瑟夫环问题/" rel="prev" title="题解：约瑟夫环问题">
-                题解：约瑟夫环问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -985,7 +983,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指针变量"><span class="nav-number">1.</span> <span class="nav-text">指针变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#指针变量的定义、赋值"><span class="nav-number">1.1.</span> <span class="nav-text">指针变量的定义、赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、普通变量定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、普通变量定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、指针变量定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、指针变量定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、给指针变量p赋值"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、给指针变量p赋值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针的引用与运算"><span class="nav-number">1.2.</span> <span class="nav-text">指针的引用与运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、指针变量的初始化"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、指针变量的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、指针变量的-、-运算"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、指针变量的+、-运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、无类型指针"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、无类型指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、多重指针"><span class="nav-number">1.2.4.</span> <span class="nav-text">4、多重指针</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵章节总结"><span class="nav-number">1.</span> <span class="nav-text">矩阵章节总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运算律"><span class="nav-number">1.1.</span> <span class="nav-text">运算律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共轭矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">共轭矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伴随矩阵"><span class="nav-number">1.3.</span> <span class="nav-text">伴随矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杂题"><span class="nav-number">1.4.</span> <span class="nav-text">杂题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分块矩阵运算"><span class="nav-number">1.5.</span> <span class="nav-text">分块矩阵运算</span></a></li></ol></li></ol></div>
             
 
           </div>
