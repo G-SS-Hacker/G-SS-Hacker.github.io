@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用泰勒展开式]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[常用泰勒展开 Guderian出品 $(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$ $(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$ $(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$ $(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$ $(5)(1+x)^\alpha=\sum_{k=0}^\alpha C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$ 明天期中考试奥利给！！！！！]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[矩阵章节总结]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E7%9F%A9%E9%98%B5%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[矩阵章节总结 Guderian出品 矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给Matlab就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭ 运算律 $ {AB}= {BA}$时，矩阵运算满足交换律，故以下运算皆成立 $(\mathrm{i})( {A}\pm {B})^2= {A}^2 \pm 2 {AB} + {B}^2$ $(\mathrm{ii})( {A}+ {B})( {A}- {B})= {A}^2- {B}^2$ $(\mathrm{iii})( {AB})^2=( {BA})^2$ $ {A}^*， {A}’， {A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼 $(\mathrm{i})( {AB})’= {B}’ {A}’$ $(\mathrm{ii})( {AB})^{-1}= {B}^{-1} {A}^{-1}$ $(\mathrm{iii})( {A}^*)^{-1}=( {A}^{-1})^*$ 带系数的情况 $(\mathrm{i})|k {A}|=k^n| {A}|$ $(\mathrm{ii})(k {A})^{-1}=\frac1{k} {A}^{-1}$ $(\mathrm{iii})(k {A})’=k {A}’$ $(\mathrm{iv})\overline{k {A}}=\overline{k}\overline{ {A}}$ 共轭矩阵记住以下四个公式，以备突然考到 $(\mathrm{i})\overline{ {A}+ {B}}=\overline{ {A}}+\overline{ {B}}$ $(\mathrm{ii})\overline{k {A}}=\overline{k}\overline{ {A}}$ $(\mathrm{iii})\overline{ {AB}}=\overline{ {A}}\overline{ {B}}$ $(\mathrm{iv})|\overline{ {A}}|=\overline{| {A}|}$ 简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭 伴随矩阵 看到$ {A}^*$，以下公式至少用其一 $(\mathrm{i}) {A}^* {A}= {A} {A}^*=| {A}| {E}$ $(\mathrm{ii}) {A}^{-1}=\frac{ {A}^*}{| {A}|}$ $(\mathrm{iii})| {A}^*|=| {A}|^{n-1}$ $(\mathrm{iv})( {A}^*)^*=| {A}|^{n-2} {A}$ 伴随矩阵的特殊性质：极端的伴随矩阵 {R}({A}^*)\begin{cases} n,\quad {R}({A})=n\\ 1,\quad {R}({A})=n-1\\ 0,\quad {R}({A})]]></content>
