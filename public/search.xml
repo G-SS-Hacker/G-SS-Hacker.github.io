@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[常用泰勒展开式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[常用泰勒展开 Guderian出品 $(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$ $(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$ $(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$ $(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$ $(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$ 明天期中考试奥利给！！！！！]]></content>
+    <content type="text"><![CDATA[常用泰勒展开 Guderian出品 $(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$ $(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$ $(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$ $(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$ $(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$ 奥利给！！！！！]]></content>
       <categories>
         <category>总结</category>
       </categories>
