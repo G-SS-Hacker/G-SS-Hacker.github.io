@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[模式匹配算法：KMP算法]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FKMP%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[模式匹配算法：KMP算法 Guderian出品 模式匹配是数据结构中字符串的一种基本运算，给定一个字符串P，要求在某个字符串T中找出与字符串P相同的所有子串，这就是模式匹配。 模式匹配算法要解决的问题 detection ：P是否出现 location ：首次在哪里出现 counting ：共有几次出现 enumeration ：各出现**在哪里** 绪论KMP算法（全称Knuth-Morris-Pratt算法）是一种高效的模式匹配算法。在模式匹配算法中，常见的算法包括BF算法（朴素算法）、KMP算法、BM算法、RK算法、有限自动机算法、Horspool算法、Sunday算法。在这些算法中，最经典的算法非KMP算法和BM算法莫属。这两种算法都有一个共同点：抽象，理解难度大。实际上，KMP算法还有一个明显特点：会者不难。本文内容默认你已经明白BF算法的原理和不足（因此这部分内容将简单略过），展开讲述KMP算法的原理、优点和c++代码实现。相信你在学会KMP算法之后将会有一种“踏遍青山人未老，这边风景独好”的快意。让我们开始吧。 BF算法BF算法的本质就是暴力搜索。既然要在串T中找出与串P相同的所有子串，那不妨找出串T中所有与串P长度相同的子串，在逐个判断这个子串是否与串P相同。具体的例子点击这里（讲得很形象了，应该不会有理解上的困难）。设strlen(T) == n, strlen(P) == m，则BF算法的时间复杂度为$O(m*n)$（简直是蜗速），在大部分应用场景中并不优秀。 KMP算法容易看出BF算法的效率是十分蹩脚的，而它蹩脚的原因也很明显：在一次匹配尝试中，一旦失配（某一位匹配失败），就把串P整体向右移动一位。在模拟算法运行过程中，我们发现如果开始匹配时第一位就失配，那么只向右移动一位的确无可厚非，毕竟说不定移动一位之后就会匹配成功呢；但是如果已经匹配了串P的一部分了才失配，在向右移动一位之后，有时候（而且往往是经常）我们发现依然注定会匹配失败，也就是说在上次失败之后，向右移动一位再做尝试是根本不必要的，这种“只移动一位”的策略实际上造成了巨大的步骤浪费。那么有没有办法，把这些不必要的尝试舍弃，节约算法的运行时间呢？ 此处我们需要考虑以下问题，以便对BF算法做出有效的改进： 为什么有一些尝试是注定徒劳的？ 如何判断哪些尝试需要舍弃？ 如果不是向右移动一位，又应该如何确定向右移动的位数？ 在看完点击这里之后，前两个问题都能得到答案。在上面链接的视频讲解中，讲述者构造了一个前缀表数组prefix table来确定串P中每个从头开始的子串的最长公共前后缀，一旦失配，就把串P向右移动到失配位置左侧子串的最长前缀处，也就是把下图中的1号移动到2号位置，继续从当前位置匹配，如果当前位置为串T的结尾，则结束匹配。 此处我们引入next[]数组来记录在失配时应该把串P的哪一位移动到当前位置。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+        <tag>C-plus-plus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常用泰勒展开式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[常用泰勒展开 Guderian出品 $(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$ $(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$ $(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$ $(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$ $(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$]]></content>
@@ -52,10 +66,10 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>算法</tag>
-        <tag>排序</tag>
         <tag>数据结构</tag>
+        <tag>C-plus-plus</tag>
+        <tag>排序</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -100,10 +114,10 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
-        <tag>C-plus-plus</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>C-plus-plus</tag>
+        <tag>C</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -204,8 +218,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -227,8 +241,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -280,12 +294,12 @@
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
-        <tag>Python</tag>
+        <tag>C</tag>
         <tag>C-sharp</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
