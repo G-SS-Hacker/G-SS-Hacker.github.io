@@ -728,7 +728,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-27 12:45:40" itemprop="dateModified" datetime="2019-11-27T12:45:40+08:00">2019-11-27</time>
+                <time title="修改时间：2019-11-28 22:40:13" itemprop="dateModified" datetime="2019-11-28T22:40:13+08:00">2019-11-28</time>
               </span>
             
           
@@ -813,6 +813,30 @@
 <li><font color="#495DD8">enumeration</font> ：各出现<font color="#64ceaa"><strong>在哪里</strong></font>？</li>
 </ul>
 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p><code>KMP算法</code>（全称<code>Knuth-Morris-Pratt算法</code>）是一种高效的模式匹配算法。在模式匹配算法中，常见的算法包括<code>BF算法</code>（<code>朴素算法</code>）、<code>KMP算法</code>、<code>BM算法</code>、<code>RK算法</code>、<code>有限自动机算法</code>、<code>Horspool算法</code>、<code>Sunday算法</code>。在这些算法中，最经典的算法非<code>KMP算法</code>和<code>BM算法</code>莫属。这两种算法都有一个共同点：抽象，理解难度大。实际上，<code>KMP算法</code>还有一个明显特点：会者不难。本文内容默认你已经明白<code>BF算法</code>的原理和不足（因此这部分内容将简单略过），展开讲述<code>KMP算法</code>的原理、优点和<code>c++</code>代码实现。相信你在学会<code>KMP算法</code>之后将会有一种<font color="#64ceaa"><strong>“踏遍青山人未老，这边风景独好”</strong></font>的快意。让我们开始吧。</p>
+<h2 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h2><p><code>BF算法</code>的本质就是<font color="#64ceaa">暴力搜索</font>。既然要在串<code>T</code>中找出与串<code>P</code>相同的所有子串，那不妨找出串<code>T</code>中所有与串<code>P</code>长度相同的子串，在逐个判断这个子串是否与串<code>P</code>相同。具体的例子<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a><font color="#5F2CA5">（<del>讲得很形象了，应该不会有理解上的困难</del>）</font>。设<code>strlen(T) == n, strlen(P) == m</code>，则<code>BF算法</code>的<font color="#64ceaa"><strong>预处理时间</strong></font>为$0$，<font color="#64ceaa"><strong>匹配时间</strong></font>为$O(mn)$，<font color="#64ceaa"><strong>总时间复杂度</strong></font>为$O(mn)$<font color="#5F2CA5"><del>（简直是蜗速）</del></font>，在大部分应用场景中并不<font color="#64ceaa"><strong>优秀</strong></font>。</p>
+<h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><h3 id="更高的效率"><a href="#更高的效率" class="headerlink" title="更高的效率"></a>更高的效率</h3><p>容易看出<code>BF算法</code>的效率是十分蹩脚的，而它蹩脚的原因也很明显：在一次匹配尝试中，一旦失配（某一位匹配失败），就把串<code>P</code>整体向右移动一位。在模拟算法运行过程中，我们发现如果开始匹配时第一位就失配，那么只向右移动一位的确无可厚非，毕竟说不定移动一位之后就会匹配成功呢；但是如果已经匹配了串<code>P</code>的一部分了才失配，在向右移动一位之后，有时候（而且往往是经常）我们发现依然注定会匹配失败，也就是说在上次失败之后，向右移动一位再做尝试是根本不必要的，这种<font color="#5F2CA5">“只移动一位”</font>的策略实际上造成了巨大的步骤浪费。那么有没有办法，把这些不必要的尝试舍弃，节约算法的运行时间呢？</p>
+<p>此处我们需要考虑以下问题，以便对<code>BF算法</code>做出有效的改进：</p>
+<ul>
+<li><font color="#495DD8">为什么有一些尝试是注定徒劳的？</font></li>
+<li><font color="#495DD8">如何判断哪些尝试需要舍弃？</font></li>
+<li><font color="#495DD8">如果不是向右移动一位，又应该如何确定向右移动的位数？</font>
+
+</li>
+</ul>
+<p>在看完<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a>（还是上面那个链接）之后，前两个问题都能得到答案。在链接的视频讲解中，讲述者构造了一个前缀表数组<code>prefix table</code>来确定串<code>P</code>中每个从头开始的子串的<font color="#64ceaa"><strong>最长公共前后缀</strong></font>（自身除外，以下省略此说明），一旦失配，就把串<code>P</code>向右移动到失配位置左侧子串的<font color="#64ceaa"><strong>最长前缀</strong></font>处，使它们重叠，也就是把下图中的<font color="#A349A4">1号</font>移动到<font color="#A349A4">2号</font>位置，继续从当前位置匹配，如果当前位置为串<code>T</code>的结尾，则结束匹配。</p>
+<p><img src="https://i.loli.net/2019/11/26/eZcoQNJmPrKtklh.jpg" alt></p>
+<p>那么问题来了：为什么要把<font color="#64ceaa"><strong>最长公共前缀</strong></font>移动至<font color="#64cceaa"><strong>最长公共后缀</strong></font>的位置？这个移动距离能不能更短？能不能更长？</p>
+<blockquote>
+ <font color="black">**引理**</font>  串的<font color="#64ceaa">**最长公共前后缀**</font>的<font color="#64ceaa">**最长公共前后缀**</font>是原串的<font color="#64ceaa">**次长公共前后缀**</font>。
+
+ <font color="black">**证明**</font>  略<font color="#5F2CA5">~~（逃~~</font>
+
+</blockquote>
+<p>实际上，在<code>BF算法</code>的一次匹配过程中，一旦失配，就把串<code>P</code>整体向右移动一位再次尝试匹配。假设第一次匹配时在串<code>P</code>的第<code>r + 1</code>位失配，此时已经确定串<code>P</code>失配位置的前<code>r</code>项与串<code>T</code>相应位置元素匹配，也确定了串<code>P</code>失配位置的前<code>r - 1</code>项与串<code>T</code>相应位置元素匹配。那么第二次匹配成功，当且仅当在串<code>P</code>的前<code>r</code>项组成的子串中，前<code>r - 1</code>位字符组成的前缀和后<code>r - 1</code>位字符组成的后缀相同，即某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - 1</code>。也就是说，如果匹配失败向右移动<code>s</code>位，那么再次匹配成功的<font color="#64ceaa"><strong>必要条件</strong></font>是串<code>P</code>在失配位置前的子串的某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - s</code>。如果串<code>P</code>在失配位置前的子串的<font color="#64ceaa"><strong>最长公共前后缀</strong></font>长度就是<code>r - s</code>，匹配失败后向右移动了不足<code>s</code>位，这意味着移动距离过短，将会做一遍无用功。</p>
+<p>如果移动距离过长，那就有可能会错过一个成功的匹配。如果匹配失败向右移动<code>s</code>位，那么再次匹配成功的<font color="#64ceaa"><strong>必要条件</strong></font>是串<code>P</code>在失配位置前的子串的某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - s</code>。注意这里是<font color="#64ceaa"><strong>必要条件</strong></font>而不是<font color="#64ceaa"><strong>充分条件</strong></font>，在把串<code>P</code>向右移动的过程中，并不是在失配位置前随便放一个<font color="#64ceaa"><strong>公共前后缀</strong></font>都能匹配成功，我们需要从<font color="#64ceaa"><strong>最长公共前后缀</strong></font>开始尝试，逐步减少原失配位置前子串的长度，直到匹配成功或者串<code>P</code>在失配位置前子串<font color="#64ceaa"><strong>最长公共前后缀</strong></font>长度变为<code>0</code>。</p>
+<p>此处我们引入<code>next[]</code>数组来记录在失配时应该把串<code>P</code>的哪一位移动到当前位置。对于串<code>P</code>的第<code>j + 1</code>位的字符来说，<code>next[j + 1]</code>的意义是由串<code>P</code>的前<code>j</code>项的子串中<font color="#64ceaa"><strong>最长公共前后缀</strong></font>的长度。<code>next[]</code>数组是<code>KMP算法</code>降低<font color="#64ceaa"><strong>时间复杂度</strong></font>的关键，在预处理时就已经确定。下面介绍<code>next[]</code>数组求法。</p>
+<h3 id="next数组求法"><a href="#next数组求法" class="headerlink" title="next数组求法"></a>next数组求法</h3><p>如果你直接跳过了前面看到了这里，那说明你已经看了无数多参考资料，还是搞不懂<code>next[]</code>数组求法的原理，几乎走投无路了。但是，正如B站鬼畜区某神所言：</p>
+<p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>
           <!--noindex-->
           
             <div class="post-button text-center">
