@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-11-28T14:48:11.515Z</updated>
+  <updated>2019-12-01T13:10:11.392Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不定积分公式</title>
+    <link href="https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/"/>
+    <id>https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</id>
+    <published>2019-12-01T12:50:06.000Z</published>
+    <updated>2019-12-01T13:10:11.392Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png" alt></p><h1 id="不定积分公式"><a href="#不定积分公式" class="headerlink" title="不定积分公式"></a>不定积分公式</h1><p><font color="grey"> <em>Guderian出品</em> </font></p><p>$(1)\int0 \mathrm{dx} = C$</p><p>$(2)\int1\mathrm{dx}=x+C$</p><p>$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$</p><p>$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$</p><p>$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$</p><p>$(6)\int e^x \mathrm{dx}=e^x+C$</p><p>$(7)\int \sin x \mathrm{dx}=-\cos x +C$</p><p>$(8)\int \cos x \mathrm{dx}=\sin x +C$</p><p>$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$</p><p>$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$</p><p>$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$</p><p>$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$</p><p>$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$</p><p>$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;不定积分公式&quot;&gt;&lt;a href=&quot;#不定积分公式&quot; class=&quot;headerlink&quot; title=&quot;不定积分公式&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
   
   <entry>
     <title>线性方程组章节总结</title>
@@ -127,9 +154,9 @@
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="字符串" scheme="https://G-SS-Hacker.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -334,7 +361,7 @@ D_n=
     <link href="https://g-ss-hacker.github.io/%E9%AB%98%E9%98%B6%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F/"/>
     <id>https://g-ss-hacker.github.io/%E9%AB%98%E9%98%B6%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F/</id>
     <published>2019-10-21T09:42:24.000Z</published>
-    <updated>2019-11-07T14:07:57.848Z</updated>
+    <updated>2019-12-01T13:07:51.885Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/10/21/qfvbeiV7g8M6N9G.png" alt></p><h1 id="高阶求导公式"><a href="#高阶求导公式" class="headerlink" title="高阶求导公式"></a>高阶求导公式</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$ (1)(a^x)^{(n)}=a^x (\ln a)$<p></p><p>$ (2)(e^{ax})^{(n)} = a^n e ^{ax} $</p><p>$(3)(\sin x)^{(n)}=\sin(x+\frac {n\pi}2)$    </p><p>$(4)(\cos x)^{(n)}=\cos(x+\frac{n\pi}2)$</p><p>$(5)(x^a)^{(n)}=a(a-1)\dots(a-n+1)x^{a-n},若n&gt;a，则导数等于零$</p><p>$(6)[\ln (x+a)]^{(n)}=(-1)^n \frac{(n-1)!}{(x+a)^n}，特别地，令a=0，(\ln x)^{(n)}=(-1)^n\frac{(n-1)!}{x^n}$</p><p>$(7)(\frac1{ax+b})^{(n)}=(-a)^{n} \frac{n!}{(ax+b)^{n+1}}，特别地，令a=1,(\frac1{x+b})=(-1)^n \frac{n!}{(x+b)^{n+1}}$</p><p>$(8)Leibniz公式：[f(x)g(x)]^{(n)}=\sum_{k=0}^n C_n^kf^{(k)}(x)g^{(n-k)}(x)，C_n^k=\frac{n!}{k!(n-k)!)}$</p><a id="more"></a><p>$(9)(f(x)\pm g(x))^{(n)}=f^{(n)}(x)+g^{(n)}(x)$</p><p>$(10)(af(x))^{(n)}=af^{(n)}(x)$</p>]]></content>
     
@@ -391,11 +418,11 @@ D_n=
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="排序" scheme="https://G-SS-Hacker.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="图论" scheme="https://G-SS-Hacker.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
@@ -552,9 +579,9 @@ a_{ij} =
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="图论" scheme="https://G-SS-Hacker.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
@@ -975,44 +1002,6 @@ a_{ij} =
     
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
-    
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>野指针的产生及其危害</title>
-    <link href="https://g-ss-hacker.github.io/%E9%87%8E%E6%8C%87%E9%92%88%E7%9A%84%E4%BA%A7%E7%94%9F%E5%8F%8A%E5%85%B6%E5%8D%B1%E5%AE%B3/"/>
-    <id>https://g-ss-hacker.github.io/%E9%87%8E%E6%8C%87%E9%92%88%E7%9A%84%E4%BA%A7%E7%94%9F%E5%8F%8A%E5%85%B6%E5%8D%B1%E5%AE%B3/</id>
-    <published>2019-08-05T08:46:38.000Z</published>
-    <updated>2019-10-21T10:55:02.713Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/10/02/qCpihPlLVgSuez1.jpg" alt></p><h1 id="野指针的产生及其危害"><a href="#野指针的产生及其危害" class="headerlink" title="野指针的产生及其危害"></a>野指针的产生及其危害</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br><strong>野指针</strong>指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。<p></p><h2 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h2><h3 id="指针变量未初始化"><a href="#指针变量未初始化" class="headerlink" title="指针变量未初始化"></a>指针变量未初始化</h3><p>任何指针变量（无<code>static</code>修饰的局部变量）刚被创建时不会自动成为*<code>NULL</code>指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同时应当被初始化，要么将指针设置为<code>NULL</code>，要么让它指向合法的内存。如果没有初始化，编译器会报错。</p><p>注：<code>NULL</code>指针是一个定义在标准库中的值为零的常量，其定义为：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NULL ((void *)0)</span></span><br></pre></td></tr></table></figure><h3 id="指针释放之后未置空"><a href="#指针释放之后未置空" class="headerlink" title="指针释放之后未置空"></a>指针释放之后未置空</h3><p>又是指针在<code>free</code>或<code>delete</code>后未赋值<code>NULL</code>，便会使人以为是合法的。然而<code>free</code>和<code>delete</code>只是把指针所指的内存给释放掉，并没有把指针本身干掉。此时指针指向的是随机内存空间。释放指针后应立即将指针置为NULL，防止产生野指针。</p><h3 id="指针操作超越变量作用域"><a href="#指针操作超越变量作用域" class="headerlink" title="指针操作超越变量作用域"></a>指针操作超越变量作用域</h3><p>返回或引用指向*<strong>栈内存</strong>的指针，因为栈内存在函数结束的时候会被释放</p><hr><h2 id="后果"><a href="#后果" class="headerlink" title="后果"></a>后果</h2><ul><li>指向不可访问地址，造成程序异常终止</li><li>指向可用空间，但是这块空间不适用，程序正常运行</li><li>指向可用空间，但是这块空间刚好在用，造成数据错误</li></ul><hr><a id="more"></a><h2 id="规避"><a href="#规避" class="headerlink" title="规避"></a>规避</h2><h3 id="初始化时置NULL"><a href="#初始化时置NULL" class="headerlink" title="初始化时置NULL"></a>初始化时置NULL</h3><p>指针变量一定要初始化为<code>NULL</code>，因为任何指针变量（无<code>static</code>修饰的局部变量）刚被创建时不会自动成为<code>NULL</code>指针，它的缺省值是随机的。</p><h3 id="释放时置NULL"><a href="#释放时置NULL" class="headerlink" title="释放时置NULL"></a>释放时置NULL</h3><p>当指针<code>p</code>指向的内存空间释放时，没有设置指针<code>p</code>的值为<code>NULL</code>。<code>delete</code>和<code>free</code>只是把内存空间释放了，但是并没有将指针<code>p</code>的值赋为<code>NULL</code>。通常判断一个指针是否合法，都是使用<code>if</code>语句测试该指针是否为<code>NULL</code>。例如（针对C++）：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">6</span>);</span><br><span class="line"><span class="keyword">delete</span> p;</span><br><span class="line"><span class="keyword">if</span>(p != <span class="literal">NULL</span>)*p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure><p>或者使用<strong>宏定义</strong>来一次性解决问题：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> del(x) delete(x); x = NULL</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/10/02/qCpihPlLVgSuez1.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;野指针的产生及其危害&quot;&gt;&lt;a href=&quot;#野指针的产生及其危害&quot; class=&quot;headerlink&quot; title=&quot;野指针的产生及其危害&quot;&gt;&lt;/a&gt;野指针的产生及其危害&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;&lt;strong&gt;野指针&lt;/strong&gt;指向了一块随机内存空间，不受程序控制。如指针指向已经被删除的对象或者指向一块没有访问权限的内存空间，之后如果对其再进行引用的话，就会出现问题。&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h2&gt;&lt;h3 id=&quot;指针变量未初始化&quot;&gt;&lt;a href=&quot;#指针变量未初始化&quot; class=&quot;headerlink&quot; title=&quot;指针变量未初始化&quot;&gt;&lt;/a&gt;指针变量未初始化&lt;/h3&gt;&lt;p&gt;任何指针变量（无&lt;code&gt;static&lt;/code&gt;修饰的局部变量）刚被创建时不会自动成为*&lt;code&gt;NULL&lt;/code&gt;指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同时应当被初始化，要么将指针设置为&lt;code&gt;NULL&lt;/code&gt;，要么让它指向合法的内存。如果没有初始化，编译器会报错。&lt;/p&gt;
-&lt;p&gt;注：&lt;code&gt;NULL&lt;/code&gt;指针是一个定义在标准库中的值为零的常量，其定义为：&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; NULL ((void *)0)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;指针释放之后未置空&quot;&gt;&lt;a href=&quot;#指针释放之后未置空&quot; class=&quot;headerlink&quot; title=&quot;指针释放之后未置空&quot;&gt;&lt;/a&gt;指针释放之后未置空&lt;/h3&gt;&lt;p&gt;又是指针在&lt;code&gt;free&lt;/code&gt;或&lt;code&gt;delete&lt;/code&gt;后未赋值&lt;code&gt;NULL&lt;/code&gt;，便会使人以为是合法的。然而&lt;code&gt;free&lt;/code&gt;和&lt;code&gt;delete&lt;/code&gt;只是把指针所指的内存给释放掉，并没有把指针本身干掉。此时指针指向的是随机内存空间。释放指针后应立即将指针置为NULL，防止产生野指针。&lt;/p&gt;
-&lt;h3 id=&quot;指针操作超越变量作用域&quot;&gt;&lt;a href=&quot;#指针操作超越变量作用域&quot; class=&quot;headerlink&quot; title=&quot;指针操作超越变量作用域&quot;&gt;&lt;/a&gt;指针操作超越变量作用域&lt;/h3&gt;&lt;p&gt;返回或引用指向*&lt;strong&gt;栈内存&lt;/strong&gt;的指针，因为栈内存在函数结束的时候会被释放&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;后果&quot;&gt;&lt;a href=&quot;#后果&quot; class=&quot;headerlink&quot; title=&quot;后果&quot;&gt;&lt;/a&gt;后果&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;指向不可访问地址，造成程序异常终止&lt;/li&gt;
-&lt;li&gt;指向可用空间，但是这块空间不适用，程序正常运行&lt;/li&gt;
-&lt;li&gt;指向可用空间，但是这块空间刚好在用，造成数据错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     

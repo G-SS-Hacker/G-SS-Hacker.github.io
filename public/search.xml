@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[不定积分公式]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[不定积分公式 Guderian出品 $(1)\int0 \mathrm{dx} = C$ $(2)\int1\mathrm{dx}=x+C$ $(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$ $(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$ $(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$ $(6)\int e^x \mathrm{dx}=e^x+C$ $(7)\int \sin x \mathrm{dx}=-\cos x +C$ $(8)\int \cos x \mathrm{dx}=\sin x +C$ $(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$ $(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$ $(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$ $(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$ $(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$ $(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[线性方程组章节总结]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[线性方程组章节总结 Guderian出品 线性方程组有解的充要条件 齐次线性方程组要么只有一组零解，要么有无穷多解 非齐次线性方程组有解的充要条件 $R(A)=R(A|\beta)$ 注：$R(A)$和$R(A|\beta)$要么相等，要么差$1$ 线性方程组解的结构 齐次线性方程组 (1) $AX=0$只有零解 $ \Leftrightarrow R(A)$等于未知数个数$\Leftrightarrow$A为列满秩阵 (2) $AX=0$有无穷多组解 $ \Leftrightarrow R(A)$小于未知数个数 非齐次线性方程组 (1) $AX=B$ 有唯一解 $\Leftrightarrow R(A)=R(A|\beta)=n$ (2) $AX=B$ 有无穷多组解 $\Leftrightarrow R(A)=R(A|\beta)&lt;n$ (3) $AX=B$ 无解 $\Leftrightarrow R(A) \ne R(A|\beta)$ 注：$AX=B$ 有唯一解 $\Leftrightarrow $ $AX=0$只有零解 线性方程组的解思想：利用矩阵初等行变换（高斯消元） 齐次线性方程组 记$N(A)$为齐次线性方程组的全体解向量所构成的向量空间，则$\dim N(A)=n-R(A)$，称$n(A)$的基为齐次线性方程组的基础解系： (1) 当$R(A)=n$时，齐次线性方程组只有零解，没有基础解系 (2) 当$R(A)&lt;n$时，基础解系为齐次线性方程组的$n-R(A)$个线性无关的解向量 非齐次线性方程组 $AX=B$ 和 $AX=0$的解向量满足： (1) 若$\eta_1$，$\eta_2$都是$AX=B$的解，那么$\eta_1 - \eta_2$是$AX=0$的解（几乎没用） (2) 若$\eta_1$是$AX=B$的解，$\eta_2$是$AX=0$的解，那么$\eta_1 + \eta_2$还是$AX=B$的解 ~我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！~]]></content>
@@ -20,8 +31,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -78,9 +89,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -127,8 +138,8 @@
       <tags>
         <tag>C</tag>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -303,7 +314,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2FG-SS-Hacker.github.io%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine(&quot;hello world&quot;); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
+    <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine("hello world"); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
         <tag>C</tag>
         <tag>C-plus-plus</tag>
