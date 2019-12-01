@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-01T13:10:11.392Z</updated>
+  <updated>2019-12-01T13:27:09.298Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,17 +21,38 @@
     <link href="https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/"/>
     <id>https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</id>
     <published>2019-12-01T12:50:06.000Z</published>
-    <updated>2019-12-01T13:10:11.392Z</updated>
+    <updated>2019-12-01T13:27:09.298Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png" alt></p><h1 id="不定积分公式"><a href="#不定积分公式" class="headerlink" title="不定积分公式"></a>不定积分公式</h1><p><font color="grey"> <em>Guderian出品</em> </font></p><p>$(1)\int0 \mathrm{dx} = C$</p><p>$(2)\int1\mathrm{dx}=x+C$</p><p>$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$</p><p>$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$</p><p>$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$</p><p>$(6)\int e^x \mathrm{dx}=e^x+C$</p><p>$(7)\int \sin x \mathrm{dx}=-\cos x +C$</p><p>$(8)\int \cos x \mathrm{dx}=\sin x +C$</p><p>$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$</p><p>$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$</p><p>$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$</p><p>$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$</p><p>$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$</p><p>$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png" alt></p><h1 id="不定积分公式"><a href="#不定积分公式" class="headerlink" title="不定积分公式"></a>不定积分公式</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)\int0 \mathrm{dx} = C$<p></p><p>$(2)\int1\mathrm{dx}=x+C$</p><p>$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$</p><p>$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$</p><p>$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$</p><p>$(6)\int e^x \mathrm{dx}=e^x+C$</p><p>$(7)\int \sin x \mathrm{dx}=-\cos x +C$</p><p>$(8)\int \cos x \mathrm{dx}=\sin x +C$</p><p>$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$</p><p>$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$</p><p>$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$</p><p>$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$</p><p>$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$</p><p>$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$</p><p>$(15)\int \tan x\mathrm{dx}=-\ln|\cos x|+C$</p><p>$(16)\int \cot x \mathrm{dx}=\ln|\sin x|+C$</p><p>$(17)\int \sec x \mathrm{dx}=\ln|\sec x+\tan x|+C$</p><p>$(18)\int \csc x\mathrm{dx}=\ln|\csc x -\cot x|+C$</p><p>$(19)\int \frac{\mathrm{dx}}{x^2+a^2}=\frac1{a}\arctan {\frac{x}{a}}+C$</p><p>$(20)\int \frac{\mathrm{dx}}{x^2-a^2}=\frac1{2a}\ln|\frac{x-a}{x+a}|+C$</p><p>$(21)\int \frac{\mathrm{dx}}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$</p><p>$(22)\int \frac{\mathrm{dx}}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|+C$</p><p>$(23)\int \sqrt{a^2-x^2}\mathrm{dx}=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin \frac{x}{a}+C$</p><p>$(24)\int \sqrt{x^2\pm a^2}\mathrm{dx}=\frac{x}{2}\sqrt{x^2\pm a^2}\pm \frac{a^2}{2}\ln|x+\sqrt{x^2\pm a^2}|+C$</p><p>$(25)\int \ln x\mathrm{dx}=x\ln x-x+C$</p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;不定积分公式&quot;&gt;&lt;a href=&quot;#不定积分公式&quot; class=&quot;headerlink&quot; title=&quot;不定积分公式&quot;
-      
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;不定积分公式&quot;&gt;&lt;a href=&quot;#不定积分公式&quot; class=&quot;headerlink&quot; title=&quot;不定积分公式&quot;&gt;&lt;/a&gt;不定积分公式&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;$(1)\int0 \mathrm{dx} = C$&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;$(2)\int1\mathrm{dx}=x+C$&lt;/p&gt;
+&lt;p&gt;$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$&lt;/p&gt;
+&lt;p&gt;$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$&lt;/p&gt;
+&lt;p&gt;$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$&lt;/p&gt;
+&lt;p&gt;$(6)\int e^x \mathrm{dx}=e^x+C$&lt;/p&gt;
+&lt;p&gt;$(7)\int \sin x \mathrm{dx}=-\cos x +C$&lt;/p&gt;
+&lt;p&gt;$(8)\int \cos x \mathrm{dx}=\sin x +C$&lt;/p&gt;
+&lt;p&gt;$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$&lt;/p&gt;
+&lt;p&gt;$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$&lt;/p&gt;
+&lt;p&gt;$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$&lt;/p&gt;
+&lt;p&gt;$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$&lt;/p&gt;
+&lt;p&gt;$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$&lt;/p&gt;
+&lt;p&gt;$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$&lt;/p&gt;
+&lt;p&gt;$(15)\int \tan x\mathrm{dx}=-\ln|\cos x|+C$&lt;/p&gt;
+&lt;p&gt;$(16)\int \cot x \mathrm{dx}=\ln|\sin x|+C$&lt;/p&gt;
+&lt;p&gt;$(17)\int \sec x \mathrm{dx}=\ln|\sec x+\tan x|+C$&lt;/p&gt;
+&lt;p&gt;$(18)\int \csc x\mathrm{dx}=\ln|\csc x -\cot x|+C$&lt;/p&gt;
+&lt;p&gt;$(19)\int \frac{\mathrm{dx}}{x^2+a^2}=\frac1{a}\arctan {\frac{x}{a}}+C$&lt;/p&gt;
+&lt;p&gt;$(20)\int \frac{\mathrm{dx}}{x^2-a^2}=\frac1{2a}\ln|\frac{x-a}{x+a}|+C$&lt;/p&gt;
+&lt;p&gt;$(21)\int \frac{\mathrm{dx}}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$&lt;/p&gt;
+&lt;p&gt;$(22)\int \frac{\mathrm{dx}}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|+C$&lt;/p&gt;
+&lt;p&gt;$(23)\int \sqrt{a^2-x^2}\mathrm{dx}=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin \frac{x}{a}+C$&lt;/p&gt;
+&lt;p&gt;$(24)\int \sqrt{x^2\pm a^2}\mathrm{dx}=\frac{x}{2}\sqrt{x^2\pm a^2}\pm \frac{a^2}{2}\ln|x+\sqrt{x^2\pm a^2}|+C$&lt;/p&gt;
+&lt;p&gt;$(25)\int \ln x\mathrm{dx}=x\ln x-x+C$&lt;/p&gt;
     
     </summary>
     
