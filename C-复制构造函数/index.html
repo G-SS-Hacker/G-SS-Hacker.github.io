@@ -150,7 +150,7 @@
 <meta property="og:description" content="C++复制构造函数 图：广州天河CBD   Guderian出品  基本概念 只有一个参数，即对同类对象的引用 形如X::X(X &amp;amp;)或X::X(const X &amp;amp;)，二者选一，后者能以常量对象作为参数 如果没有定义复制构造函数，那么编译器生成默认的复制构造函数。默认的复制构造函数完成复制功能   构造函数与复制构造函数的异同 构造函数（或称无参构造函数）不一定存在，你不写构造函">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/12/04/BtpLFjvfUKwGqTV.jpg">
-<meta property="og:updated_time" content="2019-12-04T13:24:29.813Z">
+<meta property="og:updated_time" content="2019-12-04T13:32:44.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复制构造函数">
 <meta name="twitter:description" content="C++复制构造函数 图：广州天河CBD   Guderian出品  基本概念 只有一个参数，即对同类对象的引用 形如X::X(X &amp;amp;)或X::X(const X &amp;amp;)，二者选一，后者能以常量对象作为参数 如果没有定义复制构造函数，那么编译器生成默认的复制构造函数。默认的复制构造函数完成复制功能   构造函数与复制构造函数的异同 构造函数（或称无参构造函数）不一定存在，你不写构造函">
@@ -496,7 +496,7 @@
                 
               
 
-              <time title="创建时间：2019-12-04 20:55:34 / 修改时间：21:24:29" itemprop="dateCreated datePublished" datetime="2019-12-04T20:55:34+08:00">2019-12-04</time>
+              <time title="创建时间：2019-12-04 20:55:34 / 修改时间：21:32:44" itemprop="dateCreated datePublished" datetime="2019-12-04T20:55:34+08:00">2019-12-04</time>
             </span>
           
 
@@ -596,7 +596,7 @@
 <li>构造函数（或称无参构造函数）不一定存在，你不写构造函数，编译器就只会帮你生成一个什么也不做的无参构造函数</li>
 <li>复制构造函数一定存在，你不写复制构造函数，编译器也会帮你写好一个具有复制功能的复制构造函数</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	douebl real, imag;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Complex c1;		<span class="comment">//调用缺省的构造函数</span></span><br><span class="line"><span class="function">COmplex <span class="title">c2</span><span class="params">(c1)</span></span>;	<span class="comment">//调用缺省的复制构造函数，将c2初始化成和c1一样</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	douebl real, imag;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Complex c1;		<span class="comment">//调用缺省的构造函数</span></span><br><span class="line"><span class="function">Complex <span class="title">c2</span><span class="params">(c1)</span></span>;	<span class="comment">//调用缺省的复制构造函数，将c2初始化成和c1一样</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>如果定义了自己的复制构造函数，则默认的复制构造函数不存在</li>
 </ul>
@@ -670,7 +670,7 @@
   <p><span>本文标题:</span>C++复制构造函数</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年12月04日 - 20:55:34</p>
-  <p><span>最后更新:</span>2019年12月04日 - 21:24:29</p>
+  <p><span>最后更新:</span>2019年12月04日 - 21:32:44</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/C-复制构造函数/" title="C++复制构造函数">https://G-SS-Hacker.github.io/C-复制构造函数/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/C-复制构造函数/" aria-label="复制成功！"></i></span>
   </p>
