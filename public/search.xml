@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C++复制构造函数]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC-%E5%A4%8D%E5%88%B6%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[C++复制构造函数 Guderian出品 基本概念 只有一个参数，即对同类对象的引用 形如X::X(X &amp;)或X::X(const X &amp;)，二者选一，后者能以常量对象作为参数 如果没有定义复制构造函数，那么编译器生成默认的复制构造函数。默认的复制构造函数完成复制功能 构造函数与复制构造函数的异同 构造函数（或称无参构造函数）不一定存在，你不写构造函数，编译器就只会帮你生成一个什么也不做的无参构造函数 复制构造函数一定存在，你不写复制构造函数，编译器也会帮你写好一个具有复制功能的复制构造函数 12345678class Complex&#123; private: douebl real, imag;&#125;;Complex c1; //调用缺省的构造函数COmplex c2(c1); //调用缺省的复制构造函数，将c2初始化成和c1一样 如果定义了自己的复制构造函数，则默认的复制构造函数不存在 12345678910111213141516class Complex&#123; public: double real, imag; Complex() &#123;&#125; Complex(const Complex &amp;c) &#123; real = c.real; imag = c.imag; cout &lt;&lt; "Copy constructor called"; &#125;&#125;;Complex c1;Complex c2(c1);//调用自己定义过的复制构造函数，输出Copy constructor called 特别强调1注意：不允许有形如X::X(X)的复制构造函数，参数一定是引用，不能是对象 12345678class CSample&#123; CSample(CSample c) &#123; //错，不允许出现这样的复制构造函数 //这样写的话，下面的内容要么变成了构造函数，要么语法是错误的 &#125;&#125;; 复制构造函数起作用的三种情况（1）当用一个对象去初始化同类的另一个对象时12Complex c2(c1);Complex c2 = c1; //初始化语句，非赋值语句，与上面写法是等价的 （2）当某函数有一个参数是类A的对象时那么该函数被调用时，类A的复制构造函数将被调用。C++规则：形参是实参的拷贝 123456789101112131415161718192021class A&#123; public: A() &#123;&#125;; A(A &amp;a) &#123; cout &lt;&lt; "Copy constructor called" &lt;&lt; endl; &#125;&#125;;void Func(A a1) &#123;&#125;int main()&#123; A a2; Func(a2); retrun 0;&#125;//输出：Copy constructor called （3）当函数的返回值是类A的对象时那么在函数返回时，A的复制构造函数被调用，作用是初始化作为返回值的类A对象 1234567891011121314151617181920212223242526272829class A&#123; public: int v; A(int n) &#123;v = n&#125;; A(const A &amp;a) &#123; v = a.v; cout &lt;&lt; "Copy constructor called" &lt;&lt; endl; &#125;&#125;;A.Func()&#123; A b(4); return b;&#125;int main()&#123; cout &lt;&lt; Func().v &lt;&lt; endl; //此处Func()的返回值没有名字，是一个复制构造函数初始化的对象 return 0;&#125;//输出：Copy constructor called4 特别强调2注意：对象间赋值并不导致复制构造函数被调用 123456789101112131415161718192021222324class CMyClass&#123; public: int n; CMyClass() &#123;&#125;; CMyClass(CMyClass &amp;c) &#123; n = 2 * c.n; &#125; //不推荐复制构造函数这样写，此处仅用于凸显调用复制构造函数与对象间赋值的区别&#125;;int main()&#123; CMyClass c1, c2; c1.n = 5; c2 = c1; //这是赋值语句 CMyClass c3(c1); //调用复制构造函数，c3并没有变得跟c1一样 cout &lt;&lt; c2.n &lt;&lt; ", "; cout &lt;&lt; c3.n &lt;&lt; endl; return 0;&#125;//输出：5, 10 定义函数时常量引用参数的使用1234void fun(CMyClass obj)&#123; cout &lt;&lt; "fun" &lt;&lt; endl;&#125; 这样的函数，调用时生成形参会引发复制构造函数调用，复制一遍时间开销比较大 所以可以考虑使用CMyClass &amp; 引用类型作为参数，本质上与实参是一样的 如果希望确保实参的值在函数中不应被改变，那么可以加上const关键字，这样的话如果你定义的函数中出现了改变实参的值得语句。编译器就会报错 我自己写的程序难道我自己不记得我没有改过参数吗？的确，你现在记得，明天也记得，但以后再改你的程序，就未必记得了。从代码规范的角度来讲，加上const关键字是必要的 1234void fun(const CMyClass &amp;obj)&#123; //如此一来，函数中任何试图改变obj值得语句都将是非法&#125; 思考：为什么要自己写复制构造函数？ 想通这个问题是高难度操作，作者水平有限，无法清晰地回答，仅提供参考链接。 前置知识： 深拷贝、浅拷贝 传值、传地址、传引用 参考链接： 为什么需要拷贝构造函数 c++的默认拷贝构造函数，从深度拷贝和浅拷贝说起 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改 图：广州天河CBD]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C++构造函数]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[C++ 构造参数 Guderian出品 构造函数的性质 构造参数是成员函数的一种 名字与类名相同，可以由参数，不能有返回值（void也不行） 作用是对对象进行初始化，如给成员变量赋初值 如果定义类的时候没写构造函数，则编译器生成一个默认的无参数的构造函数 默认构造函数无参数，不进行任何操作 如果定义了构造函数，则编译器不生成默认的无参数的构造函数 对象生成时构造函数被自动调用。对象一旦生成，就再也不能在其上执行构造函数 一个类可以有多个构造函数 为什么需要构造函数： 不用专门写初始化函数，也不用担心忘记 有时对象没有被初始化，会导致程序出错 构造函数的使用一个类可以有一个构造函数1234567891011121314151617181920class Circle&#123; private: double radius, xLoc, yLoc; public: Circle(double r ,double x = 0, y = 0)&#125;;Circle::Circle(double r, double x, double y)&#123; radius = r, xLoc = x, yLoc = y;&#125;//Wrong samplesCircle c1; //error,缺少构造函数的参数Circle *pc = new Circle; //error，没有参数//Correct samplesCircle c1(2); //OKCircle c1(2, 4, 4); //OKCircle *pc = new Circle(3, 4); //also OK 一个类可以有多个构造函数只要不同的构造函数的参数个数和参数类型不同，这些构造函数就会构成重载的关系 1234567891011121314151617181920212223242526class Circle&#123; private: double radius, xLoc, yLoc; public: Circle(double r ,double x = 0, y = 0) Circle(double r); Circle(Circle c1, Circle c2)&#125;;Circle::Circle(double r, double x, double y)&#123; radius = r, xLoc = x, yLoc = y;&#125;Circle::Circle(double r)&#123; radius = r;&#125;Circle::Circle(Circle c1, Circle c2)&#123; radius = c1.radius + c2.radius; xLoc = c1.xLOc + c2.xLoc; yLoc = c1.yLOc + c2.yLoc;&#125;//SamplesCircle c1(3), c2(1, 0), c3(c1, c2); 构造函数在数组的使用（1）1234567891011121314151617181920212223242526272829303132333435363738394041424344454647class CSample&#123; private: int x; public: CSample() &#123; cout &lt;&lt; "Constructor 1 Called" &lt;&lt; endl; &#125; CSample(int n) &#123; x = n; cout &lt;&lt; "Constructor 2 Called" &lt;&lt; endl; &#125;&#125;;int main()&#123; cout &lt;&lt; "step1" &lt;&lt; endl; CSample array1[2]; cout &lt;&lt; "step2" &lt;&lt; endl; CSample array2[2] = &#123;4, 5&#125;; cout &lt;&lt; "step3" &lt;&lt; endl; CSample array3[2] = &#123;3&#125;; cout &lt;&lt; "step4" &lt;&lt; endl; CSample *array4 = new CSample[2]; //随机生成两个元素的数组 delete []array4; //解除空间占用 return 0;&#125;//输出：step1//对两个对象初始化的参数没有作任何交代，编译器就认为这个对象就应该用无参的构造函数初始化Constructor 1 CalledConstructor 1 Calledstep2 //对两个对象初始化的参数都有交代Constructor 2 CalledConstructor 2 Calledstep3 //只对第一个对象初始化的参数作了交代Constructor 2 CalledConstructor 1 Calledstep4 //对两个对象初始化的参数没有作任何交代Constructor 1 CalledConstructor 1 Called 构造函数在数组的使用（2）1234567891011121314151617181920212223class Test&#123; public: Test(int n) &#123;&#125; //(1) Test(int n, int m) &#123;&#125; //(2) Test() &#123;&#125; //(3)&#125;;Test array1[3] = &#123;1, Test(1,2)&#125;;//三个元素分别用(1)，(2)，(3)初始化Test array2[3] = &#123;Test(2, 3), Test(1, 2), 1&#125;;//三个元素分别用(2)，(2)，(1)初始化Test *pArray1[3];//仅仅这么定义是不会导致对象生成的，不会引发Test的构造函数被调用。//*pArray1[3]仅仅是指针而已，不会产生任何对象Test *pArray2[3] = &#123;new Test(4), new Test(1, 2)&#125;;//对指针数组的前两个元素初始化，方法是new两个对象，返回值是指针，用new的两个对象的地址去初始化数组pArray2[3]的前两个元素。//注意这个语句只生成了两个对象，pArray2[2]还是一个指针，无从得知它的指针指向哪里，它的生成并不会导致任何对象的生成。//注意在使用中，指针数组与数组的区别 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改 图：深圳福田CBD]]></content>
@@ -44,8 +57,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -102,9 +115,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
-        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -151,8 +164,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
