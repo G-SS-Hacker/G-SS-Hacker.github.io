@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2019-12-04 20:55:34 / 修改时间：21:16:26" itemprop="dateCreated datePublished" datetime="2019-12-04T20:55:34+08:00">2019-12-04</time>
+              <time title="创建时间：2019-12-04 20:55:34 / 修改时间：21:20:34" itemprop="dateCreated datePublished" datetime="2019-12-04T20:55:34+08:00">2019-12-04</time>
             </span>
           
 
@@ -570,8 +570,7 @@
 
       
         
-          
-            <p><img src="https://i.loli.net/2019/12/04/BtpLFjvfUKwGqTV.jpg" alt></p>
+          <p><img src="https://i.loli.net/2019/12/04/BtpLFjvfUKwGqTV.jpg" alt></p>
 <h1 id="C-复制构造函数"><a href="#C-复制构造函数" class="headerlink" title="C++复制构造函数"></a>C++复制构造函数</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
 <li>只有一个参数，即对同类对象的引用</li>
@@ -598,45 +597,15 @@
 <h3 id="（3）当函数的返回值是类A的对象时"><a href="#（3）当函数的返回值是类A的对象时" class="headerlink" title="（3）当函数的返回值是类A的对象时"></a>（3）当函数的返回值是类A的对象时</h3><p>那么在函数返回时，<code>A</code>的复制构造函数被调用，作用是初始化作为返回值的类<code>A</code>对象</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> v;</span><br><span class="line">    A(<span class="keyword">int</span> n)	&#123;v = n&#125;;</span><br><span class="line">    A(<span class="keyword">const</span> A &amp;a)</span><br><span class="line">    &#123;</span><br><span class="line">        v = a.v;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Copy constructor called"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">A.Func()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">A <span class="title">b</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; Func().v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//此处Func()的返回值没有名字，是一个复制构造函数初始化的对象</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line">Copy constructor called</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="特别强调2"><a href="#特别强调2" class="headerlink" title="特别强调2"></a>特别强调2</h2><p>注意：对象间赋值并不导致复制构造函数被调用</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CMyClass</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> n;</span><br><span class="line">    CMyClass()	&#123;&#125;;</span><br><span class="line">    CMyClass(CMyClass &amp;c)	&#123; n = <span class="number">2</span> * c.n; &#125;</span><br><span class="line">    <span class="comment">//不推荐复制构造函数这样写，此处仅用于凸显调用复制构造函数与对象间赋值的区别</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    CMyClass c1, c2;</span><br><span class="line">    c1.n = <span class="number">5</span>;</span><br><span class="line">    c2 = c1;	<span class="comment">//这是赋值语句</span></span><br><span class="line">    <span class="function">CMyClass <span class="title">c3</span><span class="params">(c1)</span></span>;	<span class="comment">//调用复制构造函数，c3并没有变得跟c1一样</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c2.n &lt;&lt; <span class="string">", "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c3.n &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出：</span></span><br><span class="line"><span class="number">5</span>, <span class="number">10</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="定义函数时常量引用参数的使用"><a href="#定义函数时常量引用参数的使用" class="headerlink" title="定义函数时常量引用参数的使用"></a>定义函数时常量引用参数的使用</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(CMyClass obj)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"fun"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>这样的函数，调用时生成形参会引发复制构造函数调用，复制一遍时间开销比较大</li>
-<li>所以可以考虑使用<code>CMyClass &amp;</code> 引用类型作为参数，本质上与实参是一样的</li>
-<li>如果希望确保实参的值在函数中不应被改变，那么可以加上<code>const</code>关键字，这样的话如果你定义的函数中出现了改变实参的值得语句。编译器就会报错</li>
-</ul>
-<blockquote>
-<p>我自己写的程序难道我自己不记得我没有改过参数吗？的确，你现在记得，明天也记得，但以后再改你的程序，就未必记得了。从代码规范的角度来讲，加上<code>const</code>关键字是必要的</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">const</span> CMyClass &amp;obj)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//如此一来，函数中任何试图改变obj值得语句都将是非法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="思考：为什么要自己写复制构造函数？"><a href="#思考：为什么要自己写复制构造函数？" class="headerlink" title="思考：为什么要自己写复制构造函数？"></a>思考：为什么要自己写复制构造函数？</h2><blockquote>
-<p>想通这个问题是高难度操作，作者水平有限，无法清晰地回答，仅提供参考链接。</p>
-</blockquote>
-<p>前置知识：</p>
-<ul>
-<li>深拷贝、浅拷贝</li>
-<li>传值、传地址、传引用</li>
-</ul>
-<p>参考链接：</p>
-<ul>
-<li><a href="https://www.cnblogs.com/qianqiannian/p/8946769.html" target="_blank" rel="noopener">为什么需要拷贝构造函数</a></li>
-<li><a href="https://blog.csdn.net/qq_29344757/article/details/76037255" target="_blank" rel="noopener">c++的默认拷贝构造函数，从深度拷贝和浅拷贝说起</a></li>
-<li><a href="https://blog.csdn.net/mist99/article/details/24660173" target="_blank" rel="noopener">为什么要自己写构造函数和析构函数</a></li>
-<li><a href="https://blog.csdn.net/RealOnlyme/article/details/7272051" target="_blank" rel="noopener">使用缺省的拷贝构造函数带来的危险性</a></li>
-<li><a href="https://www.cnblogs.com/xuewangkai/p/11152377.html" target="_blank" rel="noopener">值传递 引用传递（传地址，传引用）的区别</a></li>
-</ul>
-<hr>
-<blockquote>
-<ol>
-<li>参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改</li>
-<li>图：广州天河CBD</li>
-</ol>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C-复制构造函数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
