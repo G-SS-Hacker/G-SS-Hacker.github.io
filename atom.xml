@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-05T04:53:17.827Z</updated>
+  <updated>2019-12-05T12:48:33.341Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C++友元</title>
+    <link href="https://g-ss-hacker.github.io/C-%E5%8F%8B%E5%85%83/"/>
+    <id>https://g-ss-hacker.github.io/C-%E5%8F%8B%E5%85%83/</id>
+    <published>2019-12-05T12:43:48.000Z</published>
+    <updated>2019-12-05T12:48:33.341Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/05/4od6BVpY9SDaAXy.jpg" alt></p><h1 id="C-友元"><a href="#C-友元" class="headerlink" title="C++友元"></a>C++友元</h1><p><font color="grey"> <em>Guderian出品</em> </font></p><blockquote><p>友元分为<strong>友元函数</strong>和<strong>友元类</strong>两种</p></blockquote><h2 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h2><p>一个类的友元函数可以访问该类的私有成员，友元函数不是这个类的成员函数，可以是一个普通的全局函数或其他类的成员函数</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CCar</span>;</span><span class="comment">//提前声明CCar是一个类，以便后面的CDriver类使用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CDriver</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ModifyCar</span><span class="params">(CCar *pCar)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CCar</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> price;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">int</span> <span class="title">MostExpensiveCar</span><span class="params">(CCar cars[], <span class="keyword">int</span> total)</span></span>;<span class="comment">//声明友元</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">void</span> CDriver::ModifyCar(CCar *pCar)<span class="comment">//声明友元</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> CDriver::ModifyCar(CCar *pCar)</span><br><span class="line">&#123;</span><br><span class="line">    pCar-&gt;price += <span class="number">1000</span>;<span class="comment">//汽车改装后价值增加</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">MostExpensiveCar</span><span class="params">(CCar cars[], <span class="keyword">int</span> total)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmpMax = <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; total; ++i)</span><br><span class="line">    <span class="keyword">if</span>(cars[i].price &gt; tmpMax)</span><br><span class="line">            tmpMax = cars[i].price;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> tmpMax;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以将一个类的成员函数（包括构造、析构函数）说明为另一个类的友元</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">void</span> B::function();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="友元类"><a href="#友元类" class="headerlink" title="友元类"></a>友元类</h2><p>如果<code>A</code>是<code>B</code>的友元类，那么<code>A</code>的所有成员函数可以访问<code>B</code>的所有私有成员</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CCar</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> price;</span><br><span class="line">    <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">CDriver</span>;</span><span class="comment">//声明CDriver为友元类</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CDriver</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    CCar myCar;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ModifyCar</span><span class="params">()</span><span class="comment">//改装汽车</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">myCar.price += <span class="number">1000</span>;</span><br><span class="line">            <span class="comment">//因CDriver是CCar的友元类故可以访问其私有成员</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>友元类之间的关系不能传递：类<code>A</code>是类<code>B</code>的友元，类<code>C</code>是类<code>B</code>的友元，但类<code>A</code>不是类<code>C</code>的友元</li><li>友元类之间的关系不能继承</li></ul><hr><blockquote><p>参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/05/4od6BVpY9SDaAXy.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;C-友元&quot;&gt;&lt;a href=&quot;#C-友元&quot; class=&quot;headerlink&quot; title=&quot;C++友元&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
+    
+      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++常量对象、常量成员函数和常引用</title>
     <link href="https://g-ss-hacker.github.io/C-%E5%B8%B8%E9%87%8F%E5%AF%B9%E8%B1%A1%E3%80%81%E5%B8%B8%E9%87%8F%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%92%8C%E5%B8%B8%E5%BC%95%E7%94%A8/"/>
     <id>https://g-ss-hacker.github.io/C-%E5%B8%B8%E9%87%8F%E5%AF%B9%E8%B1%A1%E3%80%81%E5%B8%B8%E9%87%8F%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%92%8C%E5%B8%B8%E5%BC%95%E7%94%A8/</id>
     <published>2019-12-05T04:43:46.000Z</published>
-    <updated>2019-12-05T04:53:17.827Z</updated>
+    <updated>2019-12-05T12:44:39.557Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/05/vwAOcbkZFnzf4PR.jpg" alt></p><h1 id="C-常量对象、常量成员函数和常引用"><a href="#C-常量对象、常量成员函数和常引用" class="headerlink" title="C++常量对象、常量成员函数和常引用"></a>C++常量对象、常量成员函数和常引用</h1><blockquote><p>图：广州塔</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><h2 id="常量对象"><a href="#常量对象" class="headerlink" title="常量对象"></a>常量对象</h2><p>如果不希望某个对象的值被改变，则定义该对象的时候可在前面加<code>const</code>关键字。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CDemo</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> vale;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetValue</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Demo obj;<span class="comment">//常量对象</span></span><br></pre></td></tr></table></figure><hr><h2 id="常量成员函数"><a href="#常量成员函数" class="headerlink" title="常量成员函数"></a>常量成员函数</h2><p>在类的成员函数说明后面可以加<code>const</code>关键字，则该成员函数成为常量成员函数。</p><p>常量成员函数执行期间<font color="red">不应该修改其所作用的对象</font>。因此，在常量成员函数中不能修改成员变量的值（<font color="Red">静态成员变量除外</font>），也不能调用同类的非常量成员函数（<font color="red">静态成员函数除外</font>）。</p><p>非常亮成员函数在执行的过程中是有可能修改掉常量成员函数中的值的。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">GetValue</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">    Sample() &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> Sample::GetValue() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    value = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//wrong,不能修改成员变量的值</span></span><br><span class="line">    func();</span><br><span class="line">    <span class="comment">//wrong,不能调用同类的非常量成员函数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> Sample o;</span><br><span class="line">    o.value = <span class="number">100</span>;<span class="comment">//err,不能修改成员变量的值</span></span><br><span class="line">    o.func();<span class="comment">//err,不能调用同类的非常量成员函数</span></span><br><span class="line">    o.GetValue();<span class="comment">//ok,可以执行常量成员函数</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="常量成员函数的重载"><a href="#常量成员函数的重载" class="headerlink" title="常量成员函数的重载"></a>常量成员函数的重载</h2><p>两个成员函数，名字和参数表都一样，但是一个是<code>const</code>，一个不是，算<font color="red">重载</font>，而不是<font color="red">重复定义</font>。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTest</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    CTest()&#123; n = <span class="number">1</span> ;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetValue</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="number">2</span> * n; &#125;</span><br><span class="line">    <span class="comment">//这两个GetValue()函数是重载关系，而不是重复定义</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> CTest objTest1;</span><br><span class="line">    CTest objTest2;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; objTest1.GetValue() &lt;&lt; <span class="string">", "</span> &lt;&lt; objTest2.GetValue();</span><br><span class="line">    <span class="comment">//objTest1是常量对象，调用的是GetValue() const</span></span><br><span class="line">    <span class="comment">//objTest2是非常量对象，调用的是GetValue()</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="常引用"><a href="#常引用" class="headerlink" title="常引用"></a>常引用</h2><p>引用前面可以加<code>const</code>关键字，成为常引用。不能通过常引用，修改其引用的变量。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r = n;</span><br><span class="line">r = <span class="number">5</span>;<span class="comment">//error</span></span><br><span class="line">n = <span class="number">4</span>;<span class="comment">//OK</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>对象作为函数的参数时，生成该参数需要调用复制构造函数，效率比较低。用指针作参数，代码又不好看，如何解决？可以用对象的引用作为参数。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="comment">//...  </span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintfObj</span><span class="params">(Sample &amp;o)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但对象引用作为函数参数有一定风险性，若函数中不小心修改了形参<code>o</code>，则实参也跟着变，这不是我想要的。如何避免？使用常引用！</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="comment">//...  </span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintfObj</span><span class="params">(<span class="keyword">const</span> Sample &amp;o)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样函数中就能确保不会出现无意中更改<code>o</code>值的语句了。</p><hr><blockquote><p> 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改</p></blockquote>]]></content>
     
@@ -54,9 +85,9 @@
     
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
     
-      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="C++" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
+      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
@@ -108,9 +139,9 @@
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -157,9 +188,9 @@
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -954,143 +985,6 @@ a_{ij} =
     
     
       <category term="Windows10" scheme="https://G-SS-Hacker.github.io/tags/Windows10/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typora常用快捷键大全</title>
-    <link href="https://g-ss-hacker.github.io/Typora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/"/>
-    <id>https://g-ss-hacker.github.io/Typora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</id>
-    <published>2019-08-12T05:48:16.000Z</published>
-    <updated>2019-12-02T13:52:54.688Z</updated>
-    
-    <content type="html"><![CDATA[<p><center><font size="5">Life is short, you need shortcuts</font></center><br><img src="https://i.loli.net/2019/10/02/EmLBQfI6HrVnPXd.jpg" alt></p><h1 id="Typora常用快捷键大全"><a href="#Typora常用快捷键大全" class="headerlink" title="Typora常用快捷键大全"></a>Typora常用快捷键大全</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-m9r4{background-color:#ffffc7;text-align:left;vertical-align:top}<br>.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}<br>.tg .tg-0lax{text-align:left;vertical-align:top}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style></p><table class="tg">  <tr>    <th class="tg-m9r4">操作类型</th>    <th class="tg-ncd7">操作</th>    <th class="tg-ncd7">快捷键</th>  </tr>  <tr>    <td class="tg-0lax" rowspan="8">文件操作</td>    <td class="tg-0pky">新建</td>    <td class="tg-0pky">Ctrl + N</td>  </tr>  <tr>    <td class="tg-0pky">新建窗口<br></td>    <td class="tg-0pky">Ctrl + Shift + N</td>  </tr>  <tr>    <td class="tg-0pky">打开</td>    <td class="tg-0pky">Ctrl + O</td>  </tr>  <tr>    <td class="tg-0lax">快速打开</td>    <td class="tg-0lax">Ctrl + P</td>  </tr>  <tr>    <td class="tg-0lax">保存<br></td>    <td class="tg-0lax">Ctrl + S</td>  </tr>  <tr>    <td class="tg-0lax">另存为</td>    <td class="tg-0lax">Ctrl + Shift + S</td>  </tr>  <tr>    <td class="tg-0lax">偏好设置</td>    <td class="tg-0lax">Ctrl + 逗号</td>  </tr>  <tr>    <td class="tg-0lax">关闭</td>    <td class="tg-0lax">Ctrl + W</td>  </tr>  <tr>    <td class="tg-0lax" rowspan="7">编辑操作</td>    <td class="tg-0lax">选中当前行/句</td>    <td class="tg-0lax">Ctrl + L</td>  </tr>  <tr>    <td class="tg-0lax">选中当前格式文本</td>    <td class="tg-0lax">Ctrl + E</td>  </tr>  <tr>    <td class="tg-0lax">选中当前词</td>    <td class="tg-0lax">Ctrl + D</td>  </tr>  <tr>    <td class="tg-0lax">查找<br></td>    <td class="tg-0lax">Ctrl + F</td>  </tr>  <tr>    <td class="tg-0lax">替换</td>    <td class="tg-0lax">Ctrl + H<br></td>  </tr>  <tr>    <td class="tg-0lax">查找下一个</td>    <td class="tg-0lax">F3</td>  </tr>  <tr>    <td class="tg-0lax">查找上一个</td>    <td class="tg-0lax">Shift + F3</td>  </tr>  <tr>    <td class="tg-0lax" rowspan="2">段落操作</td>    <td class="tg-0lax">提升标题等级</td>    <td class="tg-0lax">Ctrl + =</td>  </tr>  <tr>    <td class="tg-0lax">降低标题等级</td>    <td class="tg-0lax">Ctrl + -</td>  </tr>  <tr>    <td class="tg-0lax" rowspan="8">格式操作</td>    <td class="tg-0lax">加粗</td>    <td class="tg-0lax">Ctrl +Ｂ</td>  </tr>  <tr>    <td class="tg-0lax">斜体</td>    <td class="tg-0lax">Ctrl + I<br></td>  </tr>  <tr>    <td class="tg-0lax">下划线<br></td>    <td class="tg-0lax">Ctrl + U</td>  </tr>  <tr>    <td class="tg-0lax">代码</td>    <td class="tg-0lax">Ctrl + Shift + `</td>  </tr>  <tr>    <td class="tg-0lax">删除线</td>    <td class="tg-0lax">Alt + Shift + 5</td>  </tr>  <tr>    <td class="tg-0lax">超链接</td>    <td class="tg-0lax">Ctrl + K</td>  </tr>  <tr>    <td class="tg-0lax">图像<br></td>    <td class="tg-0lax">Ctrl + Shift + I</td>  </tr>  <tr>    <td class="tg-0lax">清除样式</td>    <td class="tg-0lax">Ctrl + \</td>  </tr></table><a id="more"></a><font color="#407600">【其他文章·Markdown·Windows10】</font><ul><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/Markdown需要转义的字符及其转义方法/">Markdown需要转义的字符及其转义方法</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/Typora常用快捷键大全/">Typora常用快捷键大全</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/Windows10常用快捷键/">Windows10常用快捷键</a></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;center&gt;&lt;font size=&quot;5&quot;&gt;Life is short, you need shortcuts&lt;/font&gt;&lt;/center&gt;&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2019/10/02/EmLBQfI6HrVnPXd.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Typora常用快捷键大全&quot;&gt;&lt;a href=&quot;#Typora常用快捷键大全&quot; class=&quot;headerlink&quot; title=&quot;Typora常用快捷键大全&quot;&gt;&lt;/a&gt;Typora常用快捷键大全&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;style type=&quot;text/css&quot;&gt;&lt;br&gt;.tg  {border-collapse:collapse;border-spacing:0;}&lt;br&gt;.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg .tg-m9r4{background-color:#ffffc7;text-align:left;vertical-align:top}&lt;br&gt;.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}&lt;br&gt;.tg .tg-0lax{text-align:left;vertical-align:top}&lt;br&gt;.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-&lt;/style&gt;&lt;/p&gt;
-&lt;table class=&quot;tg&quot;&gt;
-  &lt;tr&gt;
-    &lt;th class=&quot;tg-m9r4&quot;&gt;操作类型&lt;/th&gt;
-    &lt;th class=&quot;tg-ncd7&quot;&gt;操作&lt;/th&gt;
-    &lt;th class=&quot;tg-ncd7&quot;&gt;快捷键&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot; rowspan=&quot;8&quot;&gt;文件操作&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;新建&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;Ctrl + N&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;新建窗口&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;Ctrl + Shift + N&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;打开&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;Ctrl + O&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;快速打开&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + P&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;保存&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + S&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;另存为&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + Shift + S&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;偏好设置&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + 逗号&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;关闭&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + W&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot; rowspan=&quot;7&quot;&gt;编辑操作&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;选中当前行/句&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + L&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;选中当前格式文本&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + E&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;选中当前词&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + D&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;查找&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + F&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;替换&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + H&lt;br&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;查找下一个&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;F3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;查找上一个&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Shift + F3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot; rowspan=&quot;2&quot;&gt;段落操作&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;提升标题等级&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + =&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;降低标题等级&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + -&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot; rowspan=&quot;8&quot;&gt;格式操作&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;加粗&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl +Ｂ&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;斜体&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + I&lt;br&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;下划线&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + U&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;代码&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + Shift + `&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;删除线&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Alt + Shift + 5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;超链接&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + K&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;图像&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + Shift + I&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;清除样式&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;Ctrl + \&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="Markdown" scheme="https://G-SS-Hacker.github.io/tags/Markdown/"/>
     
   </entry>
   
