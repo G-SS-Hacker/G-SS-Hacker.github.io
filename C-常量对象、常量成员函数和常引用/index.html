@@ -150,7 +150,7 @@
 <meta property="og:description" content="C++常量对象、常量成员函数和常引用 图：广州塔   Guderian出品  常量对象如果不希望某个对象的值被改变，则定义该对象的时候可在前面加const关键字。 123456789class CDemo&amp;#123;    private:    	int vale;   	public:    	void SetValue()	&amp;#123;&amp;#125;&amp;#125;;const Demo obj">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/12/05/vwAOcbkZFnzf4PR.jpg">
-<meta property="og:updated_time" content="2019-12-05T04:48:23.092Z">
+<meta property="og:updated_time" content="2019-12-05T04:49:17.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++常量对象、常量成员函数和常引用">
 <meta name="twitter:description" content="C++常量对象、常量成员函数和常引用 图：广州塔   Guderian出品  常量对象如果不希望某个对象的值被改变，则定义该对象的时候可在前面加const关键字。 123456789class CDemo&amp;#123;    private:    	int vale;   	public:    	void SetValue()	&amp;#123;&amp;#125;&amp;#125;;const Demo obj">
@@ -496,7 +496,7 @@
                 
               
 
-              <time title="创建时间：2019-12-05 12:43:46 / 修改时间：12:48:23" itemprop="dateCreated datePublished" datetime="2019-12-05T12:43:46+08:00">2019-12-05</time>
+              <time title="创建时间：2019-12-05 12:43:46 / 修改时间：12:49:17" itemprop="dateCreated datePublished" datetime="2019-12-05T12:43:46+08:00">2019-12-05</time>
             </span>
           
 
@@ -550,7 +550,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.7k</span>
+              <span title="本文字数">1.8k</span>
             </span>
           
 
@@ -604,6 +604,10 @@
 <p>但对象引用作为函数参数有一定风险性，若函数中不小心修改了形参<code>o</code>，则实参也跟着变，这不是我想要的。如何避免？使用常引用！</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="comment">//...  </span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintfObj</span><span class="params">(<span class="keyword">const</span> Sample &amp;o)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样函数中就能确保不会出现无意中更改<code>o</code>值的语句了。</p>
+<hr>
+<blockquote>
+<p> 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改</p>
+</blockquote>
 
       
     </div>
@@ -628,7 +632,7 @@
   <p><span>本文标题:</span>C++常量对象、常量成员函数和常引用</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2019年12月05日 - 12:43:46</p>
-  <p><span>最后更新:</span>2019年12月05日 - 12:48:23</p>
+  <p><span>最后更新:</span>2019年12月05日 - 12:49:17</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/" title="C++常量对象、常量成员函数和常引用">https://G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/" aria-label="复制成功！"></i></span>
   </p>
