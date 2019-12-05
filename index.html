@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2019-12-05 20:43:48 / 修改时间：21:30:03" itemprop="dateCreated datePublished" datetime="2019-12-05T20:43:48+08:00">2019-12-05</time>
+              <time title="创建时间：2019-12-05 20:43:48 / 修改时间：22:37:18" itemprop="dateCreated datePublished" datetime="2019-12-05T20:43:48+08:00">2019-12-05</time>
             </span>
           
 
@@ -571,10 +571,9 @@
       
         
           <p><img src="https://i.loli.net/2019/12/05/4od6BVpY9SDaAXy.jpg" alt></p>
-<h1 id="C-友元"><a href="#C-友元" class="headerlink" title="C++友元"></a>C++友元</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+<h1 id="C-友元"><a href="#C-友元" class="headerlink" title="C++友元"></a>C++友元</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <blockquote>
-<p>友元分为<strong>友元函数</strong>和<strong>友元类</strong>两种</p>
+<p>友元很简单，在某种程度上算作是C++设计者对C使用者的妥协。友元分为<strong>友元函数</strong>和<strong>友元类</strong>两种。</p>
 </blockquote>
 <h2 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h2><p>一个类的友元函数可以访问该类的私有成员，友元函数不是这个类的成员函数，可以是一个普通的全局函数或其他类的成员函数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CCar</span>;</span>	<span class="comment">//提前声明CCar是一个类，以便后面的CDriver类使用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CDriver</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">ModifyCar</span><span class="params">(CCar *pCar)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CCar</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> price;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">int</span> <span class="title">MostExpensiveCar</span><span class="params">(CCar cars[], <span class="keyword">int</span> total)</span></span>;	<span class="comment">//声明友元</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">void</span> CDriver::ModifyCar(CCar *pCar)	<span class="comment">//声明友元</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> CDriver::ModifyCar(CCar *pCar)</span><br><span class="line">&#123;</span><br><span class="line">    pCar-&gt;price += <span class="number">1000</span>;	<span class="comment">//汽车改装后价值增加</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">MostExpensiveCar</span><span class="params">(CCar cars[], <span class="keyword">int</span> total)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmpMax = <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; total; ++i)</span><br><span class="line">    	<span class="keyword">if</span>(cars[i].price &gt; tmpMax)</span><br><span class="line">            tmpMax = cars[i].price;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> tmpMax;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -585,7 +584,7 @@
 <ul>
 <li>友元类之间的关系不能传递：类<code>A</code>是类<code>B</code>的友元，类<code>C</code>是类<code>B</code>的友元，但类<code>A</code>不是类<code>C</code>的友元</li>
 <li>友元类之间的关系不能继承</li>
-<li>
+</ul>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -597,7 +596,7 @@
           <!--/noindex-->
         
       
-    </li></ul></div>
+    </div>
 
     
 
