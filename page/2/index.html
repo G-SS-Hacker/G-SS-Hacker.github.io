@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">33</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
 
   </li>
         
@@ -431,6 +431,231 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C-构造函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C-构造函数/" class="post-title-link" itemprop="url">C++构造函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-04 17:10:38" itemprop="dateCreated datePublished" datetime="2019-12-04T17:10:38+08:00">2019-12-04</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-07 10:50:36" itemprop="dateModified" datetime="2019-12-07T10:50:36+08:00">2019-12-07</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">3k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">3 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://img.mp.itc.cn/upload/20170616/3e26b0c84ed64d5e9c6d533178122240_th.jpg" alt></p>
+<h1 id="C-构造参数"><a href="#C-构造参数" class="headerlink" title="C++ 构造参数"></a>C++ 构造参数</h1><blockquote>
+<p>图：深圳福田CBD</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<font color="#FF7F27">本文整理自《北京大学公开课：C++面向对象程序设计》</font>
+
+<h2 id="构造函数的性质"><a href="#构造函数的性质" class="headerlink" title="构造函数的性质"></a>构造函数的性质</h2><ul>
+<li>构造参数是成员函数的一种</li>
+<li>名字与类名相同，可以由参数，不能有返回值（<code>void</code>也不行）</li>
+<li>作用是对对象进行初始化，如给成员变量赋初值</li>
+<li>如果定义类的时候没写构造函数，则编译器生成一个默认的无参数的构造函数</li>
+<li>默认构造函数无参数，不进行任何操作</li>
+<li>如果定义了构造函数，则编译器不生成默认的无参数的构造函数</li>
+<li>对象生成时构造函数被自动调用。对象一旦生成，就再也不能在其上执行构造函数</li>
+<li>一个类可以有多个构造函数</li>
+</ul>
+<p>注：如果只定义了带参构造函数，在定义对象时必须声明参数</p>
+<h2 id="为什么需要构造函数："><a href="#为什么需要构造函数：" class="headerlink" title="为什么需要构造函数："></a>为什么需要构造函数：</h2><ul>
+<li>不用专门写初始化函数，也不用担心忘记</li>
+<li>有时对象没有被初始化，会导致程序出错</li>
+</ul>
+<h2 id="构造函数的使用"><a href="#构造函数的使用" class="headerlink" title="构造函数的使用"></a>构造函数的使用</h2><h3 id="一个类可以有一个构造函数"><a href="#一个类可以有一个构造函数" class="headerlink" title="一个类可以有一个构造函数"></a>一个类可以有一个构造函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">double</span> radius, xLoc, yLoc;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	Circle(<span class="keyword">double</span> r ,<span class="keyword">double</span> x = <span class="number">0</span>, y = <span class="number">0</span>)</span><br><span class="line">&#125;;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r, <span class="keyword">double</span> x, <span class="keyword">double</span> y)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r, xLoc = x, yLoc = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Wrong samples</span></span><br><span class="line">Circle c1;	<span class="comment">//error,缺少构造函数的参数</span></span><br><span class="line">Circle *pc = <span class="keyword">new</span> Circle;	<span class="comment">//error，没有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Correct samples</span></span><br><span class="line"><span class="function">Circle <span class="title">c1</span><span class="params">(<span class="number">2</span>)</span></span>;	<span class="comment">//OK</span></span><br><span class="line"><span class="function">Circle <span class="title">c1</span><span class="params">(<span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>)</span></span>;	<span class="comment">//OK</span></span><br><span class="line">Circle *pc = <span class="keyword">new</span> Circle(<span class="number">3</span>, <span class="number">4</span>);	<span class="comment">//also OK</span></span><br></pre></td></tr></table></figure>
+<h3 id="一个类可以有多个构造函数"><a href="#一个类可以有多个构造函数" class="headerlink" title="一个类可以有多个构造函数"></a>一个类可以有多个构造函数</h3><p>只要不同的构造函数的参数个数和参数类型不同，这些构造函数就会构成重载的关系</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">double</span> radius, xLoc, yLoc;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	Circle(<span class="keyword">double</span> r ,<span class="keyword">double</span> x = <span class="number">0</span>, y = <span class="number">0</span>)</span><br><span class="line">        Circle(<span class="keyword">double</span> r);</span><br><span class="line">    	Circle(Circle c1, Circle c2)</span><br><span class="line">&#125;;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r, <span class="keyword">double</span> x, <span class="keyword">double</span> y)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r, xLoc = x, yLoc = y;</span><br><span class="line">&#125;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r;</span><br><span class="line">&#125;</span><br><span class="line">Circle::Circle(Circle c1, Circle c2)</span><br><span class="line">&#123;</span><br><span class="line">    radius = c1.radius + c2.radius;</span><br><span class="line">    xLoc   = c1.xLOc   + c2.xLoc;</span><br><span class="line">    yLoc   = c1.yLOc   + c2.yLoc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Samples</span></span><br><span class="line">Circle c1(3), c2(1, 0), c3(c1, c2);</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C-构造函数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1336,292 +1561,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/矩阵章节总结/" class="post-title-link" itemprop="url">矩阵章节总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-28 21:43:02" itemprop="dateCreated datePublished" datetime="2019-10-28T21:43:02+08:00">2019-10-28</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-28 22:49:12" itemprop="dateModified" datetime="2019-11-28T22:49:12+08:00">2019-11-28</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">1.4k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573141304163&amp;di=91f3aa900d4bd602b9a233ff478c2bbc&amp;imgtype=0&amp;src=http%3A%2F%2Fdingyue.nosdn.127.net%2FvXsWUrS27VAb4s%3DrSMlMPRzjkRzux6S4Tx9RXqej1%3D%3DW51544709511256compressflag.jpg" alt></p>
-<h1 id="矩阵章节总结"><a href="#矩阵章节总结" class="headerlink" title="矩阵章节总结"></a>矩阵章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给<code>Matlab</code>就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭<p></p>
-<h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><ol>
-<li><p>$ {AB}= {BA}$时，矩阵运算满足<code>交换律</code>，故以下运算皆成立</p>
-<p>$(\mathrm{i})( {A}\pm  {B})^2= {A}^2 \pm 2 {AB} + {B}^2$</p>
-<p>$(\mathrm{ii})( {A}+ {B})( {A}- {B})= {A}^2- {B}^2$</p>
-<p>$(\mathrm{iii})( {AB})^2=( {BA})^2$</p>
-</li>
-<li><p>$ {A}^*， {A}’， {A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼</p>
-<p>$(\mathrm{i})( {AB})’= {B}’ {A}’$</p>
-<p>$(\mathrm{ii})( {AB})^{-1}= {B}^{-1} {A}^{-1}$</p>
-<p>$(\mathrm{iii})( {A}^*)^{-1}=( {A}^{-1})^*$</p>
-</li>
-<li><p>带系数的情况</p>
-<p>$(\mathrm{i})|k {A}|=k^n| {A}|$</p>
-<p>$(\mathrm{ii})(k {A})^{-1}=\frac1{k} {A}^{-1}$</p>
-<p>$(\mathrm{iii})(k {A})’=k {A}’$</p>
-<p>$(\mathrm{iv})\overline{k {A}}=\overline{k}\overline{ {A}}$</p>
-</li>
-</ol>
-<h2 id="共轭矩阵"><a href="#共轭矩阵" class="headerlink" title="共轭矩阵"></a>共轭矩阵</h2><p>记住以下四个公式，以备突然考到</p>
-<p>$(\mathrm{i})\overline{ {A}+ {B}}=\overline{ {A}}+\overline{ {B}}$</p>
-<p>$(\mathrm{ii})\overline{k {A}}=\overline{k}\overline{ {A}}$</p>
-<p>$(\mathrm{iii})\overline{ {AB}}=\overline{ {A}}\overline{ {B}}$</p>
-<p>$(\mathrm{iv})|\overline{ {A}}|=\overline{| {A}|}$</p>
-<p>简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭</p>
-<h2 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h2><ol>
-<li><p>看到$ {A}^*$，以下公式至少用其一</p>
-<p>$(\mathrm{i}) {A}^* {A}= {A} {A}^*=| {A}| {E}$</p>
-<p>$(\mathrm{ii}) {A}^{-1}=\frac{ {A}^*}{| {A}|}$</p>
-<p>$(\mathrm{iii})| {A}^*|=| {A}|^{n-1}$</p>
-<p>$(\mathrm{iv})( {A}^*)^*=| {A}|^{n-2} {A}$</p>
-</li>
-<li><p>伴随矩阵的特殊性质：极端的伴随矩阵</p>
-<script type="math/tex; mode=display">
-{R}({A}^*)=\begin{cases} 
-    n,\quad {R}({A})=n\\
-    1,\quad {R}({A})=n-1\\
-    0,\quad {R}({A})<n-1
-\end{cases}</script></li>
-</ol>
-<h2 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h2><ol>
-<li><p>判断矩阵可逆的方法：</p>
-<p>$(\mathrm{i}) {AB}= {BA}=E$</p>
-<p>$(\mathrm{ii}) {R}( {A})=n$</p>
-<p>$(\mathrm{iii})| {A}|=0$</p>
-<p>$(\mathrm{iv}) {A}= {P}_1 {P}_2 \dots  {P}_k$</p>
-</li>
-<li><p>初变不变秩，不变奇异性</p>
-</li>
-<li><p>行阶梯、行最简、标准形</p>
-</li>
-<li><p>求逆方法：公式法、辅助矩阵法</p>
-</li>
-</ol>
-<h2 id="分块矩阵运算"><a href="#分块矩阵运算" class="headerlink" title="分块矩阵运算"></a>分块矩阵运算</h2><ol>
-<li><p>对角方阵求逆（仅对对角方阵有效）：</p>
-<script type="math/tex; mode=display">
-\left(\begin {array}{ccc}
-    {A}_{11}& & & &\\
-     & {A}_{22}& & &\\
-     & & \ddots & &\\
-     & & & {A}_{ss}&
-\end {array}\right)^m
-=
-\left(\begin {array}{ccc}
-    {A}_{11}^m& & & &\\
-     & {A}_{22}^m& & &\\
-     & & \ddots & &\\
-     & & & {A}_{ss}^m&
-\end {array}\right)</script></li>
-<li><p>特殊矩阵求逆矩阵，是否还应保持原来的顺序：</p>
-<p>$(\mathrm{i})$主对角：$\searrow$仍为$\searrow$</p>
-<p>$(\mathrm{ii})$次对角：$\swarrow$变为$\nearrow$</p>
-</li>
-<li><p>思想：运用<code>第三类初等变换</code></p>
-<script type="math/tex; mode=display">
-\left|\begin{array}{cccc} {A} & {C} \\ {D} & {B} \end{array} \right|=|{A}||{B}-{DA}^{-1}{C}|</script></li>
-<li><p>分块矩阵的秩（高频使用，按重要性降序排列）：</p>
-<p>$(\mathrm{i})R(A+B)\leq R(A)+R(B),\quad R(A-B)\leq R(A)+R(B)$</p>
-<p>$(\mathrm{ii})R(AB)\leq min\{R(A),R(B)\}$</p>
-<p>$(\mathrm{iii})R(A|B)\leq R(A)+R(B),\quad R(\frac{A}{B})\leq R(A)+R(B)$</p>
-<p>$(\mathrm{iv})R \left(\begin{array}{ccc} A &amp; 0\\0 &amp; B \end{array} \right)=R(A)+R(B)$</p>
-<p>$(\mathrm{v})R \left(\begin{array}{ccc} A &amp; C\\0 &amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等</p>
-<p>$(\mathrm{vi})$设$A$为$m\times n$矩阵，$B$为$n\times p$矩阵（有时题目条件会简化为$A$、$B$为同阶方阵），则$R(AB) \ge R(A)+R(B)-n$；特别地，当$AB=0$时，$R(A)+R(B)\le n$</p>
-<p>$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/矩阵章节总结/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </li></ol></div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1671,7 +1610,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1867,7 +1806,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">61k</span>
   
 
   
@@ -1876,7 +1815,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">54 分钟</span>
+    <span title="站点阅读时长">56 分钟</span>
   
 </div>
 
