@@ -1191,7 +1191,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-04 21:25:33" itemprop="dateModified" datetime="2019-12-04T21:25:33+08:00">2019-12-04</time>
+                <time title="修改时间：2019-12-10 20:21:31" itemprop="dateModified" datetime="2019-12-10T20:21:31+08:00">2019-12-10</time>
               </span>
             
           
@@ -1279,7 +1279,8 @@
 <li><font color="#495DD8">enumeration</font> ：各出现<font color="#64ceaa"><strong>在哪里</strong></font>？</li>
 </ul>
 <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p><code>KMP算法</code>（全称<code>Knuth-Morris-Pratt算法</code>）是一种高效的模式匹配算法。在模式匹配算法中，常见的算法包括<code>BF算法</code>（<code>朴素算法</code>）、<code>KMP算法</code>、<code>BM算法</code>、<code>RK算法</code>、<code>有限自动机算法</code>、<code>Horspool算法</code>、<code>Sunday算法</code>。在这些算法中，最经典的算法非<code>KMP算法</code>和<code>BM算法</code>莫属。这两种算法都有一个共同点：抽象，理解难度大。实际上，<code>KMP算法</code>还有一个明显特点：会者不难。本文内容默认你已经明白<code>BF算法</code>的原理和不足（因此这部分内容将简单略过），展开讲述<code>KMP算法</code>的原理、优点和<code>c++</code>代码实现。相信你在学会<code>KMP算法</code>之后将会有一种<font color="#64ceaa"><strong>“踏遍青山人未老，这边风景独好”</strong></font>的快意。让我们开始吧。</p>
-<h2 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h2><p><code>BF算法</code>的本质就是<font color="#64ceaa">暴力搜索</font>。既然要在串<code>T</code>中找出与串<code>P</code>相同的所有子串，那不妨找出串<code>T</code>中所有与串<code>P</code>长度相同的子串，在逐个判断这个子串是否与串<code>P</code>相同。具体的例子<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a><font color="#5F2CA5">（<del>讲得很形象了，应该不会有理解上的困难</del>）</font>。设<code>strlen(T) == n, strlen(P) == m</code>，则<code>BF算法</code>的<font color="#64ceaa"><strong>预处理时间</strong></font>为$0$，<font color="#64ceaa"><strong>匹配时间</strong></font>为$O(mn)$，<font color="#64ceaa"><strong>总时间复杂度</strong></font>为$O(mn)$<font color="#5F2CA5"><del>（简直是蜗速）</del></font>，在大部分应用场景中并不<font color="#64ceaa"><strong>优秀</strong></font>。</p>
+<h2 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h2><p><code>BF算法</code>的本质就是<font color="#64ceaa">暴力搜索</font>。既然要在串<code>T</code>中找出与串<code>P</code>相同的所有子串，那不妨找出串<code>T</code>中所有与串<code>P</code>长度相同的子串，在逐个判断这个子串是否与串<code>P</code>相同。具体的例子<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a>或者<font color="#FF7F27">看下方的视频</font><font color="#5F2CA5">（讲得很形象了，应该不会有理解上的困难）</font>。设<code>strlen(T) == n, strlen(P) == m</code>，则<code>BF算法</code>的<font color="#64ceaa"><strong>预处理时间</strong></font>为$0$，<font color="#64ceaa"><strong>匹配时间</strong></font>为$O(mn)$，<font color="#64ceaa"><strong>总时间复杂度</strong></font>为$O(mn)$<font color="#5F2CA5">（简直是蜗速）</font>，在大部分应用场景中并不<font color="#64ceaa"><strong>优秀</strong></font>。</p>
+<p><iframe src="//player.bilibili.com/player.html?aid=11866460&cid=19594712&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="780" height="520" allowfullscreen="true"> </iframe></p>
 <h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><h3 id="更高的效率"><a href="#更高的效率" class="headerlink" title="更高的效率"></a>更高的效率</h3><p>容易看出<code>BF算法</code>的效率是十分蹩脚的，而它蹩脚的原因也很明显：在一次匹配尝试中，一旦失配（某一位匹配失败），就把串<code>P</code>整体向右移动一位。在模拟算法运行过程中，我们发现如果开始匹配时第一位就失配，那么只向右移动一位的确无可厚非，毕竟说不定移动一位之后就会匹配成功呢；但是如果已经匹配了串<code>P</code>的一部分了才失配，在向右移动一位之后，有时候（而且往往是经常）我们发现依然注定会匹配失败，也就是说在上次失败之后，向右移动一位再做尝试是根本不必要的，这种<font color="#5F2CA5">“只移动一位”</font>的策略实际上造成了巨大的步骤浪费。那么有没有办法，把这些不必要的尝试舍弃，节约算法的运行时间呢？</p>
 <p>此处我们需要考虑以下问题，以便对<code>BF算法</code>做出有效的改进：</p>
 <ul>
