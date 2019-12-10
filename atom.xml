@@ -550,9 +550,9 @@
     <link href="https://g-ss-hacker.github.io/%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E5%BC%8F/"/>
     <id>https://g-ss-hacker.github.io/%E5%B8%B8%E7%94%A8%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E5%BC%8F/</id>
     <published>2019-11-07T14:22:19.000Z</published>
-    <updated>2019-11-28T14:48:40.154Z</updated>
+    <updated>2019-12-10T07:27:43.140Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://cdn.colorhub.me/IogF4QdtTJDwNcp_7Fkx7Zw0XBgIHtR3T4Okq_bH7dU/fill/0/500/ce/0/bG9jYWw6Ly8vMDgv/MTIvNjQyYWU2NmVk/ODlmOWRlNGE3Y2Yw/ODJmYjI0NGE1ODY0/MjgzMDgxMi5qcGVn.jpg" alt></p><h1 id="常用泰勒展开"><a href="#常用泰勒展开" class="headerlink" title="常用泰勒展开"></a>常用泰勒展开</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$<p></p><p>$(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$</p><p>$(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$</p><p>$(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$</p><p>$(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$</p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://cdn.colorhub.me/IogF4QdtTJDwNcp_7Fkx7Zw0XBgIHtR3T4Okq_bH7dU/fill/0/500/ce/0/bG9jYWw6Ly8vMDgv/MTIvNjQyYWU2NmVk/ODlmOWRlNGE3Y2Yw/ODJmYjI0NGE1ODY0/MjgzMDgxMi5qcGVn.jpg" alt></p><h1 id="常用泰勒展开"><a href="#常用泰勒展开" class="headerlink" title="常用泰勒展开"></a>常用泰勒展开</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)e^x=1+e+\frac{e^2}{2!}+\dots +\frac{e^n}{n!}+\frac{e^\theta x}{(n+1)!}x^{n+1}$<p></p><p>$(2)\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+(-1)^m\frac{x^{2m+1}}{(2m+1)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+3!)}x^{2m+3}$</p><p>$(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$</p><p>$(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$</p><p>$(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$</p><iframe src="//player.bilibili.com/player.html?aid=76292879&cid=130500535&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="780" height="520" allowfullscreen="true"> </iframe><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>]]></content>
     
     <summary type="html">
     
@@ -562,6 +562,7 @@
 &lt;p&gt;$(3)\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+(-1)^m\frac{x^{2m}}{(2m)!}+(-1)^{m+1}\frac{\cos \theta x}{(2m+2)!}x^{2m+2}$&lt;/p&gt;
 &lt;p&gt;$(4)\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+(-1)^{n-1}\frac{x^n}{n}+(-1)^n\frac{x^{n+1}}{(n+1)(1+\theta x)^{n+1}}$&lt;/p&gt;
 &lt;p&gt;$(5)(1+x)^\alpha=\sum_{k=0}^n C_\alpha^n x^n+C_\alpha^{n+1}x^{n+1}(1+\theta x)^{\alpha -n-1}$&lt;/p&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=76292879&amp;cid=130500535&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; width=&quot;780&quot; height=&quot;520&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
     
     </summary>
     
