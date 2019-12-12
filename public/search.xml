@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[面向对象设计七大原则]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
+    <content type="text"><![CDATA[面向对象设计七大原则 图：北京航空航天大学 Guderian出品 AKA：设计模式七大原则 1. 单一职责原则 SRP，Single Responsibility Principle 每一个对象有且只有一个职责，从而实现”高内聚、低耦合“ 防止一个类实现多个功能，改变一个功能后影响其他功能的正常运作 2. 开放-封闭原则 OCP，Open-Closed Principle 对拓展开放、对修改关闭 需要对程序进行拓展的时候，不能修改原有代码，只能在原有代码的基础上添加 3. 李氏替换原则 LSP，Liskov Substitution Principle 任何基类出现的地方，一定可以用派生类代替 派生类可以拓展基类的功能，但不能改变基类的功能 4. 依赖倒置原则 DIP，Dependence Inversion Principle 实现依赖于抽象，而抽象不依赖于实现 解除高层组件对低层组件的依赖，是实现开闭原则的重要基础 5. 接口隔离原则 ISP，Interface Segregation Principle 一个类对另外一个类的依赖性应当是建立在最小的接口上 在特定的使用场合给特定用户提供其需要的方法、屏蔽其不需要的方法 6. 组合重用原则 CRP, Composite Reuse Principle, 尽量使用组合，尽量不用继承 在新的对象里面使用已有的对象，使之成为新的对象的一部分 7. 迪米特原则 LoD，Law of Demeter 一个对象应该对其他对象又尽可能少的了解 尽量降低成员的访问权限，提供访问器而不公开成员变量 注：C++中只有抽象类的概念，JAVA中既有抽象类的概念，又有接口的概念。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>软件工程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C++引用]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC-%E5%BC%95%E7%94%A8%2F</url>
     <content type="text"><![CDATA[C++引用 图：LEGO小人仔 Guderian出品 笔记整理自《北京大学公开课：C++面向对象程序设计》 C++跟C相比，多了很多独特的内容，其中有很多都是为了实现面向对象编程范式而引入的，C++的引用就是其一。 引用的概念 定义一个引用，并将其初始化为引用某个变量的通用写法：类型名 &amp; 引用名 = 某变量名 某个变量的引用，等价于这个变量，相当于该变量的一个别名 12345678int n = 7;int &amp; r = n;//r引用了n，r的类型是int &amp;r = 4;cout &lt;&lt; r; //输出4cour &lt;&lt; n; //输出4n = 5;cout &lt;&lt; n; 定义引用时一定要将其初始化成引用某个变量，而不像指针可以指向某个变量也可以不指向某个变量 初始化后，它就一直引用该变量，不会再引用别的变量了（引用是从一而终的） 引用只能引用变量，不能引用常量和表达式 1234567double a = 3, b = 5;double &amp; r1 = a;double &amp; r2 = r1; //r2也引用ar2 = 10;cout &lt;&lt; a &lt;&lt; endl; //输出10r1 = b; //r1并没有引用bcout &lt;&lt; a &lt;&lt; endl; //输出5 引用的应用C中，如何编写交换两个整型变量值的函数? 这样写吗？ 12345678void swap(int a, int b)&#123; int tmp; tmp = a; a = b; b = tmp;&#125;int n1, n2;swap(n1, n2);//n1, n2的值没有被交换 这是错误的，改变形参不会改变实参。 或者用指针？ 12345678void swap(int *a, int *b)&#123; int tmp; tmp = *a; *a = *b; *b = tmp;&#125;int n1, n2;swap(&amp; n1, &amp; n2); //取地址//n1, n2的值被交换 正确，但丑陋！ 那么C++中，如何编写交换两个整型变量值的函数? 引用作为参数 C++示例：交换两个整数 12345678void swap(int &amp; a, int &amp; b) //a就是n1，b就是n2&#123; int tmp; tmp = a; a = b; b = tmp;&#125;int n1, n2;swap(n1, n2);//n1, n2的值被交换 引用作为返回值12345678910111213int n = 4;int &amp; SetValue() &#123; return n; &#125;int main()&#123; //神奇之处，对函数的返回值进行赋值 SetValue() = 40; //然而它究竟有什么作用呢？我还没想好... cout &lt;&lt; n; //输出：40 return 0;&#125; 注意被引用的对象不能超过作用域，返回一个局部变量的引用是不合法的，但是，可以返回一个静态类型变量的引用。 常引用定义引用时，在前面加const关键字即为“常引用”。 12int n;const int &amp; r = n; 注意不能通过常引用去修改其引用的内容！ 1234int n = 100;const int &amp; r = n;r = 200; //errn = 300; //ok 常引用和非常引用的转换 const T &amp;和T &amp;是不同的类型（千万要注意！！！） T &amp;类型的引用或T类型的变量可以用来初始化const T &amp;类型的引用 const T类型的常变量和const T &amp;类型的引用则不能用来初始化T &amp;类型的引用，除非进行强制类型转换 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改]]></content>
@@ -109,9 +121,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>字符串</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -168,8 +180,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>算法</tag>
-        <tag>数据结构</tag>
         <tag>排序</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -396,10 +408,10 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>C-sharp</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
 </search>

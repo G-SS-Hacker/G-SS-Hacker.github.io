@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-10T14:24:31.983Z</updated>
+  <updated>2019-12-12T15:10:10.887Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -17,11 +17,86 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>面向对象设计七大原则</title>
+    <link href="https://g-ss-hacker.github.io/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/"/>
+    <id>https://g-ss-hacker.github.io/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/</id>
+    <published>2019-12-12T15:07:33.000Z</published>
+    <updated>2019-12-12T15:10:10.887Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/12/nuhOlgtVX1asp7B.jpg" alt></p><h1 id="面向对象设计七大原则"><a href="#面向对象设计七大原则" class="headerlink" title="面向对象设计七大原则"></a>面向对象设计七大原则</h1><blockquote><p>图：北京航空航天大学</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><blockquote><p>AKA：设计模式七大原则</p></blockquote><p><strong>1. 单一职责原则</strong></p><ul><li>SRP，Single Responsibility Principle</li><li>每一个对象有且只有一个职责，从而实现”高内聚、低耦合“</li><li>防止一个类实现多个功能，改变一个功能后影响其他功能的正常运作</li></ul><p><strong>2. 开放-封闭原则</strong></p><ul><li>OCP，Open-Closed Principle</li><li>对拓展开放、对修改关闭</li><li>需要对程序进行拓展的时候，不能修改原有代码，只能在原有代码的基础上添加</li></ul><p><strong>3. 李氏替换原则</strong></p><ul><li>LSP，Liskov Substitution Principle</li><li>任何基类出现的地方，一定可以用派生类代替</li><li>派生类可以拓展基类的功能，但不能改变基类的功能</li></ul><p><strong>4. 依赖倒置原则</strong></p><ul><li>DIP，Dependence Inversion Principle</li><li>实现依赖于抽象，而抽象不依赖于实现</li><li>解除高层组件对低层组件的依赖，是实现开闭原则的重要基础</li></ul><p><strong>5. 接口隔离原则</strong></p><ul><li>ISP，Interface Segregation Principle</li><li>一个类对另外一个类的依赖性应当是建立在最小的接口上</li><li>在特定的使用场合给特定用户提供其需要的方法、屏蔽其不需要的方法</li></ul><p><strong>6. 组合重用原则</strong></p><ul><li>CRP, Composite Reuse Principle,</li><li>尽量使用组合，尽量不用继承</li><li>在新的对象里面使用已有的对象，使之成为新的对象的一部分</li></ul><p><strong>7. 迪米特原则</strong></p><ul><li>LoD，Law of Demeter</li><li>一个对象应该对其他对象又尽可能少的了解</li><li>尽量降低成员的访问权限，提供访问器而不公开成员变量</li></ul><hr><a id="more"></a><blockquote><p>注：<code>C++</code>中只有抽象类的概念，<code>JAVA</code>中既有抽象类的概念，又有接口的概念。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/12/nuhOlgtVX1asp7B.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;面向对象设计七大原则&quot;&gt;&lt;a href=&quot;#面向对象设计七大原则&quot; class=&quot;headerlink&quot; title=&quot;面向对象设计七大原则&quot;&gt;&lt;/a&gt;面向对象设计七大原则&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：北京航空航天大学&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AKA：设计模式七大原则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1. 单一职责原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SRP，Single Responsibility Principle&lt;/li&gt;
+&lt;li&gt;每一个对象有且只有一个职责，从而实现”高内聚、低耦合“&lt;/li&gt;
+&lt;li&gt;防止一个类实现多个功能，改变一个功能后影响其他功能的正常运作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 开放-封闭原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OCP，Open-Closed Principle&lt;/li&gt;
+&lt;li&gt;对拓展开放、对修改关闭&lt;/li&gt;
+&lt;li&gt;需要对程序进行拓展的时候，不能修改原有代码，只能在原有代码的基础上添加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 李氏替换原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LSP，Liskov Substitution Principle&lt;/li&gt;
+&lt;li&gt;任何基类出现的地方，一定可以用派生类代替&lt;/li&gt;
+&lt;li&gt;派生类可以拓展基类的功能，但不能改变基类的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. 依赖倒置原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DIP，Dependence Inversion Principle&lt;/li&gt;
+&lt;li&gt;实现依赖于抽象，而抽象不依赖于实现&lt;/li&gt;
+&lt;li&gt;解除高层组件对低层组件的依赖，是实现开闭原则的重要基础&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;5. 接口隔离原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ISP，Interface Segregation Principle&lt;/li&gt;
+&lt;li&gt;一个类对另外一个类的依赖性应当是建立在最小的接口上&lt;/li&gt;
+&lt;li&gt;在特定的使用场合给特定用户提供其需要的方法、屏蔽其不需要的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;6. 组合重用原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CRP, Composite Reuse Principle,&lt;/li&gt;
+&lt;li&gt;尽量使用组合，尽量不用继承&lt;/li&gt;
+&lt;li&gt;在新的对象里面使用已有的对象，使之成为新的对象的一部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;7. 迪米特原则&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LoD，Law of Demeter&lt;/li&gt;
+&lt;li&gt;一个对象应该对其他对象又尽可能少的了解&lt;/li&gt;
+&lt;li&gt;尽量降低成员的访问权限，提供访问器而不公开成员变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="软件工程" scheme="https://G-SS-Hacker.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++引用</title>
     <link href="https://g-ss-hacker.github.io/C-%E5%BC%95%E7%94%A8/"/>
     <id>https://g-ss-hacker.github.io/C-%E5%BC%95%E7%94%A8/</id>
     <published>2019-12-07T02:51:15.000Z</published>
-    <updated>2019-12-10T14:24:31.983Z</updated>
+    <updated>2019-12-12T15:03:39.316Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/07/Xua6pB154KjyqiL.jpg" alt></p><h1 id="C-引用"><a href="#C-引用" class="headerlink" title="C++引用"></a>C++引用</h1><blockquote><p>图：LEGO小人仔</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><font color="#FF7F27">笔记整理自《北京大学公开课：C++面向对象程序设计》</font><blockquote><p><code>C++</code>跟<code>C</code>相比，多了很多独特的内容，其中有很多都是为了实现面向对象编程范式而引入的，<code>C++</code>的引用就是其一。</p></blockquote><h2 id="引用的概念"><a href="#引用的概念" class="headerlink" title="引用的概念"></a>引用的概念</h2><ul><li>定义一个引用，并将其初始化为引用某个变量的通用写法：<code>类型名 &amp; 引用名 = 某变量名</code></li><li>某个变量的引用，<font color="red">等价于</font>这个变量，相当于该变量的一个别名</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> &amp; r = n;</span><br><span class="line"><span class="comment">//r引用了n，r的类型是int &amp;</span></span><br><span class="line">r = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; r;<span class="comment">//输出4</span></span><br><span class="line">cour &lt;&lt; n;<span class="comment">//输出4</span></span><br><span class="line">n = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; n;</span><br></pre></td></tr></table></figure><ul><li>定义引用时一定要将其<font color="red">初始化</font>成引用某个变量，而不像指针可以指向某个变量也可以不指向某个变量</li><li>初始化后，它就一直引用该变量，不会再引用别的变量了（引用是从一而终的）</li><li>引用只能引用<font color="red">变量</font>，不能引用常量和表达式</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">3</span>, b = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">double</span> &amp; r1 = a;</span><br><span class="line"><span class="keyword">double</span> &amp; r2 = r1;<span class="comment">//r2也引用a</span></span><br><span class="line">r2 = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出10</span></span><br><span class="line">r1 = b;<span class="comment">//r1并没有引用b</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出5</span></span><br></pre></td></tr></table></figure><h2 id="引用的应用"><a href="#引用的应用" class="headerlink" title="引用的应用"></a>引用的应用</h2><p><code>C</code>中，如何编写交换两个整型变量值的函数?</p><ul><li>这样写吗？</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = a; a = b; b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1, n2);</span><br><span class="line"><span class="comment">//n1, n2的值没有被交换</span></span><br></pre></td></tr></table></figure><p>这是错误的，改变形参不会改变实参。</p><ul><li>或者用指针？</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = *a; *a = *b; *b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(&amp; n1, &amp; n2);<span class="comment">//取地址</span></span><br><span class="line"><span class="comment">//n1, n2的值被交换</span></span><br></pre></td></tr></table></figure><p>正确，但丑陋！</p><p>那么<code>C++</code>中，如何编写交换两个整型变量值的函数?</p><h3 id="引用作为参数"><a href="#引用作为参数" class="headerlink" title="引用作为参数"></a>引用作为参数</h3><blockquote><p><code>C++</code>示例：交换两个整数</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp; a, <span class="keyword">int</span> &amp; b)</span><span class="comment">//a就是n1，b就是n2</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = a; a = b; b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1, n2);</span><br><span class="line"><span class="comment">//n1, n2的值被交换</span></span><br></pre></td></tr></table></figure><h3 id="引用作为返回值"><a href="#引用作为返回值" class="headerlink" title="引用作为返回值"></a>引用作为返回值</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">SetValue</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//神奇之处，对函数的返回值进行赋值</span></span><br><span class="line">    SetValue() = <span class="number">40</span>;</span><br><span class="line">    <span class="comment">//然而它究竟有什么作用呢？我还没想好...</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; n;</span><br><span class="line">    <span class="comment">//输出：40</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意被引用的对象<font color="red">不能超过作用域</font>，返回一个<strong>局部变量</strong>的引用是不合法的，但是，可以返回一个<strong>静态类型变量</strong>的引用。</p><h2 id="常引用"><a href="#常引用" class="headerlink" title="常引用"></a>常引用</h2><p>定义引用时，在前面加<code>const</code>关键字即为“常引用”。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n;</span><br></pre></td></tr></table></figure><font color="red">注意不能通过常引用去修改其引用的内容！</font><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n;</span><br><span class="line">r = <span class="number">200</span>;<span class="comment">//err</span></span><br><span class="line">n = <span class="number">300</span>;<span class="comment">//ok</span></span><br></pre></td></tr></table></figure><h2 id="常引用和非常引用的转换"><a href="#常引用和非常引用的转换" class="headerlink" title="常引用和非常引用的转换"></a>常引用和非常引用的转换</h2><ul><li><code>const T &amp;</code><font color="red">和</font><code>T &amp;</code><font color="red">是不同的类型</font>（千万要注意！！！）</li><li><code>T &amp;</code>类型的引用或<code>T</code>类型的变量可以用来初始化<code>const T &amp;</code>类型的引用</li><li><code>const T</code>类型的常变量和<code>const T &amp;</code>类型的引用则不能用来初始化<code>T &amp;</code>类型的引用，除非进行<strong>强制类型转换</strong></li></ul><a id="more"></a><hr><blockquote><p>参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改</p></blockquote>]]></content>
     
@@ -536,11 +611,11 @@
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="字符串" scheme="https://G-SS-Hacker.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="字符串" scheme="https://G-SS-Hacker.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -809,9 +884,9 @@ D_n=
     
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
       <category term="排序" scheme="https://G-SS-Hacker.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="图论" scheme="https://G-SS-Hacker.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
     
@@ -1080,40 +1155,6 @@ a_{ij} =
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="排序" scheme="https://G-SS-Hacker.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>加密算法</title>
-    <link href="https://g-ss-hacker.github.io/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"/>
-    <id>https://g-ss-hacker.github.io/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</id>
-    <published>2019-09-15T11:52:03.000Z</published>
-    <updated>2019-11-10T03:29:34.249Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1568558578017&amp;di=57d5d6ff4f7325e56b649d15feda62b9&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.elecfans.com%2Fuploads%2Fallimg%2F171210%2F2755779-1G2100944092M.png" alt></p><h1 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><h2 id="加密算法的历史"><a href="#加密算法的历史" class="headerlink" title="加密算法的历史"></a>加密算法的历史</h2><p>加密算法是一种古老的算法，在人类几千年来的历史进程中，加密算法随着一场场战争的爆发而不断进步，从古罗马时代到第二次世界大战，从<strong>凯撒密码</strong>到<strong>恩尼格玛密码</strong>。然而，就像矛和盾的关系一样，加密技术和解密技术也在不断螺旋式发展。下面，笔者将向读者朋友们介绍一种古老的科技：<strong>凯撒密码</strong>。</p><p>在战争中，命令的传递往往需要通过传令兵。如：</p><p><center><b><font size="5">后方指挥部</font> ———<font color="red">传令兵携带命令“攻打X城”</font>———><font size="5">我方部队</font></b></center><br>可是，一旦传令兵被敌方抓获，重要的军事情报就会泄露给敌方。</p><p><center><b><font size="5">后方指挥部</font>—<font color="red">命令“攻打X城”</font>—><font size="5">敌方部队</font></b></center><br>甚至，敌人可能会篡改命令，并收买传令兵把假情报传给我方部队。</p><p><center><b><font size="5">后方指挥部</font>—<font color="red">命令“攻打X城”</font>—><font size="5">敌方部队</font>—<font color="red">命令“攻打Y城”</font>—><font size="5">我方部队</font></b></center><br>这样一来，我方部队就会完全落入敌方陷阱中。为了防止这种情况发生，在没有更好的传达命令的方法的情况下，我们不妨修改命令的内容，让敌人即使截获了命令，也无法看懂命令的内容，这就是对信息的加密。</p><p><center><b><font size="5">后方指挥部</font>—<font color="red">命令“@#￥！！”</font>—><font size="5">敌方部队：？？？</font></b></center><br>如何进行加密呢？有一种非常朴素的加密方法叫<strong>凯撒密码</strong>，它的基本思路就是<strong>偏移</strong>。</p><p><img src="https://i.loli.net/2019/09/15/Kg1b8A3iHamFlx5.png" alt></p><p>如图所示，图中第一行的字母代表<strong>明文</strong>，第二行字母代表<strong>密文</strong>。这个加密算法十分简单，选择一个偏移量，此处是3，把明文当中的所有字母按照字母表的顺序向后偏移三位，从而生成密文。比如：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A - &gt; D</span><br><span class="line">B - &gt; E</span><br><span class="line">C - &gt; F</span><br><span class="line">LOL - &gt; MPM</span><br></pre></td></tr></table></figure><p>这样一来，就算我军的密码被敌军截获，敌军也无法看懂。一旦我方部队收到了我方的命令，只要逆转原来加密的过程，把密文以偏移量3往左偏移解密为明文，就可以正确收到我方的命令。假设敌军已知我方的加密算法，想要破解，把26个字母都试一遍，终究可以得到正确的原文，这就叫暴力破解。</p><a id="more"></a><h2 id="现代加密算法"><a href="#现代加密算法" class="headerlink" title="现代加密算法"></a>现代加密算法</h2><h3 id="1-对称加密算法"><a href="#1-对称加密算法" class="headerlink" title="1.对称加密算法"></a>1.对称加密算法</h3><p><center><font size="5"><b>明文</b></font>--<font color="red">密钥</font>--><font size="5"><b>密文</b></font>--<font color="red">密钥</font>--><font size="5"><b>明文</b></font></center><br>这很好理解，这就好比给你需要传递的信息加上一把锁，这把锁的钥匙只有你和信息接收方拥有，这样就算信息被截获，也只能看出一堆乱码。只要传递方与接收方事先得到一致的密钥，双方就可以安全进行信息往来。</p><p>常见的对称加密算法有<code>DES</code>算法和<code>3DES</code>算法，它的基本方法是<strong>替换</strong>+<strong>移位</strong>；还有美国联邦政府采用的<code>AES</code>算法；还有<code>RC-5</code>算法和<code>IDEA</code>算法。<code>office Word</code>、<code>Excel</code>、<code>Powerful</code>、<code>pdf</code>、<code>WinRAR</code>的加密算法都属于对称加密算法。</p><p>对称加密算法的优点是<strong>简单高效</strong>，然而缺点却也很明显，那就是<strong>安全性低</strong>。比如下面这种情况：</p><p>你想要给某人通过QQ发送一个加了密的<code>word</code>文档，你发过去了但你的小伙伴打不开，那他当然会向你要密码。为了让他能顺利打开这个文档，你又要给他发送文档的密码。这样一来，你的文档就没有任何安全性可言了。如果你的文档被不怀好意的人截获，那他当然也能截获你的密码。</p><p>为了解决对称加密算法安全性低的问题，科学家发明了非对称加密算法。</p><h3 id="2-非对称加密算法"><a href="#2-非对称加密算法" class="headerlink" title="2. 非对称加密算法"></a>2. 非对称加密算法</h3><p><center><font size="5"><b>明文</b></font>--<font color="red">公钥</font>--><font size="5"><b>密文</b></font>--<font color="red">私钥</font>--><font size="5"><b>明文</b></font></center></p><p><center><font size="5"><b>明文</b></font>--<font color="red">私钥</font>--><font size="5"><b>密文</b></font>--<font color="red">公钥</font>--><font size="5"><b>明文</b></font></center><br>在非对称加密算法中有一对密钥，其中一个叫公钥、另一个叫私钥。如果要加密一个文档，我们既可以用公钥加密文档，用私钥解密文档；也可以用私钥加密文档，用公钥解密文档。最常见的非对称加密算法就是大名鼎鼎的<code>RSA</code>算法，几乎无法破解。</p><p>非对称加密算法的缺点是<strong>效率低下</strong>，然而其优点是<strong>安全性极高</strong>，解决了对称加密算法的安全性低的问题。比如下面这种情况：</p><p>在一间公司中，每一个员工都有自己的一对公钥和私钥，公钥可以交给他人，但是私钥只有自己知道。员工之一的你想要给同样为员工的某人通过QQ发送一个文档，你只需要向接受者索要他的公钥，他就会光明正大地通过QQ发给你，你再利用他的公钥给文档加密，然后光明正大地通过QQ发给他，他接收到你发送的已用他的公钥加密过的文档之后，就可以用他的私钥解密，从而顺利的查看文档了。在这个过程中，就算文档和公钥都被截获，因为没有相应的私钥，也无法正常还原。因此，这个非对称加密算法的安全性比对称加密算法提高了一个等级。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1568558578017&amp;amp;di=57d5d6ff4f7325e56b649d15feda62b9&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fwww.elecfans.com%2Fuploads%2Fallimg%2F171210%2F2755779-1G2100944092M.png&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;加密算法&quot;&gt;&lt;a href=&quot;#加密算法&quot; class=&quot;headerlink&quot; title=&quot;加密算法&quot;&gt;&lt;/a&gt;加密算法&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;加密算法的历史&quot;&gt;&lt;a href=&quot;#加密算法的历史&quot; class=&quot;headerlink&quot; title=&quot;加密算法的历史&quot;&gt;&lt;/a&gt;加密算法的历史&lt;/h2&gt;&lt;p&gt;加密算法是一种古老的算法，在人类几千年来的历史进程中，加密算法随着一场场战争的爆发而不断进步，从古罗马时代到第二次世界大战，从&lt;strong&gt;凯撒密码&lt;/strong&gt;到&lt;strong&gt;恩尼格玛密码&lt;/strong&gt;。然而，就像矛和盾的关系一样，加密技术和解密技术也在不断螺旋式发展。下面，笔者将向读者朋友们介绍一种古老的科技：&lt;strong&gt;凯撒密码&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;在战争中，命令的传递往往需要通过传令兵。如：&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;b&gt;&lt;font size=&quot;5&quot;&gt;后方指挥部&lt;/font&gt; ———&lt;font color=&quot;red&quot;&gt;传令兵携带命令“攻打X城”&lt;/font&gt;———&gt;&lt;font size=&quot;5&quot;&gt;我方部队&lt;/font&gt;&lt;/b&gt;&lt;/center&gt;&lt;br&gt;可是，一旦传令兵被敌方抓获，重要的军事情报就会泄露给敌方。&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;b&gt;&lt;font size=&quot;5&quot;&gt;后方指挥部&lt;/font&gt;—&lt;font color=&quot;red&quot;&gt;命令“攻打X城”&lt;/font&gt;—&gt;&lt;font size=&quot;5&quot;&gt;敌方部队&lt;/font&gt;&lt;/b&gt;&lt;/center&gt;&lt;br&gt;甚至，敌人可能会篡改命令，并收买传令兵把假情报传给我方部队。&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;b&gt;&lt;font size=&quot;5&quot;&gt;后方指挥部&lt;/font&gt;—&lt;font color=&quot;red&quot;&gt;命令“攻打X城”&lt;/font&gt;—&gt;&lt;font size=&quot;5&quot;&gt;敌方部队&lt;/font&gt;—&lt;font color=&quot;red&quot;&gt;命令“攻打Y城”&lt;/font&gt;—&gt;&lt;font size=&quot;5&quot;&gt;我方部队&lt;/font&gt;&lt;/b&gt;&lt;/center&gt;&lt;br&gt;这样一来，我方部队就会完全落入敌方陷阱中。为了防止这种情况发生，在没有更好的传达命令的方法的情况下，我们不妨修改命令的内容，让敌人即使截获了命令，也无法看懂命令的内容，这就是对信息的加密。&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;b&gt;&lt;font size=&quot;5&quot;&gt;后方指挥部&lt;/font&gt;—&lt;font color=&quot;red&quot;&gt;命令“@#￥！！”&lt;/font&gt;—&gt;&lt;font size=&quot;5&quot;&gt;敌方部队：？？？&lt;/font&gt;&lt;/b&gt;&lt;/center&gt;&lt;br&gt;如何进行加密呢？有一种非常朴素的加密方法叫&lt;strong&gt;凯撒密码&lt;/strong&gt;，它的基本思路就是&lt;strong&gt;偏移&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/09/15/Kg1b8A3iHamFlx5.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;如图所示，图中第一行的字母代表&lt;strong&gt;明文&lt;/strong&gt;，第二行字母代表&lt;strong&gt;密文&lt;/strong&gt;。这个加密算法十分简单，选择一个偏移量，此处是3，把明文当中的所有字母按照字母表的顺序向后偏移三位，从而生成密文。比如：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;A - &amp;gt; D&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;B - &amp;gt; E&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;C - &amp;gt; F&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LOL - &amp;gt; MPM&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这样一来，就算我军的密码被敌军截获，敌军也无法看懂。一旦我方部队收到了我方的命令，只要逆转原来加密的过程，把密文以偏移量3往左偏移解密为明文，就可以正确收到我方的命令。假设敌军已知我方的加密算法，想要破解，把26个字母都试一遍，终究可以得到正确的原文，这就叫暴力破解。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="网络与信息安全" scheme="https://G-SS-Hacker.github.io/tags/%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
