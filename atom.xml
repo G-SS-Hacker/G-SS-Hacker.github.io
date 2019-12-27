@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-27T09:24:34.529Z</updated>
+  <updated>2019-12-27T09:37:24.288Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/"/>
     <id>https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/</id>
     <published>2019-12-27T09:17:43.000Z</published>
-    <updated>2019-12-27T09:24:34.529Z</updated>
+    <updated>2019-12-27T09:37:24.288Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg" alt></p><h1 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h1><blockquote><p>图：Watch Dog 2 by Ubisoft</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><h4 id="椭圆柱面"><a href="#椭圆柱面" class="headerlink" title="椭圆柱面"></a>椭圆柱面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$<br><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438239353.png" alt="1577438239353"></li></ul><h4 id="双曲柱面"><a href="#双曲柱面" class="headerlink" title="双曲柱面"></a>双曲柱面</h4><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438137697.png" alt="1577438137697"></p><h4 id="抛物柱面"><a href="#抛物柱面" class="headerlink" title="抛物柱面"></a>抛物柱面</h4><ul><li>$x^2=2py,(p\ne 0)$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438176340.png" alt="1577438176340"></p><h4 id="椭球面"><a href="#椭球面" class="headerlink" title="椭球面"></a>椭球面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438183773.png" alt="1577438183773"></p><h4 id="单叶双曲面"><a href="#单叶双曲面" class="headerlink" title="单叶双曲面"></a>单叶双曲面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438193103.png" alt="1577438193103"></p><h4 id="双叶双曲面"><a href="#双叶双曲面" class="headerlink" title="双叶双曲面"></a>双叶双曲面</h4><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438198894.png" alt="1577438198894"></p><h4 id="椭圆抛物面"><a href="#椭圆抛物面" class="headerlink" title="椭圆抛物面"></a>椭圆抛物面</h4><ul><li>$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438208673.png" alt="1577438208673"></p><h4 id="双曲抛物面"><a href="#双曲抛物面" class="headerlink" title="双曲抛物面"></a>双曲抛物面</h4><ul><li>$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$</li><li>变种：$x^2-y^y=z$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438213743.png" alt="1577438213743"></p><h4 id="二次锥面"><a href="#二次锥面" class="headerlink" title="二次锥面"></a>二次锥面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438218118.png" alt="1577438218118"></p><a id="more"></a><hr><h1 id="明后天大化军理奥利给！！！"><a href="#明后天大化军理奥利给！！！" class="headerlink" title="明后天大化军理奥利给！！！"></a><font size="30">明后天大化军理奥利给！！！</font></h1>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg" alt></p><h1 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h1><blockquote><p>图：Watch Dog 2 by Ubisoft</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><ol><li>椭圆柱面</li></ol><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png" alt></p><ol><li>双曲柱面</li></ol><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png" alt></p><ol><li>抛物柱面</li></ol><ul><li>$x^2=2py,(p\ne 0)$</li></ul><p><img src="https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png" alt></p><ol><li>椭球面</li></ol><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png" alt></p><ol><li>单叶双曲面</li></ol><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png" alt></p><ol><li>双叶双曲面</li></ol><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png" alt></p><ol><li>椭圆抛物面</li></ol><ul><li>$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$</li></ul><p><img src="https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png" alt></p><ol><li>双曲抛物面</li></ol><ul><li>$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$</li><li>变种：$x^2-y^y=z$</li></ul><p><img src="https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png" alt></p><ol><li>二次锥面</li></ol><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$</li></ul><p><img src="https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png" alt></p><a id="more"></a><hr><h1 id="明后天大化军理奥利给！！！"><a href="#明后天大化军理奥利给！！！" class="headerlink" title="明后天大化军理奥利给！！！"></a><font size="30">明后天大化军理奥利给！！！</font></h1>]]></content>
     
     <summary type="html">
     
@@ -31,44 +31,71 @@
 &lt;h1 id=&quot;二次曲面&quot;&gt;&lt;a href=&quot;#二次曲面&quot; class=&quot;headerlink&quot; title=&quot;二次曲面&quot;&gt;&lt;/a&gt;二次曲面&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;图：Watch Dog 2 by Ubisoft&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;椭圆柱面&quot;&gt;&lt;a href=&quot;#椭圆柱面&quot; class=&quot;headerlink&quot; title=&quot;椭圆柱面&quot;&gt;&lt;/a&gt;椭圆柱面&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$&lt;br&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438239353.png&quot; alt=&quot;1577438239353&quot;&gt;&lt;/li&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;椭圆柱面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;双曲柱面&quot;&gt;&lt;a href=&quot;#双曲柱面&quot; class=&quot;headerlink&quot; title=&quot;双曲柱面&quot;&gt;&lt;/a&gt;双曲柱面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;双曲柱面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438137697.png&quot; alt=&quot;1577438137697&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;抛物柱面&quot;&gt;&lt;a href=&quot;#抛物柱面&quot; class=&quot;headerlink&quot; title=&quot;抛物柱面&quot;&gt;&lt;/a&gt;抛物柱面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抛物柱面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$x^2=2py,(p\ne 0)$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438176340.png&quot; alt=&quot;1577438176340&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;椭球面&quot;&gt;&lt;a href=&quot;#椭球面&quot; class=&quot;headerlink&quot; title=&quot;椭球面&quot;&gt;&lt;/a&gt;椭球面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;椭球面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438183773.png&quot; alt=&quot;1577438183773&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;单叶双曲面&quot;&gt;&lt;a href=&quot;#单叶双曲面&quot; class=&quot;headerlink&quot; title=&quot;单叶双曲面&quot;&gt;&lt;/a&gt;单叶双曲面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;单叶双曲面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438193103.png&quot; alt=&quot;1577438193103&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;双叶双曲面&quot;&gt;&lt;a href=&quot;#双叶双曲面&quot; class=&quot;headerlink&quot; title=&quot;双叶双曲面&quot;&gt;&lt;/a&gt;双叶双曲面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;双叶双曲面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438198894.png&quot; alt=&quot;1577438198894&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;椭圆抛物面&quot;&gt;&lt;a href=&quot;#椭圆抛物面&quot; class=&quot;headerlink&quot; title=&quot;椭圆抛物面&quot;&gt;&lt;/a&gt;椭圆抛物面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;椭圆抛物面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438208673.png&quot; alt=&quot;1577438208673&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;双曲抛物面&quot;&gt;&lt;a href=&quot;#双曲抛物面&quot; class=&quot;headerlink&quot; title=&quot;双曲抛物面&quot;&gt;&lt;/a&gt;双曲抛物面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;双曲抛物面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
 &lt;li&gt;变种：$x^2-y^y=z$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438213743.png&quot; alt=&quot;1577438213743&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;二次锥面&quot;&gt;&lt;a href=&quot;#二次锥面&quot; class=&quot;headerlink&quot; title=&quot;二次锥面&quot;&gt;&lt;/a&gt;二次锥面&lt;/h4&gt;&lt;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;二次锥面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438218118.png&quot; alt=&quot;1577438218118&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
