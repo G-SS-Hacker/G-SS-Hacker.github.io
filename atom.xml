@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-12T15:10:10.887Z</updated>
+  <updated>2019-12-27T09:24:34.529Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二次曲面</title>
+    <link href="https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/"/>
+    <id>https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/</id>
+    <published>2019-12-27T09:17:43.000Z</published>
+    <updated>2019-12-27T09:24:34.529Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg" alt></p><h1 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h1><blockquote><p>图：Watch Dog 2 by Ubisoft</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><h4 id="椭圆柱面"><a href="#椭圆柱面" class="headerlink" title="椭圆柱面"></a>椭圆柱面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$<br><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438239353.png" alt="1577438239353"></li></ul><h4 id="双曲柱面"><a href="#双曲柱面" class="headerlink" title="双曲柱面"></a>双曲柱面</h4><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438137697.png" alt="1577438137697"></p><h4 id="抛物柱面"><a href="#抛物柱面" class="headerlink" title="抛物柱面"></a>抛物柱面</h4><ul><li>$x^2=2py,(p\ne 0)$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438176340.png" alt="1577438176340"></p><h4 id="椭球面"><a href="#椭球面" class="headerlink" title="椭球面"></a>椭球面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438183773.png" alt="1577438183773"></p><h4 id="单叶双曲面"><a href="#单叶双曲面" class="headerlink" title="单叶双曲面"></a>单叶双曲面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438193103.png" alt="1577438193103"></p><h4 id="双叶双曲面"><a href="#双叶双曲面" class="headerlink" title="双叶双曲面"></a>双叶双曲面</h4><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438198894.png" alt="1577438198894"></p><h4 id="椭圆抛物面"><a href="#椭圆抛物面" class="headerlink" title="椭圆抛物面"></a>椭圆抛物面</h4><ul><li>$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438208673.png" alt="1577438208673"></p><h4 id="双曲抛物面"><a href="#双曲抛物面" class="headerlink" title="双曲抛物面"></a>双曲抛物面</h4><ul><li>$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$</li><li>变种：$x^2-y^y=z$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438213743.png" alt="1577438213743"></p><h4 id="二次锥面"><a href="#二次锥面" class="headerlink" title="二次锥面"></a>二次锥面</h4><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$</li></ul><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438218118.png" alt="1577438218118"></p><a id="more"></a><hr><h1 id="明后天大化军理奥利给！！！"><a href="#明后天大化军理奥利给！！！" class="headerlink" title="明后天大化军理奥利给！！！"></a><font size="30">明后天大化军理奥利给！！！</font></h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;二次曲面&quot;&gt;&lt;a href=&quot;#二次曲面&quot; class=&quot;headerlink&quot; title=&quot;二次曲面&quot;&gt;&lt;/a&gt;二次曲面&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：Watch Dog 2 by Ubisoft&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;椭圆柱面&quot;&gt;&lt;a href=&quot;#椭圆柱面&quot; class=&quot;headerlink&quot; title=&quot;椭圆柱面&quot;&gt;&lt;/a&gt;椭圆柱面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$&lt;br&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438239353.png&quot; alt=&quot;1577438239353&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;双曲柱面&quot;&gt;&lt;a href=&quot;#双曲柱面&quot; class=&quot;headerlink&quot; title=&quot;双曲柱面&quot;&gt;&lt;/a&gt;双曲柱面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438137697.png&quot; alt=&quot;1577438137697&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;抛物柱面&quot;&gt;&lt;a href=&quot;#抛物柱面&quot; class=&quot;headerlink&quot; title=&quot;抛物柱面&quot;&gt;&lt;/a&gt;抛物柱面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$x^2=2py,(p\ne 0)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438176340.png&quot; alt=&quot;1577438176340&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;椭球面&quot;&gt;&lt;a href=&quot;#椭球面&quot; class=&quot;headerlink&quot; title=&quot;椭球面&quot;&gt;&lt;/a&gt;椭球面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438183773.png&quot; alt=&quot;1577438183773&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;单叶双曲面&quot;&gt;&lt;a href=&quot;#单叶双曲面&quot; class=&quot;headerlink&quot; title=&quot;单叶双曲面&quot;&gt;&lt;/a&gt;单叶双曲面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438193103.png&quot; alt=&quot;1577438193103&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;双叶双曲面&quot;&gt;&lt;a href=&quot;#双叶双曲面&quot; class=&quot;headerlink&quot; title=&quot;双叶双曲面&quot;&gt;&lt;/a&gt;双叶双曲面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438198894.png&quot; alt=&quot;1577438198894&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;椭圆抛物面&quot;&gt;&lt;a href=&quot;#椭圆抛物面&quot; class=&quot;headerlink&quot; title=&quot;椭圆抛物面&quot;&gt;&lt;/a&gt;椭圆抛物面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438208673.png&quot; alt=&quot;1577438208673&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;双曲抛物面&quot;&gt;&lt;a href=&quot;#双曲抛物面&quot; class=&quot;headerlink&quot; title=&quot;双曲抛物面&quot;&gt;&lt;/a&gt;双曲抛物面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
+&lt;li&gt;变种：$x^2-y^y=z$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438213743.png&quot; alt=&quot;1577438213743&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;二次锥面&quot;&gt;&lt;a href=&quot;#二次锥面&quot; class=&quot;headerlink&quot; title=&quot;二次锥面&quot;&gt;&lt;/a&gt;二次锥面&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1577438218118.png&quot; alt=&quot;1577438218118&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="线性代数" scheme="https://G-SS-Hacker.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象设计七大原则</title>
@@ -1048,113 +1112,6 @@ a_{ij} =
       <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="图论" scheme="https://G-SS-Hacker.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>排序算法性能比较</title>
-    <link href="https://g-ss-hacker.github.io/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E6%AF%94%E8%BE%83/"/>
-    <id>https://g-ss-hacker.github.io/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E6%AF%94%E8%BE%83/</id>
-    <published>2019-09-28T01:51:41.000Z</published>
-    <updated>2019-10-21T11:02:26.327Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/09/28/kF9XINxlEd4wZ8U.jpg" alt></p><h1 id="排序算法性能比较"><a href="#排序算法性能比较" class="headerlink" title="排序算法性能比较"></a>排序算法性能比较</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-cly1{text-align:left;vertical-align:middle}<br>.tg .tg-0lax{text-align:left;vertical-align:top}</style></p><table class="tg">  <tr>    <th class="tg-cly1" rowspan="2">类别</th>    <th class="tg-cly1" rowspan="2">排序方法</th>    <th class="tg-cly1" colspan="2">时间复杂度</th>    <th class="tg-0lax" rowspan="2">空间复杂度</th>    <th class="tg-0lax" rowspan="2">稳定性</th>  </tr>  <tr>    <th class="tg-cly1">平均情况</th>    <th class="tg-0lax">最坏情况</th>  </tr>  <tr>    <td class="tg-cly1" rowspan="2">插入排序</td>    <td class="tg-cly1">直接插入</td>    <td class="tg-cly1">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(1)</td>    <td class="tg-0lax">稳定</td>  </tr>  <tr>    <td class="tg-cly1">希尔排序</td>    <td class="tg-cly1">O(n<sup>1.3</sup>)<br></td>    <td class="tg-0lax">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(1）</td>    <td class="tg-0lax">不稳定</td>  </tr>  <tr>    <td class="tg-cly1" rowspan="2">选择排序</td>    <td class="tg-cly1">直接选择</td>    <td class="tg-cly1">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(1)</td>    <td class="tg-0lax">不稳定<br></td>  </tr>  <tr>    <td class="tg-cly1">堆排序</td>    <td class="tg-cly1">O(nlogn)</td>    <td class="tg-0lax">O(nlogn)</td>    <td class="tg-0lax">O(1)</td>    <td class="tg-0lax">不稳定</td>  </tr>  <tr>    <td class="tg-cly1" rowspan="2">交换排序</td>    <td class="tg-cly1">冒泡排序</td>    <td class="tg-cly1">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(1)</td>    <td class="tg-0lax">稳定</td>  </tr>  <tr>    <td class="tg-cly1">快速排序</td>    <td class="tg-cly1">O(nlogn)</td>    <td class="tg-0lax">O(n<sup>2</sup>)</td>    <td class="tg-0lax">O(logn)</td>    <td class="tg-0lax">不稳定</td>  </tr>  <tr>    <td class="tg-cly1" colspan="2">归并排序</td>    <td class="tg-cly1">O(nlogn)</td>    <td class="tg-0lax">O(nlogn)</td>    <td class="tg-0lax">O(n)</td>    <td class="tg-0lax">稳定</td>  </tr>  <tr>    <td class="tg-cly1" colspan="2">基数排序</td>    <td class="tg-cly1">O(d(r+n))</td>    <td class="tg-0lax">O(d(r+n))</td>    <td class="tg-0lax">O(r+n)</td>    <td class="tg-0lax">稳定</td>  </tr>  <tr>    <td class="tg-cly1" colspan="2">桶排序</td>    <td class="tg-cly1">O(2(m+n))</td>    <td class="tg-0lax">O(2(m+n))</td>    <td class="tg-0lax">O(max{key})</td>    <td class="tg-0lax">稳定</td>    </tr></table><a id="more"></a><p>*注：基数排序中，d表示关键字的位数长度，r表示关键字每一个数位有r中可能的取值</p><p>**注：桶排序中，m表示桶的个数</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/09/28/kF9XINxlEd4wZ8U.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;排序算法性能比较&quot;&gt;&lt;a href=&quot;#排序算法性能比较&quot; class=&quot;headerlink&quot; title=&quot;排序算法性能比较&quot;&gt;&lt;/a&gt;排序算法性能比较&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;style type=&quot;text/css&quot;&gt;&lt;br&gt;.tg  {border-collapse:collapse;border-spacing:0;}&lt;br&gt;.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg .tg-cly1{text-align:left;vertical-align:middle}&lt;br&gt;.tg .tg-0lax{text-align:left;vertical-align:top}
-&lt;/style&gt;&lt;/p&gt;
-&lt;table class=&quot;tg&quot;&gt;
-  &lt;tr&gt;
-    &lt;th class=&quot;tg-cly1&quot; rowspan=&quot;2&quot;&gt;类别&lt;/th&gt;
-    &lt;th class=&quot;tg-cly1&quot; rowspan=&quot;2&quot;&gt;排序方法&lt;/th&gt;
-    &lt;th class=&quot;tg-cly1&quot; colspan=&quot;2&quot;&gt;时间复杂度&lt;/th&gt;
-    &lt;th class=&quot;tg-0lax&quot; rowspan=&quot;2&quot;&gt;空间复杂度&lt;/th&gt;
-    &lt;th class=&quot;tg-0lax&quot; rowspan=&quot;2&quot;&gt;稳定性&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&quot;tg-cly1&quot;&gt;平均情况&lt;/th&gt;
-    &lt;th class=&quot;tg-0lax&quot;&gt;最坏情况&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; rowspan=&quot;2&quot;&gt;插入排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;直接插入&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(1)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;希尔排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(n&lt;sup&gt;1.3&lt;/sup&gt;)&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(1）&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;不稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; rowspan=&quot;2&quot;&gt;选择排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;直接选择&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(1)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;不稳定&lt;br&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;堆排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(nlogn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(nlogn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(1)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;不稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; rowspan=&quot;2&quot;&gt;交换排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;冒泡排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(1)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;快速排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(nlogn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(logn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;不稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; colspan=&quot;2&quot;&gt;归并排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(nlogn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(nlogn)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(n)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; colspan=&quot;2&quot;&gt;基数排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(d(r+n))&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(d(r+n))&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(r+n)&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;稳定&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-cly1&quot; colspan=&quot;2&quot;&gt;桶排序&lt;/td&gt;
-    &lt;td class=&quot;tg-cly1&quot;&gt;O(2(m+n))&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(2(m+n))&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;O(max{key})&lt;/td&gt;
-    &lt;td class=&quot;tg-0lax&quot;&gt;稳定&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="排序" scheme="https://G-SS-Hacker.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
