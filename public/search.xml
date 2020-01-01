@@ -132,8 +132,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -190,9 +190,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
-        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -239,8 +239,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
