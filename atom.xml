@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2019-12-30T02:22:30.980Z</updated>
+  <updated>2020-01-25T13:16:10.891Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/"/>
     <id>https://g-ss-hacker.github.io/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2/</id>
     <published>2019-12-27T09:17:43.000Z</published>
-    <updated>2019-12-30T02:22:30.980Z</updated>
+    <updated>2020-01-25T13:16:10.891Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg" alt></p><h1 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h1><blockquote><p>图：Watch Dog 2 by Ubisoft</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>1.椭圆柱面<p></p><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png" alt></p><p>2.双曲柱面</p><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png" alt></p><p>3.抛物柱面</p><ul><li>$x^2=2py,(p\ne 0)$</li></ul><p><img src="https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png" alt></p><p>4.椭球面</p><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png" alt></p><p>5.单叶双曲面</p><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png" alt></p><p>6.双叶双曲面</p><ul><li>$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$</li></ul><p><img src="https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png" alt></p><p>7.椭圆抛物面</p><ul><li>$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$</li></ul><p><img src="https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png" alt></p><p>8.双曲抛物面</p><ul><li>$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$</li><li>变种：$x^2-y^y=z$</li></ul><p><img src="https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png" alt></p><p>9.二次锥面</p><ul><li>$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$</li></ul><p><img src="https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png" alt></p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p><font color="#407600">【其他文章·微积分·线性代数】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/不定积分公式/">不定积分公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用泰勒展开式/">常用泰勒展开式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高阶求导公式/">高阶求导公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高等数学公式/">高等数学公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用等价无穷小/">常用等价无穷小</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/导数基本公式/">导数基本公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">矩阵章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/行列式章节总结/">行列式章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/线性方程组章节总结/">线性方程组章节总结</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/27/emE71j6LgFIMouW.jpg" alt></p><h1 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h1><blockquote><p>图：Watch Dog 2 by Ubisoft</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>1.椭圆柱面<p></p><script type="math/tex; mode=display">\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</script><p><img src="https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png" alt></p><p>2.双曲柱面</p><script type="math/tex; mode=display">\frac{x^2}{a^2}-\frac{y^2}{b^2}=1</script><p><img src="https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png" alt></p><p>3.抛物柱面</p><script type="math/tex; mode=display">x^2=2py,(p\ne 0)</script><p><img src="https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png" alt></p><p>4.椭球面</p><script type="math/tex; mode=display">\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1</script><p><img src="https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png" alt></p><p>5.单叶双曲面</p><script type="math/tex; mode=display">\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1</script><p><img src="https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png" alt></p><p>6.双叶双曲面</p><script type="math/tex; mode=display">\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1</script><p><img src="https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png" alt></p><p>7.椭圆抛物面</p><script type="math/tex; mode=display">\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q同号)</script><p><img src="https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png" alt></p><p>8.双曲抛物面</p><script type="math/tex; mode=display">\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q同号)</script><p>变种：</p><script type="math/tex; mode=display">x^2-y^2=z</script><p><img src="https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png" alt></p><p>9.二次锥面</p><script type="math/tex; mode=display">\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0</script><p><img src="https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png" alt></p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p><font color="#407600">【其他文章·微积分·线性代数】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/不定积分公式/">不定积分公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用泰勒展开式/">常用泰勒展开式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高阶求导公式/">高阶求导公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高等数学公式/">高等数学公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用等价无穷小/">常用等价无穷小</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/导数基本公式/">导数基本公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">矩阵章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/行列式章节总结/">行列式章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/线性方程组章节总结/">线性方程组章节总结</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -32,51 +32,34 @@
 &lt;p&gt;图：Watch Dog 2 by Ubisoft&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;1.椭圆柱面&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/Hwvx1keWTuFSYst.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;2.双曲柱面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/PwFeypDxlEtRCBH.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;3.抛物柱面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$x^2=2py,(p\ne 0)$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+x^2=2py,(p\ne 0)&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/45RbcKSEJg6mzd8.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;4.椭球面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/EfLtb1HT73QlpuF.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;5.单叶双曲面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/F1US2Bg5wjTlb4p.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;6.双叶双曲面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/FvlP6Zc7On82jBh.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;7.椭圆抛物面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{2p}+\frac{y^2}{2q}=z,(p,q同号)&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/iDJsOL9dQHUpM5g.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;8.双曲抛物面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q$同号$)$&lt;/li&gt;
-&lt;li&gt;变种：$x^2-y^y=z$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{2p}-\frac{y^2}{2q}=z,(p,q同号)&lt;/script&gt;&lt;p&gt;变种：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/q5RrWazfgbGyCNV.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;9.二次锥面&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png&quot; alt&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=0&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27/xWD9suRyaVKtgLj.png&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
