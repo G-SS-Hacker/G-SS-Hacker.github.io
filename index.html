@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2020-01-28 14:25:40 / 修改时间：14:43:43" itemprop="dateCreated datePublished" datetime="2020-01-28T14:25:40+08:00">2020-01-28</time>
+              <time title="创建时间：2020-01-28 14:25:40 / 修改时间：14:48:13" itemprop="dateCreated datePublished" datetime="2020-01-28T14:25:40+08:00">2020-01-28</time>
             </span>
           
 
@@ -570,13 +570,11 @@
 
       
         
-          
-            <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580203723216&amp;di=8aed87a08dfaee482cb60caaaed0998a&amp;imgtype=0&amp;src=http%3A%2F%2F01.minipic.eastday.com%2F20170705%2F20170705072438_f5cc5771dd19389bacdba25fcfa1ee80_4.jpeg" alt></p>
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580203723216&amp;di=8aed87a08dfaee482cb60caaaed0998a&amp;imgtype=0&amp;src=http%3A%2F%2F01.minipic.eastday.com%2F20170705%2F20170705072438_f5cc5771dd19389bacdba25fcfa1ee80_4.jpeg" alt></p>
 <h1 id="面向对象绪论"><a href="#面向对象绪论" class="headerlink" title="面向对象绪论"></a>面向对象绪论</h1><blockquote>
 <p>图：歼15航母降落</p>
 </blockquote>
-<p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><ul>
 <li>类 Class</li>
 <li>对象 Object</li>
@@ -632,63 +630,15 @@
 <p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8sTCbFoafDBb6mgT7LLN0sWdAv82o4X35CWYiv9x6uM06XiPfBeK8XCw-4Io4zjQH2GnF2BWQnWInDhbgu5YCaBPLmBPL8MYhHjHWZQQc2Qwb2qb85q-AGcfS2z180" alt></p>
 <p>以上类图对应的<code>C++</code>代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C1Dobject</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getx</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setx</span><span class="params">(<span class="keyword">int</span> xPrime)</span> </span>&#123; x = xPrime; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C2Dobject</span>:</span> <span class="keyword">public</span> C1Dobject</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> y = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">gety</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sety</span><span class="params">(<span class="keyword">int</span> yPrime)</span> </span>&#123; y = yPrime; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C3Dobject</span>:</span> <span class="keyword">public</span> C2Dobject</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> z = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getz</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> z; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setz</span><span class="params">(<span class="keyword">int</span> zPrime)</span> </span>&#123; z = zPrime; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="多态-Polymorphism"><a href="#多态-Polymorphism" class="headerlink" title="多态 Polymorphism"></a>多态 Polymorphism</h3><blockquote>
-<p>使用指向父类的指针或者引用，能够调用子类的对象</p>
-</blockquote>
-<p>结论：</p>
-<ol>
-<li>当一个类从另一个类继承而来，多态使得子类可以代替父类</li>
-<li>消息发送方不需要知道消息接收方属于哪一个子类</li>
-<li><font color="red">同一类族</font>的接收者可以按自己的方式处理消息</li>
-</ol>
-<p>如以下类图例子，定义形状<code>CShape</code>作为父类，派生出矩形<code>CRectangle</code>和三角形<code>CTriangle</code>。现在假设我们知道一个图形<code>shape</code>，希望获取它的面积，而我们并不需要知道它的具体形状（属于哪一个子类），只需要确保<code>shape</code>所属的类在<code>CShape</code>的类组下即可。图形<code>shape</code>的面积可以通过调用函数<code>area()</code>实现。</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8EpaWiI5MmgT7LLN0EIaqkISnBpqb55GufoeI8SYNd91ONAq0bgxaKoZDJIZ8KClDAk1GoKZFJCqeWxCIYr4GDJJ2xbiiXDIy5Q1C0" alt></p>
-<p><code>C++</code>中多态的实现涉及<strong>静态多态</strong>和<strong>动态多态</strong>以及<strong>虚函数</strong>的使用，代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CShape</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">	<span class="keyword">int</span> width, height;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	CShape(<span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>) &#123; width = a, height = b; &#125;</span><br><span class="line">	<span class="comment">//纯虚函数，具体功能在子类中实现</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">area</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CRectangle</span>:</span> <span class="keyword">public</span> CShape</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//显式调用父类的构造函数</span></span><br><span class="line">	CRectangle( <span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>): CShape(a, b) &#123;&#125;;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"CRectangle area calls: "</span>;</span><br><span class="line">		<span class="keyword">return</span> width * height;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTriangle</span>:</span> <span class="keyword">public</span> CShape</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//显式调用父类的构造函数</span></span><br><span class="line">	CTriangle( <span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>): CShape(a, b) &#123;&#125;;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"CTriangle area calls: "</span>;</span><br><span class="line">		<span class="keyword">return</span> width * height / <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CShape *ptr;</span><br><span class="line">	<span class="function">CRectangle <span class="title">rect</span><span class="params">(<span class="number">10</span>, <span class="number">10</span>)</span></span>;</span><br><span class="line">	<span class="function">CTriangle  <span class="title">tri</span><span class="params">(<span class="number">10</span>, <span class="number">10</span>)</span></span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//获取矩形的面积</span></span><br><span class="line">	ptr = &amp;rect;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr-&gt;area() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//获取三角形的面积</span></span><br><span class="line">	ptr = &amp;tri;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr-&gt;area() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>C++</code>中构成多态需要满足两个条件：</p>
-<ol>
-<li>调用函数的对象须是<strong>指针</strong>或<strong>引用</strong></li>
-<li>被调用的函数须是<strong>重写</strong><sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup>的<strong>虚函数</strong><sup><a href="#fn_ 2" id="reffn_ 2"> 2</a></sup></li>
-</ol>
-<h3 id="聚合-组合-Aggregation-Composition"><a href="#聚合-组合-Aggregation-Composition" class="headerlink" title="聚合/组合 Aggregation / Composition"></a>聚合/组合 Aggregation / Composition</h3><h4 id="聚合-Aggregation"><a href="#聚合-Aggregation" class="headerlink" title="聚合 Aggregation"></a>聚合 Aggregation</h4><blockquote>
-<p>A has B，B是A的一部分，但A不控制B的生命周期</p>
-</blockquote>
-<p>如：学校由学生组成，那么学校与学生是聚合关系</p>
-<p><code>UML</code>图中聚合关系的符号如下图</p>
-<p><img src="https://s.plantuml.com/sym03.png" alt></p>
-<h4 id="组合-Composition"><a href="#组合-Composition" class="headerlink" title="组合 Composition"></a>组合 Composition</h4><blockquote>
-<p>A has B，B是A的一部分，且A控制B的生命周期</p>
-</blockquote>
-<p>如：树由树叶组成，那么树与树叶是组合关系</p>
-<p><code>UML</code>图中聚合关系的符号如下图</p>
-<p><img src="https://s.plantuml.com/sym01.png" alt></p>
-<h3 id="接口-实现-Interface-Implementation"><a href="#接口-实现-Interface-Implementation" class="headerlink" title="接口/实现 Interface / Implementation"></a>接口/实现 Interface / Implementation</h3><h4 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口 Interface"></a>接口 Interface</h4><blockquote>
-<p>描述一个类的用户如何与这个类交互</p>
-</blockquote>
-<h4 id="实现-Implementation"><a href="#实现-Implementation" class="headerlink" title="实现 Implementation"></a>实现 Implementation</h4><blockquote>
-<p>完成接口所定义的功能，如类、构建等完成的任务</p>
-</blockquote>
-<p>如电视机、插座、发电厂的关系如何呢？</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWZEJyvEBL6miSdCAqajIajCJhMpume9Kz3JiuFASS6KrEZfAGJabwSM1UGavfLmEQJcfG3D0G00" alt></p>
-<ul>
-<li>电视机是用户 client</li>
-<li>插座是接口 Interface</li>
-<li>发电厂是实现 Implementation</li>
-</ul>
-<h3 id="抽象-Abstraction"><a href="#抽象-Abstraction" class="headerlink" title="抽象 Abstraction"></a>抽象 Abstraction</h3><blockquote>
-<p>抽取具体客观事物的共性</p>
-</blockquote>
-<p>抽象是面向对象领域<font color="red">发现类</font>的主要方法</p>
-<p>（所谓抽象，玄之又玄，众妙之门）</p>
-<hr>
-<blockquote id="fn_ 1">
-<sup> 1</sup>. 重写：函数重写必须函数名一致、参数一致、返回值一致<a href="#reffn_ 1" title="Jump back to footnote [ 1] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ 2">
-<sup> 2</sup>. 虚函数：在类的成员函数前加<code>virtual</code>关键字<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/面向对象绪论/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
