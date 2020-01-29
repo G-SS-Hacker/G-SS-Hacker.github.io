@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-01-28T07:01:22.029Z</updated>
+  <updated>2020-01-29T07:23:50.052Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UML用例图</title>
+    <link href="https://g-ss-hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/"/>
+    <id>https://g-ss-hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/</id>
+    <published>2020-01-29T07:18:11.000Z</published>
+    <updated>2020-01-29T07:23:50.052Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580292501613&amp;di=8e0a699a6038f2b93f35402fd489905e&amp;imgtype=0&amp;src=http%3A%2F%2Fimg8.9158.com%2F200909%2F04%2F13%2F13%2F200909049381645.jpg" alt></p><h1 id="UML建模工具——用例图"><a href="#UML建模工具——用例图" class="headerlink" title="UML建模工具——用例图"></a>UML建模工具——用例图</h1><blockquote><p>图：歼15双机编队</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><p><img src="https://i.loli.net/2020/01/29/gORWzAFpmDh5LBU.png" alt></p><ul><li>系统 System</li><li>参与者 Actors</li><li>用例 Use Cases</li><li>关系 Relationships</li></ul><h2 id="系统（System）"><a href="#系统（System）" class="headerlink" title="系统（System）"></a>系统（System）</h2><blockquote><p>一个系统就是你开发的所有东西，可以是网站、软件组件、业务流程、应用程序、<code>etc</code></p></blockquote><p>用一个矩形代表一个系统，然后将系统名称放在顶部。矩形用于定义系统的范围，矩形内的所有内容都在系统内发生，矩形外的所有内容都不会在系统外发生。</p><p><img src="https://i.loli.net/2020/01/29/7C2rukVLh9YdNOs.png" alt></p><p>如图所示，灰色区域即为飞行控制系统，而副驾驶、机长都是系统外内容，属于参与者。</p><h2 id="参与者（Actor）"><a href="#参与者（Actor）" class="headerlink" title="参与者（Actor）"></a>参与者（Actor）</h2><blockquote><p>使用我们的系统（与系统交互）实现目标的某人或某物，可以是<strong>一个人、一个组织、另一个系统或一个外部设备</strong></p></blockquote><p>参与者的普通图形用火柴人表示；当另一个系统充当参与者时，参与者的图形用矩形表示。</p><p><img src="https://i.loli.net/2020/01/29/7tCmJuUPGsEInYl.png" alt></p><p>在软件工程中，参与者告诉我们我们这个系统应该具有的功能。不同的参与者希望获得不同的功能，我们需要找到重要的参与者，认真调查他们的需求，并根据不同参与者的需求完善系统。</p><h2 id="用例（Use-Case）"><a href="#用例（Use-Case）" class="headerlink" title="用例（Use Case）"></a>用例（Use Case）</h2><blockquote><p>系统为响应参与者引发的一个事件而执行的一系列的处理/动作，而这些处理应该为参与者产生一种有价值的结果</p></blockquote><p>用椭圆形容一个用例，代表要系统做的一个任务。</p><p><img src="https://i.loli.net/2020/01/29/JPxRlemypEr7zKT.png" alt></p><h2 id="关系（Relationship）"><a href="#关系（Relationship）" class="headerlink" title="关系（Relationship）"></a>关系（Relationship）</h2><p>用例图中涉及的关系有：<strong>关联</strong>、<strong>泛化</strong>、<strong>包含</strong>、<strong>扩展</strong></p><div class="table-container"><table><thead><tr><th>关系类型</th><th>说明</th><th>表示符号</th></tr></thead><tbody><tr><td>关联（Association）</td><td>参与者与用例之间的关系</td><td><img src="https://i.loli.net/2020/01/29/Kztkm5aJZRAPErp.png" alt></td></tr><tr><td>泛化（Inheritance）</td><td>参与者之间或用例之间的关系</td><td><img src="https://i.loli.net/2020/01/29/fxqJKuU3DnMCVv1.png" alt></td></tr><tr><td>包含（Include）</td><td>用例之间的关系</td><td><img src="https://i.loli.net/2020/01/29/RJMG6S9aVZ3Hoq5.png" alt></td></tr><tr><td>扩展（Extend）</td><td>用例之间的关系</td><td><img src="https://i.loli.net/2020/01/29/FyOQcZR9EnLUoNW.png" alt></td></tr></tbody></table></div><a id="more"></a><h3 id="关联（Association）"><a href="#关联（Association）" class="headerlink" title="关联（Association）"></a>关联（Association）</h3><blockquote><p>关联关系，用实线表示。表示参与者与用例之间的通信，任何一方都可以发送和接受信息。</p></blockquote><p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuSf9JIjHACbNACfCpoXHICaiIaqkoSpFut9CBialKj3LLT08BKvLS4uiJjNaSaZDIm7g0G00" alt></p><p>参与者<code>Actor</code>与用例<code>Use Case</code>相关联，参与者既要向用例发送信息，也要就收用例反馈的信息。</p><h3 id="泛化（Inheritance）"><a href="#泛化（Inheritance）" class="headerlink" title="泛化（Inheritance）"></a>泛化（Inheritance）</h3><blockquote><p>泛化关系，实现+空心箭头，从子类指向父类。</p></blockquote><p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuR8ABKujibAmgT7LLR0AymomGXLnBqqjBh7YujBmoKzNoCpJX0X3UGf9bGgfkOcPEPguvGC35HAJyqlpIZIv75BpKe1M0W00" alt></p><font color="grey">（account拼错了）</font><p>如上图所示，用户<code>User</code>可以被细分为<code>VIP</code>用户和游客<code>Guest</code>；登录<code>Log in</code>也可以被细分为邮箱登录<code>Log in by email</code>和QQ登录<code>Log in by QQ account</code>。</p><h3 id="包含（Include）"><a href="#包含（Include）" class="headerlink" title="包含（Include）"></a>包含（Include）</h3><blockquote><p>包含关系，把一个较复杂用例所表示的功能分解成较小的步骤，是上一个用例执行过程中必不可少的。箭头指向包含的子用例。</p></blockquote><p><img src="https://i.loli.net/2020/01/29/8TaW9bkAf34wEmQ.png" alt></p><p>如上图所示，系统维护<code>System Maintenance</code>的工作包含了添加<code>Add</code>、删除<code>Remove</code>和修正<code>Modify</code>。</p><h3 id="扩展（Extend）"><a href="#扩展（Extend）" class="headerlink" title="扩展（Extend）"></a>扩展（Extend）</h3><blockquote><p>扩展关系，用例功能的延伸，相当于为基础用例提供一个附加功能，不是必不可少的。箭头指向被扩展的父用例。</p></blockquote><p><img src="https://i.loli.net/2020/01/29/p5rmtwzIgYKayq6.png" alt></p><p>如上图所示，打喷嚏<code>Sneeze</code>必然包含闭眼<code>Close Eyes</code>的过程，因此<code>Sneeze</code>和<code>Close Eyes</code>是包含关系；打完喷嚏<code>Sneeze</code>之后不一定需要道歉<code>Say Excuse Me</code>，因此<code>Sneeze</code>和<code>Say Excuse Me</code>是扩展关系。</p><h2 id="完整的用例图例子"><a href="#完整的用例图例子" class="headerlink" title="完整的用例图例子"></a>完整的用例图例子</h2><p><img src="https://i.loli.net/2020/01/29/X6iBYlnecLb3Vax.png" alt></p><p>这是一个<code>Bank app</code>系统，参与者包括用户<code>Customer</code>和银行数据库<code>Bank</code>，用户可以进行的操作包括登录<code>Log in</code>、验证余额<code>Check Balance</code>、转账<code>Transfer Funds</code>、支付<code>Make Payment</code>和建立档案<code>Set Up Profile</code>。</p><p>用户登录后，需要验证密码<code>Verify Password</code>，因此<code>Log in</code>和<code>Verify Password</code>是包含关系；如果用户输入密码错误，则展示错误信息<code>Display Login Error</code>，因此<code>Log in</code>和<code>Display Login Error</code>是扩展关系（用户不一定会输错密码）。</p><p>用户验证余额、转账和支付都需要银行数据库来帮助实现，因此验证余额、转账和支付和<code>Bank</code>都是关联关系。而用户进行转账和支付操作时，都必须验证用户账户资金是否足够<code>Veirify Sufficient Funds</code>，因此转账、支付和<code>Verify Sufficient Funds</code>是包含关系。</p><p>用户在支付时，可以选择使用支票支付<code>Pay from Checking</code>或余额支付<code>Pay from Savings</code>，故支票支付和余额支付与支付是泛化关系。</p><p>此处有一个带有扩展点<code>Extension Points</code>的用例：建立档案<code>Set Up Profile</code>。用例名称在上方，扩展点在下方。扩展点是扩展关系的详细叙述。这个用例表明用户可以再<code>Banking App</code>中建立自己的档案，当用户在建立他们的档案是，可以选择转移至几个不同的屏幕。如果用户感到困惑，他们可以转到档案帮助页面<code>Go to Profile Help</code>；如果用户希望了解隐私信息，他们可以转到隐私信息页面<code>Show Privacy Info</code>。还可以添加注释，以写明导致扩展的情况发生的条件。</p><hr><blockquote><p>Reference：<a href="https://www.youtube.com/watch?v=zid-MVo7M-E" target="_blank" rel="noopener">https://www.youtube.com/watch?v=zid-MVo7M-E</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1580292501613&amp;amp;di=8e0a699a6038f2b93f35402fd489905e&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fimg8.9158.com%2F200909%2F04%2F13%2F13%2F200909049381645.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;UML建模工具——用例图&quot;&gt;&lt;a href=&quot;#UML建模工具——用例图&quot; class=&quot;headerlink&quot; title=&quot;UML建模工具——用例图&quot;&gt;&lt;/a&gt;UML建模工具——用例图&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：歼15双机编队&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/gORWzAFpmDh5LBU.png&quot; alt&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统 System&lt;/li&gt;
+&lt;li&gt;参与者 Actors&lt;/li&gt;
+&lt;li&gt;用例 Use Cases&lt;/li&gt;
+&lt;li&gt;关系 Relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;系统（System）&quot;&gt;&lt;a href=&quot;#系统（System）&quot; class=&quot;headerlink&quot; title=&quot;系统（System）&quot;&gt;&lt;/a&gt;系统（System）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一个系统就是你开发的所有东西，可以是网站、软件组件、业务流程、应用程序、&lt;code&gt;etc&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用一个矩形代表一个系统，然后将系统名称放在顶部。矩形用于定义系统的范围，矩形内的所有内容都在系统内发生，矩形外的所有内容都不会在系统外发生。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/7C2rukVLh9YdNOs.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;如图所示，灰色区域即为飞行控制系统，而副驾驶、机长都是系统外内容，属于参与者。&lt;/p&gt;
+&lt;h2 id=&quot;参与者（Actor）&quot;&gt;&lt;a href=&quot;#参与者（Actor）&quot; class=&quot;headerlink&quot; title=&quot;参与者（Actor）&quot;&gt;&lt;/a&gt;参与者（Actor）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;使用我们的系统（与系统交互）实现目标的某人或某物，可以是&lt;strong&gt;一个人、一个组织、另一个系统或一个外部设备&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参与者的普通图形用火柴人表示；当另一个系统充当参与者时，参与者的图形用矩形表示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/7tCmJuUPGsEInYl.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;在软件工程中，参与者告诉我们我们这个系统应该具有的功能。不同的参与者希望获得不同的功能，我们需要找到重要的参与者，认真调查他们的需求，并根据不同参与者的需求完善系统。&lt;/p&gt;
+&lt;h2 id=&quot;用例（Use-Case）&quot;&gt;&lt;a href=&quot;#用例（Use-Case）&quot; class=&quot;headerlink&quot; title=&quot;用例（Use Case）&quot;&gt;&lt;/a&gt;用例（Use Case）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;系统为响应参与者引发的一个事件而执行的一系列的处理/动作，而这些处理应该为参与者产生一种有价值的结果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用椭圆形容一个用例，代表要系统做的一个任务。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/JPxRlemypEr7zKT.png&quot; alt&gt;&lt;/p&gt;
+&lt;h2 id=&quot;关系（Relationship）&quot;&gt;&lt;a href=&quot;#关系（Relationship）&quot; class=&quot;headerlink&quot; title=&quot;关系（Relationship）&quot;&gt;&lt;/a&gt;关系（Relationship）&lt;/h2&gt;&lt;p&gt;用例图中涉及的关系有：&lt;strong&gt;关联&lt;/strong&gt;、&lt;strong&gt;泛化&lt;/strong&gt;、&lt;strong&gt;包含&lt;/strong&gt;、&lt;strong&gt;扩展&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;table-container&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;关系类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;表示符号&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;关联（Association）&lt;/td&gt;
+&lt;td&gt;参与者与用例之间的关系&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/Kztkm5aJZRAPErp.png&quot; alt&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;泛化（Inheritance）&lt;/td&gt;
+&lt;td&gt;参与者之间或用例之间的关系&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/fxqJKuU3DnMCVv1.png&quot; alt&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;包含（Include）&lt;/td&gt;
+&lt;td&gt;用例之间的关系&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/RJMG6S9aVZ3Hoq5.png&quot; alt&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;扩展（Extend）&lt;/td&gt;
+&lt;td&gt;用例之间的关系&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://i.loli.net/2020/01/29/FyOQcZR9EnLUoNW.png&quot; alt&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="软件工程" scheme="https://G-SS-Hacker.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象绪论</title>
@@ -754,11 +842,11 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="字符串" scheme="https://G-SS-Hacker.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="字符串" scheme="https://G-SS-Hacker.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -1025,9 +1113,9 @@ D_n=
     
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
-      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
       <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="排序" scheme="https://G-SS-Hacker.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
@@ -1100,39 +1188,6 @@ D_n=
 &lt;p&gt;$(8)(1+x)^a-1 \sim ax$&lt;sup&gt;&lt;a href=&quot;#fn_ *&quot; id=&quot;reffn_ *&quot;&gt; *&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;$(9)\ln (1+x) \sim x$&lt;/p&gt;
 &lt;p&gt;$(10)\sqrt{1+x}-1 \sim \frac12x$&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>导数基本公式</title>
-    <link href="https://g-ss-hacker.github.io/%E5%AF%BC%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F/"/>
-    <id>https://g-ss-hacker.github.io/%E5%AF%BC%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F/</id>
-    <published>2019-10-13T08:47:40.000Z</published>
-    <updated>2019-10-13T13:27:20.998Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/10/13/e4F7haguPTV1UrG.jpg" alt></p><h1 id="导数基本公式"><a href="#导数基本公式" class="headerlink" title="导数基本公式"></a>导数基本公式</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)(C)’ = 0$<p></p><p>$(2)(x^a)’=ax^{a-1}$</p><p>$(3)(a^x)’=a^x\ln a    (a&gt;0且a\not=1)$</p><p>$(4)(e^x)’=e^x$</p><p>$(5)(\log_ax)’=\frac{1}{x\ln a}(a&gt;0且a\not=1)$</p><p>$(6)(\ln x)’=\frac1{x}$</p><p>$(7)(\sin x)’=\cos x$</p><p>$(8)(\cos x)’=-\sin x$</p><p>$(9)(\tan x)’=\frac1{\cos^2x}=\sec^2x$</p><p>$(10)(\cot x)’=\frac1{-\sin^x}=-\csc^2x$</p><a id="more"></a><p>$(11)(\sec x)’=\sec x\tan x$</p><p>$(12)(\csc x)’=-\csc x\cot x$</p><p>$(13)(\arcsin x)’=\frac1{\sqrt{1-x^2}}$</p><p>$(14)(\arccos x)’=-\frac1{\sqrt{1-x^2}}$</p><p>$(15)(\arctan x)’=\frac1{1+x^2}$</p><p>$(16)(\mathrm{arccot} x)’=-\frac1{1+x^2}$</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/10/13/e4F7haguPTV1UrG.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;导数基本公式&quot;&gt;&lt;a href=&quot;#导数基本公式&quot; class=&quot;headerlink&quot; title=&quot;导数基本公式&quot;&gt;&lt;/a&gt;导数基本公式&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;$(1)(C)’ = 0$&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;$(2)(x^a)’=ax^{a-1}$&lt;/p&gt;
-&lt;p&gt;$(3)(a^x)’=a^x\ln a    (a&amp;gt;0且a\not=1)$&lt;/p&gt;
-&lt;p&gt;$(4)(e^x)’=e^x$&lt;/p&gt;
-&lt;p&gt;$(5)(\log_ax)’=\frac{1}{x\ln a}(a&amp;gt;0且a\not=1)$&lt;/p&gt;
-&lt;p&gt;$(6)(\ln x)’=\frac1{x}$&lt;/p&gt;
-&lt;p&gt;$(7)(\sin x)’=\cos x$&lt;/p&gt;
-&lt;p&gt;$(8)(\cos x)’=-\sin x$&lt;/p&gt;
-&lt;p&gt;$(9)(\tan x)’=\frac1{\cos^2x}=\sec^2x$&lt;/p&gt;
-&lt;p&gt;$(10)(\cot x)’=\frac1{-\sin^x}=-\csc^2x$&lt;/p&gt;
     
     </summary>
     

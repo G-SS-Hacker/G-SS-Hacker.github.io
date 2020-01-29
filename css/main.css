@@ -1838,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #96a48b;
+  background: #ff45ff;
 }
 .feed-link,
 .chat {
@@ -3069,6 +3069,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-size: 1rem;
 }
 .headband {
   height: 3px;
@@ -3138,4 +3139,13 @@ body {
   font-size: 26px;
   font-weight: normal;
   font-family: sans-serif, 'Comic Sans MS', "PingFang SC", "Microsoft YaHei";
+}
+blockquote {
+  background-color: rgba(66,185,131,0.1);
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 1px;
+  padding-left: 15px;
+  border-left: 4px solid #42b983;
+  color: #777;
 }
