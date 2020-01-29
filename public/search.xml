@@ -146,8 +146,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -204,9 +204,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
-        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -253,8 +253,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -432,11 +432,11 @@
     <content type="text"><![CDATA[多种语言实现Hello World Starter Guderian出品 Python1print("hello world") C123456#include&lt;stdio.h&gt;int main()&#123; printf("hello world"); return 0;&#125; C++12345678#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int main()&#123; cout&lt;&lt;"hello world"; return 0;&#125; C#123456789using System; class TestApp &#123; public static void Main() &#123; Console.WriteLine("hello world"); Console.ReadKey(); &#125; &#125; Pascal1234Program HelloWorld(output); begin writeln('hello world') end. Java1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("hello world"); &#125; &#125;]]></content>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C-sharp</tag>
         <tag>Pascal</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
