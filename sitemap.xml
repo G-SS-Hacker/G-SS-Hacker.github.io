@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://G-SS-Hacker.github.io/hello-world/</loc>
+    
+    <lastmod>2020-01-29T09:17:20.384Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://G-SS-Hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/</loc>
     
     <lastmod>2020-01-29T08:28:09.351Z</lastmod>
@@ -194,13 +201,6 @@
     <loc>https://G-SS-Hacker.github.io/c-%E6%8C%87%E9%92%88%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</loc>
     
     <lastmod>2019-10-21T10:54:39.296Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://G-SS-Hacker.github.io/hello-world/</loc>
-    
-    <lastmod>2019-10-21T10:54:15.069Z</lastmod>
     
   </url>
   
