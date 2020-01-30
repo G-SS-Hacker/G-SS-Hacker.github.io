@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-01-30T03:02:13.721Z</updated>
+  <updated>2020-01-30T03:04:20.771Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,17 +21,45 @@
     <link href="https://g-ss-hacker.github.io/UML%E6%B4%BB%E5%8A%A8%E5%9B%BE/"/>
     <id>https://g-ss-hacker.github.io/UML%E6%B4%BB%E5%8A%A8%E5%9B%BE/</id>
     <published>2020-01-30T02:28:34.000Z</published>
-    <updated>2020-01-30T03:02:13.721Z</updated>
+    <updated>2020-01-30T03:04:20.771Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/01/30/QTqVWaAG6pmMPtY.jpg" alt></p><h1 id="UML建模工具——活动图"><a href="#UML建模工具——活动图" class="headerlink" title="UML建模工具——活动图"></a>UML建模工具——活动图</h1><blockquote><p>图：香港九龙(Kowloon, Hong Kong)</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote><p>活动图（Activity Diagram）是一种特殊的状态图，它展现了在系统内从一个活动到另一个活动的流程</p></blockquote><p>活动图与用例图互为补充，主要用于需求分析阶段</p><h2 id="基本建模元素"><a href="#基本建模元素" class="headerlink" title="基本建模元素"></a>基本建模元素</h2><ul><li>开始（Initial Node）、结束（Final Node）、对象（Objects）</li><li>动作（Actions）</li><li>分支（Decision Nodes）</li><li>分岔和汇合（Forking and Joining）</li><li>泳道（Partition）</li></ul><h3 id="开始、结束、对象"><a href="#开始、结束、对象" class="headerlink" title="开始、结束、对象"></a>开始、结束、对象</h3><p><img src="https://i.loli.net/2020/01/30/feKLcOm78I2sHq6.png" alt></p><h3 id="动作-活动节点"><a href="#动作-活动节点" class="headerlink" title="动作/活动节点"></a>动作/活动节点</h3><blockquote><p>一个活动节点是一个过程中进行的非原子的执行单元，活动的执行最终延伸为一些独立动作的（Action）的执行</p></blockquote><p><img src="https://i.loli.net/2020/01/30/nMR7g8bOk4JIVCw.png" alt></p><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><blockquote><p>分支相当于编程语言中的<code>if</code>语句，可以有一个<strong>进入流</strong>和多个<strong>离去流</strong></p></blockquote><p><img src="https://i.loli.net/2020/01/30/wJICE1RnY63gjzv.png" alt></p><h3 id="分岔和汇合"><a href="#分岔和汇合" class="headerlink" title="分岔和汇合"></a>分岔和汇合</h3><blockquote><p>分差表示把一个单独的控制流分成两个或多个并发的控制流。汇合表示两个或多个并发控制流的同步发生，一个汇合可以有两个或多个进入转移和一个输出转移。用同步棒来说明并行控制流的分岔和汇合。</p></blockquote><p><img src="https://i.loli.net/2020/01/30/l36JHnw8mhaVuE2.png" alt></p><h3 id="泳道"><a href="#泳道" class="headerlink" title="泳道"></a>泳道</h3><blockquote><p>将一个活动图中的活动分组，每一组表示一个特定的类别、人或部门，他们负责组内的活动，每个组被称为一个泳道，用一条垂直的实线把它们分开。每个活动严格属于每一个泳道，转移（流）和同步棒（分差与汇合）可以跨越泳道。</p></blockquote><p><img src="https://i.loli.net/2020/01/30/GtJph7T481s3VKn.png" alt></p><h2 id="完整的活动图例子"><a href="#完整的活动图例子" class="headerlink" title="完整的活动图例子"></a>完整的活动图例子</h2><h3 id="电商平台"><a href="#电商平台" class="headerlink" title="电商平台"></a>电商平台</h3><p><img src="https://i.loli.net/2020/01/30/NTCoV7Zq2LzEBIQ.png" alt></p><h3 id="货物交易"><a href="#货物交易" class="headerlink" title="货物交易"></a>货物交易</h3><p><img src="https://i.loli.net/2020/01/29/kTVaWsJpgLmDdQ3.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/01/30/QTqVWaAG6pmMPtY.jpg" alt></p><h1 id="UML建模工具——活动图"><a href="#UML建模工具——活动图" class="headerlink" title="UML建模工具——活动图"></a>UML建模工具——活动图</h1><blockquote><p>图：香港九龙(Kowloon, Hong Kong)</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote><p>活动图（Activity Diagram）是一种特殊的状态图，它展现了在系统内从一个活动到另一个活动的流程</p></blockquote><p>活动图与用例图互为补充，主要用于需求分析阶段</p><h2 id="基本建模元素"><a href="#基本建模元素" class="headerlink" title="基本建模元素"></a>基本建模元素</h2><ul><li>开始（Initial Node）、结束（Final Node）、对象（Objects）</li><li>动作（Actions）</li><li>分支（Decision Nodes）</li><li>分岔和汇合（Forking and Joining）</li><li>泳道（Partition）</li></ul><h3 id="开始、结束、对象"><a href="#开始、结束、对象" class="headerlink" title="开始、结束、对象"></a>开始、结束、对象</h3><p><img src="https://i.loli.net/2020/01/30/feKLcOm78I2sHq6.png" alt></p><h3 id="动作-活动节点"><a href="#动作-活动节点" class="headerlink" title="动作/活动节点"></a>动作/活动节点</h3><blockquote><p>一个活动节点是一个过程中进行的非原子的执行单元，活动的执行最终延伸为一些独立动作的（Action）的执行</p></blockquote><p><img src="https://i.loli.net/2020/01/30/nMR7g8bOk4JIVCw.png" alt></p><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><blockquote><p>分支相当于编程语言中的<code>if</code>语句，可以有一个<strong>进入流</strong>和多个<strong>离去流</strong></p></blockquote><p><img src="https://i.loli.net/2020/01/30/wJICE1RnY63gjzv.png" alt></p><h3 id="分岔和汇合"><a href="#分岔和汇合" class="headerlink" title="分岔和汇合"></a>分岔和汇合</h3><blockquote><p>分差表示把一个单独的控制流分成两个或多个并发的控制流。汇合表示两个或多个并发控制流的同步发生，一个汇合可以有两个或多个进入转移和一个输出转移。用同步棒来说明并行控制流的分岔和汇合。</p></blockquote><p><img src="https://i.loli.net/2020/01/30/l36JHnw8mhaVuE2.png" alt></p><h3 id="泳道"><a href="#泳道" class="headerlink" title="泳道"></a>泳道</h3><blockquote><p>将一个活动图中的活动分组，每一组表示一个特定的类别、人或部门，他们负责组内的活动，每个组被称为一个泳道，用一条垂直的实线把它们分开。每个活动严格属于每一个泳道，转移（流）和同步棒（分差与汇合）可以跨越泳道。</p></blockquote><p><img src="https://i.loli.net/2020/01/30/GtJph7T481s3VKn.png" alt></p><a id="more"></a><h2 id="完整的活动图例子"><a href="#完整的活动图例子" class="headerlink" title="完整的活动图例子"></a>完整的活动图例子</h2><h3 id="电商平台"><a href="#电商平台" class="headerlink" title="电商平台"></a>电商平台</h3><p><img src="https://i.loli.net/2020/01/30/NTCoV7Zq2LzEBIQ.png" alt></p><h3 id="货物交易"><a href="#货物交易" class="headerlink" title="货物交易"></a>货物交易</h3><p><img src="https://i.loli.net/2020/01/29/kTVaWsJpgLmDdQ3.png" alt></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/QTqVWaAG6pmMPtY.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;UML建模工具——活动图&quot;&gt;&lt;a href=&quot;#UML建模工具——活动图&quot; class=&quot;headerlink&quot; ti
-      
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/QTqVWaAG6pmMPtY.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;UML建模工具——活动图&quot;&gt;&lt;a href=&quot;#UML建模工具——活动图&quot; class=&quot;headerlink&quot; title=&quot;UML建模工具——活动图&quot;&gt;&lt;/a&gt;UML建模工具——活动图&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：香港九龙(Kowloon, Hong Kong)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;活动图（Activity Diagram）是一种特殊的状态图，它展现了在系统内从一个活动到另一个活动的流程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;活动图与用例图互为补充，主要用于需求分析阶段&lt;/p&gt;
+&lt;h2 id=&quot;基本建模元素&quot;&gt;&lt;a href=&quot;#基本建模元素&quot; class=&quot;headerlink&quot; title=&quot;基本建模元素&quot;&gt;&lt;/a&gt;基本建模元素&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;开始（Initial Node）、结束（Final Node）、对象（Objects）&lt;/li&gt;
+&lt;li&gt;动作（Actions）&lt;/li&gt;
+&lt;li&gt;分支（Decision Nodes）&lt;/li&gt;
+&lt;li&gt;分岔和汇合（Forking and Joining）&lt;/li&gt;
+&lt;li&gt;泳道（Partition）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;开始、结束、对象&quot;&gt;&lt;a href=&quot;#开始、结束、对象&quot; class=&quot;headerlink&quot; title=&quot;开始、结束、对象&quot;&gt;&lt;/a&gt;开始、结束、对象&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/feKLcOm78I2sHq6.png&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;动作-活动节点&quot;&gt;&lt;a href=&quot;#动作-活动节点&quot; class=&quot;headerlink&quot; title=&quot;动作/活动节点&quot;&gt;&lt;/a&gt;动作/活动节点&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;一个活动节点是一个过程中进行的非原子的执行单元，活动的执行最终延伸为一些独立动作的（Action）的执行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/nMR7g8bOk4JIVCw.png&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分支&quot;&gt;&lt;/a&gt;分支&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;分支相当于编程语言中的&lt;code&gt;if&lt;/code&gt;语句，可以有一个&lt;strong&gt;进入流&lt;/strong&gt;和多个&lt;strong&gt;离去流&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/wJICE1RnY63gjzv.png&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;分岔和汇合&quot;&gt;&lt;a href=&quot;#分岔和汇合&quot; class=&quot;headerlink&quot; title=&quot;分岔和汇合&quot;&gt;&lt;/a&gt;分岔和汇合&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;分差表示把一个单独的控制流分成两个或多个并发的控制流。汇合表示两个或多个并发控制流的同步发生，一个汇合可以有两个或多个进入转移和一个输出转移。用同步棒来说明并行控制流的分岔和汇合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/l36JHnw8mhaVuE2.png&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;泳道&quot;&gt;&lt;a href=&quot;#泳道&quot; class=&quot;headerlink&quot; title=&quot;泳道&quot;&gt;&lt;/a&gt;泳道&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;将一个活动图中的活动分组，每一组表示一个特定的类别、人或部门，他们负责组内的活动，每个组被称为一个泳道，用一条垂直的实线把它们分开。每个活动严格属于每一个泳道，转移（流）和同步棒（分差与汇合）可以跨越泳道。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/30/GtJph7T481s3VKn.png&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
