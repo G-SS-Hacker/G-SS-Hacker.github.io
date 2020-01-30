@@ -1838,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff45ff;
+  background: #853eeb;
 }
 .feed-link,
 .chat {
@@ -3059,9 +3059,14 @@ ul.breadcrumb li+li:last-child {
   }
 }
 code {
-  color: #ff2400;
-  background: #fbf7f8;
+  color: #e96900;
+  background: #f8f8f8;
   margin: 2px;
+  font-size: 0.92rem;
+  font-family: courier new, jetbrains mono, consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+}
+.highlight .code pre {
+  font-family: jetbrains mono, consolas;
 }
 body {
   background: url("/images/sky.jpg");

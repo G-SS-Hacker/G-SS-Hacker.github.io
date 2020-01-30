@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[UML活动图]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FUML%E6%B4%BB%E5%8A%A8%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[UML建模工具——活动图 图：香港九龙(Kowloon, Hong Kong) Guderian出品 定义 活动图（Activity Diagram）是一种特殊的状态图，它展现了在系统内从一个活动到另一个活动的流程 活动图与用例图互为补充，主要用于需求分析阶段 基本建模元素 开始（Initial Node）、结束（Final Node）、对象（Objects） 动作（Actions） 分支（Decision Nodes） 分岔和汇合（Forking and Joining） 泳道（Partition） 开始、结束、对象 动作/活动节点 一个活动节点是一个过程中进行的非原子的执行单元，活动的执行最终延伸为一些独立动作的（Action）的执行 分支 分支相当于编程语言中的if语句，可以有一个进入流和多个离去流 分岔和汇合 分差表示把一个单独的控制流分成两个或多个并发的控制流。汇合表示两个或多个并发控制流的同步发生，一个汇合可以有两个或多个进入转移和一个输出转移。用同步棒来说明并行控制流的分岔和汇合。 泳道 将一个活动图中的活动分组，每一组表示一个特定的类别、人或部门，他们负责组内的活动，每个组被称为一个泳道，用一条垂直的实线把它们分开。每个活动严格属于每一个泳道，转移（流）和同步棒（分差与汇合）可以跨越泳道。 完整的活动图例子电商平台 货物交易]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>软件工程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[UML用例图]]></title>
     <url>%2FG-SS-Hacker.github.io%2FUML%E7%94%A8%E4%BE%8B%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[UML建模工具——用例图 图：歼15双机编队 Guderian出品 系统 System 参与者 Actors 用例 Use Cases 关系 Relationships 系统（System） 一个系统就是你开发的所有东西，可以是网站、软件组件、业务流程、应用程序、etc. 用一个矩形代表一个系统，然后将系统名称放在顶部。矩形用于定义系统的范围，矩形内的所有内容都在系统内发生，矩形外的所有内容都不会在系统外发生。 如图所示，灰色区域即为飞行控制系统，而副驾驶、机长都是系统外内容，属于参与者。 参与者（Actor） 使用我们的系统（与系统交互）实现目标的某人或某物，可以是一个人、一个组织、另一个系统或一个外部设备 参与者的普通图形用火柴人表示；当另一个系统充当参与者时，参与者的图形用矩形表示。 在软件工程中，参与者告诉我们我们这个系统应该具有的功能。不同的参与者希望获得不同的功能，我们需要找到重要的参与者，认真调查他们的需求，并根据不同参与者的需求完善系统。 用例（Use Case） 系统为响应参与者引发的一个事件而执行的一系列的处理/动作，而这些处理应该为参与者产生一种有价值的结果 用椭圆形容一个用例，代表要系统做的一个任务。 关系（Relationship）用例图中涉及的关系有：关联、泛化、包含、扩展 关系类型 说明 表示符号 关联（Association） 参与者与用例之间的关系 泛化（Inheritance） 参与者之间或用例之间的关系 包含（Include） 用例之间的关系 扩展（Extend） 用例之间的关系 关联（Association） 关联关系，用实线表示。表示参与者与用例之间的通信，任何一方都可以发送和接受信息。 参与者Actor与用例Use Case相关联，参与者既要向用例发送信息，也要就收用例反馈的信息。 泛化（Inheritance） 泛化关系，实现+空心箭头，从子类指向父类。 （account拼错了） 如上图所示，用户User可以被细分为VIP用户和游客Guest；登录Log in也可以被细分为邮箱登录Log in by email和QQ登录Log in by QQ account。 包含（Include） 包含关系，把一个较复杂用例所表示的功能分解成较小的步骤，是上一个用例执行过程中必不可少的。箭头指向包含的子用例。 如上图所示，系统维护System Maintenance的工作包含了添加Add、删除Remove和修正Modify。 扩展（Extend） 扩展关系，用例功能的延伸，相当于为基础用例提供一个附加功能，不是必不可少的。箭头指向被扩展的父用例。 如上图所示，打喷嚏Sneeze必然包含闭眼Close Eyes的过程，因此Sneeze和Close Eyes是包含关系；打完喷嚏Sneeze之后不一定需要道歉Say Excuse Me，因此Sneeze和Say Excuse Me是扩展关系。 完整的用例图例子 这是一个Bank app系统，参与者包括用户Customer和银行数据库Bank，用户可以进行的操作包括登录Log in、验证余额Check Balance、转账Transfer Funds、支付Make Payment和建立档案Set Up Profile。 用户登录后，需要验证密码Verify Password，因此Log in和Verify Password是包含关系；如果用户输入密码错误，则展示错误信息Display Login Error，因此Log in和Display Login Error是扩展关系（用户不一定会输错密码）。 用户验证余额、转账和支付都需要银行数据库来帮助实现，因此验证余额、转账和支付和Bank都是关联关系。而用户进行转账和支付操作时，都必须验证用户账户资金是否足够Veirify Sufficient Funds，因此转账、支付和Verify Sufficient Funds是包含关系。 用户在支付时，可以选择使用支票支付Pay from Checking或余额支付Pay from Savings，故支票支付和余额支付与支付是泛化关系。 此处有一个带有扩展点Extension Points的用例：建立档案Set Up Profile。用例名称在上方，扩展点在下方。扩展点是扩展关系的详细叙述。这个用例表明用户可以再Banking App中建立自己的档案，当用户在建立他们的档案是，可以选择转移至几个不同的屏幕。如果用户感到困惑，他们可以转到档案帮助页面Go to Profile Help；如果用户希望了解隐私信息，他们可以转到隐私信息页面Show Privacy Info。还可以添加注释，以写明导致扩展的情况发生的条件。 Reference：https://www.youtube.com/watch?v=zid-MVo7M-E]]></content>
@@ -20,8 +32,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -57,21 +69,21 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[C++继承和派生]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC-%E7%BB%A7%E6%89%BF%E5%92%8C%E6%B4%BE%E7%94%9F%2F</url>
-    <content type="text"><![CDATA[C++继承和派生 图：亲爱的、古老的地球 Guderian出品 本文整理自《北京大学公开课：C++面向对象程序设计》 基本概念 继承和派生实际上是一回事：在定义一个新的类B时，如果该类与某个已有的类A相似（指的是B拥有A的全部特点），那么可以把A作为一个基类，而把B作为基类的一个派生类（也称子类），这使得创建和维护一个程序更加容易 派生类拥有基类的全部特点，派生类还可以对基类进行修改和扩充。在派生类中，可以扩充新的成员变量和成员函数 派生类一经定义，可以独立使用，定义对象时不依赖于基类 派生类拥有基类的全部成员函数和成员变量。不论是private、protected、public 在派生类的各个成员函数中，不能访问基类的private成员 简单理解成员修饰符protected和private的区别：protected成员在派生类中可以被访问，而private不能 对象不同类型对应的访问权限： 类型 public protected private 本类 √ √ √ 派生类 √ √ × 其他类 √ × × 派生类的写法12345class 派生类名: 访问修饰符 基类名 //Zhclass derived-class: access-specifier base-class //En&#123; //...&#125;; 访问修饰符可以是private、protected、public中的一个。如果未使用访问修饰符，则默认为private。该访问修饰符规定了继承类型。 继承类型 公有继承（public）：继承public和protected且类型不变，不继承private 保护继承（protected）：继承public和protected且类型都为protected，不继承private 私有继承（private）：继承public和protected且类型都变为private，不继承private 一般使用公有继承。 写法示例：学生管理系统1234567891011121314151617181920212223242526272829class CStudent&#123; private: string sName; int nAge; public: bool IsThreeGood() &#123;&#125;; void SetName(const string &amp; name) &#123; sName = name; &#125; //...&#125;;class CUndergraduteStudent: public CStudent//本科生&#123; private: int nDepartment; public: bool IsThreeGood() &#123;/*...*/&#125;; //覆盖（不是重载！覆盖的参数表不变，重载的参数表改变！） //名字与基类一样，但行为不一样 bool CanBaoYan() &#123;/*...*/&#125;;&#125;;class CGraduatedStudent: public CStudent//研究生&#123; private: int nDepartment; char szMentorName[20]; public: int CountSalary() &#123;/*...*/&#125;;&#125;; 派生类对象的内存空间派生类对象的体积 = 基类对象的体积 + 派生类对象自己的成员变量的体积。 在派生类对象中，包含基类对象，而且基类对象的存储位置位于派生类对象新增的成员变量之前。 学籍管理程序实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;class CStudent&#123; private: string name; string id; char gender; int age; public: void PrintInfo(); void SetInfo(const string &amp; name_, const string % id_, int age_, char gender_); string GetName() &#123; return name; &#125;&#125;;class CUndergraduteStudent: public CStudent&#123;//本科生类，继承了CStudent类 private: string department; //学生所属的系的名称 public: void QualifiedForBaoyan() //给予保研资格 &#123; cout &lt;&lt; "qualified for baoyan" &lt;&lt; endl; &#125; void PrintInfo() &#123; CStudent::PrintInfo(); //调用基类的PrintInfo cout &lt;&lt; "Department" &lt;&lt; department &lt;&lt; endl; &#125; void SetInfo(const string &amp; name_, const string % id_, int age_, char gender_) &#123; CStudent::SetInfo(name_, id_, age_, gender_); //调用基类的SetInfo department = department_; &#125;&#125;;int main()&#123; CUndergraduteStudent s2; s2.SetInfo("Guderian", "999999999", 21, "M", "Combat Command"); //古德里安，999999999，,2岁，男性，战役指挥学 s2.QualifiedForBaoyan(); //获得保研资格 s2.PrintInfo(); //打印信息 return 0;&#125;//输出：Guderian qualified for baoyanName: GuderianID: 999999999Age: 21Gender: MDepartment: Combat Command 派生类的使用方法 在派生类中，调用基类的成员函数，设置了从基类继承的信息之后，之后再设置自己独有的信息。这一方法在C++面向对象编程中是很常用的。 多继承：一个子类可以有多个父亲，继承多个父亲的特性 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改]]></content>
+    <content type="text"><![CDATA[C++继承和派生 图：古老的地球 Guderian出品 本文整理自《北京大学公开课：C++面向对象程序设计》 基本概念 继承和派生实际上是一回事：在定义一个新的类B时，如果该类与某个已有的类A相似（指的是B拥有A的全部特点），那么可以把A作为一个基类，而把B作为基类的一个派生类（也称子类），这使得创建和维护一个程序更加容易 派生类拥有基类的全部特点，派生类还可以对基类进行修改和扩充。在派生类中，可以扩充新的成员变量和成员函数 派生类一经定义，可以独立使用，定义对象时不依赖于基类 派生类拥有基类的全部成员函数和成员变量。不论是private、protected、public 在派生类的各个成员函数中，不能访问基类的private成员 简单理解成员修饰符protected和private的区别：protected成员在派生类中可以被访问，而private不能 对象不同类型对应的访问权限： 类型 public protected private 本类 √ √ √ 派生类 √ √ × 其他类 √ × × 派生类的写法12345class 派生类名: 访问修饰符 基类名 //Zhclass derived-class: access-specifier base-class //En&#123; //...&#125;; 访问修饰符可以是private、protected、public中的一个。如果未使用访问修饰符，则默认为private。该访问修饰符规定了继承类型。 继承类型 公有继承（public）：继承public和protected且类型不变，不继承private 保护继承（protected）：继承public和protected且类型都为protected，不继承private 私有继承（private）：继承public和protected且类型都变为private，不继承private 一般使用公有继承。 写法示例：学生管理系统1234567891011121314151617181920212223242526272829class CStudent&#123; private: string sName; int nAge; public: bool IsThreeGood() &#123;&#125;; void SetName(const string &amp; name) &#123; sName = name; &#125; //...&#125;;class CUndergraduteStudent: public CStudent//本科生&#123; private: int nDepartment; public: bool IsThreeGood() &#123;/*...*/&#125;; //覆盖（不是重载！覆盖的参数表不变，重载的参数表改变！） //名字与基类一样，但行为不一样 bool CanBaoYan() &#123;/*...*/&#125;;&#125;;class CGraduatedStudent: public CStudent//研究生&#123; private: int nDepartment; char szMentorName[20]; public: int CountSalary() &#123;/*...*/&#125;;&#125;; 派生类对象的内存空间派生类对象的体积 = 基类对象的体积 + 派生类对象自己的成员变量的体积。 在派生类对象中，包含基类对象，而且基类对象的存储位置位于派生类对象新增的成员变量之前。 学籍管理程序实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;class CStudent&#123; private: string name; string id; char gender; int age; public: void PrintInfo(); void SetInfo(const string &amp; name_, const string % id_, int age_, char gender_); string GetName() &#123; return name; &#125;&#125;;class CUndergraduteStudent: public CStudent&#123;//本科生类，继承了CStudent类 private: string department; //学生所属的系的名称 public: void QualifiedForBaoyan() //给予保研资格 &#123; cout &lt;&lt; "qualified for baoyan" &lt;&lt; endl; &#125; void PrintInfo() &#123; CStudent::PrintInfo(); //调用基类的PrintInfo cout &lt;&lt; "Department" &lt;&lt; department &lt;&lt; endl; &#125; void SetInfo(const string &amp; name_, const string % id_, int age_, char gender_) &#123; CStudent::SetInfo(name_, id_, age_, gender_); //调用基类的SetInfo department = department_; &#125;&#125;;int main()&#123; CUndergraduteStudent s2; s2.SetInfo("Guderian", "999999999", 21, "M", "Combat Command"); //古德里安，999999999，,2岁，男性，战役指挥学 s2.QualifiedForBaoyan(); //获得保研资格 s2.PrintInfo(); //打印信息 return 0;&#125;//输出：Guderian qualified for baoyanName: GuderianID: 999999999Age: 21Gender: MDepartment: Combat Command 派生类的使用方法 在派生类中，调用基类的成员函数，设置了从基类继承的信息之后，之后再设置自己独有的信息。这一方法在C++面向对象编程中是很常用的。 多继承：一个子类可以有多个父亲，继承多个父亲的特性 参考并整理自《C++面向对象设计》郭炜，北京大学，感谢原作者！编辑时有删改]]></content>
       <categories>
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -83,8 +95,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -96,8 +108,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -109,8 +121,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -122,8 +134,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -158,9 +170,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>字符串</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -217,8 +229,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>算法</tag>
-        <tag>数据结构</tag>
         <tag>排序</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
