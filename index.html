@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2020-01-31 09:58:03 / 修改时间：10:02:32" itemprop="dateCreated datePublished" datetime="2020-01-31T09:58:03+08:00">2020-01-31</time>
+              <time title="创建时间：2020-01-31 09:58:03 / 修改时间：11:18:37" itemprop="dateCreated datePublished" datetime="2020-01-31T09:58:03+08:00">2020-01-31</time>
             </span>
           
 
@@ -570,8 +570,7 @@
 
       
         
-          
-            <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580395950609&amp;di=f6e13ac0c889517e41f2d4bbdbf4e3c1&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201311%2F02%2F20131102140834_Rnsec.jpeg" alt></p>
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580395950609&amp;di=f6e13ac0c889517e41f2d4bbdbf4e3c1&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201311%2F02%2F20131102140834_Rnsec.jpeg" alt></p>
 <h1 id="UML建模工具——类图"><a href="#UML建模工具——类图" class="headerlink" title="UML建模工具——类图"></a>UML建模工具——类图</h1><blockquote>
 <p>图：巴尔的摩（Baltimore）</p>
 </blockquote>
@@ -604,148 +603,15 @@
 <li>学生与身份证之间为关联关系，使用一根实线表示；</li>
 <li>学生上学需要用到自行车，与自行车是一种依赖关系，使用带箭头的虚线表示；</li>
 </ul>
-<h2 id="类图中的元素"><a href="#类图中的元素" class="headerlink" title="类图中的元素"></a>类图中的元素</h2><ul>
-<li>类</li>
-<li>接口</li>
-<li>协作</li>
-<li>类之间的关系</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>关系类型</th>
-<th>说明</th>
-<th>表示符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>依赖（Dependency）</td>
-<td>独立事物发生变化会影响依赖事物</td>
-<td><img src="https://i.loli.net/2020/01/30/4Hti1muvxPNZM3p.png" alt></td>
-</tr>
-<tr>
-<td>关联（Association）</td>
-<td>整体与部分关系</td>
-<td><img src="https://i.loli.net/2020/01/29/Kztkm5aJZRAPErp.png" alt></td>
-</tr>
-<tr>
-<td>泛化（Generalization）</td>
-<td>特殊/一般关系</td>
-<td><img src="https://i.loli.net/2020/01/29/fxqJKuU3DnMCVv1.png" alt></td>
-</tr>
-<tr>
-<td>实现（Realization）</td>
-<td>实现表示一个class类实现interface接口（可以是多个）的功能</td>
-<td><img src="https://i.loli.net/2020/01/30/j7b49S3OUmglCYX.png" alt></td>
-</tr>
-<tr>
-<td>聚合（Aggregation）</td>
-<td>A has B，B是A的一部分，但A不控制B的生命周期</td>
-<td><img src="https://s.plantuml.com/sym03.png" alt></td>
-</tr>
-<tr>
-<td>组合（Composition）</td>
-<td>A has B，B是A的一部分，且A控制B的生命周期</td>
-<td><img src="https://s.plantuml.com/sym01.png" alt></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="依赖（Dependency）-1"><a href="#依赖（Dependency）-1" class="headerlink" title="依赖（Dependency） 1"></a>依赖（Dependency）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>依赖关系是用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_dependency.jpg" alt="_images/uml_dependency.jpg"></p>
-<p>与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化；</p>
-<p>显然，依赖也有方向，双向依赖是一种非常糟糕的结构，我们总是应该保持单向依赖，杜绝双向依赖的产生；</p>
-<p>注：在最终代码中，依赖关系体现为类构造方法及类方法的传入参数，箭头的指向为调用关系；依赖关系除了临时知道对方外，还是“使用”对方的方法和属性；</p>
-<h3 id="关联（Association）-1"><a href="#关联（Association）-1" class="headerlink" title="关联（Association） 1"></a>关联（Association）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>关联关系是用一条直线表示的；它描述不同类的对象之间的结构关系；它是一种静态关系， 通常与运行状态无关，一般由常识等因素决定的；它一般用来定义对象之间静态的、天然的结构； 所以，关联关系是一种“强关联”的关系；</p>
-<p>比如，乘车人和车票之间就是一种关联关系；学生和学校就是一种关联关系；</p>
-<p>关联关系默认不强调方向，表示对象间相互知道；如果特别强调方向，如下图，表示A知道B，但 B不知道A；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_association.jpg" alt="_images/uml_association.jpg"></p>
-<p>注：在最终代码中，关联对象通常是以成员变量的形式实现的；</p>
-<h3 id="泛化（Generalization）-1"><a href="#泛化（Generalization）-1" class="headerlink" title="泛化（Generalization） 1"></a>泛化（Generalization）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>类的继承结构表现在UML中为：泛化(generalize)与实现(realize)：</p>
-<p>继承关系为 is-a的关系；两个对象之间如果可以用 is-a 来表示，就是继承关系：（..是..)</p>
-<p>eg：自行车是车、猫是动物</p>
-<p>泛化关系用一条带空心箭头的直接表示；如下图表示（A继承自B）；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_generalization.jpg" alt="_images/uml_generalization.jpg"></p>
-<p>eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与SUV之间为泛化关系；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_generalize.jpg" alt="_images/uml_generalize.jpg"></p>
-<p>注：最终代码中，泛化关系表现为继承非抽象类；</p>
-<h3 id="实现（Realization）-1"><a href="#实现（Realization）-1" class="headerlink" title="实现（Realization） 1"></a>实现（Realization）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>实现关系用一条带空心箭头的虚线表示；</p>
-<p>eg：”车”为一个抽象概念，在现实中并无法直接用来定义对象；只有指明具体的子类(汽车还是自行车)，才 可以用来定义对象（”车”这个类在C++中用抽象类表示，在JAVA中有接口这个概念，更容易理解）</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_realize.jpg" alt="_images/uml_realize.jpg"></p>
-<p>注：最终代码中，实现关系表现为继承抽象类；</p>
-<h3 id="聚合（Aggregation）-1"><a href="#聚合（Aggregation）-1" class="headerlink" title="聚合（Aggregation） 1"></a>聚合（Aggregation）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>聚合关系用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_aggregation.jpg" alt="_images/uml_aggregation.jpg"></p>
-<p>聚合关系用于表示实体对象之间的关系，表示整体由部分构成的语义；例如一个部门由多个员工组成；</p>
-<p>与组合关系不同的是，整体和部分不是强依赖的，即使整体不存在了，部分仍然存在；例如， 部门撤销了，人员不会消失，他们依然存在；</p>
-<h3 id="组合（Composition）-1"><a href="#组合（Composition）-1" class="headerlink" title="组合（Composition） 1"></a>组合（Composition）<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></h3><p>组合关系用一条带实心菱形箭头直线表示，如下图表示A组成B，或者B由A组成；</p>
-<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/uml_composition.jpg" alt="_images/uml_composition.jpg"></p>
-<p>与聚合关系一样，组合关系同样表示整体由部分构成的语义；比如公司由多个部门组成；</p>
-<p>但组合关系是一种强依赖的特殊聚合关系，如果整体不存在了，则部分也不存在了；例如， 公司不存在了，部门也将不存在了；</p>
-<h2 id="关联关系的修饰"><a href="#关联关系的修饰" class="headerlink" title="关联关系的修饰"></a>关联关系的修饰</h2><h3 id="名称及其方向"><a href="#名称及其方向" class="headerlink" title="名称及其方向"></a>名称及其方向</h3><p><img src="https://i.loli.net/2020/01/30/Sj8GdFpH4zf1gwP.png" alt></p>
-<h3 id="角色及可见性"><a href="#角色及可见性" class="headerlink" title="角色及可见性"></a>角色及可见性</h3><blockquote>
-<p>在关联的每一端，表明相连的类在该关联关系中的作用</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/01/30/v96Lc3Rtkmq2nw4.png" alt></p>
-<h3 id="多重性（Multiplicity）"><a href="#多重性（Multiplicity）" class="headerlink" title="多重性（Multiplicity）"></a>多重性（Multiplicity）</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>修饰（Adornment）</th>
-<th>语义（Semantics）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>0..1</code></td>
-<td><code>0</code>or<code>1</code></td>
-</tr>
-<tr>
-<td><code>1</code></td>
-<td>Exactly <code>1</code></td>
-</tr>
-<tr>
-<td><code>0..*</code></td>
-<td><code>0</code> or more</td>
-</tr>
-<tr>
-<td><code>1..*</code></td>
-<td><code>1</code> or more</td>
-</tr>
-<tr>
-<td><code>m..n</code></td>
-<td><code>m</code> to <code>n</code></td>
-</tr>
-<tr>
-<td><code>m..n, p..q</code></td>
-<td><code>m</code> to <code>n</code> or <code>p</code> to <code>q</code></td>
-</tr>
-<tr>
-<td><code>*</code></td>
-<td><code>0</code> or more</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><img src="https://i.loli.net/2020/01/30/cKHgGLmvEizPNu8.png" alt></p>
-<p>在图中：</p>
-<ol>
-<li>一个<code>Car</code>有一个<code>Person</code>（司机，这里<code>person</code>指司机），因此在<code>Person</code>端有个符号<code>1</code>；</li>
-<li>一个<code>Person</code>（司机）开一辆车<code>Car</code>，因此在<code>Car</code>有个符号<code>1</code>；</li>
-<li>一个<code>Car</code>有四个<code>Tire</code>（轮胎），因此在<code>Tire</code>端有个符号<code>4</code>；</li>
-<li>一个<code>Tire</code>仅能在一个<code>Car</code>上，因此在在<code>Car</code>端有个符号<code>1</code>。需要注意的是，如果认为“ 一个<code>Tire</code>可能在一个<code>Car</code>上，也可能不在Car上”那么Car端的符号为<code>0..1</code>；</li>
-<li>一个<code>Car</code>只有一个<code>Brand</code>（标志），所以在<code>Brand</code>端符号为<code>1</code>；</li>
-<li>一个标志会在<code>0</code>辆或多辆车上，所以<code>Car</code>端符号为<code>*</code>。</li>
-</ol>
-<hr>
-<blockquote>
-<blockquote id="fn_ 1">
-<sup> 1</sup>. Reference and lots of thanks：<a href="https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html" target="_blank" rel="noopener">https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html</a><a href="#reffn_ 1" title="Jump back to footnote [ 1] in the text."> &#8617;</a>
-</blockquote>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/UML类图/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
