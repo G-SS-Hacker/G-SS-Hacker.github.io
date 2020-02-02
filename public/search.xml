@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[UML顺序图]]></title>
-    <url>%2FG-SS-Hacker.github.io%2FUML%E9%A1%BA%E5%BA%8F%E5%9B%BE%2F</url>
-    <content type="text"><![CDATA[UML建模工具——顺序图 图：旧金山湾区，晚霞下的泛美金字塔（Transamerica Pyramid） Guderian出品 顺序图（Sequence）是场景（Scenario）的图形化表示，描述了以时间顺序组织的对象之间的交互活动 完整的UML顺序图例子 基本建模元素 对象 对象生命线 控制焦点 消息：调用消息、返回消息、异步消息、自关联消息 对象销毁 结构化控制 同步消息与异步消息同步消息 发送方向接收方发送消息，接收方接收此消息并回复发送方。发送者在收到接收者的回复之前不会发送另一条消息。 如：老师想张三问了一个问题，张三必须当场给予回复，老师才会问下一个同学问题。 异步消息 发送方向接收方发送消息，发送者在收到接收者的回复之前可以进行其他活动。 如：老师给张三布置了一个问题，让张三课后思考一下如何解决，然后问其他同学问题。]]></content>
+    <title><![CDATA[UML通信图]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FUML%E9%80%9A%E4%BF%A1%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[UML建模工具——通信图 图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge） Guderian出品 通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换 但二者建模的角度不同 1 通信图 强调随着时间的推移，各对象是如何交互的 通信图 强调对象之间的结构关系 通信图的组成元素 对象（object） 链接（link） 注意虽然链接和关联的图形都是一条实线，但是此处的链接是对象之间的关系，而关联是类之间的关系 消息（message） 完整的通信图例子 技术员张三创建了一个工具 技术员张三使用了这个工具 2.1 工具检查了A103号锅炉 2.2 工具维修了A103号锅炉 技术员张三销毁了这个工具 1. http://coursehome.zhihuishu.com/courseHome/2049439#teachTeam &#8617;]]></content>
       <categories>
         <category>总结</category>
       </categories>
       <tags>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
+        <tag>UML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[UML顺序图]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FUML%E9%A1%BA%E5%BA%8F%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[UML建模工具——顺序图 图：旧金山湾区，晚霞下的泛美金字塔（Transamerica Pyramid） Guderian出品 顺序图和通信图都属于UML交互图 顺序图（Sequence）是场景（Scenario）的图形化表示，描述了以时间顺序组织的对象之间的交互活动 完整的UML顺序图例子 基本建模元素 对象 对象生命线 控制焦点 消息：调用消息、返回消息、异步消息、自关联消息 对象销毁 结构化控制 同步消息与异步消息同步消息 发送方向接收方发送消息，接收方接收此消息并回复发送方。发送者在收到接收者的回复之前不会发送另一条消息。 如：老师想张三问了一个问题，张三必须当场给予回复，老师才会问下一个同学问题。 异步消息 发送方向接收方发送消息，发送者在收到接收者的回复之前可以进行其他活动。 如：老师给张三布置了一个问题，让张三课后思考一下如何解决，然后问其他同学问题。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>软件工程</tag>
+        <tag>UML</tag>
       </tags>
   </entry>
   <entry>
@@ -22,6 +36,7 @@
       <tags>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
+        <tag>UML</tag>
       </tags>
   </entry>
   <entry>
@@ -34,6 +49,7 @@
       <tags>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
+        <tag>UML</tag>
       </tags>
   </entry>
   <entry>
@@ -46,6 +62,7 @@
       <tags>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
+        <tag>UML</tag>
       </tags>
   </entry>
   <entry>
@@ -194,8 +211,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -252,9 +269,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
         <tag>排序</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -301,8 +318,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>

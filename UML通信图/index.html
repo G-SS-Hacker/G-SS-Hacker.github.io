@@ -141,25 +141,21 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="面向对象绪论 图：歼15航母降落   Guderian出品  面向对象的基本概念 类 Class 对象 Object   浅显理解：类是抽象的对象，对象是具体的类  概念之间的互用 属性 Attribute == 数据 Data == 状态 State == 信息 Information 操作 Operation == 方法 Method == 行为 Behavior == 职责 Respons">
-<meta name="keywords" content="OOP,C-plus-plus,面向对象,软件工程">
+  <meta name="description" content="UML建模工具——通信图 图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge）   Guderian出品    通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换 但二者建模的角度不同 1  通信图 强调随着时间的推移，各对象是如何交互的 通信图 强调对象之间的结构关系     通信图的组成元素 对象（object）">
+<meta name="keywords" content="面向对象,软件工程,UML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象绪论">
-<meta property="og:url" content="https://G-SS-Hacker.github.io/面向对象绪论/index.html">
+<meta property="og:title" content="UML通信图">
+<meta property="og:url" content="https://G-SS-Hacker.github.io/UML通信图/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="面向对象绪论 图：歼15航母降落   Guderian出品  面向对象的基本概念 类 Class 对象 Object   浅显理解：类是抽象的对象，对象是具体的类  概念之间的互用 属性 Attribute == 数据 Data == 状态 State == 信息 Information 操作 Operation == 方法 Method == 行为 Behavior == 职责 Respons">
+<meta property="og:description" content="UML建模工具——通信图 图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge）   Guderian出品    通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换 但二者建模的角度不同 1  通信图 强调随着时间的推移，各对象是如何交互的 通信图 强调对象之间的结构关系     通信图的组成元素 对象（object）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580203723216&di=8aed87a08dfaee482cb60caaaed0998a&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20170705%2F20170705072438_f5cc5771dd19389bacdba25fcfa1ee80_4.jpeg">
-<meta property="og:image" content="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8sTCbFoafDBb6mgT7LLN0sWdAv82o4X35CWYiv9x6uM06XiPfBeK8XCw-4Io4zjQH2GnF2BWQnWInDhbgu5YCaBPLmBPL8MYhHjHWZQQc2Qwb2qb85q-AGcfS2z180">
-<meta property="og:image" content="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8EpaWiI5MmgT7LLN0EIaqkISnBpqb55GufoeI8SYNd91ONAq0bgxaKoZDJIZ8KClDAk1GoKZFJCqeWxCIYr4GDJJ2xbiiXDIy5Q1C0">
-<meta property="og:image" content="https://s.plantuml.com/sym03.png">
-<meta property="og:image" content="https://s.plantuml.com/sym01.png">
-<meta property="og:image" content="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWZEJyvEBL6miSdCAqajIajCJhMpume9Kz3JiuFASS6KrEZfAGJabwSM1UGavfLmEQJcfG3D0G00">
-<meta property="og:updated_time" content="2020-01-30T02:27:59.734Z">
+<meta property="og:image" content="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+<meta property="og:image" content="https://i.loli.net/2020/02/01/gc7X8V9qkzBKDEL.png">
+<meta property="og:updated_time" content="2020-02-02T00:41:08.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象绪论">
-<meta name="twitter:description" content="面向对象绪论 图：歼15航母降落   Guderian出品  面向对象的基本概念 类 Class 对象 Object   浅显理解：类是抽象的对象，对象是具体的类  概念之间的互用 属性 Attribute == 数据 Data == 状态 State == 信息 Information 操作 Operation == 方法 Method == 行为 Behavior == 职责 Respons">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580203723216&di=8aed87a08dfaee482cb60caaaed0998a&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20170705%2F20170705072438_f5cc5771dd19389bacdba25fcfa1ee80_4.jpeg">
+<meta name="twitter:title" content="UML通信图">
+<meta name="twitter:description" content="UML建模工具——通信图 图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge）   Guderian出品    通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换 但二者建模的角度不同 1  通信图 强调随着时间的推移，各对象是如何交互的 通信图 强调对象之间的结构关系     通信图的组成元素 对象（object）">
+<meta name="twitter:image" content="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
 
 
 
@@ -169,7 +165,7 @@
 
   
   
-  <link rel="canonical" href="https://G-SS-Hacker.github.io/面向对象绪论/">
+  <link rel="canonical" href="https://G-SS-Hacker.github.io/UML通信图/">
 
 
 
@@ -179,7 +175,7 @@
   };
 </script>
 
-  <title>面向对象绪论 | G-SS-Hacker</title>
+  <title>UML通信图 | G-SS-Hacker</title>
   
 
 
@@ -458,7 +454,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/面向对象绪论/">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/UML通信图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="G-SS-Hacker">
@@ -475,7 +471,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面向对象绪论
+          <h1 class="post-title" itemprop="name headline">UML通信图
 
               
             
@@ -501,23 +497,13 @@
                 
               
 
-              <time title="创建时间：2020-01-28 14:25:40" itemprop="dateCreated datePublished" datetime="2020-01-28T14:25:40+08:00">2020-01-28</time>
+              <time title="创建时间：2020-02-02 08:40:00 / 修改时间：08:41:08" itemprop="dateCreated datePublished" datetime="2020-02-02T08:40:00+08:00">2020-02-02</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-01-30 10:27:59" itemprop="dateModified" datetime="2020-01-30T10:27:59+08:00">2020-01-30</time>
-              </span>
             
           
 
@@ -565,7 +551,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.2k</span>
+              <span title="本文字数">439</span>
             </span>
           
 
@@ -577,7 +563,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">3 分钟</span>
+              <span title="阅读时长">1 分钟</span>
             </span>
           
 
@@ -596,126 +582,49 @@
       
 
       
-        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580203723216&amp;di=8aed87a08dfaee482cb60caaaed0998a&amp;imgtype=0&amp;src=http%3A%2F%2F01.minipic.eastday.com%2F20170705%2F20170705072438_f5cc5771dd19389bacdba25fcfa1ee80_4.jpeg" alt></p>
-<h1 id="面向对象绪论"><a href="#面向对象绪论" class="headerlink" title="面向对象绪论"></a>面向对象绪论</h1><blockquote>
-<p>图：歼15航母降落</p>
+        <p><img src="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt></p>
+<h1 id="UML建模工具——通信图"><a href="#UML建模工具——通信图" class="headerlink" title="UML建模工具——通信图"></a>UML建模工具——通信图</h1><blockquote>
+<p>图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge）</p>
 </blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><ul>
-<li>类 Class</li>
-<li>对象 Object</li>
+<p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<blockquote>
+<p>通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换</p>
+<p>但二者建模的角度不同<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></p>
+<ul>
+<li><font color="red">通信图 强调随着时间的推移，各对象是如何交互的</font></li>
+<li><font color="red">通信图 强调对象之间的结构关系</font>
+
+</li>
+</ul>
+</blockquote>
+<h2 id="通信图的组成元素"><a href="#通信图的组成元素" class="headerlink" title="通信图的组成元素"></a>通信图的组成元素</h2><ul>
+<li>对象（object）</li>
+<li>链接（link）</li>
 </ul>
 <blockquote>
-<p>浅显理解：类是抽象的对象，对象是具体的类</p>
-</blockquote>
-<h2 id="概念之间的互用"><a href="#概念之间的互用" class="headerlink" title="概念之间的互用"></a>概念之间的互用</h2><ul>
-<li>属性 Attribute == 数据 Data == 状态 State == 信息 Information</li>
-<li>操作 Operation == 方法 Method == 行为 Behavior == 职责 Responsibility</li>
-<li>对象 Object == 实例 Instance</li>
-</ul>
-<h2 id="面向对象的核心特征"><a href="#面向对象的核心特征" class="headerlink" title="面向对象的核心特征"></a>面向对象的核心特征</h2><ul>
-<li>封装 Encapsulation</li>
-<li>继承 Inheritance</li>
-<li>多态 Polymorphism</li>
-</ul>
-<blockquote>
-<p>封装、继承和多态被称为所谓的“面向对象三大特征”</p>
+<p>注意虽然链接和关联的图形都是一条实线，但是此处的链接是对象之间的关系，而关联是类之间的关系</p>
 </blockquote>
 <ul>
-<li>聚合/组合 Aggregation / Composition</li>
-<li>接口/实现 Interface / Implementation</li>
-<li>抽象 Abstraction</li>
+<li>消息（message）</li>
 </ul>
-<h3 id="封装-Encapsulation"><a href="#封装-Encapsulation" class="headerlink" title="封装 Encapsulation"></a>封装 Encapsulation</h3><blockquote>
-<p>是指隐藏对象的属性和实现细节，仅对外提供公共访问方式</p>
-</blockquote>
-<ol>
-<li><strong>封装什么？</strong></li>
-</ol>
-<ul>
-<li>内部的、不想让其他人随意了解的信息</li>
-<li>类的属性 Attribute</li>
-<li>类的方法 Method</li>
-</ul>
-<ol>
-<li><strong>为什么要封装？</strong></li>
-</ol>
-<ul>
-<li>保护隐私</li>
-<li>保护数据安全</li>
-<li>隔离复杂度</li>
-</ul>
-<ol>
-<li><strong>面向对象的封装有四种方式</strong></li>
-</ol>
-<ul>
-<li>Public</li>
-<li>Private</li>
-<li>Protected</li>
-<li>Package</li>
-</ul>
-<h3 id="继承-Inheritance"><a href="#继承-Inheritance" class="headerlink" title="继承 Inheritance"></a>继承 Inheritance</h3><blockquote>
-<p>一个类从其他类获得它的状态和行为，同时还可以加上自己额外的状态和行为</p>
-</blockquote>
-<p>父类中的属性和方法，在子类中可以重复使用，子类就不需要再定义了，这样即可实现代码的可重用性。如以下类图例子，定义类<code>C1Dobject</code>一维物体，它有一个属性<code>x</code>对应x轴上的一个坐标，两个方法<code>getx()</code>和<code>setx(int)</code>分别表示x坐标的获取和设置。如果我们需要定义二维物体，就没有必要把x坐标重复定义。我们在类<code>C1Dobject</code>的基础上派生出子类<code>C2Dobject</code>，只需再定义属性<code>y</code>和方法<code>gety()</code>及<code>sety(int)</code>就可以完整地抽象出一个二维物体；类似地，如果我们需要定义三维物体，没有必要把x坐标、y坐标重复定义，只需再类<code>C2Dobject</code>的基础上派生出子类<code>C3Dobject</code>，再定义属性<code>z</code>和方法<code>getz()</code>及<code>setz(int)</code>即可。显而易见，继承提高了代码的可重用性，减少了创建类的工作量。</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8sTCbFoafDBb6mgT7LLN0sWdAv82o4X35CWYiv9x6uM06XiPfBeK8XCw-4Io4zjQH2GnF2BWQnWInDhbgu5YCaBPLmBPL8MYhHjHWZQQc2Qwb2qb85q-AGcfS2z180" alt></p>
-<p>以上类图对应的<code>C++</code>代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C1Dobject</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getx</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setx</span><span class="params">(<span class="keyword">int</span> xPrime)</span> </span>&#123; x = xPrime; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C2Dobject</span>:</span> <span class="keyword">public</span> C1Dobject</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> y = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">gety</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sety</span><span class="params">(<span class="keyword">int</span> yPrime)</span> </span>&#123; y = yPrime; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C3Dobject</span>:</span> <span class="keyword">public</span> C2Dobject</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> z = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getz</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> z; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setz</span><span class="params">(<span class="keyword">int</span> zPrime)</span> </span>&#123; z = zPrime; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="多态-Polymorphism"><a href="#多态-Polymorphism" class="headerlink" title="多态 Polymorphism"></a>多态 Polymorphism</h3><blockquote>
-<p>使用指向父类的指针或者引用，能够调用子类的对象</p>
-</blockquote>
-<p>结论：</p>
+<h2 id="完整的通信图例子"><a href="#完整的通信图例子" class="headerlink" title="完整的通信图例子"></a>完整的通信图例子</h2><p><img src="https://i.loli.net/2020/02/01/gc7X8V9qkzBKDEL.png" alt></p>
 <ol>
-<li>当一个类从另一个类继承而来，多态使得子类可以代替父类</li>
-<li>消息发送方不需要知道消息接收方属于哪一个子类</li>
-<li><font color="red">同一类族</font>的接收者可以按自己的方式处理消息</li>
+<li><p>技术员张三创建了一个工具</p>
+</li>
+<li><p>技术员张三使用了这个工具</p>
+<p>2.1 工具检查了A103号锅炉</p>
+<p>2.2 工具维修了A103号锅炉</p>
+</li>
+<li><p>技术员张三销毁了这个工具</p>
+</li>
 </ol>
-<p>如以下类图例子，定义形状<code>CShape</code>作为父类，派生出矩形<code>CRectangle</code>和三角形<code>CTriangle</code>。现在假设我们知道一个图形<code>shape</code>，希望获取它的面积，而我们并不需要知道它的具体形状（属于哪一个子类），只需要确保<code>shape</code>所属的类在<code>CShape</code>的类组下即可。图形<code>shape</code>的面积可以通过调用函数<code>area()</code>实现。</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN8EpaWiI5MmgT7LLN0EIaqkISnBpqb55GufoeI8SYNd91ONAq0bgxaKoZDJIZ8KClDAk1GoKZFJCqeWxCIYr4GDJJ2xbiiXDIy5Q1C0" alt></p>
-<p><code>C++</code>中多态的实现涉及<strong>静态多态</strong>和<strong>动态多态</strong>以及<strong>虚函数</strong>的使用，代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CShape</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">	<span class="keyword">int</span> width, height;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	CShape(<span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>) &#123; width = a, height = b; &#125;</span><br><span class="line">	<span class="comment">//纯虚函数，具体功能在子类中实现</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">area</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CRectangle</span>:</span> <span class="keyword">public</span> CShape</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//显式调用父类的构造函数</span></span><br><span class="line">	CRectangle( <span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>): CShape(a, b) &#123;&#125;;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"CRectangle area calls: "</span>;</span><br><span class="line">		<span class="keyword">return</span> width * height;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTriangle</span>:</span> <span class="keyword">public</span> CShape</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//显式调用父类的构造函数</span></span><br><span class="line">	CTriangle( <span class="keyword">int</span> a = <span class="number">0</span>, <span class="keyword">int</span> b = <span class="number">0</span>): CShape(a, b) &#123;&#125;;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"CTriangle area calls: "</span>;</span><br><span class="line">		<span class="keyword">return</span> width * height / <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CShape *ptr;</span><br><span class="line">	<span class="function">CRectangle <span class="title">rect</span><span class="params">(<span class="number">10</span>, <span class="number">10</span>)</span></span>;</span><br><span class="line">	<span class="function">CTriangle  <span class="title">tri</span><span class="params">(<span class="number">10</span>, <span class="number">10</span>)</span></span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//获取矩形的面积</span></span><br><span class="line">	ptr = &amp;rect;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr-&gt;area() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//获取三角形的面积</span></span><br><span class="line">	ptr = &amp;tri;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ptr-&gt;area() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>C++</code>中构成多态需要满足两个条件：</p>
-<ol>
-<li>调用函数的对象须是<strong>指针</strong>或<strong>引用</strong></li>
-<li>被调用的函数须是<strong>重写</strong><sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup>的<strong>虚函数</strong><sup><a href="#fn_ 2" id="reffn_ 2"> 2</a></sup></li>
-</ol>
-<h3 id="聚合-组合-Aggregation-Composition"><a href="#聚合-组合-Aggregation-Composition" class="headerlink" title="聚合/组合 Aggregation / Composition"></a>聚合/组合 Aggregation / Composition</h3><h4 id="聚合-Aggregation"><a href="#聚合-Aggregation" class="headerlink" title="聚合 Aggregation"></a>聚合 Aggregation</h4><blockquote>
-<p>A has B，B是A的一部分，但A不控制B的生命周期</p>
-</blockquote>
-<p>如：学校由学生组成，那么学校与学生是聚合关系</p>
-<p><code>UML</code>图中聚合关系的符号如下图</p>
-<p><img src="https://s.plantuml.com/sym03.png" alt></p>
-<h4 id="组合-Composition"><a href="#组合-Composition" class="headerlink" title="组合 Composition"></a>组合 Composition</h4><blockquote>
-<p>A has B，B是A的一部分，且A控制B的生命周期</p>
-</blockquote>
-<p>如：树由树叶组成，那么树与树叶是组合关系</p>
-<p><code>UML</code>图中聚合关系的符号如下图</p>
-<p><img src="https://s.plantuml.com/sym01.png" alt></p>
-<h3 id="接口-实现-Interface-Implementation"><a href="#接口-实现-Interface-Implementation" class="headerlink" title="接口/实现 Interface / Implementation"></a>接口/实现 Interface / Implementation</h3><h4 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口 Interface"></a>接口 Interface</h4><blockquote>
-<p>描述一个类的用户如何与这个类交互</p>
-</blockquote>
-<h4 id="实现-Implementation"><a href="#实现-Implementation" class="headerlink" title="实现 Implementation"></a>实现 Implementation</h4><blockquote>
-<p>完成接口所定义的功能，如类、构建等完成的任务</p>
-</blockquote>
-<p>如电视机、插座、发电厂的关系如何呢？</p>
-<p><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWZEJyvEBL6miSdCAqajIajCJhMpume9Kz3JiuFASS6KrEZfAGJabwSM1UGavfLmEQJcfG3D0G00" alt></p>
-<ul>
-<li>电视机是用户 client</li>
-<li>插座是接口 Interface</li>
-<li>发电厂是实现 Implementation</li>
-</ul>
-<h3 id="抽象-Abstraction"><a href="#抽象-Abstraction" class="headerlink" title="抽象 Abstraction"></a>抽象 Abstraction</h3><blockquote>
-<p>抽取具体客观事物的共性</p>
-</blockquote>
-<p>抽象是面向对象领域<font color="red">发现类</font>的主要方法</p>
-<p>（所谓抽象，玄之又玄，众妙之门）</p>
 <hr>
+<blockquote>
 <blockquote id="fn_ 1">
-<sup> 1</sup>. 重写：函数重写必须函数名一致、参数一致、返回值一致<a href="#reffn_ 1" title="Jump back to footnote [ 1] in the text."> &#8617;</a>
+<sup> 1</sup>. <a href="http://coursehome.zhihuishu.com/courseHome/2049439#teachTeam" target="_blank" rel="noopener">http://coursehome.zhihuishu.com/courseHome/2049439#teachTeam</a><a href="#reffn_ 1" title="Jump back to footnote [ 1] in the text."> &#8617;</a>
 </blockquote>
-<blockquote id="fn_ 2">
-<sup> 2</sup>. 虚函数：在类的成员函数前加<code>virtual</code>关键字<a href="#reffn_ 2" title="Jump back to footnote [ 2] in the text."> &#8617;</a>
 </blockquote>
 
       
@@ -738,12 +647,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>面向对象绪论</p>
+  <p><span>本文标题:</span>UML通信图</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
-  <p><span>发布时间:</span>2020年01月28日 - 14:25:40</p>
-  <p><span>最后更新:</span>2020年01月30日 - 10:27:59</p>
-  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/面向对象绪论/" title="面向对象绪论">https://G-SS-Hacker.github.io/面向对象绪论/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/面向对象绪论/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年02月02日 - 08:40:00</p>
+  <p><span>最后更新:</span>2020年02月02日 - 08:41:08</p>
+  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/UML通信图/" title="UML通信图">https://G-SS-Hacker.github.io/UML通信图/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/UML通信图/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -782,13 +691,11 @@
         
         <div class="post-tags">
           
-            <a href="/G-SS-Hacker.github.io/tags/OOP/" rel="tag"><i class="fa fa-tag"></i> OOP</a>
-          
-            <a href="/G-SS-Hacker.github.io/tags/C-plus-plus/" rel="tag"><i class="fa fa-tag"></i> C-plus-plus</a>
-          
             <a href="/G-SS-Hacker.github.io/tags/面向对象/" rel="tag"><i class="fa fa-tag"></i> 面向对象</a>
           
             <a href="/G-SS-Hacker.github.io/tags/软件工程/" rel="tag"><i class="fa fa-tag"></i> 软件工程</a>
+          
+            <a href="/G-SS-Hacker.github.io/tags/UML/" rel="tag"><i class="fa fa-tag"></i> UML</a>
           
         </div>
       
@@ -801,8 +708,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/G-SS-Hacker.github.io/二次曲面/" rel="next" title="二次曲面">
-                <i class="fa fa-chevron-left"></i> 二次曲面
+              <a href="/G-SS-Hacker.github.io/UML顺序图/" rel="next" title="UML顺序图">
+                <i class="fa fa-chevron-left"></i> UML顺序图
               </a>
             
           </div>
@@ -810,10 +717,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/G-SS-Hacker.github.io/UML用例图/" rel="prev" title="UML用例图">
-                UML用例图 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1060,7 +963,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象绪论"><span class="nav-number">1.</span> <span class="nav-text">面向对象绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象的基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">面向对象的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念之间的互用"><span class="nav-number">1.2.</span> <span class="nav-text">概念之间的互用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象的核心特征"><span class="nav-number">1.3.</span> <span class="nav-text">面向对象的核心特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装-Encapsulation"><span class="nav-number">1.3.1.</span> <span class="nav-text">封装 Encapsulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承-Inheritance"><span class="nav-number">1.3.2.</span> <span class="nav-text">继承 Inheritance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态-Polymorphism"><span class="nav-number">1.3.3.</span> <span class="nav-text">多态 Polymorphism</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合-组合-Aggregation-Composition"><span class="nav-number">1.3.4.</span> <span class="nav-text">聚合/组合 Aggregation / Composition</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合-Aggregation"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">聚合 Aggregation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合-Composition"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">组合 Composition</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口-实现-Interface-Implementation"><span class="nav-number">1.3.5.</span> <span class="nav-text">接口/实现 Interface / Implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#接口-Interface"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">接口 Interface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-Implementation"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">实现 Implementation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象-Abstraction"><span class="nav-number">1.3.6.</span> <span class="nav-text">抽象 Abstraction</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML建模工具——通信图"><span class="nav-number">1.</span> <span class="nav-text">UML建模工具——通信图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#通信图的组成元素"><span class="nav-number">1.1.</span> <span class="nav-text">通信图的组成元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整的通信图例子"><span class="nav-number">1.2.</span> <span class="nav-text">完整的通信图例子</span></a></li></ol></li></ol></div>
             
 
           </div>
