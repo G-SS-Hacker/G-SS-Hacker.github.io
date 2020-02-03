@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-02T00:41:08.461Z</updated>
+  <updated>2020-02-03T13:57:19.306Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UML状态图</title>
+    <link href="https://g-ss-hacker.github.io/UML%E7%8A%B6%E6%80%81%E5%9B%BE/"/>
+    <id>https://g-ss-hacker.github.io/UML%E7%8A%B6%E6%80%81%E5%9B%BE/</id>
+    <published>2020-02-03T13:56:57.000Z</published>
+    <updated>2020-02-03T13:57:19.306Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://images.pexels.com/photos/313032/pexels-photo-313032.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></p><h1 id="UML建模工具——状态图"><a href="#UML建模工具——状态图" class="headerlink" title="UML建模工具——状态图"></a>UML建模工具——状态图</h1><blockquote><p>图：马来西亚，吉隆坡（Kapa Lumpur）</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><blockquote><p>状态图(Statechart Diagram)是描述一个实体（对象）基于事件反应的动态行为</p></blockquote><h2 id="完整的状态图例子"><a href="#完整的状态图例子" class="headerlink" title="完整的状态图例子"></a>完整的状态图例子</h2><p><img src="https://i.loli.net/2020/02/03/9ves8PrpAUhfT6E.png" alt></p><a id="more"></a><h2 id="状态图的建模元素"><a href="#状态图的建模元素" class="headerlink" title="状态图的建模元素"></a>状态图的建模元素</h2><h3 id="状态（State）"><a href="#状态（State）" class="headerlink" title="状态（State）"></a>状态（State）</h3><p><img src="https://i.loli.net/2020/02/03/AL8rJ1mUebfPH7Z.png" alt></p><p>状态<strong>亮灯</strong>如上图所示，状态用圆角矩形表示，其中可以包括：</p><ul><li>名称</li><li>进入动作</li><li>退出动作</li><li>内部迁移</li><li>子状态</li></ul><h3 id="事件（Event）"><a href="#事件（Event）" class="headerlink" title="事件（Event）"></a>事件（Event）</h3><blockquote><p> 事件可视作引起一个状态迁移至另一个状态的激励条件</p></blockquote><p>如以上状态图中，事件<strong>会员收货</strong>使得状态<strong>订单发货</strong>迁移至<strong>订单收货</strong>。</p><p>事件必须有意义，只有有意义的事件才会促成状态迁移，无意义的事件对状态不产生影响。</p><h3 id="迁移（Transition）"><a href="#迁移（Transition）" class="headerlink" title="迁移（Transition）"></a>迁移（Transition）</h3><p><img src="https://i.loli.net/2020/02/03/elGnTOKpmiSHhN2.png" alt></p><p>如上图所示，迁移为状态之间的关联，且必须有事件触发器并满足一定触发条件才会产生状态间的迁移。</p><p>迁移由5部分组成：</p><ul><li>源状态</li><li>事件触发器</li><li>触发条件</li><li>效应</li><li>目标状态</li></ul><h2 id="状态图建模注意事项"><a href="#状态图建模注意事项" class="headerlink" title="状态图建模注意事项"></a>状态图建模注意事项</h2><ul><li>一个状态必须与其他状态有关联，不允许孤立存在</li><li>不允许只进不出或只出不进的迁移</li><li>不允许没有事件的迁移</li></ul><hr><blockquote><p>Reference：<a href="https://edu.csdn.net/course/play/24559/273459" target="_blank" rel="noopener">https://edu.csdn.net/course/play/24559/273459</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/313032/pexels-photo-313032.jpeg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=750&amp;amp;w=1260&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;UML建模工具——状态图&quot;&gt;&lt;a href=&quot;#UML建模工具——状态图&quot; class=&quot;headerlink&quot; title=&quot;UML建模工具——状态图&quot;&gt;&lt;/a&gt;UML建模工具——状态图&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：马来西亚，吉隆坡（Kapa Lumpur）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;状态图(Statechart Diagram)是描述一个实体（对象）基于事件反应的动态行为&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;完整的状态图例子&quot;&gt;&lt;a href=&quot;#完整的状态图例子&quot; class=&quot;headerlink&quot; title=&quot;完整的状态图例子&quot;&gt;&lt;/a&gt;完整的状态图例子&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/03/9ves8PrpAUhfT6E.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="软件工程" scheme="https://G-SS-Hacker.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="UML" scheme="https://G-SS-Hacker.github.io/tags/UML/"/>
+    
+  </entry>
   
   <entry>
     <title>UML通信图</title>
@@ -1195,67 +1231,6 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
 &lt;p&gt;$(\mathrm{v})R \left(\begin{array}{ccc} A &amp;amp; C\\0 &amp;amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等&lt;/p&gt;
 &lt;p&gt;$(\mathrm{vi})$设$A$为$m\times n$矩阵，$B$为$n\times p$矩阵（有时题目条件会简化为$A$、$B$为同阶方阵），则$R(AB) \ge R(A)+R(B)-n$；特别地，当$AB=0$时，$R(A)+R(B)\le n$&lt;/p&gt;
 &lt;p&gt;$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="线性代数" scheme="https://G-SS-Hacker.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>行列式章节总结</title>
-    <link href="https://g-ss-hacker.github.io/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/"/>
-    <id>https://g-ss-hacker.github.io/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/</id>
-    <published>2019-10-27T06:37:35.000Z</published>
-    <updated>2019-12-04T13:26:28.286Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/10/27/y2VaJbGAj3O6uxW.png" alt></p><h1 id="行列式章节总结"><a href="#行列式章节总结" class="headerlink" title="行列式章节总结"></a>行列式章节总结</h1><blockquote><p>图：刺客伍六七</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题。为了让行列式计算与证明不那么难算，笔者从题海中抽象出行列式计算和证明的常用算法和性质。作者水平不高，将就看看吧 ╮(╯_╰)╭<p></p><h2 id="行列式计算公式"><a href="#行列式计算公式" class="headerlink" title="行列式计算公式"></a>行列式计算公式</h2><p><strong>1.行列式定义</strong></p><script type="math/tex; mode=display">\left|\begin{array}{cccc}    a_{11} &    a_{12} &    \dots &     a_{1n}\\    a_{21} &    a_{22} &     \dots &     a_{2n}\\    \vdots &    \vdots &           &     \vdots\\    a_{n1} &    a_{n2} &     \dots &     a_{nn}\\\end{array}\right|= \sum(-1)^{t(p_1p_2\dots p_n)}a_{p_11}a_{p_22}\dots a_{p_nn}</script><p>特别地，对于二阶和三阶行列式，可直接用<code>对角线法则</code>求出结果。</p><p><strong>2.行列式展开定理</strong></p><p><strong>引理</strong>    如果$n$阶行列式$D$中第$i$行（列）所有元素除$a_{ij}$外都是零，那么，$D$等于$a_{ij}$与它的代数余子式$A_{ij}$的乘积，即$D=a_{ij}A_{ij}$。</p><p><strong>展开定理</strong>     行列式等于它的任一行（列）的各元素与其代数余子式的乘积之和，即</p><script type="math/tex; mode=display">D=a_{i1}A_{i1}+a_{i2}A_{i2}+\dots a_{in}A_{in},\quad i=1,2,\dots,n;\\D=a_{1j}A_{1j}+a_{2j}A_{2j}+\dots a_{nj}A_{nj},\quad j=1,2,\dots,n.</script><p><strong>推论</strong>    行列式$D$的任一行（列）元素与另一行（列）对应元素的代数余子式乘积之和等于$0$，即</p><script type="math/tex; mode=display">a_{i1}A_{j1}+a_{i2}A_{j2}+\dots a_{in}A_{jn}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n;\\a_{1i}A_{1j}+a_{2i}A_{2j}+\dots a_{ni}A_{nj}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n.</script><p>行列式结果等于$0$的定理常用于填空题和判断题。</p><p><strong>3.范德蒙定理</strong></p><p>范德蒙定理的证明用到了<code>第二数学归纳法</code>，在行列式和矩阵中，任何看起来可以用<code>数学归纳法</code>证明的题目（甚至包括一部分计算题），都可以用<code>数学归纳法</code>来做。</p><script type="math/tex; mode=display">D_n=\left|\begin{array}{cccc}    1 &    1 &    \dots &     1\\    x_1 &    x_2 &     \dots &     x_n\\    x_1^2& x_2^2& \dots & x_n^2\\    \vdots &    \vdots &           &     \vdots\\    x_1^{n-1} &    x_2^{n-1} &     \dots &     x_n^{n-1}\\\end{array}\right|= \prod_{1\leq j<i \leq n}(x_i-x_j),\quad n \ge 2</script><p>简单地记就是，每两个不同的项全部按顺序作差乘一遍。</p><p><strong>4.凯恩法则</strong></p><p>遇见线性方程组就上凯恩法则，把消元问题化为行列式计算问题。</p><a id="more"></a><h2 id="行列式七条性质"><a href="#行列式七条性质" class="headerlink" title="行列式七条性质"></a>行列式七条性质</h2><p>行列式七条性质常用与选择题和填空题，以及某些命题的证明，计算时得出来的结果要么为$0$，要么为题目所给行列式的值得整数倍。</p><p><strong>1.行列式与其转置相等</strong></p><p><strong>2.互换两行（列）变号</strong></p><p><strong>3.两行（列）相同为零</strong></p><p><strong>4.行（列）提公因子</strong></p><p><strong>5.两行（列）成比例为零</strong></p><p><strong>6.如果行列式的某一行（列）是两项和的形式，那么这个行列式就等于两个行列式的和</strong></p><p><strong>7.某行（列）的倍数加到另一行（列），行列式不变</strong></p><h2 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h2><p><strong>1.</strong> $|kA|=k^n|A|,\quad |A^m|=|A|^m,\quad A_{n \times n}$</p><p><strong>2.</strong>行列式乘法定理： $|AB|=|A||B|,\quad A_{n \times n},\quad B_{n \times n}$</p><p>然而，$|A+B|\ne|A|+|B|$</p><p><strong>3.</strong> $|A^m|=|A|^m,\quad A_{n \times n}$</p><p><strong>4.</strong> $|A’|=|A|,\quad A_{n\times n}$</p><p><strong>5.</strong> $A^*A=AA^*=|A|E$</p><p><strong>6.</strong>$A^{-1}=\frac{A^*}{|A|}$</p><p><strong>7.</strong>$|A^{*}|=|A|^{n-1},\quad A^{*}=|A|A^{-1}$</p><p><strong>8.</strong>$(A^{*})^{*}=|A|^{n-2}A$</p><p><strong>9.</strong>若$A\sim B$，则$|A|=|B|$</p><p><strong>10.</strong>$|A^{-1}|=\frac1{|A|}$</p><h2 id="分块矩阵的行列式"><a href="#分块矩阵的行列式" class="headerlink" title="分块矩阵的行列式"></a>分块矩阵的行列式</h2><p><strong>1.对角形</strong></p><p>对方阵$A_{11},A_{22},\dots A_{ss}$，若满足主对角线上的三角形，则其构成的行列式结果为</p><script type="math/tex; mode=display">|A_{11}||A_{22}|\dots |A_{ss}|</script><p>对方阵$A_{11},A_{22},\dots A_{ss}$，若满足次对角线上的三角形，则其构成的行列式结果为</p><script type="math/tex; mode=display">(-1)^{m \times n}|A_{11}||A_{22}|\dots |A_{ss}|</script><p><strong>2.在非常严苛的条件下以下等式成立。</strong></p><script type="math/tex; mode=display">\left|\begin{array}{cccc} A & B \\ C & D \end{array} \right|=|AD-CB|,\quad AC=CA</script><p><strong>3.</strong>$|\lambda E_m -AB|=\lambda^{m-n}|\lambda E_n-BA|,\quad A_{m \times n},\quad B_{n \times m},\quad m &gt; n$</p><p>该公式的证明运用了分块方阵的<code>第三类初等变换</code>（第三类初等变换不改变分块方阵的行列式的值），这是一个重要的思想，是分块矩阵行列式运算的根本方法，常用于分块方阵的计算和证明中。</p><p><strong>4.</strong>令$n=1$，$|\lambda E_m-\alpha \beta’|=\lambda^{m-1}|\lambda-\beta’\alpha|$，$\alpha$，$\beta$为$m\times 1$向量</p><p><strong>5.</strong>令$\lambda=1$，$|E_m-AB|=|En-BA|$</p><p><strong>6.</strong>令$m=n$，$|\lambda E_m-AB|=|\lambda E_n-BA|$</p><!--more--><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/10/27/y2VaJbGAj3O6uxW.png&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;行列式章节总结&quot;&gt;&lt;a href=&quot;#行列式章节总结&quot; class=&quot;headerlink&quot; title=&quot;行列式章节总结&quot;&gt;&lt;/a&gt;行列式章节总结&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;图：刺客伍六七&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;行列式形式优美，应用广泛。但是笔者相当头痛行列式的计算问题和行列式等式的证明问题。为了让行列式计算与证明不那么难算，笔者从题海中抽象出行列式计算和证明的常用算法和性质。作者水平不高，将就看看吧 ╮(╯_╰)╭&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;行列式计算公式&quot;&gt;&lt;a href=&quot;#行列式计算公式&quot; class=&quot;headerlink&quot; title=&quot;行列式计算公式&quot;&gt;&lt;/a&gt;行列式计算公式&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.行列式定义&lt;/strong&gt;&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\left|\begin{array}{cccc}
-    a_{11} &amp;    a_{12} &amp;    \dots &amp;     a_{1n}\\
-    a_{21} &amp;    a_{22} &amp;     \dots &amp;     a_{2n}\\
-    \vdots &amp;    \vdots &amp;           &amp;     \vdots\\
-    a_{n1} &amp;    a_{n2} &amp;     \dots &amp;     a_{nn}\\
-\end{array}\right|
-= 
-\sum(-1)^{t(p_1p_2\dots p_n)}a_{p_11}a_{p_22}\dots a_{p_nn}&lt;/script&gt;&lt;p&gt;特别地，对于二阶和三阶行列式，可直接用&lt;code&gt;对角线法则&lt;/code&gt;求出结果。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2.行列式展开定理&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;引理&lt;/strong&gt;    如果$n$阶行列式$D$中第$i$行（列）所有元素除$a_{ij}$外都是零，那么，$D$等于$a_{ij}$与它的代数余子式$A_{ij}$的乘积，即$D=a_{ij}A_{ij}$。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;展开定理&lt;/strong&gt;     行列式等于它的任一行（列）的各元素与其代数余子式的乘积之和，即&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-D=a_{i1}A_{i1}+a_{i2}A_{i2}+\dots a_{in}A_{in},\quad i=1,2,\dots,n;\\
-D=a_{1j}A_{1j}+a_{2j}A_{2j}+\dots a_{nj}A_{nj},\quad j=1,2,\dots,n.&lt;/script&gt;&lt;p&gt;&lt;strong&gt;推论&lt;/strong&gt;    行列式$D$的任一行（列）元素与另一行（列）对应元素的代数余子式乘积之和等于$0$，即&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-a_{i1}A_{j1}+a_{i2}A_{j2}+\dots a_{in}A_{jn}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n;\\
-a_{1i}A_{1j}+a_{2i}A_{2j}+\dots a_{ni}A_{nj}=0,\quad i \ne j,\quad i,j=1,2,\dots ,n.&lt;/script&gt;&lt;p&gt;行列式结果等于$0$的定理常用于填空题和判断题。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3.范德蒙定理&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;范德蒙定理的证明用到了&lt;code&gt;第二数学归纳法&lt;/code&gt;，在行列式和矩阵中，任何看起来可以用&lt;code&gt;数学归纳法&lt;/code&gt;证明的题目（甚至包括一部分计算题），都可以用&lt;code&gt;数学归纳法&lt;/code&gt;来做。&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-D_n=
-\left|\begin{array}{cccc}
-    1 &amp;    1 &amp;    \dots &amp;     1\\
-    x_1 &amp;    x_2 &amp;     \dots &amp;     x_n\\
-    x_1^2&amp; x_2^2&amp; \dots &amp; x_n^2\\
-    \vdots &amp;    \vdots &amp;           &amp;     \vdots\\
-    x_1^{n-1} &amp;    x_2^{n-1} &amp;     \dots &amp;     x_n^{n-1}\\
-\end{array}\right|
-= 
-\prod_{1\leq j&lt;i \leq n}(x_i-x_j),\quad n \ge 2&lt;/script&gt;&lt;p&gt;简单地记就是，每两个不同的项全部按顺序作差乘一遍。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4.凯恩法则&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;遇见线性方程组就上凯恩法则，把消元问题化为行列式计算问题。&lt;/p&gt;
     
     </summary>
     
