@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Softmax函数反向传播求导详细过程]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FSoftmax%E5%87%BD%E6%95%B0%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E6%B1%82%E5%AF%BC%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York） Guderian出品 回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C): ​ $\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$ 其中$C$表示要预测的类别数，上式满足$\sum_{i=1}^C a_i{[L]}=1$，即输入样本属于各类别的概率和为$1$。 第三步：计算损失函数单个样本的损失函数为$L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$，其中$y$为目标输出。 求导第一步：对Softmax函数求导​ 对$\mathrm{Softmax}$函数求导，即求$\frac{\partial a_i}{\partial z_j}$：第$\mathrm{i}$项输出对第$\mathrm{j}$项输入的偏导数。 ​ $\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$（省略$[ L ]$标记，默认为第$ L $层，下同），分类讨论： ​ $(1)$当$\mathrm{i=j}$时，把$a_i$分母中除$e^{z_j}$项外视作常量 ​ $\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$ ​ $(2)$当$\mathrm{i\ne j}$时，把$a_i$分子和分母中除$e^{z_j}$项外视作常量 ​ $\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$ 第二步：对损失函数求导对损失函数求导，即求$\frac{\partial L}{\partial z_j}$：损失函数对第$\mathrm{j}$项输入的偏导数。 ​ $\because L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$ ​ $\therefore \frac{\partial L}{\partial z_j}=-\sum_{i=1}^C y_i\frac{\partial \log a_i}{\partial z_j}=-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$ （把$y_i$视作常量，再用链导法则转化为对$\mathrm{Softmax}$函数求导） 分别代入$(1)(2)$得： $-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}=-\frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j} \, -\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$ ​ ​ $\quad =$ $-\frac{y_j}{a_j}a_j(1-a_j)\,+\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}a_ia_j$ ​ $\quad =$ $-y_j\, +y_ja_j\, +\sum_{i=1,i \ne j}^C y_ia_j$ ​ $\quad =$ $-y_j\, +\sum_{i=1}^C y_ia_j$ （合并$y_ja_j$至$\sum_{i=1,i \ne j}^C y_ia_j$中） ​ $\quad =$ $-y_i\, +a_j\sum_{i=1}^C y_i$ （提出$a_j$） ​ $\quad =$ $a_j-y_j$ 从上述结果可以看出，$\mathrm{Softmax}$回归和$\mathrm{Logistic}$回归中损失函数求导后具有相同的形式，这也说明了$\mathrm{Softmax}$回归和$\mathrm{Logistic}$回归具有相同的本质，$\mathrm{Softmax}$回归是$\mathrm{Logistic}$的推广。 Reference and lots of thanks：https://www.cnblogs.com/zhaopAC/p/9539118.html]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+        <tag>机器学习</tag>
+        <tag>神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[UML状态图]]></title>
     <url>%2FG-SS-Hacker.github.io%2FUML%E7%8A%B6%E6%80%81%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[【面向对象分析UML建模工具全部文章】 UML建模工具(1)——用例图 UML建模工具(2)——活动图 UML建模工具(3)——类图 UML建模工具(4)——顺序图 UML建模工具(5)——通信图 UML建模工具(6)——状态图 UML建模工具——状态图 图：马来西亚，吉隆坡（Kapa Lumpur） Guderian出品 状态图(Statechart Diagram)是描述一个实体（对象）基于事件反应的动态行为 完整的状态图例子 状态图的建模元素状态（State） 状态亮灯如上图所示，状态用圆角矩形表示，其中可以包括： 名称 进入动作 退出动作 内部迁移 子状态 事件（Event） 事件可视作引起一个状态迁移至另一个状态的激励条件 如以上状态图中，事件会员收货使得状态订单发货迁移至订单收货。 事件必须有意义，只有有意义的事件才会促成状态迁移，无意义的事件对状态不产生影响。 迁移（Transition） 如上图所示，迁移为状态之间的关联，且必须有事件触发器并满足一定触发条件才会产生状态间的迁移。 迁移由5部分组成： 源状态 事件触发器 触发条件 效应 目标状态 状态图建模注意事项 一个状态必须与其他状态有关联，不允许孤立存在 不允许只进不出或只出不进的迁移 不允许没有事件的迁移 Reference：https://edu.csdn.net/course/play/24559/273459]]></content>

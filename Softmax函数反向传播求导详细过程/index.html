@@ -141,13 +141,20 @@
   daovoice('update');
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="G-SS-Hacker">
-<meta property="og:url" content="https://G-SS-Hacker.github.io/tags/Windows10/index.html">
+  <meta name="description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
+<meta name="keywords" content="微积分,机器学习,神经网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Softmax函数反向传播求导详细过程">
+<meta property="og:url" content="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
+<meta property="og:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s2.ax1x.com/2020/02/05/1rU0Fs.png">
+<meta property="og:updated_time" content="2020-02-05T03:24:36.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="G-SS-Hacker">
+<meta name="twitter:title" content="Softmax函数反向传播求导详细过程">
+<meta name="twitter:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/02/05/1rU0Fs.png">
 
 
 
@@ -157,7 +164,7 @@
 
   
   
-  <link rel="canonical" href="https://G-SS-Hacker.github.io/tags/Windows10/">
+  <link rel="canonical" href="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/">
 
 
 
@@ -167,7 +174,7 @@
   };
 </script>
 
-  <title>标签: Windows10 | G-SS-Hacker</title>
+  <title>Softmax函数反向传播求导详细过程 | G-SS-Hacker</title>
   
 
 
@@ -215,7 +222,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,7 +300,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -426,86 +433,320 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Windows10<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/G-SS-Hacker.github.io/Windows10常用快捷键/" itemprop="url">
-            
-              <span itemprop="name">Windows10常用快捷键</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Softmax函数反向传播求导详细过程
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T15:21:26+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-04 22:22:46" itemprop="dateCreated datePublished" datetime="2020-02-04T22:22:46+08:00">2020-02-04</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-05 11:24:36" itemprop="dateModified" datetime="2020-02-05T11:24:36+08:00">2020-02-05</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-free-code-camp"></i>
+                 阅读次数： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2.4k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://s2.ax1x.com/2020/02/05/1rU0Fs.png" alt></p>
+<h1 id="Softmax函数反向传播求导详细过程"><a href="#Softmax函数反向传播求导详细过程" class="headerlink" title="Softmax函数反向传播求导详细过程"></a>Softmax函数反向传播求导详细过程</h1><blockquote>
+<p>图：纽约，曼哈顿（Manhattan, New York）</p>
+</blockquote>
+<p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<h2 id="回顾：Softmax函数正向传播"><a href="#回顾：Softmax函数正向传播" class="headerlink" title="回顾：Softmax函数正向传播"></a>回顾：Softmax函数正向传播</h2><h3 id="第一步：计算Z函数"><a href="#第一步：计算Z函数" class="headerlink" title="第一步：计算Z函数"></a>第一步：计算Z函数</h3><p>对神经网络输出层（即第<font size="4rem">$ L $</font>层）有<font size="4rem">$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$</font>，其中<font size="4rem">$a^{[L-1]}$</font>为上一层输出值。</p>
+<h3 id="第二步：计算Softmax函数"><a href="#第二步：计算Softmax函数" class="headerlink" title="第二步：计算Softmax函数"></a>第二步：计算Softmax函数</h3><font size="4rem," face="consolas">for i in range(C):</font> 
+
+<p>​    <font size="5rem">$\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$</font></p>
+<p>其中<font size="4rem">$C$</font>表示要预测的类别数，上式满足<font size="4rem">$\sum_{i=1}^C a_i{[L]}=1$</font>，即输入样本属于各类别的概率和为<font size="4rem">$1$</font>。</p>
+<h3 id="第三步：计算损失函数"><a href="#第三步：计算损失函数" class="headerlink" title="第三步：计算损失函数"></a>第三步：计算损失函数</h3><p>单个样本的损失函数为<font size="4rem">$L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font>，其中<font size="4rem">$y$</font>为目标输出。</p>
+<h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><h3 id="第一步：对Softmax函数求导"><a href="#第一步：对Softmax函数求导" class="headerlink" title="第一步：对Softmax函数求导"></a>第一步：对Softmax函数求导</h3><p>​    对<font size="4rem">$\mathrm{Softmax}$</font>函数求导，即求<font size="5rem">$\frac{\partial a_i}{\partial z_j}$</font>：第<font size="4rem">$\mathrm{i}$</font>项输出对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$</font>（省略<font size="4rem">$[ L ]$</font>标记，默认为第<font size="4rem">$ L $</font>层，下同），分类讨论：</p>
+<p>​    $(1)$当<font size="4rem">$\mathrm{i=j}$</font>时，把<font size="4rem">$a_i$</font>分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$</font></p>
+<p>​    $(2)$当<font size="4rem">$\mathrm{i\ne j}$</font>时，把<font size="4rem">$a_i$</font>分子和分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
+<a id="more"></a>
+<h3 id="第二步：对损失函数求导"><a href="#第二步：对损失函数求导" class="headerlink" title="第二步：对损失函数求导"></a>第二步：对损失函数求导</h3><p>对损失函数求导，即求<font size="5rem">$\frac{\partial L}{\partial z_j}$</font>：损失函数对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
+<p>​    <font size="4rem">$\because L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font> </p>
+<p>​    <font size="5rem">$\therefore \frac{\partial L}{\partial z_j}=-\sum_{i=1}^C y_i\frac{\partial \log a_i}{\partial z_j}=-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$</font></p>
+<p>（把<font size="4rem">$y_i$</font>视作常量，再用链导法则转化为对<font size="4rem">$\mathrm{Softmax}$</font>函数求导）</p>
+<p>分别代入$(1)(2)$得：</p>
+<font size="5rem">$-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}=-\frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j} \, -\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$</font> 
+
+<p>​        <font size="1rem"> </font></p>
+<p>​                                <font size="5rem">$\quad =$</font> <font size="5rem">$-\frac{y_j}{a_j}a_j(1-a_j)\,+\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}a_ia_j$</font> </p>
+<p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_j\, +y_ja_j\, +\sum_{i=1,i \ne j}^C y_ia_j$</font> </p>
+<p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_j\, +\sum_{i=1}^C y_ia_j$</font> （合并<font size="4rem">$y_ja_j$</font>至<font size="4rem">$\sum_{i=1,i \ne j}^C y_ia_j$</font>中） </p>
+<p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_i\, +a_j\sum_{i=1}^C y_i$</font> （提出<font size="4rem">$a_j$</font>） </p>
+<p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$a_j-y_j$</font> </p>
+<p>从上述结果可以看出，<font size="4rem">$\mathrm{Softmax}$</font>回归和<font size="4rem">$\mathrm{Logistic}$</font>回归中损失函数求导后具有相同的形式，这也说明了<font size="4rem">$\mathrm{Softmax}$</font>回归和<font size="4rem">$\mathrm{Logistic}$</font>回归具有相同的本质，<font size="4rem">$\mathrm{Softmax}$</font>回归是<font size="4rem">$\mathrm{Logistic}$</font>的推广。</p>
+<hr>
+<blockquote>
+<p>Reference and lots of thanks：<a href="https://www.cnblogs.com/zhaopAC/p/9539118.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaopAC/p/9539118.html</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Softmax函数反向传播求导详细过程</p>
+  <p><span>文章作者:</span>G-SS-Hacker</p>
+  <p><span>发布时间:</span>2020年02月04日 - 22:22:46</p>
+  <p><span>最后更新:</span>2020年02月05日 - 11:24:36</p>
+  <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" title="Softmax函数反向传播求导详细过程">https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
 
 
       
     </div>
 
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/G-SS-Hacker.github.io/tags/微积分/" rel="tag"><i class="fa fa-tag"></i> 微积分</a>
+          
+            <a href="/G-SS-Hacker.github.io/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+          
+            <a href="/G-SS-Hacker.github.io/tags/神经网络/" rel="tag"><i class="fa fa-tag"></i> 神经网络</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/G-SS-Hacker.github.io/UML状态图/" rel="next" title="UML状态图">
+                <i class="fa fa-chevron-left"></i> UML状态图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -526,8 +767,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -708,6 +958,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Softmax函数反向传播求导详细过程"><span class="nav-number">1.</span> <span class="nav-text">Softmax函数反向传播求导详细过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回顾：Softmax函数正向传播"><span class="nav-number">1.1.</span> <span class="nav-text">回顾：Softmax函数正向传播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：计算Z函数"><span class="nav-number">1.1.1.</span> <span class="nav-text">第一步：计算Z函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：计算Softmax函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">第二步：计算Softmax函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：计算损失函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">第三步：计算损失函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求导"><span class="nav-number">1.2.</span> <span class="nav-text">求导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：对Softmax函数求导"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一步：对Softmax函数求导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：对损失函数求导"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二步：对损失函数求导</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -910,6 +1177,10 @@
 
 
   
+  <script src="/G-SS-Hacker.github.io/js/scrollspy.js?v=7.2.0"></script>
+<script src="/G-SS-Hacker.github.io/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -928,6 +1199,37 @@
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'c9840aa62ef3000e5258',
+    clientSecret: 'aa28da58d8cfe60f3e85c41a017ea335d74a3815',
+    repo: 'G-SS-Hacker.github.io',
+    owner: 'G-SS-Hacker',
+    admin: ['G-SS-Hacker'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'false'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
   
   <script>
@@ -1264,6 +1566,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

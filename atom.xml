@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-04T03:25:19.383Z</updated>
+  <updated>2020-02-05T03:24:36.895Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Softmax函数反向传播求导详细过程</title>
+    <link href="https://g-ss-hacker.github.io/Softmax%E5%87%BD%E6%95%B0%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E6%B1%82%E5%AF%BC%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B/"/>
+    <id>https://g-ss-hacker.github.io/Softmax%E5%87%BD%E6%95%B0%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E6%B1%82%E5%AF%BC%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B/</id>
+    <published>2020-02-04T14:22:46.000Z</published>
+    <updated>2020-02-05T03:24:36.895Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/02/05/1rU0Fs.png" alt></p><h1 id="Softmax函数反向传播求导详细过程"><a href="#Softmax函数反向传播求导详细过程" class="headerlink" title="Softmax函数反向传播求导详细过程"></a>Softmax函数反向传播求导详细过程</h1><blockquote><p>图：纽约，曼哈顿（Manhattan, New York）</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><h2 id="回顾：Softmax函数正向传播"><a href="#回顾：Softmax函数正向传播" class="headerlink" title="回顾：Softmax函数正向传播"></a>回顾：Softmax函数正向传播</h2><h3 id="第一步：计算Z函数"><a href="#第一步：计算Z函数" class="headerlink" title="第一步：计算Z函数"></a>第一步：计算Z函数</h3><p>对神经网络输出层（即第<font size="4rem">$ L $</font>层）有<font size="4rem">$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$</font>，其中<font size="4rem">$a^{[L-1]}$</font>为上一层输出值。</p><h3 id="第二步：计算Softmax函数"><a href="#第二步：计算Softmax函数" class="headerlink" title="第二步：计算Softmax函数"></a>第二步：计算Softmax函数</h3><font size="4rem," face="consolas">for i in range(C):</font> <p>​    <font size="5rem">$\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$</font></p><p>其中<font size="4rem">$C$</font>表示要预测的类别数，上式满足<font size="4rem">$\sum_{i=1}^C a_i{[L]}=1$</font>，即输入样本属于各类别的概率和为<font size="4rem">$1$</font>。</p><h3 id="第三步：计算损失函数"><a href="#第三步：计算损失函数" class="headerlink" title="第三步：计算损失函数"></a>第三步：计算损失函数</h3><p>单个样本的损失函数为<font size="4rem">$L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font>，其中<font size="4rem">$y$</font>为目标输出。</p><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><h3 id="第一步：对Softmax函数求导"><a href="#第一步：对Softmax函数求导" class="headerlink" title="第一步：对Softmax函数求导"></a>第一步：对Softmax函数求导</h3><p>​    对<font size="4rem">$\mathrm{Softmax}$</font>函数求导，即求<font size="5rem">$\frac{\partial a_i}{\partial z_j}$</font>：第<font size="4rem">$\mathrm{i}$</font>项输出对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p><p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$</font>（省略<font size="4rem">$[ L ]$</font>标记，默认为第<font size="4rem">$ L $</font>层，下同），分类讨论：</p><p>​    $(1)$当<font size="4rem">$\mathrm{i=j}$</font>时，把<font size="4rem">$a_i$</font>分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p><p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$</font></p><p>​    $(2)$当<font size="4rem">$\mathrm{i\ne j}$</font>时，把<font size="4rem">$a_i$</font>分子和分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p><p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p><a id="more"></a><h3 id="第二步：对损失函数求导"><a href="#第二步：对损失函数求导" class="headerlink" title="第二步：对损失函数求导"></a>第二步：对损失函数求导</h3><p>对损失函数求导，即求<font size="5rem">$\frac{\partial L}{\partial z_j}$</font>：损失函数对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p><p>​    <font size="4rem">$\because L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font> </p><p>​    <font size="5rem">$\therefore \frac{\partial L}{\partial z_j}=-\sum_{i=1}^C y_i\frac{\partial \log a_i}{\partial z_j}=-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$</font></p><p>（把<font size="4rem">$y_i$</font>视作常量，再用链导法则转化为对<font size="4rem">$\mathrm{Softmax}$</font>函数求导）</p><p>分别代入$(1)(2)$得：</p><font size="5rem">$-\sum_{i=1}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}=-\frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j} \, -\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}\frac{\partial a_i}{\partial z_j}$</font> <p>​        <font size="1rem"> </font></p><p>​                                <font size="5rem">$\quad =$</font> <font size="5rem">$-\frac{y_j}{a_j}a_j(1-a_j)\,+\sum_{i=1,i \ne j}^C \frac{y_i}{a_i}a_ia_j$</font> </p><p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_j\, +y_ja_j\, +\sum_{i=1,i \ne j}^C y_ia_j$</font> </p><p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_j\, +\sum_{i=1}^C y_ia_j$</font> （合并<font size="4rem">$y_ja_j$</font>至<font size="4rem">$\sum_{i=1,i \ne j}^C y_ia_j$</font>中） </p><p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$-y_i\, +a_j\sum_{i=1}^C y_i$</font> （提出<font size="4rem">$a_j$</font>） </p><p>​                                <font size="5rem">$\quad =$</font> <font size="4rem">$a_j-y_j$</font> </p><p>从上述结果可以看出，<font size="4rem">$\mathrm{Softmax}$</font>回归和<font size="4rem">$\mathrm{Logistic}$</font>回归中损失函数求导后具有相同的形式，这也说明了<font size="4rem">$\mathrm{Softmax}$</font>回归和<font size="4rem">$\mathrm{Logistic}$</font>回归具有相同的本质，<font size="4rem">$\mathrm{Softmax}$</font>回归是<font size="4rem">$\mathrm{Logistic}$</font>的推广。</p><hr><blockquote><p>Reference and lots of thanks：<a href="https://www.cnblogs.com/zhaopAC/p/9539118.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaopAC/p/9539118.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/02/05/1rU0Fs.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Softmax函数反向传播求导详细过程&quot;&gt;&lt;a href=&quot;#Softmax函数反向传播求导详细过程&quot; class=&quot;headerlink&quot; title=&quot;Softmax函数反向传播求导详细过程&quot;&gt;&lt;/a&gt;Softmax函数反向传播求导详细过程&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：纽约，曼哈顿（Manhattan, New York）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;回顾：Softmax函数正向传播&quot;&gt;&lt;a href=&quot;#回顾：Softmax函数正向传播&quot; class=&quot;headerlink&quot; title=&quot;回顾：Softmax函数正向传播&quot;&gt;&lt;/a&gt;回顾：Softmax函数正向传播&lt;/h2&gt;&lt;h3 id=&quot;第一步：计算Z函数&quot;&gt;&lt;a href=&quot;#第一步：计算Z函数&quot; class=&quot;headerlink&quot; title=&quot;第一步：计算Z函数&quot;&gt;&lt;/a&gt;第一步：计算Z函数&lt;/h3&gt;&lt;p&gt;对神经网络输出层（即第&lt;font size=&quot;4rem&quot;&gt;$ L $&lt;/font&gt;层）有&lt;font size=&quot;4rem&quot;&gt;$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$&lt;/font&gt;，其中&lt;font size=&quot;4rem&quot;&gt;$a^{[L-1]}$&lt;/font&gt;为上一层输出值。&lt;/p&gt;
+&lt;h3 id=&quot;第二步：计算Softmax函数&quot;&gt;&lt;a href=&quot;#第二步：计算Softmax函数&quot; class=&quot;headerlink&quot; title=&quot;第二步：计算Softmax函数&quot;&gt;&lt;/a&gt;第二步：计算Softmax函数&lt;/h3&gt;&lt;font size=&quot;4rem,&quot; face=&quot;consolas&quot;&gt;for i in range(C):&lt;/font&gt; 
+
+&lt;p&gt;​    &lt;font size=&quot;5rem&quot;&gt;$\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;font size=&quot;4rem&quot;&gt;$C$&lt;/font&gt;表示要预测的类别数，上式满足&lt;font size=&quot;4rem&quot;&gt;$\sum_{i=1}^C a_i{[L]}=1$&lt;/font&gt;，即输入样本属于各类别的概率和为&lt;font size=&quot;4rem&quot;&gt;$1$&lt;/font&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;第三步：计算损失函数&quot;&gt;&lt;a href=&quot;#第三步：计算损失函数&quot; class=&quot;headerlink&quot; title=&quot;第三步：计算损失函数&quot;&gt;&lt;/a&gt;第三步：计算损失函数&lt;/h3&gt;&lt;p&gt;单个样本的损失函数为&lt;font size=&quot;4rem&quot;&gt;$L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$&lt;/font&gt;，其中&lt;font size=&quot;4rem&quot;&gt;$y$&lt;/font&gt;为目标输出。&lt;/p&gt;
+&lt;h2 id=&quot;求导&quot;&gt;&lt;a href=&quot;#求导&quot; class=&quot;headerlink&quot; title=&quot;求导&quot;&gt;&lt;/a&gt;求导&lt;/h2&gt;&lt;h3 id=&quot;第一步：对Softmax函数求导&quot;&gt;&lt;a href=&quot;#第一步：对Softmax函数求导&quot; class=&quot;headerlink&quot; title=&quot;第一步：对Softmax函数求导&quot;&gt;&lt;/a&gt;第一步：对Softmax函数求导&lt;/h3&gt;&lt;p&gt;​    对&lt;font size=&quot;4rem&quot;&gt;$\mathrm{Softmax}$&lt;/font&gt;函数求导，即求&lt;font size=&quot;5rem&quot;&gt;$\frac{\partial a_i}{\partial z_j}$&lt;/font&gt;：第&lt;font size=&quot;4rem&quot;&gt;$\mathrm{i}$&lt;/font&gt;项输出对第&lt;font size=&quot;4rem&quot;&gt;$\mathrm{j}$&lt;/font&gt;项输入的偏导数。&lt;/p&gt;
+&lt;p&gt;​    &lt;font size=&quot;5rem&quot;&gt;$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$&lt;/font&gt;（省略&lt;font size=&quot;4rem&quot;&gt;$[ L ]$&lt;/font&gt;标记，默认为第&lt;font size=&quot;4rem&quot;&gt;$ L $&lt;/font&gt;层，下同），分类讨论：&lt;/p&gt;
+&lt;p&gt;​    $(1)$当&lt;font size=&quot;4rem&quot;&gt;$\mathrm{i=j}$&lt;/font&gt;时，把&lt;font size=&quot;4rem&quot;&gt;$a_i$&lt;/font&gt;分母中除&lt;font size=&quot;4rem&quot;&gt;$e^{z_j}$&lt;/font&gt;项外视作常量&lt;/p&gt;
+&lt;p&gt;​    &lt;font size=&quot;5rem&quot;&gt;$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;​    $(2)$当&lt;font size=&quot;4rem&quot;&gt;$\mathrm{i\ne j}$&lt;/font&gt;时，把&lt;font size=&quot;4rem&quot;&gt;$a_i$&lt;/font&gt;分子和分母中除&lt;font size=&quot;4rem&quot;&gt;$e^{z_j}$&lt;/font&gt;项外视作常量&lt;/p&gt;
+&lt;p&gt;​    &lt;font size=&quot;5rem&quot;&gt;$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$&lt;/font&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+      <category term="机器学习" scheme="https://G-SS-Hacker.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="神经网络" scheme="https://G-SS-Hacker.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>UML状态图</title>
@@ -128,7 +172,7 @@
     <link href="https://g-ss-hacker.github.io/UML%E9%A1%BA%E5%BA%8F%E5%9B%BE/"/>
     <id>https://g-ss-hacker.github.io/UML%E9%A1%BA%E5%BA%8F%E5%9B%BE/</id>
     <published>2020-02-01T02:33:40.000Z</published>
-    <updated>2020-02-04T03:26:40.891Z</updated>
+    <updated>2020-02-05T02:49:55.348Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://images.pexels.com/photos/208589/pexels-photo-208589.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></p><font color="#407600">【面向对象分析UML建模工具全部文章】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/">UML建模工具(1)——用例图</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E6%B4%BB%E5%8A%A8%E5%9B%BE/">UML建模工具(2)——活动图</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%B1%BB%E5%9B%BE/">UML建模工具(3)——类图</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%A1%BA%E5%BA%8F%E5%9B%BE/">UML建模工具(4)——顺序图</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%80%9A%E4%BF%A1%E5%9B%BE/">UML建模工具(5)——通信图</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%8A%B6%E6%80%81%E5%9B%BE/">UML建模工具(6)——状态图</a></li></ul><h1 id="UML建模工具——顺序图"><a href="#UML建模工具——顺序图" class="headerlink" title="UML建模工具——顺序图"></a>UML建模工具——顺序图</h1><blockquote><p>图：旧金山湾区，晚霞下的泛美金字塔（Transamerica Pyramid）</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><blockquote><p>顺序图和通信图都属于UML交互图</p><p>顺序图（Sequence）是场景（Scenario）的图形化表示，描述了以时间顺序组织的<strong>对象</strong>之间的交互活动</p></blockquote><h2 id="完整的UML顺序图例子"><a href="#完整的UML顺序图例子" class="headerlink" title="完整的UML顺序图例子"></a>完整的UML顺序图例子</h2><p><img src="https://i.loli.net/2020/01/31/lanCLPDjYKHqd9t.png" alt></p><h2 id="基本建模元素"><a href="#基本建模元素" class="headerlink" title="基本建模元素"></a>基本建模元素</h2><ul><li>对象</li><li>对象生命线</li><li>控制焦点</li><li>消息：调用消息、返回消息、异步消息、自关联消息</li><li>对象销毁</li><li>结构化控制</li></ul><a id="more"></a><p><img src="https://i.loli.net/2020/01/31/AgkLjs9dYD6HCyn.png" alt></p><p><img src="https://i.loli.net/2020/01/31/UQL236c7RsKi5St.png" alt></p><h2 id="同步消息与异步消息"><a href="#同步消息与异步消息" class="headerlink" title="同步消息与异步消息"></a>同步消息与异步消息</h2><h3 id="同步消息"><a href="#同步消息" class="headerlink" title="同步消息"></a>同步消息</h3><blockquote><p>发送方向接收方发送消息，接收方接收此消息并回复发送方。发送者在收到接收者的回复之前不会发送另一条消息。</p></blockquote><p>如：老师想张三问了一个问题，张三必须当场给予回复，老师才会问下一个同学问题。</p><h3 id="异步消息"><a href="#异步消息" class="headerlink" title="异步消息"></a>异步消息</h3><blockquote><p>发送方向接收方发送消息，发送者在收到接收者的回复之前可以进行其他活动。</p></blockquote><p>如：老师给张三布置了一个问题，让张三课后思考一下如何解决，然后问其他同学问题。</p>]]></content>
     
@@ -1190,114 +1234,6 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
     
     
       <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矩阵章节总结</title>
-    <link href="https://g-ss-hacker.github.io/%E7%9F%A9%E9%98%B5%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/"/>
-    <id>https://g-ss-hacker.github.io/%E7%9F%A9%E9%98%B5%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/</id>
-    <published>2019-10-28T13:43:02.000Z</published>
-    <updated>2019-11-28T14:49:12.849Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573141304163&amp;di=91f3aa900d4bd602b9a233ff478c2bbc&amp;imgtype=0&amp;src=http%3A%2F%2Fdingyue.nosdn.127.net%2FvXsWUrS27VAb4s%3DrSMlMPRzjkRzux6S4Tx9RXqej1%3D%3DW51544709511256compressflag.jpg" alt></p><h1 id="矩阵章节总结"><a href="#矩阵章节总结" class="headerlink" title="矩阵章节总结"></a>矩阵章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给<code>Matlab</code>就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭<p></p><h2 id="运算律"><a href="#运算律" class="headerlink" title="运算律"></a>运算律</h2><ol><li><p>$ {AB}= {BA}$时，矩阵运算满足<code>交换律</code>，故以下运算皆成立</p><p>$(\mathrm{i})( {A}\pm  {B})^2= {A}^2 \pm 2 {AB} + {B}^2$</p><p>$(\mathrm{ii})( {A}+ {B})( {A}- {B})= {A}^2- {B}^2$</p><p>$(\mathrm{iii})( {AB})^2=( {BA})^2$</p></li><li><p>$ {A}^*， {A}’， {A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼</p><p>$(\mathrm{i})( {AB})’= {B}’ {A}’$</p><p>$(\mathrm{ii})( {AB})^{-1}= {B}^{-1} {A}^{-1}$</p><p>$(\mathrm{iii})( {A}^*)^{-1}=( {A}^{-1})^*$</p></li><li><p>带系数的情况</p><p>$(\mathrm{i})|k {A}|=k^n| {A}|$</p><p>$(\mathrm{ii})(k {A})^{-1}=\frac1{k} {A}^{-1}$</p><p>$(\mathrm{iii})(k {A})’=k {A}’$</p><p>$(\mathrm{iv})\overline{k {A}}=\overline{k}\overline{ {A}}$</p></li></ol><h2 id="共轭矩阵"><a href="#共轭矩阵" class="headerlink" title="共轭矩阵"></a>共轭矩阵</h2><p>记住以下四个公式，以备突然考到</p><p>$(\mathrm{i})\overline{ {A}+ {B}}=\overline{ {A}}+\overline{ {B}}$</p><p>$(\mathrm{ii})\overline{k {A}}=\overline{k}\overline{ {A}}$</p><p>$(\mathrm{iii})\overline{ {AB}}=\overline{ {A}}\overline{ {B}}$</p><p>$(\mathrm{iv})|\overline{ {A}}|=\overline{| {A}|}$</p><p>简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭</p><h2 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h2><ol><li><p>看到$ {A}^*$，以下公式至少用其一</p><p>$(\mathrm{i}) {A}^* {A}= {A} {A}^*=| {A}| {E}$</p><p>$(\mathrm{ii}) {A}^{-1}=\frac{ {A}^*}{| {A}|}$</p><p>$(\mathrm{iii})| {A}^*|=| {A}|^{n-1}$</p><p>$(\mathrm{iv})( {A}^*)^*=| {A}|^{n-2} {A}$</p></li><li><p>伴随矩阵的特殊性质：极端的伴随矩阵</p><script type="math/tex; mode=display">{R}({A}^*)=\begin{cases}     n,\quad {R}({A})=n\\    1,\quad {R}({A})=n-1\\    0,\quad {R}({A})<n-1\end{cases}</script></li></ol><h2 id="杂题"><a href="#杂题" class="headerlink" title="杂题"></a>杂题</h2><ol><li><p>判断矩阵可逆的方法：</p><p>$(\mathrm{i}) {AB}= {BA}=E$</p><p>$(\mathrm{ii}) {R}( {A})=n$</p><p>$(\mathrm{iii})| {A}|=0$</p><p>$(\mathrm{iv}) {A}= {P}_1 {P}_2 \dots  {P}_k$</p></li><li><p>初变不变秩，不变奇异性</p></li><li><p>行阶梯、行最简、标准形</p></li><li><p>求逆方法：公式法、辅助矩阵法</p></li></ol><h2 id="分块矩阵运算"><a href="#分块矩阵运算" class="headerlink" title="分块矩阵运算"></a>分块矩阵运算</h2><ol><li><p>对角方阵求逆（仅对对角方阵有效）：</p><script type="math/tex; mode=display">\left(\begin {array}{ccc}    {A}_{11}& & & &\\     & {A}_{22}& & &\\     & & \ddots & &\\     & & & {A}_{ss}&\end {array}\right)^m=\left(\begin {array}{ccc}    {A}_{11}^m& & & &\\     & {A}_{22}^m& & &\\     & & \ddots & &\\     & & & {A}_{ss}^m&\end {array}\right)</script></li><li><p>特殊矩阵求逆矩阵，是否还应保持原来的顺序：</p><p>$(\mathrm{i})$主对角：$\searrow$仍为$\searrow$</p><p>$(\mathrm{ii})$次对角：$\swarrow$变为$\nearrow$</p></li><li><p>思想：运用<code>第三类初等变换</code></p><script type="math/tex; mode=display">\left|\begin{array}{cccc} {A} & {C} \\ {D} & {B} \end{array} \right|=|{A}||{B}-{DA}^{-1}{C}|</script></li><li><p>分块矩阵的秩（高频使用，按重要性降序排列）：</p><p>$(\mathrm{i})R(A+B)\leq R(A)+R(B),\quad R(A-B)\leq R(A)+R(B)$</p><p>$(\mathrm{ii})R(AB)\leq min\{R(A),R(B)\}$</p><p>$(\mathrm{iii})R(A|B)\leq R(A)+R(B),\quad R(\frac{A}{B})\leq R(A)+R(B)$</p><p>$(\mathrm{iv})R \left(\begin{array}{ccc} A &amp; 0\\0 &amp; B \end{array} \right)=R(A)+R(B)$</p><p>$(\mathrm{v})R \left(\begin{array}{ccc} A &amp; C\\0 &amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等</p><p>$(\mathrm{vi})$设$A$为$m\times n$矩阵，$B$为$n\times p$矩阵（有时题目条件会简化为$A$、$B$为同阶方阵），则$R(AB) \ge R(A)+R(B)-n$；特别地，当$AB=0$时，$R(A)+R(B)\le n$</p><p>$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证</p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1573141304163&amp;amp;di=91f3aa900d4bd602b9a233ff478c2bbc&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fdingyue.nosdn.127.net%2FvXsWUrS27VAb4s%3DrSMlMPRzjkRzux6S4Tx9RXqej1%3D%3DW51544709511256compressflag.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;矩阵章节总结&quot;&gt;&lt;a href=&quot;#矩阵章节总结&quot; class=&quot;headerlink&quot; title=&quot;矩阵章节总结&quot;&gt;&lt;/a&gt;矩阵章节总结&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;矩阵（matrix）形式优美，应用广泛。但是笔者相当头痛矩阵问题。实际上，矩阵的计算绝对不能靠硬算（硬算的事交给&lt;code&gt;Matlab&lt;/code&gt;就好了，实际上计算机做矩阵运算，为了避免数值不稳定问题，使用的是和人计算不同的算法），而是灵活变形后运用基本的计算公式；矩阵的证明则更离不开对公式及其推论的灵活运用。笔者从题海中抽象出矩阵计算的常用思想和性质。作者实属菜鸟，水平很菜，将就看看吧 ╮(╯_╰)╭&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;运算律&quot;&gt;&lt;a href=&quot;#运算律&quot; class=&quot;headerlink&quot; title=&quot;运算律&quot;&gt;&lt;/a&gt;运算律&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;$ {AB}= {BA}$时，矩阵运算满足&lt;code&gt;交换律&lt;/code&gt;，故以下运算皆成立&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})( {A}\pm  {B})^2= {A}^2 \pm 2 {AB} + {B}^2$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})( {A}+ {B})( {A}- {B})= {A}^2- {B}^2$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})( {AB})^2=( {BA})^2$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;$ {A}^*， {A}’， {A}^{-1}$组合会产生十分令人头疼的问题，使用以下公式来缓解头疼&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})( {AB})’= {B}’ {A}’$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})( {AB})^{-1}= {B}^{-1} {A}^{-1}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})( {A}^*)^{-1}=( {A}^{-1})^*$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;带系数的情况&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})|k {A}|=k^n| {A}|$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})(k {A})^{-1}=\frac1{k} {A}^{-1}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})(k {A})’=k {A}’$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iv})\overline{k {A}}=\overline{k}\overline{ {A}}$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;共轭矩阵&quot;&gt;&lt;a href=&quot;#共轭矩阵&quot; class=&quot;headerlink&quot; title=&quot;共轭矩阵&quot;&gt;&lt;/a&gt;共轭矩阵&lt;/h2&gt;&lt;p&gt;记住以下四个公式，以备突然考到&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})\overline{ {A}+ {B}}=\overline{ {A}}+\overline{ {B}}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})\overline{k {A}}=\overline{k}\overline{ {A}}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})\overline{ {AB}}=\overline{ {A}}\overline{ {B}}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iv})|\overline{ {A}}|=\overline{| {A}|}$&lt;/p&gt;
-&lt;p&gt;简单地记，凡是涉及共轭的题目，计算的时候看起来能取共轭的都取共轭&lt;/p&gt;
-&lt;h2 id=&quot;伴随矩阵&quot;&gt;&lt;a href=&quot;#伴随矩阵&quot; class=&quot;headerlink&quot; title=&quot;伴随矩阵&quot;&gt;&lt;/a&gt;伴随矩阵&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;看到$ {A}^*$，以下公式至少用其一&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i}) {A}^* {A}= {A} {A}^*=| {A}| {E}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii}) {A}^{-1}=\frac{ {A}^*}{| {A}|}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})| {A}^*|=| {A}|^{n-1}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iv})( {A}^*)^*=| {A}|^{n-2} {A}$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;伴随矩阵的特殊性质：极端的伴随矩阵&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-{R}({A}^*)=\begin{cases} 
-    n,\quad {R}({A})=n\\
-    1,\quad {R}({A})=n-1\\
-    0,\quad {R}({A})&lt;n-1
-\end{cases}&lt;/script&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;杂题&quot;&gt;&lt;a href=&quot;#杂题&quot; class=&quot;headerlink&quot; title=&quot;杂题&quot;&gt;&lt;/a&gt;杂题&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;判断矩阵可逆的方法：&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i}) {AB}= {BA}=E$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii}) {R}( {A})=n$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})| {A}|=0$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iv}) {A}= {P}_1 {P}_2 \dots  {P}_k$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;初变不变秩，不变奇异性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;行阶梯、行最简、标准形&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;求逆方法：公式法、辅助矩阵法&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;分块矩阵运算&quot;&gt;&lt;a href=&quot;#分块矩阵运算&quot; class=&quot;headerlink&quot; title=&quot;分块矩阵运算&quot;&gt;&lt;/a&gt;分块矩阵运算&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;对角方阵求逆（仅对对角方阵有效）：&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\left(\begin {array}{ccc}
-    {A}_{11}&amp; &amp; &amp; &amp;\\
-     &amp; {A}_{22}&amp; &amp; &amp;\\
-     &amp; &amp; \ddots &amp; &amp;\\
-     &amp; &amp; &amp; {A}_{ss}&amp;
-\end {array}\right)^m
-=
-\left(\begin {array}{ccc}
-    {A}_{11}^m&amp; &amp; &amp; &amp;\\
-     &amp; {A}_{22}^m&amp; &amp; &amp;\\
-     &amp; &amp; \ddots &amp; &amp;\\
-     &amp; &amp; &amp; {A}_{ss}^m&amp;
-\end {array}\right)&lt;/script&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;特殊矩阵求逆矩阵，是否还应保持原来的顺序：&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})$主对角：$\searrow$仍为$\searrow$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})$次对角：$\swarrow$变为$\nearrow$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;思想：运用&lt;code&gt;第三类初等变换&lt;/code&gt;&lt;/p&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\left|\begin{array}{cccc} {A} &amp; {C} \\ {D} &amp; {B} \end{array} \right|=|{A}||{B}-{DA}^{-1}{C}|&lt;/script&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;分块矩阵的秩（高频使用，按重要性降序排列）：&lt;/p&gt;
-&lt;p&gt;$(\mathrm{i})R(A+B)\leq R(A)+R(B),\quad R(A-B)\leq R(A)+R(B)$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{ii})R(AB)\leq min\{R(A),R(B)\}$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})R(A|B)\leq R(A)+R(B),\quad R(\frac{A}{B})\leq R(A)+R(B)$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iv})R \left(\begin{array}{ccc} A &amp;amp; 0\\0 &amp;amp; B \end{array} \right)=R(A)+R(B)$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{v})R \left(\begin{array}{ccc} A &amp;amp; C\\0 &amp;amp; B \end{array} \right)\ge R(A)+R(B)$，若$A$，$B$其一可逆则取等&lt;/p&gt;
-&lt;p&gt;$(\mathrm{vi})$设$A$为$m\times n$矩阵，$B$为$n\times p$矩阵（有时题目条件会简化为$A$、$B$为同阶方阵），则$R(AB) \ge R(A)+R(B)-n$；特别地，当$AB=0$时，$R(A)+R(B)\le n$&lt;/p&gt;
-&lt;p&gt;$(\mathrm{iii})(\mathrm{iv})(\mathrm{v})$皆易证&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="线性代数" scheme="https://G-SS-Hacker.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
