@@ -141,19 +141,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
+  <meta name="description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品  回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(1, C">
 <meta name="keywords" content="微积分,机器学习,神经网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Softmax函数反向传播求导详细过程">
 <meta property="og:url" content="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
+<meta property="og:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品  回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(1, C">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2020/02/05/1rU0Fs.png">
-<meta property="og:updated_time" content="2020-02-05T03:24:36.895Z">
+<meta property="og:updated_time" content="2020-02-05T08:20:33.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Softmax函数反向传播求导详细过程">
-<meta name="twitter:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品   回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(C):">
+<meta name="twitter:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品  回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(1, C">
 <meta name="twitter:image" content="https://s2.ax1x.com/2020/02/05/1rU0Fs.png">
 
 
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-05 11:24:36" itemprop="dateModified" datetime="2020-02-05T11:24:36+08:00">2020-02-05</time>
+                <time title="修改时间：2020-02-05 16:20:33" itemprop="dateModified" datetime="2020-02-05T16:20:33+08:00">2020-02-05</time>
               </span>
             
           
@@ -560,7 +560,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">2.4k</span>
+              <span title="本文字数">2.5k</span>
             </span>
           
 
@@ -595,10 +595,9 @@
 <h1 id="Softmax函数反向传播求导详细过程"><a href="#Softmax函数反向传播求导详细过程" class="headerlink" title="Softmax函数反向传播求导详细过程"></a>Softmax函数反向传播求导详细过程</h1><blockquote>
 <p>图：纽约，曼哈顿（Manhattan, New York）</p>
 </blockquote>
-<p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="回顾：Softmax函数正向传播"><a href="#回顾：Softmax函数正向传播" class="headerlink" title="回顾：Softmax函数正向传播"></a>回顾：Softmax函数正向传播</h2><h3 id="第一步：计算Z函数"><a href="#第一步：计算Z函数" class="headerlink" title="第一步：计算Z函数"></a>第一步：计算Z函数</h3><p>对神经网络输出层（即第<font size="4rem">$ L $</font>层）有<font size="4rem">$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$</font>，其中<font size="4rem">$a^{[L-1]}$</font>为上一层输出值。</p>
-<h3 id="第二步：计算Softmax函数"><a href="#第二步：计算Softmax函数" class="headerlink" title="第二步：计算Softmax函数"></a>第二步：计算Softmax函数</h3><font size="4rem," face="consolas">for i in range(C):</font> 
+<h3 id="第二步：计算Softmax函数"><a href="#第二步：计算Softmax函数" class="headerlink" title="第二步：计算Softmax函数"></a>第二步：计算Softmax函数</h3><font size="4rem," face="consolas">for i in range(1, C + 1):</font> 
 
 <p>​    <font size="5rem">$\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$</font></p>
 <p>其中<font size="4rem">$C$</font>表示要预测的类别数，上式满足<font size="4rem">$\sum_{i=1}^C a_i{[L]}=1$</font>，即输入样本属于各类别的概率和为<font size="4rem">$1$</font>。</p>
@@ -652,7 +651,7 @@
   <p><span>本文标题:</span>Softmax函数反向传播求导详细过程</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年02月04日 - 22:22:46</p>
-  <p><span>最后更新:</span>2020年02月05日 - 11:24:36</p>
+  <p><span>最后更新:</span>2020年02月05日 - 16:20:33</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" title="Softmax函数反向传播求导详细过程">https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" aria-label="复制成功！"></i></span>
   </p>
