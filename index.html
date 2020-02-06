@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2020-02-06 19:12:29 / 修改时间：19:24:15" itemprop="dateCreated datePublished" datetime="2020-02-06T19:12:29+08:00">2020-02-06</time>
+              <time title="创建时间：2020-02-06 19:12:29 / 修改时间：19:27:17" itemprop="dateCreated datePublished" datetime="2020-02-06T19:12:29+08:00">2020-02-06</time>
             </span>
           
 
@@ -570,13 +570,11 @@
 
       
         
-          
-            <p><img src="https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg" alt></p>
+          <p><img src="https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg" alt></p>
 <h1 id="机器学习中的评价指标：F1-score"><a href="#机器学习中的评价指标：F1-score" class="headerlink" title="机器学习中的评价指标：F1-score"></a>机器学习中的评价指标：F1-score</h1><blockquote>
 <p>图：西雅图（Seattle）</p>
 </blockquote>
-<p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="回顾：F1-score的计算过程"><a href="#回顾：F1-score的计算过程" class="headerlink" title="回顾：F1-score的计算过程"></a>回顾：F1-score的计算过程</h2><h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><blockquote>
 <p>混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。</p>
 </blockquote>
@@ -614,23 +612,15 @@
 <p>F1分数（$\mathrm{F1-score}$）即精确率与召回率的调和平均数（$\mathrm{Harmonic \, Mean}$），比算术平均数（$\mathrm{Arithmetic \, Mean}$）的评价效果更好。</p>
 </blockquote>
 <font size="5rem">$\mathrm{F1=\frac{2}{\frac1{P}+\frac1{R}}=\frac{2PR}{P+R}}$</font>
-
-
-
-<h2 id="直观理解为什么F1-score能评价模型优劣"><a href="#直观理解为什么F1-score能评价模型优劣" class="headerlink" title="直观理解为什么F1-score能评价模型优劣"></a>直观理解为什么F1-score能评价模型优劣</h2><p>在你训练的机器学习模型过程中，你往往希望能够兼顾<strong>精确率</strong>和<strong>召回率</strong>，并使用一个统一的<strong>单值评价指标来评价</strong>你的机器学习模型的训练效果。我们之所以使用<strong>调和平均</strong>而不是<strong>算术平均</strong>，是因为在<strong>算术平均</strong>中，任何一方对数值增长的贡献相当，任何一方对数值下降的责任也相当；而<strong>调和平均</strong>在增长的时候会偏袒较小值，也会惩罚<strong>精确率</strong>和<strong>召回率</strong>相差巨大的极端情况，很好地兼顾了<strong>精确率</strong>和<strong>召回率</strong>。</p>
-<h3 id="几何观点"><a href="#几何观点" class="headerlink" title="几何观点"></a>几何观点</h3><p><img src="https://i.loli.net/2020/02/06/12cwKpjqIAumLJ6.jpg" alt></p>
-<p>上图为函数图象<font size="5" rem>$z=f(x, y)=\frac{2xy}{x+y}$</font>。显而易见当<font size="4" rem>$x=1$</font>，<font size="4" rem>$y=0$</font>或者<font size="4" rem>$y=1$</font>，<font size="4" rem>$x=0$</font>时，<font size="4" rem>$z=0$</font>，说明<strong>调和平均</strong>惩罚<strong>精确率</strong>和<strong>召回率</strong>相差很大的极端情况。当<font size="4" rem>$x&lt;y$</font>时，梯度<font size="4" rem>$\mathrm{grad} \, z $</font>在<font size="4" rem>$x$</font>方向增长比<font size="4" rem>$y$</font>方向快；当<font size="4" rem>$y&lt;x$</font>时，梯度<font size="4" rem>$\mathrm{grad} \, z$</font>在<font size="4" rem>$y$</font>方向增长比<font size="4" rem>$x$</font>方向快，即<strong>调和平均</strong>在增长的时候会偏袒较小值。</p>
-<h3 id="代数观点"><a href="#代数观点" class="headerlink" title="代数观点"></a>代数观点</h3><p>对函数<font size="5" rem>$f(x, y)=\frac{2xy}{x+y}$</font>，其图象关于平面<font size="4" rem>$x=y$</font>对称。分别求<font size="4rem">$f(x,y)$</font>对<font size="4rem">$x$</font>和<font size="4rem">$y$</font>的偏导数：</p>
-<p>​     <font size="5" rem>$\frac{\partial f(x,y)}{\partial x}=\frac{2y^2}{(x+y)^2}$</font></p>
-<p>​     <font size="5" rem>$\frac{\partial f(x,y)}{\partial y}=\frac{2x^2}{(x+y)^2}$</font></p>
-<p>当<font size="4" rem>$x&lt;y$</font>时，<font size="5" rem>$\frac{\partial f(x,y)}{\partial x}&gt;\frac{\partial f(x,y)}{\partial y}$</font>，梯度<font size="4" rem>$\mathrm{grad} \, z $</font>在<font size="4" rem>$x$</font>方向增长比<font size="4" rem>$y$</font>方向快；当<font size="4" rem>$y&lt;x$</font>时，<font size="5" rem>$\frac{\partial f(x,y)}{\partial y}&gt;\frac{\partial f(x,y)}{\partial x}$</font>，梯度<font size="4" rem>$\mathrm{grad} \, z$</font>在<font size="4" rem>$y$</font>方向增长比<font size="4" rem>$x$</font>方向快，即<strong>调和平均</strong>在增长的时候会偏袒较小值。</p>
-<p>可以看出，<font size="4" rem>$\mathrm{F1-score}$</font>是一种综合的评价指标,它要求总体高指标必须建立在同时满足高<strong>精确率</strong>和高<strong>召回率</strong>的情况之上。使得我们可以更方便快速地对不同模型进行比较，从而选择最优的那个模型。</p>
-<hr>
-<blockquote>
-<p>Reference and lots of thanks：<a href="https://blog.csdn.net/otengyue/article/details/89426004" target="_blank" rel="noopener">https://blog.csdn.net/otengyue/article/details/89426004</a></p>
-</blockquote>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
