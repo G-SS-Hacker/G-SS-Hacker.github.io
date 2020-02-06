@@ -150,7 +150,7 @@
 <meta property="og:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品  回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(1, C">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2020/02/05/1rU0Fs.png">
-<meta property="og:updated_time" content="2020-02-05T08:20:33.562Z">
+<meta property="og:updated_time" content="2020-02-06T00:54:35.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Softmax函数反向传播求导详细过程">
 <meta name="twitter:description" content="Softmax函数反向传播求导详细过程 图：纽约，曼哈顿（Manhattan, New York）   Guderian出品  回顾：Softmax函数正向传播第一步：计算Z函数对神经网络输出层（即第$ L $层）有$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$，其中$a^{[L-1]}$为上一层输出值。 第二步：计算Softmax函数for i in range(1, C">
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-05 16:20:33" itemprop="dateModified" datetime="2020-02-05T16:20:33+08:00">2020-02-05</time>
+                <time title="修改时间：2020-02-06 08:54:35" itemprop="dateModified" datetime="2020-02-06T08:54:35+08:00">2020-02-06</time>
               </span>
             
           
@@ -605,9 +605,9 @@
 <h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><h3 id="第一步：对Softmax函数求导"><a href="#第一步：对Softmax函数求导" class="headerlink" title="第一步：对Softmax函数求导"></a>第一步：对Softmax函数求导</h3><p>​    对<font size="4rem">$\mathrm{Softmax}$</font>函数求导，即求<font size="5rem">$\frac{\partial a_i}{\partial z_j}$</font>：第<font size="4rem">$\mathrm{i}$</font>项输出对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
 <p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$</font>（省略<font size="4rem">$[ L ]$</font>标记，默认为第<font size="4rem">$ L $</font>层，下同），分类讨论：</p>
 <p>​    $(1)$当<font size="4rem">$\mathrm{i=j}$</font>时，把<font size="4rem">$a_i$</font>分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$</font></p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=a_j(1-a_j)$</font></p>
 <p>​    $(2)$当<font size="4rem">$\mathrm{i\ne j}$</font>时，把<font size="4rem">$a_i$</font>分子和分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
 <a id="more"></a>
 <h3 id="第二步：对损失函数求导"><a href="#第二步：对损失函数求导" class="headerlink" title="第二步：对损失函数求导"></a>第二步：对损失函数求导</h3><p>对损失函数求导，即求<font size="5rem">$\frac{\partial L}{\partial z_j}$</font>：损失函数对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
 <p>​    <font size="4rem">$\because L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font> </p>
@@ -651,7 +651,7 @@
   <p><span>本文标题:</span>Softmax函数反向传播求导详细过程</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年02月04日 - 22:22:46</p>
-  <p><span>最后更新:</span>2020年02月05日 - 16:20:33</p>
+  <p><span>最后更新:</span>2020年02月06日 - 08:54:35</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" title="Softmax函数反向传播求导详细过程">https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" aria-label="复制成功！"></i></span>
   </p>

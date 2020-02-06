@@ -769,7 +769,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-05 16:20:33" itemprop="dateModified" datetime="2020-02-05T16:20:33+08:00">2020-02-05</time>
+                <time title="修改时间：2020-02-06 08:54:35" itemprop="dateModified" datetime="2020-02-06T08:54:35+08:00">2020-02-06</time>
               </span>
             
           
@@ -856,9 +856,9 @@
 <h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><h3 id="第一步：对Softmax函数求导"><a href="#第一步：对Softmax函数求导" class="headerlink" title="第一步：对Softmax函数求导"></a>第一步：对Softmax函数求导</h3><p>​    对<font size="4rem">$\mathrm{Softmax}$</font>函数求导，即求<font size="5rem">$\frac{\partial a_i}{\partial z_j}$</font>：第<font size="4rem">$\mathrm{i}$</font>项输出对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
 <p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$</font>（省略<font size="4rem">$[ L ]$</font>标记，默认为第<font size="4rem">$ L $</font>层，下同），分类讨论：</p>
 <p>​    $(1)$当<font size="4rem">$\mathrm{i=j}$</font>时，把<font size="4rem">$a_i$</font>分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=a_j(1-a_j)$</font></p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=a_j(1-a_j)$</font></p>
 <p>​    $(2)$当<font size="4rem">$\mathrm{i\ne j}$</font>时，把<font size="4rem">$a_i$</font>分子和分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^{‘}=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
+<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
           <!--noindex-->
           
             <div class="post-button text-center">
