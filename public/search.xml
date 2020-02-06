@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[机器学习中的评价指标：F1-score]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%EF%BC%9AF1-score%2F</url>
+    <content type="text"><![CDATA[机器学习中的评价指标：F1-score 图：西雅图（Seattle） Guderian出品 回顾：F1-score的计算过程混淆矩阵（Confusion Matrix） 混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。 在机器学习领域，混淆矩阵用于衡量一个分类器的准确程度。对于二分类问题，将其样例根据真实类别和分类器的预测类别的组合划分为真正例$\mathrm{(True \, Positive)}$、假正例$\mathrm{(False \, Positive)}$、真反例$\mathrm{(True \, Negative)}$、假反例$\mathrm{(False \, Negative)}$四种情形。 对应混淆矩阵$\mathrm{(Confusion \, Matrix)}$如下表： .tg {border-collapse:collapse;border-spacing:0;}.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg .tg-0lax{text-align:left;vertical-align:top}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} 真实情况 预测结果 真 假 真 TP（真正例） FN（假反例） 假 FP（假正例） TN（真反例） 精确率（Precision）与召回率（Recall）根据混淆矩阵，我们可以得到如下定义： 精确率$\mathrm{(Precision)}$ $\mathrm{P=\frac{TP}{TP+FP} \times 100\%}$，表示真实情况和预测结果皆为真/预测结果为真 召回率$\mathrm{(Recall)}$ $\mathrm{R=\frac{TP}{TP+FN} \times 100 \%}$，表示真实情况和预测结果皆为真/真实情况为真 F1分数（F1-score） F1分数（$\mathrm{F1-score}$）即精确率与召回率的调和平均数（$\mathrm{Harmonic \, Mean}$），比算术平均数（$\mathrm{Arithmetic \, Mean}$）的评价效果更好。 $\mathrm{F1=\frac{2}{\frac1{P}+\frac1{R}}=\frac{2PR}{P+R}}$ 直观理解为什么F1-score能评价模型优劣在你训练的机器学习模型过程中，你往往希望能够兼顾精确率和召回率，并使用一个统一的单值评价指标来评价你的机器学习模型的训练效果。我们之所以使用调和平均而不是算术平均，是因为在算术平均中，任何一方对数值增长的贡献相当，任何一方对数值下降的责任也相当；而调和平均在增长的时候会偏袒较小值，也会惩罚精确率和召回率相差巨大的极端情况，很好地兼顾了精确率和召回率。 几何观点 上图为函数图象$z=f(x, y)=\frac{2xy}{x+y}$。显而易见当$x=1$，$y=0$或者$y=1$，$x=0$时，$z=0$，说明调和平均惩罚精确率和召回率相差很大的极端情况。当$x&lt;y$时，梯度$\mathrm{grad} \, z $在$x$方向增长比$y$方向快；当$y&lt;x$时，梯度$\mathrm{grad} \, z$在$y$方向增长比$x$方向快，即调和平均在增长的时候会偏袒较小值。 代数观点对函数$f(x, y)=\frac{2xy}{x+y}$，其图象关于平面$x=y$对称。分别求$f(x,y)$对$x$和$y$的偏导数： ​ $\frac{\partial f(x,y)}{\partial x}=\frac{2y^2}{(x+y)^2}$ ​ $\frac{\partial f(x,y)}{\partial y}=\frac{2x^2}{(x+y)^2}$ 当$x&lt;y$时，$\frac{\partial f(x,y)}{\partial x}&gt;\frac{\partial f(x,y)}{\partial y}$，梯度$\mathrm{grad} \, z $在$x$方向增长比$y$方向快；当$y&lt;x$时，$\frac{\partial f(x,y)}{\partial y}&gt;\frac{\partial f(x,y)}{\partial x}$，梯度$\mathrm{grad} \, z$在$y$方向增长比$x$方向快，即调和平均在增长的时候会偏袒较小值。 可以看出，$\mathrm{F1-score}$是一种综合的评价指标,它要求总体高指标必须建立在同时满足高精确率和高召回率的情况之上。使得我们可以更方便快速地对不同模型进行比较，从而选择最优的那个模型。 Reference and lots of thanks：https://blog.csdn.net/otengyue/article/details/89426004]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C & C++基本数据类型取值范围]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%2F</url>
     <content type="text"><![CDATA[C &amp; C++基本数据类型取值范围 图：伦敦（London） Guderian出品 .tg {border-collapse:collapse;border-spacing:0;}.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} 基本数据类型 关键字 存储大小 取数范围 整型 基本整型 int 4字节 -2^31 ~ 2^31-1 实型 长整型 long 4字节 -2^31 ~ 2^31-1 短整型 short 2字节 -2^15 ~ 2^15-1 无符号整型 unsigned unsigned int 4字节unsigned long 4字节unsigned short 2字节 unsigned int : 0 ~ 2^32-1unsigned long : 0 ~ 2^32-1unsigned short : 0 ~ 2^16-1 实型 单精度实型 float 4字节 1.2E-38 ~ 3.4E+38 精度6位小数 双精度实型 double 8字节 2.3E-308 ~ 1.7E+308 精度15位小数 长双精度实型 long double 16字节 3.4E-4932 ~ 1.1E+4932 精度19位小数 字符型 char 1字节 0 ~ 2^8-1 枚举类型 enum 我们不管遇到多复杂的数据类型都不要怕，我们戴口罩面对它。消除恐惧的最好办法就是面对恐惧！坚持就是胜利！学好C语言！奥利给！]]></content>
@@ -111,8 +123,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -148,8 +160,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -161,8 +173,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -174,8 +186,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -187,8 +199,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -200,8 +212,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -213,8 +225,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>

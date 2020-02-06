@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">46</span></a>
 
   </li>
         
@@ -431,6 +431,226 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/" class="post-title-link" itemprop="url">C++常量对象、常量成员函数和常引用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-05 12:43:46" itemprop="dateCreated datePublished" datetime="2019-12-05T12:43:46+08:00">2019-12-05</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-07 10:50:43" itemprop="dateModified" datetime="2019-12-07T10:50:43+08:00">2019-12-07</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.8k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2019/12/05/vwAOcbkZFnzf4PR.jpg" alt></p>
+<h1 id="C-常量对象、常量成员函数和常引用"><a href="#C-常量对象、常量成员函数和常引用" class="headerlink" title="C++常量对象、常量成员函数和常引用"></a>C++常量对象、常量成员函数和常引用</h1><blockquote>
+<p>图：广州塔</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<font color="#FF7F27">本文整理自《北京大学公开课：C++面向对象程序设计》</font>
+
+<h2 id="常量对象"><a href="#常量对象" class="headerlink" title="常量对象"></a>常量对象</h2><p>如果不希望某个对象的值被改变，则定义该对象的时候可在前面加<code>const</code>关键字。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CDemo</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> vale;</span><br><span class="line">   	<span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">SetValue</span><span class="params">()</span>	</span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Demo obj;	<span class="comment">//常量对象</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="常量成员函数"><a href="#常量成员函数" class="headerlink" title="常量成员函数"></a>常量成员函数</h2><p>在类的成员函数说明后面可以加<code>const</code>关键字，则该成员函数成为常量成员函数。</p>
+<p>常量成员函数执行期间<font color="red">不应该修改其所作用的对象</font>。因此，在常量成员函数中不能修改成员变量的值（<font color="Red">静态成员变量除外</font>），也不能调用同类的非常量成员函数（<font color="red">静态成员函数除外</font>）。</p>
+<p>非常亮成员函数在执行的过程中是有可能修改掉常量成员函数中的值的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> value;</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">GetValue</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span>	</span>&#123;&#125;;</span><br><span class="line">    	Sample() &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> Sample::GetValue() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    value = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//wrong,不能修改成员变量的值</span></span><br><span class="line">    func();</span><br><span class="line">    <span class="comment">//wrong,不能调用同类的非常量成员函数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> Sample o;</span><br><span class="line">    o.value = <span class="number">100</span>;	<span class="comment">//err,不能修改成员变量的值</span></span><br><span class="line">    o.func();		<span class="comment">//err,不能调用同类的非常量成员函数</span></span><br><span class="line">    o.GetValue();	<span class="comment">//ok,可以执行常量成员函数</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="常量成员函数的重载"><a href="#常量成员函数的重载" class="headerlink" title="常量成员函数的重载"></a>常量成员函数的重载</h2><p>两个成员函数，名字和参数表都一样，但是一个是<code>const</code>，一个不是，算<font color="red">重载</font>，而不是<font color="red">重复定义</font>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTest</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	CTest()	&#123; n = <span class="number">1</span> ;&#125;</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">GetValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">GetValue</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="number">2</span> * n; &#125;</span><br><span class="line">    	<span class="comment">//这两个GetValue()函数是重载关系，而不是重复定义</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> CTest objTest1;</span><br><span class="line">    CTest objTest2;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; objTest1.GetValue() &lt;&lt; <span class="string">", "</span> &lt;&lt; objTest2.GetValue();</span><br><span class="line">    <span class="comment">//objTest1是常量对象，调用的是GetValue() const</span></span><br><span class="line">    <span class="comment">//objTest2是非常量对象，调用的是GetValue()</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="常引用"><a href="#常引用" class="headerlink" title="常引用"></a>常引用</h2><p>引用前面可以加<code>const</code>关键字，成为常引用。不能通过常引用，修改其引用的变量。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r = n;</span><br><span class="line">r = <span class="number">5</span>;	<span class="comment">//error</span></span><br><span class="line">n = <span class="number">4</span>;	<span class="comment">//OK</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C-常量对象、常量成员函数和常引用/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1348,251 +1568,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/KMP算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/KMP算法/" class="post-title-link" itemprop="url">模式匹配算法：KMP算法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-26 15:34:36" itemprop="dateCreated datePublished" datetime="2019-11-26T15:34:36+08:00">2019-11-26</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-10 20:21:31" itemprop="dateModified" datetime="2019-12-10T20:21:31+08:00">2019-12-10</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">4.4k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">4 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1574783133220&amp;di=3be2714c61c60e81640b949c940ab16a&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170613%2Fca5280ac60284d4cb01f4f81be3b448b_th.jpg" alt></p>
-<h1 id="模式匹配算法：KMP算法"><a href="#模式匹配算法：KMP算法" class="headerlink" title="模式匹配算法：KMP算法"></a>模式匹配算法：KMP算法</h1><blockquote>
-<p> 图：北京航空航天大学</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<blockquote>
-<p>模式匹配是数据结构中字符串的一种基本运算，给定一个字符串P，要求在某个字符串T中找出与字符串P相同的所有子串，这就是模式匹配。</p>
-</blockquote>
-<h2 id="模式匹配算法要解决的问题"><a href="#模式匹配算法要解决的问题" class="headerlink" title="模式匹配算法要解决的问题"></a>模式匹配算法要解决的问题</h2><ul>
-<li><font color="#495DD8">detection</font> ：P<font color="#64ceaa"><strong>是否</strong></font>出现</li>
-<li><font color="#495DD8">location</font> ：首次<font color="#64ceaa"><strong>在哪里</strong></font>出现</li>
-<li><font color="#495DD8">counting</font> ：共有<font color="#64ceaa"><strong>几次</strong></font>出现</li>
-<li><font color="#495DD8">enumeration</font> ：各出现<font color="#64ceaa"><strong>在哪里</strong></font>？</li>
-</ul>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p><code>KMP算法</code>（全称<code>Knuth-Morris-Pratt算法</code>）是一种高效的模式匹配算法。在模式匹配算法中，常见的算法包括<code>BF算法</code>（<code>朴素算法</code>）、<code>KMP算法</code>、<code>BM算法</code>、<code>RK算法</code>、<code>有限自动机算法</code>、<code>Horspool算法</code>、<code>Sunday算法</code>。在这些算法中，最经典的算法非<code>KMP算法</code>和<code>BM算法</code>莫属。这两种算法都有一个共同点：抽象，理解难度大。实际上，<code>KMP算法</code>还有一个明显特点：会者不难。本文内容默认你已经明白<code>BF算法</code>的原理和不足（因此这部分内容将简单略过），展开讲述<code>KMP算法</code>的原理、优点和<code>c++</code>代码实现。相信你在学会<code>KMP算法</code>之后将会有一种<font color="#64ceaa"><strong>“踏遍青山人未老，这边风景独好”</strong></font>的快意。让我们开始吧。</p>
-<h2 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h2><p><code>BF算法</code>的本质就是<font color="#64ceaa">暴力搜索</font>。既然要在串<code>T</code>中找出与串<code>P</code>相同的所有子串，那不妨找出串<code>T</code>中所有与串<code>P</code>长度相同的子串，在逐个判断这个子串是否与串<code>P</code>相同。具体的例子<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a>或者<font color="#FF7F27">看下方的视频</font><font color="#5F2CA5">（讲得很形象了，应该不会有理解上的困难）</font>。设<code>strlen(T) == n, strlen(P) == m</code>，则<code>BF算法</code>的<font color="#64ceaa"><strong>预处理时间</strong></font>为$0$，<font color="#64ceaa"><strong>匹配时间</strong></font>为$O(mn)$，<font color="#64ceaa"><strong>总时间复杂度</strong></font>为$O(mn)$<font color="#5F2CA5">（简直是蜗速）</font>，在大部分应用场景中并不<font color="#64ceaa"><strong>优秀</strong></font>。</p>
-<p><iframe src="//player.bilibili.com/player.html?aid=11866460&cid=19594712&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="780" height="520" allowfullscreen="true"> </iframe></p>
-<h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><h3 id="更高的效率"><a href="#更高的效率" class="headerlink" title="更高的效率"></a>更高的效率</h3><p>容易看出<code>BF算法</code>的效率是十分蹩脚的，而它蹩脚的原因也很明显：在一次匹配尝试中，一旦失配（某一位匹配失败），就把串<code>P</code>整体向右移动一位。在模拟算法运行过程中，我们发现如果开始匹配时第一位就失配，那么只向右移动一位的确无可厚非，毕竟说不定移动一位之后就会匹配成功呢；但是如果已经匹配了串<code>P</code>的一部分了才失配，在向右移动一位之后，有时候（而且往往是经常）我们发现依然注定会匹配失败，也就是说在上次失败之后，向右移动一位再做尝试是根本不必要的，这种<font color="#5F2CA5">“只移动一位”</font>的策略实际上造成了巨大的步骤浪费。那么有没有办法，把这些不必要的尝试舍弃，节约算法的运行时间呢？</p>
-<p>此处我们需要考虑以下问题，以便对<code>BF算法</code>做出有效的改进：</p>
-<ul>
-<li><font color="#495DD8">为什么有一些尝试是注定徒劳的？</font></li>
-<li><font color="#495DD8">如何判断哪些尝试需要舍弃？</font></li>
-<li><font color="#495DD8">如果不是向右移动一位，又应该如何确定向右移动的位数？</font>
-
-</li>
-</ul>
-<p>在看完<a href="https://www.bilibili.com/video/av11866460" target="_blank" rel="noopener">点击这里</a>（还是上面那个链接）之后，前两个问题都能得到答案。在链接的视频讲解中，讲述者构造了一个前缀表数组<code>prefix table</code>来确定串<code>P</code>中每个从头开始的子串的<font color="#64ceaa"><strong>最长公共前后缀</strong></font>（自身除外，以下省略此说明），一旦失配，就把串<code>P</code>向右移动到失配位置左侧子串的<font color="#64ceaa"><strong>最长前缀</strong></font>处，使它们重叠，也就是把下图中的<font color="#A349A4">1号</font>移动到<font color="#A349A4">2号</font>位置，继续从当前位置匹配，如果当前位置为串<code>T</code>的结尾，则结束匹配。</p>
-<p><img src="https://i.loli.net/2019/11/26/eZcoQNJmPrKtklh.jpg" alt></p>
-<p>那么问题来了：为什么要把<font color="#64ceaa"><strong>最长公共前缀</strong></font>移动至<font color="#64cceaa"><strong>最长公共后缀</strong></font>的位置？这个移动距离能不能更短？能不能更长？</p>
-<blockquote>
- <font color="black">**引理**</font>  串的<font color="#64ceaa">**最长公共前后缀**</font>的<font color="#64ceaa">**最长公共前后缀**</font>是原串的<font color="#64ceaa">**次长公共前后缀**</font>。
-
- <font color="black">**证明**</font>  略<font color="#5F2CA5">~~（逃~~</font>
-
-</blockquote>
-<p>实际上，在<code>BF算法</code>的一次匹配过程中，一旦失配，就把串<code>P</code>整体向右移动一位再次尝试匹配。假设第一次匹配时在串<code>P</code>的第<code>r + 1</code>位失配，此时已经确定串<code>P</code>失配位置的前<code>r</code>项与串<code>T</code>相应位置元素匹配，也确定了串<code>P</code>失配位置的前<code>r - 1</code>项与串<code>T</code>相应位置元素匹配。那么第二次匹配成功，当且仅当在串<code>P</code>的前<code>r</code>项组成的子串中，前<code>r - 1</code>位字符组成的前缀和后<code>r - 1</code>位字符组成的后缀相同，即某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - 1</code>。也就是说，如果匹配失败向右移动<code>s</code>位，那么再次匹配成功的<font color="#64ceaa"><strong>必要条件</strong></font>是串<code>P</code>在失配位置前的子串的某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - s</code>。如果串<code>P</code>在失配位置前的子串的<font color="#64ceaa"><strong>最长公共前后缀</strong></font>长度就是<code>r - s</code>，匹配失败后向右移动了不足<code>s</code>位，这意味着移动距离过短，将会做一遍无用功。</p>
-<p>如果移动距离过长，那就有可能会错过一个成功的匹配。如果匹配失败向右移动<code>s</code>位，那么再次匹配成功的<font color="#64ceaa"><strong>必要条件</strong></font>是串<code>P</code>在失配位置前的子串的某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - s</code>。注意这里是<font color="#64ceaa"><strong>必要条件</strong></font>而不是<font color="#64ceaa"><strong>充分条件</strong></font>，在把串<code>P</code>向右移动的过程中，并不是在失配位置前随便放一个<font color="#64ceaa"><strong>公共前后缀</strong></font>都能匹配成功，我们需要从<font color="#64ceaa"><strong>最长公共前后缀</strong></font>开始尝试，逐步减少原失配位置前子串的长度，直到匹配成功或者串<code>P</code>在失配位置前子串<font color="#64ceaa"><strong>最长公共前后缀</strong></font>长度变为<code>0</code>。</p>
-<p>此处我们引入<code>next[]</code>数组来记录在失配时应该把串<code>P</code>的哪一位移动到当前位置。对于串<code>P</code>的第<code>j + 1</code>位的字符来说，<code>next[j + 1]</code>的意义是由串<code>P</code>的前<code>j</code>项的子串中<font color="#64ceaa"><strong>最长公共前后缀</strong></font>的长度。<code>next[]</code>数组是<code>KMP算法</code>降低<font color="#64ceaa"><strong>时间复杂度</strong></font>的关键，在预处理时就已经确定。下面介绍<code>next[]</code>数组求法。</p>
-<h3 id="next数组求法"><a href="#next数组求法" class="headerlink" title="next数组求法"></a>next数组求法</h3><p>如果你直接跳过了前面看到了这里，那说明你已经看了无数多参考资料，还是搞不懂<code>next[]</code>数组求法的原理，几乎走投无路了。但是，正如B站鬼畜区某神所言：</p>
-<p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/KMP算法/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/G-SS-Hacker.github.io/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/9/">9</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/G-SS-Hacker.github.io/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/10/">10</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1637,7 +1617,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1835,7 +1815,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">77k</span>
+    <span title="站点总字数">79k</span>
   
 
   
@@ -1844,7 +1824,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:10</span>
+    <span title="站点阅读时长">1:12</span>
   
 </div>
 
