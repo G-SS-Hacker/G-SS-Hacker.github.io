@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-06T11:27:17.012Z</updated>
+  <updated>2020-02-07T08:51:25.052Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -17,11 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C语言基础学习笔记（1）：变量、算术运算与赋值运算</title>
+    <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E3%80%81%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97/"/>
+    <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E3%80%81%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97/</id>
+    <published>2020-02-07T08:43:47.000Z</published>
+    <updated>2020-02-07T08:51:25.052Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/02/07/1gDzsH.png" alt></p><h1 id="C语言基础学习笔记（1）：变量、算术运算与赋值运算"><a href="#C语言基础学习笔记（1）：变量、算术运算与赋值运算" class="headerlink" title="C语言基础学习笔记（1）：变量、算术运算与赋值运算"></a>C语言基础学习笔记（1）：变量、算术运算与赋值运算</h1><blockquote><p>图：西安城墙</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><ol><li><p><code>C</code>中取余运算的结果符号与被除数符号相同。</p></li><li><p><code>C</code>中数字后面带个<code>U</code>， <code>u</code>, <code>L</code>, <code>l</code>, <code>F</code>,<code>f</code>的含义：</p><p><code>U</code>和<code>u</code>表示该数值是<strong>无符号整型</strong>（<code>unsigned int</code>）；<code>L</code>和<code>l</code>表示该数值是<strong>长整型</strong>（<code>long</code>）；<code>F</code>和<code>f</code>表示该数值是<strong>浮点型</strong>（<code>float</code>）。</p></li><li><p><code>C</code>中数字后面带个<code>H</code>, <code>h</code>, <code>B</code>, <code>b</code>或数字前面带个<code>0</code>, <code>0x</code>的含义：</p><p><code>H</code>和<code>h</code>表示该数值是<strong>十六进制数</strong>；<code>B</code>和<code>b</code>表示该数值是<strong>二进制数</strong>；前面带<code>0</code>表示该数值是<strong>八进制数</strong>；前面带<code>0x</code>表示该数值是<strong>十六进制数</strong>。</p></li><li><p><code>C</code>标准常用数学函数：</p></li></ol><p><img src="https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png" alt></p><ol><li><code>C</code>中的多重赋值表达式：<strong>变量1 = 变量2 = 表达式</strong>。如<code>a = b = 3</code>，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算<code>b = 3</code>，再执行<code>a = (b = 3)</code>。</li><li><code>C</code>的算术表达式中不同类型数据的运算结果的类型是<strong>取值范围较大</strong>的那种类型。<code>C</code>编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为<strong>类型提升（Type Promotion）</strong>。其规则如下：</li></ol><p><img src="https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png" alt></p><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/02/07/1gDzsH.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot;&gt;&lt;/a&gt;C语言基础学习笔记（1）：变量、算术运算与赋值运算&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：西安城墙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;中取余运算的结果符号与被除数符号相同。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;中数字后面带个&lt;code&gt;U&lt;/code&gt;， &lt;code&gt;u&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;l&lt;/code&gt;, &lt;code&gt;F&lt;/code&gt;,&lt;code&gt;f&lt;/code&gt;的含义：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;U&lt;/code&gt;和&lt;code&gt;u&lt;/code&gt;表示该数值是&lt;strong&gt;无符号整型&lt;/strong&gt;（&lt;code&gt;unsigned int&lt;/code&gt;）；&lt;code&gt;L&lt;/code&gt;和&lt;code&gt;l&lt;/code&gt;表示该数值是&lt;strong&gt;长整型&lt;/strong&gt;（&lt;code&gt;long&lt;/code&gt;）；&lt;code&gt;F&lt;/code&gt;和&lt;code&gt;f&lt;/code&gt;表示该数值是&lt;strong&gt;浮点型&lt;/strong&gt;（&lt;code&gt;float&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;中数字后面带个&lt;code&gt;H&lt;/code&gt;, &lt;code&gt;h&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;或数字前面带个&lt;code&gt;0&lt;/code&gt;, &lt;code&gt;0x&lt;/code&gt;的含义：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;H&lt;/code&gt;和&lt;code&gt;h&lt;/code&gt;表示该数值是&lt;strong&gt;十六进制数&lt;/strong&gt;；&lt;code&gt;B&lt;/code&gt;和&lt;code&gt;b&lt;/code&gt;表示该数值是&lt;strong&gt;二进制数&lt;/strong&gt;；前面带&lt;code&gt;0&lt;/code&gt;表示该数值是&lt;strong&gt;八进制数&lt;/strong&gt;；前面带&lt;code&gt;0x&lt;/code&gt;表示该数值是&lt;strong&gt;十六进制数&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;标准常用数学函数：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;C&lt;/code&gt;中的多重赋值表达式：&lt;strong&gt;变量1 = 变量2 = 表达式&lt;/strong&gt;。如&lt;code&gt;a = b = 3&lt;/code&gt;，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算&lt;code&gt;b = 3&lt;/code&gt;，再执行&lt;code&gt;a = (b = 3)&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C&lt;/code&gt;的算术表达式中不同类型数据的运算结果的类型是&lt;strong&gt;取值范围较大&lt;/strong&gt;的那种类型。&lt;code&gt;C&lt;/code&gt;编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为&lt;strong&gt;类型提升（Type Promotion）&lt;/strong&gt;。其规则如下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>机器学习中的评价指标：F1-score</title>
     <link href="https://g-ss-hacker.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%EF%BC%9AF1-score/"/>
     <id>https://g-ss-hacker.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%EF%BC%9AF1-score/</id>
     <published>2020-02-06T11:12:29.000Z</published>
-    <updated>2020-02-06T11:27:17.012Z</updated>
+    <updated>2020-02-07T06:12:29.528Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg" alt></p><h1 id="机器学习中的评价指标：F1-score"><a href="#机器学习中的评价指标：F1-score" class="headerlink" title="机器学习中的评价指标：F1-score"></a>机器学习中的评价指标：F1-score</h1><blockquote><p>图：西雅图（Seattle）</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><h2 id="回顾：F1-score的计算过程"><a href="#回顾：F1-score的计算过程" class="headerlink" title="回顾：F1-score的计算过程"></a>回顾：F1-score的计算过程</h2><h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><blockquote><p>混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。</p></blockquote><p>在机器学习领域，混淆矩阵用于衡量一个分类器的准确程度。对于二分类问题，将其样例根据真实类别和分类器的预测类别的组合划分为真正例$\mathrm{(True \, Positive)}$、假正例$\mathrm{(False \, Positive)}$、真反例$\mathrm{(True \, Negative)}$、假反例$\mathrm{(False \, Negative)}$四种情形。</p><p>对应混淆矩阵$\mathrm{(Confusion \, Matrix)}$如下表：</p><p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-0lax{text-align:left;vertical-align:top}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style></p><table class="tg">  <tr>    <th class="tg-0lax" rowspan="2"><center>真实情况</center></th>    <th class="tg-0lax" colspan="2"><center>预测结果</center></th>  </tr>  <tr>    <td class="tg-0lax"><center>真</center></td>    <td class="tg-0lax"><center>假</center></td>  </tr>  <tr>    <td class="tg-0lax"><center>真</center></td>    <td class="tg-0lax"><center>TP（真正例）</center></td>    <td class="tg-0lax"><center>FN（假反例）</center></td>  </tr>  <tr>    <td class="tg-0pky"><center>假</center></td>    <td class="tg-0pky"><center>FP（假正例）</center></td>    <td class="tg-0lax"><center>TN（真反例）</center></td>  </tr></table><h3 id="精确率（Precision）与召回率（Recall）"><a href="#精确率（Precision）与召回率（Recall）" class="headerlink" title="精确率（Precision）与召回率（Recall）"></a>精确率（Precision）与召回率（Recall）</h3><p>根据混淆矩阵，我们可以得到如下定义：</p><ul><li><strong>精确率</strong>$\mathrm{(Precision)}$   <font size="4rem">$\mathrm{P=\frac{TP}{TP+FP} \times 100\%}$</font>，表示<strong>真实情况和预测结果皆为真/预测结果为真</strong></li><li><strong>召回率</strong>$\mathrm{(Recall)}$   <font size="4rem">$\mathrm{R=\frac{TP}{TP+FN} \times 100 \%}$</font>，表示<strong>真实情况和预测结果皆为真/真实情况为真</strong></li></ul><h3 id="F1分数（F1-score）"><a href="#F1分数（F1-score）" class="headerlink" title="F1分数（F1-score）"></a>F1分数（F1-score）</h3><blockquote><p>F1分数（$\mathrm{F1-score}$）即精确率与召回率的调和平均数（$\mathrm{Harmonic \, Mean}$），比算术平均数（$\mathrm{Arithmetic \, Mean}$）的评价效果更好。</p></blockquote><font size="5rem">$\mathrm{F1=\frac{2}{\frac1{P}+\frac1{R}}=\frac{2PR}{P+R}}$</font><a id="more"></a><h2 id="直观理解为什么F1-score能评价模型优劣"><a href="#直观理解为什么F1-score能评价模型优劣" class="headerlink" title="直观理解为什么F1-score能评价模型优劣"></a>直观理解为什么F1-score能评价模型优劣</h2><p>在你训练的机器学习模型过程中，你往往希望能够兼顾<strong>精确率</strong>和<strong>召回率</strong>，并使用一个统一的<strong>单值评价指标来评价</strong>你的机器学习模型的训练效果。我们之所以使用<strong>调和平均</strong>而不是<strong>算术平均</strong>，是因为在<strong>算术平均</strong>中，任何一方对数值增长的贡献相当，任何一方对数值下降的责任也相当；而<strong>调和平均</strong>在增长的时候会偏袒较小值，也会惩罚<strong>精确率</strong>和<strong>召回率</strong>相差巨大的极端情况，很好地兼顾了<strong>精确率</strong>和<strong>召回率</strong>。</p><h3 id="几何观点"><a href="#几何观点" class="headerlink" title="几何观点"></a>几何观点</h3><p><img src="https://i.loli.net/2020/02/06/12cwKpjqIAumLJ6.jpg" alt></p><p>上图为函数图象<font size="5" rem>$z=f(x, y)=\frac{2xy}{x+y}$</font>。显而易见当<font size="4" rem>$x=1$</font>，<font size="4" rem>$y=0$</font>或者<font size="4" rem>$y=1$</font>，<font size="4" rem>$x=0$</font>时，<font size="4" rem>$z=0$</font>，说明<strong>调和平均</strong>惩罚<strong>精确率</strong>和<strong>召回率</strong>相差很大的极端情况。当<font size="4" rem>$x&lt;y$</font>时，梯度<font size="4" rem>$\mathrm{grad} \, z $</font>在<font size="4" rem>$x$</font>方向增长比<font size="4" rem>$y$</font>方向快；当<font size="4" rem>$y&lt;x$</font>时，梯度<font size="4" rem>$\mathrm{grad} \, z$</font>在<font size="4" rem>$y$</font>方向增长比<font size="4" rem>$x$</font>方向快，即<strong>调和平均</strong>在增长的时候会偏袒较小值。</p><h3 id="代数观点"><a href="#代数观点" class="headerlink" title="代数观点"></a>代数观点</h3><p>对函数<font size="5" rem>$f(x, y)=\frac{2xy}{x+y}$</font>，其图象关于平面<font size="4" rem>$x=y$</font>对称。分别求<font size="4rem">$f(x,y)$</font>对<font size="4rem">$x$</font>和<font size="4rem">$y$</font>的偏导数：</p><p>​     <font size="5" rem>$\frac{\partial f(x,y)}{\partial x}=\frac{2y^2}{(x+y)^2}$</font></p><p>​     <font size="5" rem>$\frac{\partial f(x,y)}{\partial y}=\frac{2x^2}{(x+y)^2}$</font></p><p>当<font size="4" rem>$x&lt;y$</font>时，<font size="5" rem>$\frac{\partial f(x,y)}{\partial x}&gt;\frac{\partial f(x,y)}{\partial y}$</font>，梯度<font size="4" rem>$\mathrm{grad} \, z $</font>在<font size="4" rem>$x$</font>方向增长比<font size="4" rem>$y$</font>方向快；</p><p>当<font size="4" rem>$y&lt;x$</font>时，<font size="5" rem>$\frac{\partial f(x,y)}{\partial y}&gt;\frac{\partial f(x,y)}{\partial x}$</font>，梯度<font size="4" rem>$\mathrm{grad} \, z$</font>在<font size="4" rem>$y$</font>方向增长比<font size="4" rem>$x$</font>方向快，即<strong>调和平均</strong>在增长的时候会偏袒较小值。</p><p>可以看出，<font size="4" rem>$\mathrm{F1-score}$</font>是一种综合的评价指标,它要求总体高指标必须建立在同时满足高<strong>精确率</strong>和高<strong>召回率</strong>的情况之上。使得我们可以更方便快速地对不同模型进行比较，从而选择最优的那个模型。</p><hr><blockquote><p>Reference and lots of thanks：<a href="https://blog.csdn.net/otengyue/article/details/89426004" target="_blank" rel="noopener">https://blog.csdn.net/otengyue/article/details/89426004</a></p></blockquote>]]></content>
     
@@ -703,9 +749,9 @@
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -910,9 +956,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1000,9 +1046,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1037,9 +1083,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1083,9 +1129,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1141,9 +1187,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1192,9 +1238,9 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
       <category term="OOP" scheme="https://G-SS-Hacker.github.io/tags/OOP/"/>
+    
+      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
@@ -1245,61 +1291,6 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
     
     
       <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线性方程组章节总结</title>
-    <link href="https://g-ss-hacker.github.io/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/"/>
-    <id>https://g-ss-hacker.github.io/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%AB%A0%E8%8A%82%E6%80%BB%E7%BB%93/</id>
-    <published>2019-11-28T13:13:45.000Z</published>
-    <updated>2019-12-02T13:52:12.458Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/11/28/KuIyhFR2j49xqwG.jpg" alt></p><h1 id="线性方程组章节总结"><a href="#线性方程组章节总结" class="headerlink" title="线性方程组章节总结"></a>线性方程组章节总结</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><h2 id="线性方程组有解的充要条件"><a href="#线性方程组有解的充要条件" class="headerlink" title="线性方程组有解的充要条件"></a>线性方程组有解的充要条件</h2><ol><li><p>齐次线性方程组要么只有一组零解，要么有无穷多解</p></li><li><p>非齐次线性方程组有解的充要条件</p><p>$R(A)=R(A|\beta)$</p><p>注：$R(A)$和$R(A|\beta)$要么相等，要么差$1$</p></li></ol><h2 id="线性方程组解的结构"><a href="#线性方程组解的结构" class="headerlink" title="线性方程组解的结构"></a>线性方程组解的结构</h2><ol><li><p>齐次线性方程组</p><p>(1) $AX=0$只有零解 $ \Leftrightarrow R(A)$等于未知数个数$\Leftrightarrow$A为列满秩阵</p><p>(2) $AX=0$有无穷多组解 $ \Leftrightarrow R(A)$小于未知数个数</p></li><li><p>非齐次线性方程组</p><p>(1) $AX=B$ 有唯一解 $\Leftrightarrow R(A)=R(A|\beta)=n$ </p><p>(2) $AX=B$ 有无穷多组解 $\Leftrightarrow R(A)=R(A|\beta)&lt;n$</p><p>(3) $AX=B$ 无解 $\Leftrightarrow R(A) \ne R(A|\beta)$</p></li></ol><p>注：在非常严苛的条件下，以下两命题等价：$AX=B$ 有唯一解 $\Leftrightarrow $ $AX=0$只有零解（当$A$时方阵时成立）</p><h2 id="线性方程组的解"><a href="#线性方程组的解" class="headerlink" title="线性方程组的解"></a>线性方程组的解</h2><p>思想：利用矩阵初等行变换（高斯消元）</p><ol><li><p>齐次线性方程组</p><p>记$N(A)$为齐次线性方程组的全体解向量所构成的向量空间，则$\dim N(A)=n-R(A)$，称$n(A)$的基为齐次线性方程组的<strong>基础解系</strong>：</p><p>(1) 当$R(A)=n$时，齐次线性方程组只有零解，没有<strong>基础解系</strong></p><p>(2) 当$R(A)&lt;n$时，<strong>基础解系</strong>为齐次线性方程组的$n-R(A)$个线性无关的解向量</p></li><li><p>非齐次线性方程组</p><p>$AX=B$ 和 $AX=0$的解向量满足：</p><p>(1) 若$\eta_1$，$\eta_2$都是$AX=B$的解，那么$\eta_1 - \eta_2$是$AX=0$的解<del>（几乎没用）</del></p><p>(2) 若$\eta_1$是$AX=B$的解，$\eta_2$是$AX=0$的解，那么$\eta_1 + \eta_2$还是$AX=B$的解</p><a id="more"></a></li></ol><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p><font color="#407600">【其他文章·线性代数·微积分】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/线性方程组章节总结/">线性方程组章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">矩阵章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/行列式章节总结/">行列式章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用泰勒展开式/">常用泰勒展开式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高阶求导公式/">高阶求导公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高等数学公式/">高等数学公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用等价无穷小/">常用等价无穷小</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/导数基本公式/">导数基本公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/不定积分公式/">不定积分公式</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/11/28/KuIyhFR2j49xqwG.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;线性方程组章节总结&quot;&gt;&lt;a href=&quot;#线性方程组章节总结&quot; class=&quot;headerlink&quot; title=&quot;线性方程组章节总结&quot;&gt;&lt;/a&gt;线性方程组章节总结&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&quot;线性方程组有解的充要条件&quot;&gt;&lt;a href=&quot;#线性方程组有解的充要条件&quot; class=&quot;headerlink&quot; title=&quot;线性方程组有解的充要条件&quot;&gt;&lt;/a&gt;线性方程组有解的充要条件&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;齐次线性方程组要么只有一组零解，要么有无穷多解&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;非齐次线性方程组有解的充要条件&lt;/p&gt;
-&lt;p&gt;$R(A)=R(A|\beta)$&lt;/p&gt;
-&lt;p&gt;注：$R(A)$和$R(A|\beta)$要么相等，要么差$1$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;线性方程组解的结构&quot;&gt;&lt;a href=&quot;#线性方程组解的结构&quot; class=&quot;headerlink&quot; title=&quot;线性方程组解的结构&quot;&gt;&lt;/a&gt;线性方程组解的结构&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;齐次线性方程组&lt;/p&gt;
-&lt;p&gt;(1) $AX=0$只有零解 $ \Leftrightarrow R(A)$等于未知数个数$\Leftrightarrow$A为列满秩阵&lt;/p&gt;
-&lt;p&gt;(2) $AX=0$有无穷多组解 $ \Leftrightarrow R(A)$小于未知数个数&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;非齐次线性方程组&lt;/p&gt;
-&lt;p&gt;(1) $AX=B$ 有唯一解 $\Leftrightarrow R(A)=R(A|\beta)=n$ &lt;/p&gt;
-&lt;p&gt;(2) $AX=B$ 有无穷多组解 $\Leftrightarrow R(A)=R(A|\beta)&amp;lt;n$&lt;/p&gt;
-&lt;p&gt;(3) $AX=B$ 无解 $\Leftrightarrow R(A) \ne R(A|\beta)$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;注：在非常严苛的条件下，以下两命题等价：$AX=B$ 有唯一解 $\Leftrightarrow $ $AX=0$只有零解（当$A$时方阵时成立）&lt;/p&gt;
-&lt;h2 id=&quot;线性方程组的解&quot;&gt;&lt;a href=&quot;#线性方程组的解&quot; class=&quot;headerlink&quot; title=&quot;线性方程组的解&quot;&gt;&lt;/a&gt;线性方程组的解&lt;/h2&gt;&lt;p&gt;思想：利用矩阵初等行变换（高斯消元）&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;齐次线性方程组&lt;/p&gt;
-&lt;p&gt;记$N(A)$为齐次线性方程组的全体解向量所构成的向量空间，则$\dim N(A)=n-R(A)$，称$n(A)$的基为齐次线性方程组的&lt;strong&gt;基础解系&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;(1) 当$R(A)=n$时，齐次线性方程组只有零解，没有&lt;strong&gt;基础解系&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;(2) 当$R(A)&amp;lt;n$时，&lt;strong&gt;基础解系&lt;/strong&gt;为齐次线性方程组的$n-R(A)$个线性无关的解向量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;非齐次线性方程组&lt;/p&gt;
-&lt;p&gt;$AX=B$ 和 $AX=0$的解向量满足：&lt;/p&gt;
-&lt;p&gt;(1) 若$\eta_1$，$\eta_2$都是$AX=B$的解，那么$\eta_1 - \eta_2$是$AX=0$的解&lt;del&gt;（几乎没用）&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;(2) 若$\eta_1$是$AX=B$的解，$\eta_2$是$AX=0$的解，那么$\eta_1 + \eta_2$还是$AX=B$的解&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="线性代数" scheme="https://G-SS-Hacker.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
