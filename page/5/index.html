@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-10 20:21:31" itemprop="dateModified" datetime="2019-12-10T20:21:31+08:00">2019-12-10</time>
+                <time title="修改时间：2020-02-07 13:45:53" itemprop="dateModified" datetime="2020-02-07T13:45:53+08:00">2020-02-07</time>
               </span>
             
           
@@ -548,7 +548,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">4.4k</span>
+              <span title="本文字数">4.5k</span>
             </span>
           
 
@@ -619,7 +619,7 @@
 <p>如果移动距离过长，那就有可能会错过一个成功的匹配。如果匹配失败向右移动<code>s</code>位，那么再次匹配成功的<font color="#64ceaa"><strong>必要条件</strong></font>是串<code>P</code>在失配位置前的子串的某一个<font color="#64ceaa"><strong>公共前后缀</strong></font>长度为<code>r - s</code>。注意这里是<font color="#64ceaa"><strong>必要条件</strong></font>而不是<font color="#64ceaa"><strong>充分条件</strong></font>，在把串<code>P</code>向右移动的过程中，并不是在失配位置前随便放一个<font color="#64ceaa"><strong>公共前后缀</strong></font>都能匹配成功，我们需要从<font color="#64ceaa"><strong>最长公共前后缀</strong></font>开始尝试，逐步减少原失配位置前子串的长度，直到匹配成功或者串<code>P</code>在失配位置前子串<font color="#64ceaa"><strong>最长公共前后缀</strong></font>长度变为<code>0</code>。</p>
 <p>此处我们引入<code>next[]</code>数组来记录在失配时应该把串<code>P</code>的哪一位移动到当前位置。对于串<code>P</code>的第<code>j + 1</code>位的字符来说，<code>next[j + 1]</code>的意义是由串<code>P</code>的前<code>j</code>项的子串中<font color="#64ceaa"><strong>最长公共前后缀</strong></font>的长度。<code>next[]</code>数组是<code>KMP算法</code>降低<font color="#64ceaa"><strong>时间复杂度</strong></font>的关键，在预处理时就已经确定。下面介绍<code>next[]</code>数组求法。</p>
 <h3 id="next数组求法"><a href="#next数组求法" class="headerlink" title="next数组求法"></a>next数组求法</h3><p>如果你直接跳过了前面看到了这里，那说明你已经看了无数多参考资料，还是搞不懂<code>next[]</code>数组求法的原理，几乎走投无路了。但是，正如B站鬼畜区某神所言：</p>
-<p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p>
+<font color="#FF7F27">**我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！**</font>
           <!--noindex-->
           
             <div class="post-button text-center">
