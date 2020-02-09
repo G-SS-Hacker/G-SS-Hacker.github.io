@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-07T08:51:25.052Z</updated>
+  <updated>2020-02-09T04:36:12.150Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -17,13 +17,77 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C语言基础学习笔记（2）：格式化输入与输出</title>
+    <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/"/>
+    <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/</id>
+    <published>2020-02-09T04:35:51.000Z</published>
+    <updated>2020-02-09T04:36:12.150Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/02/09/1faKYV.png" alt></p><h1 id="C语言基础学习笔记（2）：格式化输入与输出"><a href="#C语言基础学习笔记（2）：格式化输入与输出" class="headerlink" title="C语言基础学习笔记（2）：格式化输入与输出"></a>C语言基础学习笔记（2）：格式化输入与输出</h1><blockquote><p>图：乞力马扎罗山（Kilimanjaro）</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><ol><li><p><code>C</code>语言格式化屏幕输出：<code>printf(格式控制字符串, 输出值参数表);</code></p><p><code>C</code>语言格式化屏幕输入：<code>scanf(格式控制字符串, 输入地址表);</code></p></li><li><p>问题：<code>printf()</code>用<code>%</code>作为格式字符的标识，那么如何输出<code>%</code>呢？<code>C</code>规定，连续两个百分号出现在格式控制字符串中就表示要输出一个百分号</p></li><li><p>如何分隔多个输入数据？</p><p>1）空格、<code>Tab</code>或回车</p><p>2）达到输入位宽</p><p>3）遇到非法字符</p></li><li><p>如何判断<code>scanf()</code>函数读入了正确的数据项数呢？</p><p>事实上，<code>scanf()</code>是有返回值的，它的返回值就是正确读入的数据项数。现在明白<code>while(scanf(...))</code>为什么正确了吧？</p></li><li><p><code>scanf()</code>格式控制字符串中的普通字符原样输入。注意格式字符为<code>%f, %e</code>为输入<code>float</code>型且不能指定精度，格式字符为<code>%c</code>为一个字符包括空白字符（如空格和制表符）。</p></li><li><p><code>scanf()</code>格式修饰符</p></li></ol><p><img src="https://i.loli.net/2020/02/08/NJ3vn2TEYZcFXx4.png" alt></p><ol><li><p>字符型常量：所有的<code>ASCII</code>码都可以通过转义方式表示，其中<code>\ddd</code>为<code>1</code>到<code>3</code>位八进制<code>ASCII</code>码值所代表的字符，<code>\xhh</code>为<code>1</code>到<code>2</code>为十六进制<code>ASCII</code>码值所代表的字符。如：<code>&#39;B&#39;</code>等价于<code>&#39;\102&#39;</code>等价于<code>&#39;\x42&#39;</code>。</p></li><li><p>大小写英文字母的<code>ASCII</code>值相差<code>32</code>，即<code>大写字母+32=小写字母</code>。</p></li><li><p>单个字符的输入输出：</p><p><code>putchar(ch)</code>：向屏幕输出一个字符，字符型变量<code>ch</code>的值</p><p><code>ch = getchar()</code>：从键盘接受的字符作为<code>getchar()</code>的函数值，无参数</p></li><li><p>用<code>getchar()</code>输入时应注意的问题：<code>getchar()</code>函数并不是直接读取用户输入的字符，而是将输入字符先放在输入缓冲队列中，再从缓冲队列读取字符，直到输入回车符或文件结束符<code>EOF</code>时，程序才认为输入结束；一行输入结束，<code>getchar()</code>才开始从输入缓冲队列读取字符，前面函数没读取的数据仍在缓冲队列中，将被下一个<code>getchar()</code>函数读取。</p></li><li><p>在<code>Linux/Unix</code>下键入<code>Ctrl + D</code>或在<code>Windows</code>下键入<code>Ctrl + Z</code>，<code>getchar()</code>函数的确是会返回<code>-1</code>即<code>EOF</code>（<code>End Of File</code>）的，严格意义上应该用<code>int</code>类型来接收<code>getchar()</code>的返回值。</p></li><li><p>注意用<code>%c</code>格式读入字符时，空格和回车等空白字符都会被当做有效字符读入，在<code>%c</code>前加一个空格可以忽略缓冲区中的空白字符。</p></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/02/09/1faKYV.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;C语言基础学习笔记（2）：格式化输入与输出&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记（2）：格式化输入与输出&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记（2）：格式化输入与输出&quot;&gt;&lt;/a&gt;C语言基础学习笔记（2）：格式化输入与输出&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：乞力马扎罗山（Kilimanjaro）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言格式化屏幕输出：&lt;code&gt;printf(格式控制字符串, 输出值参数表);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言格式化屏幕输入：&lt;code&gt;scanf(格式控制字符串, 输入地址表);&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;问题：&lt;code&gt;printf()&lt;/code&gt;用&lt;code&gt;%&lt;/code&gt;作为格式字符的标识，那么如何输出&lt;code&gt;%&lt;/code&gt;呢？&lt;code&gt;C&lt;/code&gt;规定，连续两个百分号出现在格式控制字符串中就表示要输出一个百分号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何分隔多个输入数据？&lt;/p&gt;
+&lt;p&gt;1）空格、&lt;code&gt;Tab&lt;/code&gt;或回车&lt;/p&gt;
+&lt;p&gt;2）达到输入位宽&lt;/p&gt;
+&lt;p&gt;3）遇到非法字符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何判断&lt;code&gt;scanf()&lt;/code&gt;函数读入了正确的数据项数呢？&lt;/p&gt;
+&lt;p&gt;事实上，&lt;code&gt;scanf()&lt;/code&gt;是有返回值的，它的返回值就是正确读入的数据项数。现在明白&lt;code&gt;while(scanf(...))&lt;/code&gt;为什么正确了吧？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;scanf()&lt;/code&gt;格式控制字符串中的普通字符原样输入。注意格式字符为&lt;code&gt;%f, %e&lt;/code&gt;为输入&lt;code&gt;float&lt;/code&gt;型且不能指定精度，格式字符为&lt;code&gt;%c&lt;/code&gt;为一个字符包括空白字符（如空格和制表符）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;scanf()&lt;/code&gt;格式修饰符&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/08/NJ3vn2TEYZcFXx4.png&quot; alt&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;字符型常量：所有的&lt;code&gt;ASCII&lt;/code&gt;码都可以通过转义方式表示，其中&lt;code&gt;\ddd&lt;/code&gt;为&lt;code&gt;1&lt;/code&gt;到&lt;code&gt;3&lt;/code&gt;位八进制&lt;code&gt;ASCII&lt;/code&gt;码值所代表的字符，&lt;code&gt;\xhh&lt;/code&gt;为&lt;code&gt;1&lt;/code&gt;到&lt;code&gt;2&lt;/code&gt;为十六进制&lt;code&gt;ASCII&lt;/code&gt;码值所代表的字符。如：&lt;code&gt;&amp;#39;B&amp;#39;&lt;/code&gt;等价于&lt;code&gt;&amp;#39;\102&amp;#39;&lt;/code&gt;等价于&lt;code&gt;&amp;#39;\x42&amp;#39;&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;大小写英文字母的&lt;code&gt;ASCII&lt;/code&gt;值相差&lt;code&gt;32&lt;/code&gt;，即&lt;code&gt;大写字母+32=小写字母&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;单个字符的输入输出：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;putchar(ch)&lt;/code&gt;：向屏幕输出一个字符，字符型变量&lt;code&gt;ch&lt;/code&gt;的值&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ch = getchar()&lt;/code&gt;：从键盘接受的字符作为&lt;code&gt;getchar()&lt;/code&gt;的函数值，无参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用&lt;code&gt;getchar()&lt;/code&gt;输入时应注意的问题：&lt;code&gt;getchar()&lt;/code&gt;函数并不是直接读取用户输入的字符，而是将输入字符先放在输入缓冲队列中，再从缓冲队列读取字符，直到输入回车符或文件结束符&lt;code&gt;EOF&lt;/code&gt;时，程序才认为输入结束；一行输入结束，&lt;code&gt;getchar()&lt;/code&gt;才开始从输入缓冲队列读取字符，前面函数没读取的数据仍在缓冲队列中，将被下一个&lt;code&gt;getchar()&lt;/code&gt;函数读取。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在&lt;code&gt;Linux/Unix&lt;/code&gt;下键入&lt;code&gt;Ctrl + D&lt;/code&gt;或在&lt;code&gt;Windows&lt;/code&gt;下键入&lt;code&gt;Ctrl + Z&lt;/code&gt;，&lt;code&gt;getchar()&lt;/code&gt;函数的确是会返回&lt;code&gt;-1&lt;/code&gt;即&lt;code&gt;EOF&lt;/code&gt;（&lt;code&gt;End Of File&lt;/code&gt;）的，严格意义上应该用&lt;code&gt;int&lt;/code&gt;类型来接收&lt;code&gt;getchar()&lt;/code&gt;的返回值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;注意用&lt;code&gt;%c&lt;/code&gt;格式读入字符时，空格和回车等空白字符都会被当做有效字符读入，在&lt;code&gt;%c&lt;/code&gt;前加一个空格可以忽略缓冲区中的空白字符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言基础学习笔记（1）：变量、算术运算与赋值运算</title>
     <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E3%80%81%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97/"/>
     <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E3%80%81%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97/</id>
     <published>2020-02-07T08:43:47.000Z</published>
-    <updated>2020-02-07T08:51:25.052Z</updated>
+    <updated>2020-02-09T04:35:15.050Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/02/07/1gDzsH.png" alt></p><h1 id="C语言基础学习笔记（1）：变量、算术运算与赋值运算"><a href="#C语言基础学习笔记（1）：变量、算术运算与赋值运算" class="headerlink" title="C语言基础学习笔记（1）：变量、算术运算与赋值运算"></a>C语言基础学习笔记（1）：变量、算术运算与赋值运算</h1><blockquote><p>图：西安城墙</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><ol><li><p><code>C</code>中取余运算的结果符号与被除数符号相同。</p></li><li><p><code>C</code>中数字后面带个<code>U</code>， <code>u</code>, <code>L</code>, <code>l</code>, <code>F</code>,<code>f</code>的含义：</p><p><code>U</code>和<code>u</code>表示该数值是<strong>无符号整型</strong>（<code>unsigned int</code>）；<code>L</code>和<code>l</code>表示该数值是<strong>长整型</strong>（<code>long</code>）；<code>F</code>和<code>f</code>表示该数值是<strong>浮点型</strong>（<code>float</code>）。</p></li><li><p><code>C</code>中数字后面带个<code>H</code>, <code>h</code>, <code>B</code>, <code>b</code>或数字前面带个<code>0</code>, <code>0x</code>的含义：</p><p><code>H</code>和<code>h</code>表示该数值是<strong>十六进制数</strong>；<code>B</code>和<code>b</code>表示该数值是<strong>二进制数</strong>；前面带<code>0</code>表示该数值是<strong>八进制数</strong>；前面带<code>0x</code>表示该数值是<strong>十六进制数</strong>。</p></li><li><p><code>C</code>标准常用数学函数：</p></li></ol><p><img src="https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png" alt></p><ol><li><code>C</code>中的多重赋值表达式：<strong>变量1 = 变量2 = 表达式</strong>。如<code>a = b = 3</code>，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算<code>b = 3</code>，再执行<code>a = (b = 3)</code>。</li><li><code>C</code>的算术表达式中不同类型数据的运算结果的类型是<strong>取值范围较大</strong>的那种类型。<code>C</code>编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为<strong>类型提升（Type Promotion）</strong>。其规则如下：</li></ol><p><img src="https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png" alt></p><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/02/07/1gDzsH.png" alt></p><h1 id="C语言基础学习笔记（1）：变量、算术运算与赋值运算"><a href="#C语言基础学习笔记（1）：变量、算术运算与赋值运算" class="headerlink" title="C语言基础学习笔记（1）：变量、算术运算与赋值运算"></a>C语言基础学习笔记（1）：变量、算术运算与赋值运算</h1><blockquote><p>图：西安城墙</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><ol><li><p><code>C</code>中取余运算的结果符号与被除数符号相同。</p></li><li><p><code>C</code>中数字后面带个<code>U</code>， <code>u</code>, <code>L</code>, <code>l</code>, <code>F</code>,<code>f</code>的含义：</p><p><code>U</code>和<code>u</code>表示该数值是<strong>无符号整型</strong>（<code>unsigned int</code>）；<code>L</code>和<code>l</code>表示该数值是<strong>长整型</strong>（<code>long</code>）；<code>F</code>和<code>f</code>表示该数值是<strong>浮点型</strong>（<code>float</code>）。</p></li><li><p><code>C</code>中数字后面带个<code>H</code>, <code>h</code>, <code>B</code>, <code>b</code>或数字前面带个<code>0</code>, <code>0x</code>的含义：</p><p><code>H</code>和<code>h</code>表示该数值是<strong>十六进制数</strong>；<code>B</code>和<code>b</code>表示该数值是<strong>二进制数</strong>；前面带<code>0</code>表示该数值是<strong>八进制数</strong>；前面带<code>0x</code>表示该数值是<strong>十六进制数</strong>。</p></li><li><p><code>C</code>标准常用数学函数：</p></li></ol><p><img src="https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png" alt></p><ol><li><code>C</code>中的多重赋值表达式：<strong>变量1 = 变量2 = 表达式</strong>。如<code>a = b = 3</code>，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算<code>b = 3</code>，再执行<code>a = (b = 3)</code>。</li><li><code>C</code>的算术表达式中不同类型数据的运算结果的类型是<strong>取值范围较大</strong>的那种类型。<code>C</code>编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为<strong>类型提升（Type Promotion）</strong>。其规则如下：</li></ol><p><img src="https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png" alt></p><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></p></li><li><p><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -31,8 +95,7 @@
 &lt;h1 id=&quot;C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记（1）：变量、算术运算与赋值运算&quot;&gt;&lt;/a&gt;C语言基础学习笔记（1）：变量、算术运算与赋值运算&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;图：西安城墙&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;中取余运算的结果符号与被除数符号相同。&lt;/p&gt;
 &lt;/li&gt;
@@ -1243,54 +1306,6 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
       <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
     
       <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不定积分公式</title>
-    <link href="https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/"/>
-    <id>https://g-ss-hacker.github.io/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</id>
-    <published>2019-12-01T12:50:06.000Z</published>
-    <updated>2019-12-02T13:52:26.250Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png" alt></p><h1 id="不定积分公式"><a href="#不定积分公式" class="headerlink" title="不定积分公式"></a>不定积分公式</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)\int0 \mathrm{dx} = C$<p></p><p>$(2)\int1\mathrm{dx}=x+C$</p><p>$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$</p><p>$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$</p><p>$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$</p><p>$(6)\int e^x \mathrm{dx}=e^x+C$</p><p>$(7)\int \sin x \mathrm{dx}=-\cos x +C$</p><p>$(8)\int \cos x \mathrm{dx}=\sin x +C$</p><p>$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$</p><p>$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$</p><p>$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$</p><p>$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$</p><p>$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$</p><p>$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$</p><p>$(15)\int \tan x\mathrm{dx}=-\ln|\cos x|+C$</p><p>$(16)\int \cot x \mathrm{dx}=\ln|\sin x|+C$</p><p>$(17)\int \sec x \mathrm{dx}=\ln|\sec x+\tan x|+C$</p><p>$(18)\int \csc x\mathrm{dx}=\ln|\csc x -\cot x|+C$</p><p>$(19)\int \frac{\mathrm{dx}}{x^2+a^2}=\frac1{a}\arctan {\frac{x}{a}}+C$</p><p>$(20)\int \frac{\mathrm{dx}}{x^2-a^2}=\frac1{2a}\ln|\frac{x-a}{x+a}|+C$</p><p>$(21)\int \frac{\mathrm{dx}}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$</p><p>$(22)\int \frac{\mathrm{dx}}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|+C$</p><p>$(23)\int \sqrt{a^2-x^2}\mathrm{dx}=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin \frac{x}{a}+C$</p><p>$(24)\int \sqrt{x^2\pm a^2}\mathrm{dx}=\frac{x}{2}\sqrt{x^2\pm a^2}\pm \frac{a^2}{2}\ln|x+\sqrt{x^2\pm a^2}|+C$</p><p>$(25)\int \ln x\mathrm{dx}=x\ln x-x+C$</p><a id="more"></a><hr><p>~<font color="#FF7F27"><strong>我们遇到什么困难也不要怕，微笑着面对它！消除恐惧的最好办法就是面对恐惧！坚持就是胜利！加油！奥利给！</strong></font>~</p><font color="#407600">【其他文章·微积分·线性代数】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/不定积分公式/">不定积分公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用泰勒展开式/">常用泰勒展开式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高阶求导公式/">高阶求导公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/高等数学公式/">高等数学公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/常用等价无穷小/">常用等价无穷小</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/导数基本公式/">导数基本公式</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/矩阵章节总结/">矩阵章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/行列式章节总结/">行列式章节总结</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/线性方程组章节总结/">线性方程组章节总结</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;不定积分公式&quot;&gt;&lt;a href=&quot;#不定积分公式&quot; class=&quot;headerlink&quot; title=&quot;不定积分公式&quot;&gt;&lt;/a&gt;不定积分公式&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;br&gt;$(1)\int0 \mathrm{dx} = C$&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;$(2)\int1\mathrm{dx}=x+C$&lt;/p&gt;
-&lt;p&gt;$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$&lt;/p&gt;
-&lt;p&gt;$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$&lt;/p&gt;
-&lt;p&gt;$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$&lt;/p&gt;
-&lt;p&gt;$(6)\int e^x \mathrm{dx}=e^x+C$&lt;/p&gt;
-&lt;p&gt;$(7)\int \sin x \mathrm{dx}=-\cos x +C$&lt;/p&gt;
-&lt;p&gt;$(8)\int \cos x \mathrm{dx}=\sin x +C$&lt;/p&gt;
-&lt;p&gt;$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$&lt;/p&gt;
-&lt;p&gt;$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$&lt;/p&gt;
-&lt;p&gt;$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$&lt;/p&gt;
-&lt;p&gt;$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$&lt;/p&gt;
-&lt;p&gt;$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$&lt;/p&gt;
-&lt;p&gt;$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$&lt;/p&gt;
-&lt;p&gt;$(15)\int \tan x\mathrm{dx}=-\ln|\cos x|+C$&lt;/p&gt;
-&lt;p&gt;$(16)\int \cot x \mathrm{dx}=\ln|\sin x|+C$&lt;/p&gt;
-&lt;p&gt;$(17)\int \sec x \mathrm{dx}=\ln|\sec x+\tan x|+C$&lt;/p&gt;
-&lt;p&gt;$(18)\int \csc x\mathrm{dx}=\ln|\csc x -\cot x|+C$&lt;/p&gt;
-&lt;p&gt;$(19)\int \frac{\mathrm{dx}}{x^2+a^2}=\frac1{a}\arctan {\frac{x}{a}}+C$&lt;/p&gt;
-&lt;p&gt;$(20)\int \frac{\mathrm{dx}}{x^2-a^2}=\frac1{2a}\ln|\frac{x-a}{x+a}|+C$&lt;/p&gt;
-&lt;p&gt;$(21)\int \frac{\mathrm{dx}}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$&lt;/p&gt;
-&lt;p&gt;$(22)\int \frac{\mathrm{dx}}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|+C$&lt;/p&gt;
-&lt;p&gt;$(23)\int \sqrt{a^2-x^2}\mathrm{dx}=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin \frac{x}{a}+C$&lt;/p&gt;
-&lt;p&gt;$(24)\int \sqrt{x^2\pm a^2}\mathrm{dx}=\frac{x}{2}\sqrt{x^2\pm a^2}\pm \frac{a^2}{2}\ln|x+\sqrt{x^2\pm a^2}|+C$&lt;/p&gt;
-&lt;p&gt;$(25)\int \ln x\mathrm{dx}=x\ln x-x+C$&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
   </entry>
   

@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">48</span></a>
 
   </li>
         
@@ -431,6 +431,270 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C-继承和派生/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C-继承和派生/" class="post-title-link" itemprop="url">C++继承和派生</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-06 21:51:21" itemprop="dateCreated datePublished" datetime="2019-12-06T21:51:21+08:00">2019-12-06</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-30 10:36:48" itemprop="dateModified" datetime="2020-01-30T10:36:48+08:00">2020-01-30</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2.9k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">3 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s2.ax1x.com/2019/12/06/QYrjln.jpg" alt></p>
+<h1 id="C-继承和派生"><a href="#C-继承和派生" class="headerlink" title="C++继承和派生"></a>C++继承和派生</h1><blockquote>
+<p>图：古老的地球</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<font color="#FF7F27">本文整理自《北京大学公开课：C++面向对象程序设计》</font>
+
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li><font color="font">继承</font>和<font color="red">派生</font>实际上是一回事：在定义一个新的类<code>B</code>时，如果该类与某个已有的类<code>A</code>相似（指的是<code>B</code>拥有<code>A</code>的全部特点），那么可以把<code>A</code>作为一个<strong>基类</strong>，而把<code>B</code>作为<strong>基类</strong>的一个<strong>派生类</strong>（也称<strong>子类</strong>），这使得创建和维护一个程序更加容易</li>
+<li><strong>派生类</strong>拥有<strong>基类</strong>的全部特点，派生类还可以对<strong>基类</strong>进行修改和扩充。在<strong>派生类</strong>中，可以扩充新的成员变量和成员函数</li>
+<li><strong>派生类</strong>一经定义，可以独立使用，定义对象时不依赖于<strong>基类</strong></li>
+<li><strong>派生类</strong>拥有<strong>基类</strong>的全部成员函数和成员变量。不论是<code>private</code>、<code>protected</code>、<code>public</code></li>
+<li>在<strong>派生类</strong>的各个成员函数中，不能访问<strong>基类</strong>的<code>private</code>成员</li>
+</ul>
+<blockquote>
+<p>简单理解成员修饰符<code>protected</code>和<code>private</code>的区别：<code>protected</code>成员在派生类中可以被访问，而<code>private</code>不能</p>
+</blockquote>
+<ul>
+<li>对象不同类型对应的访问权限：</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>public</th>
+<th>protected</th>
+<th>private</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本类</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>派生类</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>其他类</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="派生类的写法"><a href="#派生类的写法" class="headerlink" title="派生类的写法"></a>派生类的写法</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 派生类名:</span> 访问修饰符 基类名	<span class="comment">//Zh</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">derived</span>-<span class="title">class</span>:</span> access-specifier base-<span class="class"><span class="keyword">class</span>	//<span class="title">En</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>访问修饰符</strong>可以是<code>private</code>、<code>protected</code>、<code>public</code>中的一个。如果未使用<strong>访问修饰符</strong>，则默认为<code>private</code>。该访问修饰符规定了<strong>继承类型</strong>。</p>
+<h2 id="继承类型"><a href="#继承类型" class="headerlink" title="继承类型"></a>继承类型</h2><ul>
+<li>公有继承（<code>public</code>）：继承<code>public</code>和<code>protected</code>且类型不变，不继承<code>private</code></li>
+<li>保护继承（<code>protected</code>）：继承<code>public</code>和<code>protected</code>且类型都为<code>protected</code>，不继承<code>private</code></li>
+<li>私有继承（<code>private</code>）：继承<code>public</code>和<code>protected</code>且类型都变为<code>private</code>，不继承<code>private</code></li>
+</ul>
+<p>一般使用公有继承。</p>
+<h2 id="写法示例：学生管理系统"><a href="#写法示例：学生管理系统" class="headerlink" title="写法示例：学生管理系统"></a>写法示例：学生管理系统</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CStudent</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="built_in">string</span> sName;</span><br><span class="line">    	<span class="keyword">int</span> nAge;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">bool</span> <span class="title">IsThreeGood</span><span class="params">()</span>	</span>&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetName</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span> &amp; name)</span>	</span>&#123; sName = name; &#125;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CUndergraduteStudent</span>:</span> <span class="keyword">public</span> CStudent</span><br><span class="line"><span class="comment">//本科生</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="keyword">int</span> nDepartment;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="keyword">bool</span> <span class="title">IsThreeGood</span><span class="params">()</span>	</span>&#123;<span class="comment">/*...*/</span>&#125;;	<span class="comment">//覆盖（不是重载！覆盖的参数表不变，重载的参数表改变！）</span></span><br><span class="line">		<span class="comment">//名字与基类一样，但行为不一样</span></span><br><span class="line">		<span class="function"><span class="keyword">bool</span> <span class="title">CanBaoYan</span><span class="params">()</span>	</span>&#123;<span class="comment">/*...*/</span>&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CGraduatedStudent</span>:</span> <span class="keyword">public</span> CStudent</span><br><span class="line"><span class="comment">//研究生</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="keyword">int</span> nDepartment;</span><br><span class="line">		<span class="keyword">char</span> szMentorName[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="keyword">int</span> <span class="title">CountSalary</span><span class="params">()</span>	</span>&#123;<span class="comment">/*...*/</span>&#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="派生类对象的内存空间"><a href="#派生类对象的内存空间" class="headerlink" title="派生类对象的内存空间"></a>派生类对象的内存空间</h2><font color="Red">派生类对象的体积 = 基类对象的体积 + 派生类对象自己的成员变量的体积。</font>
+
+<p>在派生类对象中，包含基类对象，而且基类对象的存储位置位于派生类对象新增的成员变量<font color="red">之前</font>。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C-继承和派生/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1320,232 +1584,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/不定积分公式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/不定积分公式/" class="post-title-link" itemprop="url">不定积分公式</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-12-01 20:50:06" itemprop="dateCreated datePublished" datetime="2019-12-01T20:50:06+08:00">2019-12-01</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-02 21:52:26" itemprop="dateModified" datetime="2019-12-02T21:52:26+08:00">2019-12-02</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">1.5k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://i.loli.net/2019/12/01/hMmSsvG2xVE7K5p.png" alt></p>
-<h1 id="不定积分公式"><a href="#不定积分公式" class="headerlink" title="不定积分公式"></a>不定积分公式</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>$(1)\int0 \mathrm{dx} = C$<p></p>
-<p>$(2)\int1\mathrm{dx}=x+C$</p>
-<p>$(3)\int x^\mu \mathrm{dx}=\frac1{\mu+1}x^{\mu+1}+C(\mu \ne -1)$</p>
-<p>$(4)\int\frac1{x}\mathrm{dx}=\ln|x|+C$</p>
-<p>$(5)\int a^x \mathrm{dx}=\frac{a^x}{\ln a}+C$</p>
-<p>$(6)\int e^x \mathrm{dx}=e^x+C$</p>
-<p>$(7)\int \sin x \mathrm{dx}=-\cos x +C$</p>
-<p>$(8)\int \cos x \mathrm{dx}=\sin x +C$</p>
-<p>$(9)\int \sec^2 x \mathrm{dx}=\int \frac1{\cos^2 x}\mathrm{dx}=\tan x+C$</p>
-<p>$(10)\int \csc^2x\mathrm{dx}=\int \frac1{\sin^2x}\mathrm{dx}=-\cot x +C$</p>
-<p>$(11)\int\sec x\tan x\mathrm{dx}=\sec x+C$</p>
-<p>$(12)\int \csc x\cot x\mathrm{dx}=-\csc x +C$</p>
-<p>$(13)\int \frac{\mathrm{dx}}{\sqrt{1-x^2}}=\arcsin x+C$</p>
-<p>$(14)\int \frac{\mathrm{dx}}{1+x^2}=\arctan x+C$</p>
-<p>$(15)\int \tan x\mathrm{dx}=-\ln|\cos x|+C$</p>
-<p>$(16)\int \cot x \mathrm{dx}=\ln|\sin x|+C$</p>
-<p>$(17)\int \sec x \mathrm{dx}=\ln|\sec x+\tan x|+C$</p>
-<p>$(18)\int \csc x\mathrm{dx}=\ln|\csc x -\cot x|+C$</p>
-<p>$(19)\int \frac{\mathrm{dx}}{x^2+a^2}=\frac1{a}\arctan {\frac{x}{a}}+C$</p>
-<p>$(20)\int \frac{\mathrm{dx}}{x^2-a^2}=\frac1{2a}\ln|\frac{x-a}{x+a}|+C$</p>
-<p>$(21)\int \frac{\mathrm{dx}}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$</p>
-<p>$(22)\int \frac{\mathrm{dx}}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|+C$</p>
-<p>$(23)\int \sqrt{a^2-x^2}\mathrm{dx}=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin \frac{x}{a}+C$</p>
-<p>$(24)\int \sqrt{x^2\pm a^2}\mathrm{dx}=\frac{x}{2}\sqrt{x^2\pm a^2}\pm \frac{a^2}{2}\ln|x+\sqrt{x^2\pm a^2}|+C$</p>
-<p>$(25)\int \ln x\mathrm{dx}=x\ln x-x+C$</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/不定积分公式/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1595,7 +1633,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-count">48</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1793,7 +1831,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">80k</span>
+    <span title="站点总字数">81k</span>
   
 
   
@@ -1802,7 +1840,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:13</span>
+    <span title="站点阅读时长">1:14</span>
   
 </div>
 
@@ -2316,9 +2354,9 @@
   
     
       
-        
-      
     
+      
+        
       
     
       
