@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言基础学习笔记（3）：关系运算符与逻辑运算符]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%EF%BC%9A%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[C语言基础学习笔记（3）：关系运算符与逻辑运算符 图：北极狐（Artic Fox） Guderian出品 C语言的“短路”特性：若表达式的值可由先计算的左操作数的值单独推导出来，那么将不再计算右操作数的值。“短路”特性有时很有用，如(i != 0) &amp;&amp; (j / i &gt; 0)使得不会发生除0的情况。 C条件表达式：表达式1 ? 表达式2 : 表达式3：如果表达式1为真，则返回表达式2；否则表达式3。 整数的数值溢出——上溢出：|一个数值运算结果| &gt; |类型能表示的最大数|。进位超过最高位而发生进位丢失或进位达到最高位而改变符号位。 对于无符号数，不能随意用a - b &lt; 0取代a &lt; b，因为前者可能发生数值溢出，导致判断结果发生错误。 浮点数的数值溢出，不仅有上溢出还有下溢出： 上溢出：|数值运算结果| &gt; |类型能表示的最大数| 下溢出：|数值运算结果| &lt; |类型能表示的最小数|，此时系统把该结果处理成机器0 把float赋值给int会丢失小数（不经四舍五入）。 &lt;stdlib.h&gt;中的exit(0)终止整个程序的执行强制返回操作系统。当其参数为0时表示正常退出，非0表示程序出错。 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C和C++中rand()函数]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E4%B8%ADrand%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[C和C++中rand()函数 本文遵守cc0协议😎（图片和代码也是） Guderian出品 头文件&lt;stdlib.h&gt; 声明int rand(void) 描述生成一个随机数，其大小介于0和RAND_MAX之间。其中RAND_MAX在头文件&lt;stdlib.h和&lt;cstdlib&gt;中宏定义为#define RAND_MAX 0X7fff，十进制形式为32767即(1 &lt;&lt; 15) - 1。 使用方法调用rand()函数应该通过srand(unsigned int)设置随机数种子，一旦设置随机数种子，那么接下来程序将遵循同一个规则产生随机数。如果你没有设置随机数种子，那么程序将自动把随机数种子设置为1。 设置随机数种子为常数如果设置随机数种子为常数（如1），那么不管在什么时间、什么环境下运行程序都将得到相同的随机数。使用方法如下： 1234567891011//cc0#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;int main()&#123; srand(1); int randnum = rand(); printf("%d\n", randnum); return 0;&#125; 设置随机数种子为系统时间戳如果想要得到不同的随机数，一种常用的方法是设置随机数种子为系统时间戳time(NULL)（先包含&lt;time.h&gt;头文件），即从1970年1月1日0时到当前时刻所经过的秒数。使用方法如下： 123456789101112//cc0#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;time.h&gt;int main()&#123; srand (time(NULL)); int randnum = rand(); printf("%d\n", randnum); return 0;&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -8,8 +19,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -54,8 +65,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -157,8 +168,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -194,8 +205,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -207,8 +218,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -220,8 +231,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -233,8 +244,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -246,8 +257,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -259,8 +270,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -400,8 +411,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
         <tag>图论</tag>
@@ -504,8 +515,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -527,8 +538,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
