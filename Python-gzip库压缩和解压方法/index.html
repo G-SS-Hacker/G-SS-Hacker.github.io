@@ -150,7 +150,7 @@
 <meta property="og:description" content="python-gzip库压缩和解压方法 图：1130近防炮   Guderian出品  使用gzip压缩文件 先用open()打开待压缩文件，再用gzip.opnen()打开压缩文件，最后读入待压缩文件内容并写入压文件中。  方法一1234567import gzip# 压缩文件：文件路径、待压缩文件名、压缩文件名def compress(path,name_in,name_out):    w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2020/02/12/1HpSE9.png">
-<meta property="og:updated_time" content="2020-02-13T13:10:26.662Z">
+<meta property="og:updated_time" content="2020-02-13T13:18:56.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python-gzip库压缩和解压方法">
 <meta name="twitter:description" content="python-gzip库压缩和解压方法 图：1130近防炮   Guderian出品  使用gzip压缩文件 先用open()打开待压缩文件，再用gzip.opnen()打开压缩文件，最后读入待压缩文件内容并写入压文件中。  方法一1234567import gzip# 压缩文件：文件路径、待压缩文件名、压缩文件名def compress(path,name_in,name_out):    w">
@@ -496,7 +496,7 @@
                 
               
 
-              <time title="创建时间：2020-02-13 21:05:19 / 修改时间：21:10:26" itemprop="dateCreated datePublished" datetime="2020-02-13T21:05:19+08:00">2020-02-13</time>
+              <time title="创建时间：2020-02-13 21:05:19 / 修改时间：21:18:56" itemprop="dateCreated datePublished" datetime="2020-02-13T21:05:19+08:00">2020-02-13</time>
             </span>
           
 
@@ -592,6 +592,7 @@
 <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩文件：文件路径、待压缩文件名、压缩文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compress</span><span class="params">(path,name_in,name_out)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> open(path+name_in,<span class="string">'rb'</span>) <span class="keyword">as</span> f_in:</span><br><span class="line">        <span class="keyword">with</span> gzip.open(path+name_out,<span class="string">'wb'</span>) <span class="keyword">as</span> f_out:</span><br><span class="line">            f_out.write(f_in.read())</span><br></pre></td></tr></table></figure>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>如果你不喜欢用<code>with</code>语句，还可以这么写（记得<code>close()</code>就行了）：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩文件：文件路径、待压缩文件名、压缩文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compress</span><span class="params">(path,name_in,name_out)</span>:</span></span><br><span class="line">    f_in = open(path+name_in,<span class="string">'rb'</span>)</span><br><span class="line">    f_out = gzip.open(path+name_out,<span class="string">'wb'</span>)</span><br><span class="line">    f_out.write(f_in.read())</span><br><span class="line">    f_in.close()</span><br><span class="line">    f_out.close()</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="使用gzip解压文件"><a href="#使用gzip解压文件" class="headerlink" title="使用gzip解压文件"></a>使用gzip解压文件</h2><blockquote>
 <p>先用<code>gzip.opnen()</code>打开压缩文件，再用<code>open()</code>打开解压文件，最后读入压缩文件内容并写入解压文件中。</p>
 </blockquote>
@@ -621,7 +622,7 @@
   <p><span>本文标题:</span>Python-gzip库压缩和解压方法</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年02月13日 - 21:05:19</p>
-  <p><span>最后更新:</span>2020年02月13日 - 21:10:26</p>
+  <p><span>最后更新:</span>2020年02月13日 - 21:18:56</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/" title="Python-gzip库压缩和解压方法">https://G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/" aria-label="复制成功！"></i></span>
   </p>
