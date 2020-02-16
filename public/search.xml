@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言基础学习笔记（4）：函数与防御式编程]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%BC%8F%E7%BC%96%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[C语言基础学习笔记（4）：函数与防御式编程 图：塔克拉玛干沙漠 Guderian出品 C语言函数的返回值类型，可以使数组以外的任意一种类型。 在函数调用的过程中，实参和形参占用不同的内存空间，可以同名。 当函数定义在函数调用之后，C89标准默认函数返回值类型为int，而C99不再支持隐含的函数声明。 把所有函数的定义都放在主函数的前面也不意味着不需要函数原型，因为不一定只有主函数会调用你定义的函数，还是有可能出现函数的调用出现在函数的定义之前的情况。 综合3和4，应该在程序开头写清所有的函数原型。 函数设计的基本原则： （1）函数规模要小 （2）函数功能要单一 （3）函数接口定义要清楚 断言：assert()为在&lt;assert.h&gt;中定义的宏，可把其“函数原型”视作void assert(int expression)。 （1）expression为真，pass （2）expression为假，中断程序 可以用if语句代替断言，代价是程序编译后的目标代码体积变大，运行效率下降；使用断言便于在调试程序时发现错误，不影响程序执行效率。断言仅用于debug版本调试程序，不能用作release版本；换句话说只能用它确保预期不会发生的状况的确不会发生，而不能用它检查可能发生的状况是否发生。注意一个assert只能检验一个条件。 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python-gzip库压缩和解压方法]]></title>
     <url>%2FG-SS-Hacker.github.io%2FPython-gzip%E5%BA%93%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[python-gzip库压缩和解压方法 图：1130近防炮 Guderian出品 使用gzip压缩文件 先用open()打开待压缩文件，再用gzip.opnen()打开压缩文件，最后读入待压缩文件内容并写入压文件中。 方法一1234567import gzip# 压缩文件：文件路径、待压缩文件名、压缩文件名def compress(path,name_in,name_out): with open(path+name_in,'rb') as f_in: with gzip.open(path+name_out,'wb') as f_out: f_out.write(f_in.read()) 方法二如果你不喜欢用with语句，还可以这么写（记得close()就行了）： 123456789import gzip# 压缩文件：文件路径、待压缩文件名、压缩文件名def compress(path,name_in,name_out): f_in = open(path+name_in,'rb') f_out = gzip.open(path+name_out,'wb') f_out.write(f_in.read()) f_in.close() f_out.close() 使用gzip解压文件 先用gzip.opnen()打开压缩文件，再用open()打开解压文件，最后读入压缩文件内容并写入解压文件中。 方法一1234567import gzip# 解压缩：文件路径、压缩文件名、解压缩文件名def decompress(path,name_in,name_out): with gzip.open(path+name_in,'rb') as f_in: with open(path+name_out,'wb') as f_out: f_out.write(f_in.read()) 方法二123456789import gzip# 解压缩：文件路径、压缩文件名、解压缩文件名def decompress(path,name_in,name_out): f_in = gzip.open(path+name_in,'rb') f_out = open(path+name_out,'wb') f_out.write(f_in.read()) f_in.close() f_out.close()]]></content>
@@ -190,8 +201,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -227,8 +238,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -240,8 +251,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -253,8 +264,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -266,8 +277,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -279,8 +290,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -292,8 +303,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
