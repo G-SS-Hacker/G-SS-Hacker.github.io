@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-16T07:39:12.691Z</updated>
+  <updated>2020-02-17T05:22:14.344Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%BC%8F%E7%BC%96%E7%A8%8B/</id>
     <published>2020-02-16T07:38:50.000Z</published>
-    <updated>2020-02-16T07:39:12.691Z</updated>
+    <updated>2020-02-17T05:22:14.344Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/02/16/A81KRsbrM4hy6nX.jpg" alt></p><h1 id="C语言基础学习笔记（4）：函数与防御式编程"><a href="#C语言基础学习笔记（4）：函数与防御式编程" class="headerlink" title="C语言基础学习笔记（4）：函数与防御式编程"></a>C语言基础学习笔记（4）：函数与防御式编程</h1><blockquote><p>图：塔克拉玛干沙漠</p></blockquote><p><font color="grey"> <em>Guderian出品</em> </font></p><ol><li><p><code>C</code>语言函数的返回值类型，可以使数组以外的任意一种类型。</p></li><li><p>在函数调用的过程中，<strong>实参</strong>和<strong>形参</strong>占用不同的内存空间，可以同名。</p></li><li><p>当函数定义在函数调用之后，<code>C89</code>标准默认函数返回值类型为<code>int</code>，而<code>C99</code>不再支持隐含的函数声明。</p></li><li><p>把所有函数的定义都放在主函数的前面也不意味着不需要函数原型，因为不一定只有主函数会调用你定义的函数，还是有可能出现函数的调用出现在函数的定义之前的情况。</p></li><li><p>综合<code>3</code>和<code>4</code>，应该在程序开头写清所有的函数原型。</p></li><li><p>函数设计的基本原则：</p><p>（1）函数规模要小</p><p>（2）函数功能要单一</p><p>（3）函数接口定义要清楚</p></li><li><p>断言：<code>assert()</code>为在<code>&lt;assert.h&gt;</code>中定义的宏，可把其“函数原型”视作<code>void assert(int expression)</code>。</p><p>（1）<code>expression</code>为真，pass</p><p>（2）<code>expression</code>为假，中断程序</p><p>可以用<code>if</code>语句代替断言，代价是程序编译后的目标代码体积变大，运行效率下降；使用断言便于在调试程序时发现错误，不影响程序执行效率。断言仅用于<code>debug</code>版本调试程序，不能用作<code>release</code>版本；换句话说只能用它确保预期不会发生的状况的确不会发生，而不能用它检查可能发生的状况是否发生。注意一个<code>assert</code>只能检验一个条件。</p></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/02/16/A81KRsbrM4hy6nX.jpg" alt></p><h1 id="C语言基础学习笔记（4）：函数与防御式编程"><a href="#C语言基础学习笔记（4）：函数与防御式编程" class="headerlink" title="C语言基础学习笔记（4）：函数与防御式编程"></a>C语言基础学习笔记（4）：函数与防御式编程</h1><blockquote><p>图：塔克拉玛干沙漠</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><ol><li><p><code>C</code>语言函数的返回值类型，可以是数组以外的任意一种类型。</p></li><li><p>在函数调用的过程中，<strong>实参</strong>和<strong>形参</strong>占用不同的内存空间，可以同名。</p></li><li><p>当函数定义在函数调用之后，<code>C89</code>标准默认函数返回值类型为<code>int</code>，而<code>C99</code>不再支持隐含的函数声明。</p></li><li><p>把所有函数的定义都放在主函数的前面也不意味着不需要函数原型，因为不一定只有主函数会调用你定义的函数，还是有可能出现函数的调用出现在函数的定义之前的情况。</p></li><li><p>综合<code>3</code>和<code>4</code>，应该在程序开头写清所有的函数原型。</p></li><li><p>函数设计的基本原则：</p><p>（1）函数规模要小</p><p>（2）函数功能要单一</p><p>（3）函数接口定义要清楚</p></li><li><p>断言：<code>assert()</code>为在<code>&lt;assert.h&gt;</code>中定义的宏，可把其“函数原型”视作<code>void assert(int expression)</code>。</p><p>（1）<code>expression</code>为真，pass</p><p>（2）<code>expression</code>为假，中断程序</p><p>可以用<code>if</code>语句代替断言，代价是程序编译后的目标代码体积变大，运行效率下降；使用断言便于在调试程序时发现错误，不影响程序执行效率。断言仅用于<code>debug</code>版本调试程序，不能用作<code>release</code>版本；换句话说只能用它确保预期不会发生的状况的确不会发生，而不能用它检查可能发生的状况是否发生。注意一个<code>assert</code>只能检验一个条件。</p></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -31,10 +31,9 @@
 &lt;h1 id=&quot;C语言基础学习笔记（4）：函数与防御式编程&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记（4）：函数与防御式编程&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记（4）：函数与防御式编程&quot;&gt;&lt;/a&gt;C语言基础学习笔记（4）：函数与防御式编程&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;图：塔克拉玛干沙漠&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言函数的返回值类型，可以使数组以外的任意一种类型。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言函数的返回值类型，可以是数组以外的任意一种类型。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;在函数调用的过程中，&lt;strong&gt;实参&lt;/strong&gt;和&lt;strong&gt;形参&lt;/strong&gt;占用不同的内存空间，可以同名。&lt;/p&gt;
 &lt;/li&gt;
