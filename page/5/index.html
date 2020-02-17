@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">53</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">54</span></a>
 
   </li>
         
@@ -431,6 +431,255 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C-引用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C-引用/" class="post-title-link" itemprop="url">C++引用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-07 10:51:15" itemprop="dateCreated datePublished" datetime="2019-12-07T10:51:15+08:00">2019-12-07</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-25 20:47:04" itemprop="dateModified" datetime="2020-01-25T20:47:04+08:00">2020-01-25</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.7k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2019/12/07/Xua6pB154KjyqiL.jpg" alt></p>
+<h1 id="C-引用"><a href="#C-引用" class="headerlink" title="C++引用"></a>C++引用</h1><blockquote>
+<p>图：LEGO小人仔</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<font color="#FF7F27">笔记整理自《北京大学公开课：C++面向对象程序设计》</font>
+
+<blockquote>
+<p><code>C++</code>跟<code>C</code>相比，多了很多独特的内容，其中有很多都是为了实现面向对象编程范式而引入的，<code>C++</code>的引用就是其一。</p>
+</blockquote>
+<h2 id="引用的概念"><a href="#引用的概念" class="headerlink" title="引用的概念"></a>引用的概念</h2><ul>
+<li>定义一个引用，并将其初始化为引用某个变量的通用写法：<code>类型名 &amp; 引用名 = 某变量名</code></li>
+<li>某个变量的引用，<font color="red">等价于</font>这个变量，相当于该变量的一个别名</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> &amp; r = n;</span><br><span class="line"><span class="comment">//r引用了n，r的类型是int &amp;</span></span><br><span class="line">r = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; r;	<span class="comment">//输出4</span></span><br><span class="line">cour &lt;&lt; n;	<span class="comment">//输出4</span></span><br><span class="line">n = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; n;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>定义引用时一定要将其<font color="red">初始化</font>成引用某个变量，而不像指针可以指向某个变量也可以不指向某个变量</li>
+<li>初始化后，它就一直引用该变量，不会再引用别的变量了（引用是从一而终的）</li>
+<li>引用只能引用<font color="red">变量</font>，不能引用常量和表达式</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">3</span>, b = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">double</span> &amp; r1 = a;</span><br><span class="line"><span class="keyword">double</span> &amp; r2 = r1;	<span class="comment">//r2也引用a</span></span><br><span class="line">r2 = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;	<span class="comment">//输出10</span></span><br><span class="line">r1 = b;				<span class="comment">//r1并没有引用b</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;	<span class="comment">//输出5</span></span><br></pre></td></tr></table></figure>
+<h2 id="引用的应用"><a href="#引用的应用" class="headerlink" title="引用的应用"></a>引用的应用</h2><p><code>C</code>中，如何编写交换两个整型变量值的函数?</p>
+<ul>
+<li>这样写吗？</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = a; a = b; b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1, n2);</span><br><span class="line"><span class="comment">//n1, n2的值没有被交换</span></span><br></pre></td></tr></table></figure>
+<p>这是错误的，改变形参不会改变实参。</p>
+<ul>
+<li>或者用指针？</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = *a; *a = *b; *b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(&amp; n1, &amp; n2);	<span class="comment">//取地址</span></span><br><span class="line"><span class="comment">//n1, n2的值被交换</span></span><br></pre></td></tr></table></figure>
+<p>正确，但丑陋！</p>
+<p>那么<code>C++</code>中，如何编写交换两个整型变量值的函数?</p>
+<h3 id="引用作为参数"><a href="#引用作为参数" class="headerlink" title="引用作为参数"></a>引用作为参数</h3><blockquote>
+<p><code>C++</code>示例：交换两个整数</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp; a, <span class="keyword">int</span> &amp; b)</span>	<span class="comment">//a就是n1，b就是n2</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp;</span><br><span class="line">    tmp = a; a = b; b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n1, n2;</span><br><span class="line">swap(n1, n2);</span><br><span class="line"><span class="comment">//n1, n2的值被交换</span></span><br></pre></td></tr></table></figure>
+<h3 id="引用作为返回值"><a href="#引用作为返回值" class="headerlink" title="引用作为返回值"></a>引用作为返回值</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">4</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">SetValue</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> n; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//神奇之处，对函数的返回值进行赋值</span></span><br><span class="line">    SetValue() = <span class="number">40</span>;</span><br><span class="line">    <span class="comment">//然而它究竟有什么作用呢？我还没想好...</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; n;</span><br><span class="line">    <span class="comment">//输出：40</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意被引用的对象<font color="red">不能超过作用域</font>，返回一个<strong>局部变量</strong>的引用是不合法的，但是，可以返回一个<strong>静态类型变量</strong>的引用。</p>
+<h2 id="常引用"><a href="#常引用" class="headerlink" title="常引用"></a>常引用</h2><p>定义引用时，在前面加<code>const</code>关键字即为“常引用”。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n;</span><br></pre></td></tr></table></figure>
+<font color="red">注意不能通过常引用去修改其引用的内容！</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; r = n;</span><br><span class="line">r = <span class="number">200</span>;	<span class="comment">//err</span></span><br><span class="line">n = <span class="number">300</span>;	<span class="comment">//ok</span></span><br></pre></td></tr></table></figure>
+<h2 id="常引用和非常引用的转换"><a href="#常引用和非常引用的转换" class="headerlink" title="常引用和非常引用的转换"></a>常引用和非常引用的转换</h2><ul>
+<li><code>const T &amp;</code><font color="red">和</font><code>T &amp;</code><font color="red">是不同的类型</font>（千万要注意！！！）</li>
+<li><code>T &amp;</code>类型的引用或<code>T</code>类型的变量可以用来初始化<code>const T &amp;</code>类型的引用</li>
+<li><code>const T</code>类型的常变量和<code>const T &amp;</code>类型的引用则不能用来初始化<code>T &amp;</code>类型的引用，除非进行<strong>强制类型转换</strong></li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C-引用/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1359,231 +1608,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C-构造函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C-构造函数/" class="post-title-link" itemprop="url">C++构造函数</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-12-04 17:10:38" itemprop="dateCreated datePublished" datetime="2019-12-04T17:10:38+08:00">2019-12-04</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-07 10:50:36" itemprop="dateModified" datetime="2019-12-07T10:50:36+08:00">2019-12-07</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">3k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">3 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://img.mp.itc.cn/upload/20170616/3e26b0c84ed64d5e9c6d533178122240_th.jpg" alt></p>
-<h1 id="C-构造参数"><a href="#C-构造参数" class="headerlink" title="C++ 构造参数"></a>C++ 构造参数</h1><blockquote>
-<p>图：深圳福田CBD</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<font color="#FF7F27">本文整理自《北京大学公开课：C++面向对象程序设计》</font>
-
-<h2 id="构造函数的性质"><a href="#构造函数的性质" class="headerlink" title="构造函数的性质"></a>构造函数的性质</h2><ul>
-<li>构造参数是成员函数的一种</li>
-<li>名字与类名相同，可以由参数，不能有返回值（<code>void</code>也不行）</li>
-<li>作用是对对象进行初始化，如给成员变量赋初值</li>
-<li>如果定义类的时候没写构造函数，则编译器生成一个默认的无参数的构造函数</li>
-<li>默认构造函数无参数，不进行任何操作</li>
-<li>如果定义了构造函数，则编译器不生成默认的无参数的构造函数</li>
-<li>对象生成时构造函数被自动调用。对象一旦生成，就再也不能在其上执行构造函数</li>
-<li>一个类可以有多个构造函数</li>
-</ul>
-<p>注：如果只定义了带参构造函数，在定义对象时必须声明参数</p>
-<h2 id="为什么需要构造函数："><a href="#为什么需要构造函数：" class="headerlink" title="为什么需要构造函数："></a>为什么需要构造函数：</h2><ul>
-<li>不用专门写初始化函数，也不用担心忘记</li>
-<li>有时对象没有被初始化，会导致程序出错</li>
-</ul>
-<h2 id="构造函数的使用"><a href="#构造函数的使用" class="headerlink" title="构造函数的使用"></a>构造函数的使用</h2><h3 id="一个类可以有一个构造函数"><a href="#一个类可以有一个构造函数" class="headerlink" title="一个类可以有一个构造函数"></a>一个类可以有一个构造函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">double</span> radius, xLoc, yLoc;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	Circle(<span class="keyword">double</span> r ,<span class="keyword">double</span> x = <span class="number">0</span>, y = <span class="number">0</span>)</span><br><span class="line">&#125;;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r, <span class="keyword">double</span> x, <span class="keyword">double</span> y)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r, xLoc = x, yLoc = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Wrong samples</span></span><br><span class="line">Circle c1;	<span class="comment">//error,缺少构造函数的参数</span></span><br><span class="line">Circle *pc = <span class="keyword">new</span> Circle;	<span class="comment">//error，没有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Correct samples</span></span><br><span class="line"><span class="function">Circle <span class="title">c1</span><span class="params">(<span class="number">2</span>)</span></span>;	<span class="comment">//OK</span></span><br><span class="line"><span class="function">Circle <span class="title">c1</span><span class="params">(<span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>)</span></span>;	<span class="comment">//OK</span></span><br><span class="line">Circle *pc = <span class="keyword">new</span> Circle(<span class="number">3</span>, <span class="number">4</span>);	<span class="comment">//also OK</span></span><br></pre></td></tr></table></figure>
-<h3 id="一个类可以有多个构造函数"><a href="#一个类可以有多个构造函数" class="headerlink" title="一个类可以有多个构造函数"></a>一个类可以有多个构造函数</h3><p>只要不同的构造函数的参数个数和参数类型不同，这些构造函数就会构成重载的关系</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">double</span> radius, xLoc, yLoc;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	Circle(<span class="keyword">double</span> r ,<span class="keyword">double</span> x = <span class="number">0</span>, y = <span class="number">0</span>)</span><br><span class="line">        Circle(<span class="keyword">double</span> r);</span><br><span class="line">    	Circle(Circle c1, Circle c2)</span><br><span class="line">&#125;;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r, <span class="keyword">double</span> x, <span class="keyword">double</span> y)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r, xLoc = x, yLoc = y;</span><br><span class="line">&#125;</span><br><span class="line">Circle::Circle(<span class="keyword">double</span> r)</span><br><span class="line">&#123;</span><br><span class="line">    radius = r;</span><br><span class="line">&#125;</span><br><span class="line">Circle::Circle(Circle c1, Circle c2)</span><br><span class="line">&#123;</span><br><span class="line">    radius = c1.radius + c2.radius;</span><br><span class="line">    xLoc   = c1.xLOc   + c2.xLoc;</span><br><span class="line">    yLoc   = c1.yLOc   + c2.yLoc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Samples</span></span><br><span class="line">Circle c1(3), c2(1, 0), c3(c1, c2);</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C-构造函数/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1633,7 +1657,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1831,7 +1855,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">86k</span>
+    <span title="站点总字数">87k</span>
   
 
   
@@ -1840,7 +1864,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:18</span>
+    <span title="站点阅读时长">1:20</span>
   
 </div>
 
@@ -2356,9 +2380,9 @@
       
     
       
-        
-      
     
+      
+        
       
     
       

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言基础学习笔记（5）：递归]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%EF%BC%9A%E9%80%92%E5%BD%92%2F</url>
+    <content type="text"><![CDATA[C语言基础学习笔记（5）：递归 图：苏35发射空对空导弹 Guderian出品 把现成的代码拿来使用就称为复用，这么做可以大大提高编写效率。 C语言中的函数可以嵌套调用，不能嵌套定义。 定义.函数直接或间接调用了自己，称为递归调用（Recursive Call）。这样的函数，称为递归函数（Recursive Function）。 递归函数包含基本条件和一般条件。基本条件控制递归调用结束，一般条件控制递归调用项基本条件转化。如果没有基本条件或者一般条件不能转化为基本条件，此时递归无法结束，变成“无穷递归”。 通常下面三种情况需要使用递归： （1）数学定义是递归的：计算阶乘，最大公约数和斐波那契数列 （2）数据结构时递归的：队列、链表、树和图 （3）问题的解法是递归的：汉诺塔，骑士游历，八皇后问题 典型递归问题示例：汉诺塔问题（题目链接） 先考虑比较简单的情形：当只有2个圆盘的时候如何解决？ 将1号圆盘从A移到C 将2号圆盘从A移到B 将1号圆盘从C移到B 再考虑复杂的情形：当有n个圆盘的时候如何解决？使用数学归纳法，假设n-1个圆盘的汉诺塔问题已经解决，将“上面n-1个圆盘”看成一个整体： 将“上面n-1个圆盘”从A移到C 将第n号圆盘从A移到B 将“上面n-1个圆盘”从C移到B 123456789101112131415161718192021222324252627282930313233#include &lt;stdio.h&gt;void Hanoi(int n, char a, char b, char c);void Move(int n, char a, char b);int main()&#123; int n; printf("Input the number of disks:"); scanf("%d", &amp;n); printf("steps of moving %d disks form A to B by means of C:\n", n); Hanoi(n, 'A', 'B', 'C'); return 0;&#125;void Hanoi(int n, char a, char b, char c)&#123; if (n == 1) &#123; Move(n, a, b); &#125; else &#123; Hanoi(n-1, a, c, b); //将“上面n-1个圆盘”从A移到C Move(n, a, b); //将第n号圆盘从A移到B Hanoi(n-1, c, b, a); //将“上面n-1个圆盘”从C移到B &#125;&#125;void Move(int n, char a, char b)&#123; printf("Move %d: from %c to %c\n", n, a, b);&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言基础学习笔记（4）：函数与防御式编程]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%EF%BC%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%BC%8F%E7%BC%96%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[C语言基础学习笔记（4）：函数与防御式编程 图：塔克拉玛干沙漠 Guderian出品 C语言函数的返回值类型，可以是数组以外的任意一种类型。 在函数调用的过程中，实参和形参占用不同的内存空间，可以同名。 当函数定义在函数调用之后，C89标准默认函数返回值类型为int，而C99不再支持隐含的函数声明。 把所有函数的定义都放在主函数的前面也不意味着不需要函数原型，因为不一定只有主函数会调用你定义的函数，还是有可能出现函数的调用出现在函数的定义之前的情况。 综合3和4，应该在程序开头写清所有的函数原型。 函数设计的基本原则： （1）函数规模要小 （2）函数功能要单一 （3）函数接口定义要清楚 断言：assert()为在&lt;assert.h&gt;中定义的宏，可把其“函数原型”视作void assert(int expression)。 （1）expression为真，pass （2）expression为假，中断程序 可以用if语句代替断言，代价是程序编译后的目标代码体积变大，运行效率下降；使用断言便于在调试程序时发现错误，不影响程序执行效率。断言仅用于debug版本调试程序，不能用作release版本；换句话说只能用它确保预期不会发生的状况的确不会发生，而不能用它检查可能发生的状况是否发生。注意一个assert只能检验一个条件。 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
