@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-02-17T07:46:40.575Z</updated>
+  <updated>2020-02-18T04:01:18.814Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -17,13 +17,72 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C语言基础学习笔记（6）：变量作用域、形参与实参</title>
+    <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E5%BD%A2%E5%8F%82%E4%B8%8E%E5%AE%9E%E5%8F%82/"/>
+    <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E5%BD%A2%E5%8F%82%E4%B8%8E%E5%AE%9E%E5%8F%82/</id>
+    <published>2020-02-18T03:49:13.000Z</published>
+    <updated>2020-02-18T04:01:18.814Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/02/18/zS7nBNk6Up8GuIj.jpg" alt></p><h1 id="C语言基础学习笔记：变量作用域、形参与实参"><a href="#C语言基础学习笔记：变量作用域、形参与实参" class="headerlink" title="C语言基础学习笔记：变量作用域、形参与实参"></a>C语言基础学习笔记：变量作用域、形参与实参</h1><blockquote><p>图：联盟号飞船（Soyuz）</p></blockquote><p><font color="grey"> <em>Guderian</em>出品 </font></p><ol><li><p><code>C</code>语言中，作用域较小的局部变量隐藏作用于较大的局部变量。如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"a = %d, b = %d\n"</span>, a, b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a = %d, b = %d"</span>, a, b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输出结果为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = 3, b = 4</span><br><span class="line">a = 1, b = 2</span><br></pre></td></tr></table></figure></li><li><p><code>C</code>语言中，局部变量隐藏全局变量。形参与全局变量同名不会相互干扰。</p></li><li><p><strong>实参（argument）</strong>：在调用函数时传递给函数的参数，在调用时有确定的值</p><p><strong>形参（parameter）</strong>：在定义函数名和函数体时使用的参数，目的是接收调用该函数时传入的参数。</p></li><li><p>总之，只要同名的变量出现在不同的作用域内二者互不干扰，编译器有能力区分不同作用域中的同名变量。</p></li><li><p>编译器如何区分不同作用域的同名变量呢？编译器没有变量名这个概念，只知道内存地址，通过将同名变量映射到不同的内存地址来实现作用域的划分，如<strong>全局变量</strong>位于<code>RAM</code>中的<strong>静态存储区</strong>，<strong>局部变量</strong>位于<code>RAM</code>中的<strong>动态存储区</strong>。</p><p><img src="https://i.loli.net/2020/02/17/OG7vRc3uqwxijb9.jpg" alt></p><p><strong>（1）只读存储区</strong></p><ul><li>存放机器代码和常量等只读数据</li></ul><p><strong>（2）静态存储区</strong></p><ul><li>存放全局变量和静态变量等</li><li>静态——发生在程序编译或链接时</li></ul><p><strong>（3）动态存储区</strong></p><ul><li>包括堆和栈。其中栈用于保存函数调用时的返回地址、形参、局部变量等</li><li>动态——发生在程序载入和运行时</li></ul></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/18/zS7nBNk6Up8GuIj.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;C语言基础学习笔记：变量作用域、形参与实参&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记：变量作用域、形参与实参&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记：变量作用域、形参与实参&quot;&gt;&lt;/a&gt;C语言基础学习笔记：变量作用域、形参与实参&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;图：联盟号飞船（Soyuz）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian&lt;/em&gt;出品 &lt;/font&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言中，作用域较小的局部变量隐藏作用于较大的局部变量。如：&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, b = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, b = &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;a = %d, b = %d\n&quot;&lt;/span&gt;, a, b);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;a = %d, b = %d&quot;&lt;/span&gt;, a, b);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;输出结果为：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = 3, b = 4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = 1, b = 2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;C&lt;/code&gt;语言中，局部变量隐藏全局变量。形参与全局变量同名不会相互干扰。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;实参（argument）&lt;/strong&gt;：在调用函数时传递给函数的参数，在调用时有确定的值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;形参（parameter）&lt;/strong&gt;：在定义函数名和函数体时使用的参数，目的是接收调用该函数时传入的参数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;总之，只要同名的变量出现在不同的作用域内二者互不干扰，编译器有能力区分不同作用域中的同名变量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译器如何区分不同作用域的同名变量呢？编译器没有变量名这个概念，只知道内存地址，通过将同名变量映射到不同的内存地址来实现作用域的划分，如&lt;strong&gt;全局变量&lt;/strong&gt;位于&lt;code&gt;RAM&lt;/code&gt;中的&lt;strong&gt;静态存储区&lt;/strong&gt;，&lt;strong&gt;局部变量&lt;/strong&gt;位于&lt;code&gt;RAM&lt;/code&gt;中的&lt;strong&gt;动态存储区&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/17/OG7vRc3uqwxijb9.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（1）只读存储区&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存放机器代码和常量等只读数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;（2）静态存储区&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存放全局变量和静态变量等&lt;/li&gt;
+&lt;li&gt;静态——发生在程序编译或链接时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;（3）动态存储区&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括堆和栈。其中栈用于保存函数调用时的返回地址、形参、局部变量等&lt;/li&gt;
+&lt;li&gt;动态——发生在程序载入和运行时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言基础学习笔记（5）：递归</title>
     <link href="https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%EF%BC%9A%E9%80%92%E5%BD%92/"/>
     <id>https://g-ss-hacker.github.io/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%EF%BC%9A%E9%80%92%E5%BD%92/</id>
     <published>2020-02-17T07:45:20.000Z</published>
-    <updated>2020-02-17T07:46:40.575Z</updated>
+    <updated>2020-02-18T03:49:55.433Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2016/12/03/20/08/sukhoi-35-1880484_1280.jpg" alt></p><h1 id="C语言基础学习笔记（5）：递归"><a href="#C语言基础学习笔记（5）：递归" class="headerlink" title="C语言基础学习笔记（5）：递归"></a>C语言基础学习笔记（5）：递归</h1><blockquote><p>图：苏35发射空对空导弹</p></blockquote><p><font color="grey"> <em>Guderian</em>出品 </font></p><ol><li><p>把现成的代码拿来使用就称为<strong>复用</strong>，这么做可以大大提高编写效率。</p></li><li><p><code>C</code>语言中的函数可以<strong>嵌套调用</strong>，不能<strong>嵌套定义</strong>。</p></li><li><p><strong>定义.</strong>函数直接或间接调用了自己，称为<strong>递归调用（Recursive Call）</strong>。这样的函数，称为<strong>递归函数（Recursive Function）</strong>。</p></li><li><p><strong>递归函数</strong>包含<strong>基本条件</strong>和<strong>一般条件</strong>。<strong>基本条件</strong>控制递归调用结束，<strong>一般条件</strong>控制递归调用项基本条件转化。如果没有基本条件或者一般条件不能转化为基本条件，此时递归无法结束，变成“无穷递归”。</p></li><li><p>通常下面三种情况需要使用递归：</p><p>（1）<strong>数学定义</strong>是递归的：计算阶乘，最大公约数和斐波那契数列</p><p>（2）<strong>数据结构</strong>时递归的：队列、链表、树和图</p><p>（3）<strong>问题的解法</strong>是递归的：汉诺塔，骑士游历，八皇后问题</p></li><li><p>典型递归问题示例：汉诺塔问题（<a href="https://baike.baidu.com/item/%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/1945186?fr=aladdin#1" target="_blank" rel="noopener">题目链接</a>）</p><p>先考虑比较简单的情形：当只有<code>2</code>个圆盘的时候如何解决？</p><p><img src="https://i.loli.net/2020/02/17/cv6dfE7yMC4s3Kx.jpg" alt></p><ul><li>将<code>1</code>号圆盘从A移到C</li><li>将<code>2</code>号圆盘从A移到B</li><li>将<code>1</code>号圆盘从C移到B</li></ul><p>再考虑复杂的情形：当有<code>n</code>个圆盘的时候如何解决？使用<strong>数学归纳法</strong>，假设<code>n-1</code>个圆盘的汉诺塔问题已经解决，将“上面<code>n-1</code>个圆盘”看成一个整体：</p><ul><li>将“上面<code>n-1</code>个圆盘”从A移到C</li><li>将第<code>n</code>号圆盘从A移到B</li><li>将“上面<code>n-1</code>个圆盘”从C移到B</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Move</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Input the number of disks:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"steps of moving %d disks form A to B by means of C:\n"</span>, n);</span><br><span class="line">Hanoi(n, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">Move(n, a, b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">Hanoi(n<span class="number">-1</span>, a, c, b);<span class="comment">//将“上面n-1个圆盘”从A移到C</span></span><br><span class="line">Move(n, a, b);   <span class="comment">//将第n号圆盘从A移到B</span></span><br><span class="line">Hanoi(n<span class="number">-1</span>, c, b, a);<span class="comment">//将“上面n-1个圆盘”从C移到B</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Move</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Move %d: from %c to %c\n"</span>, n, a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2016/12/03/20/08/sukhoi-35-1880484_1280.jpg" alt></p><h1 id="C语言基础学习笔记（5）：递归"><a href="#C语言基础学习笔记（5）：递归" class="headerlink" title="C语言基础学习笔记（5）：递归"></a>C语言基础学习笔记（5）：递归</h1><blockquote><p>图：苏35发射空对空导弹</p></blockquote><p></p><p><font color="grey"> <em>Guderian</em>出品 </font></p><p></p><ol><li><p>把现成的代码拿来使用就称为<strong>复用</strong>，这么做可以大大提高编写效率。</p></li><li><p><code>C</code>语言中的函数可以<strong>嵌套调用</strong>，不能<strong>嵌套定义</strong>。</p></li><li><p><strong>定义.</strong>函数直接或间接调用了自己，称为<strong>递归调用（Recursive Call）</strong>。这样的函数，称为<strong>递归函数（Recursive Function）</strong>。</p></li><li><p><strong>递归函数</strong>包含<strong>基本条件</strong>和<strong>一般条件</strong>。<strong>基本条件</strong>控制递归调用结束，<strong>一般条件</strong>控制递归调用项基本条件转化。如果没有基本条件或者一般条件不能转化为基本条件，此时递归无法结束，变成“无穷递归”。</p></li><li><p>通常下面三种情况需要使用递归：</p><p>（1）<strong>数学定义</strong>是递归的：计算阶乘，最大公约数和斐波那契数列</p><p>（2）<strong>数据结构</strong>时递归的：队列、链表、树和图</p><p>（3）<strong>问题的解法</strong>是递归的：汉诺塔，骑士游历，八皇后问题</p></li><li><p>典型递归问题示例：汉诺塔问题（<a href="https://baike.baidu.com/item/%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/1945186?fr=aladdin#1" target="_blank" rel="noopener">题目链接</a>）</p><p>先考虑比较简单的情形：当只有<code>2</code>个圆盘的时候如何解决？</p><p><img src="https://i.loli.net/2020/02/17/cv6dfE7yMC4s3Kx.jpg" alt></p><ul><li>将<code>1</code>号圆盘从A移到C</li><li>将<code>2</code>号圆盘从A移到B</li><li>将<code>1</code>号圆盘从C移到B</li></ul><p>再考虑复杂的情形：当有<code>n</code>个圆盘的时候如何解决？使用<strong>数学归纳法</strong>，假设<code>n-1</code>个圆盘的汉诺塔问题已经解决，将“上面<code>n-1</code>个圆盘”看成一个整体：</p><ul><li>将“上面<code>n-1</code>个圆盘”从A移到C</li><li>将第<code>n</code>号圆盘从A移到B</li><li>将“上面<code>n-1</code>个圆盘”从C移到B</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Move</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Input the number of disks:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"steps of moving %d disks form A to B by means of C:\n"</span>, n);</span><br><span class="line">Hanoi(n, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">Move(n, a, b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">Hanoi(n<span class="number">-1</span>, a, c, b);<span class="comment">//将“上面n-1个圆盘”从A移到C</span></span><br><span class="line">Move(n, a, b);   <span class="comment">//将第n号圆盘从A移到B</span></span><br><span class="line">Hanoi(n<span class="number">-1</span>, c, b, a);<span class="comment">//将“上面n-1个圆盘”从C移到B</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Move</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Move %d: from %c to %c\n"</span>, n, a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><a id="more"></a><hr><font color="#407600">【更多C语言系列】</font><ul><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">C &amp; C++基本数据类型取值范围</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/C和C-中memset用法/">C &amp; C++ memset</a></li><li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/野指针的产生及其危害/">野指针的产生及其危害</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -31,8 +90,7 @@
 &lt;h1 id=&quot;C语言基础学习笔记（5）：递归&quot;&gt;&lt;a href=&quot;#C语言基础学习笔记（5）：递归&quot; class=&quot;headerlink&quot; title=&quot;C语言基础学习笔记（5）：递归&quot;&gt;&lt;/a&gt;C语言基础学习笔记（5）：递归&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;图：苏35发射空对空导弹&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian&lt;/em&gt;出品 &lt;/font&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian&lt;/em&gt;出品 &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;把现成的代码拿来使用就称为&lt;strong&gt;复用&lt;/strong&gt;，这么做可以大大提高编写效率。&lt;/p&gt;
 &lt;/li&gt;
@@ -1128,81 +1186,6 @@ x^2-y^2=z&lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/27
     
     
       <category term="线性代数" scheme="https://G-SS-Hacker.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象设计七大原则</title>
-    <link href="https://g-ss-hacker.github.io/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/"/>
-    <id>https://g-ss-hacker.github.io/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/</id>
-    <published>2019-12-12T15:07:33.000Z</published>
-    <updated>2019-12-12T15:10:10.887Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/12/12/nuhOlgtVX1asp7B.jpg" alt></p><h1 id="面向对象设计七大原则"><a href="#面向对象设计七大原则" class="headerlink" title="面向对象设计七大原则"></a>面向对象设计七大原则</h1><blockquote><p>图：北京航空航天大学</p></blockquote><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p><blockquote><p>AKA：设计模式七大原则</p></blockquote><p><strong>1. 单一职责原则</strong></p><ul><li>SRP，Single Responsibility Principle</li><li>每一个对象有且只有一个职责，从而实现”高内聚、低耦合“</li><li>防止一个类实现多个功能，改变一个功能后影响其他功能的正常运作</li></ul><p><strong>2. 开放-封闭原则</strong></p><ul><li>OCP，Open-Closed Principle</li><li>对拓展开放、对修改关闭</li><li>需要对程序进行拓展的时候，不能修改原有代码，只能在原有代码的基础上添加</li></ul><p><strong>3. 李氏替换原则</strong></p><ul><li>LSP，Liskov Substitution Principle</li><li>任何基类出现的地方，一定可以用派生类代替</li><li>派生类可以拓展基类的功能，但不能改变基类的功能</li></ul><p><strong>4. 依赖倒置原则</strong></p><ul><li>DIP，Dependence Inversion Principle</li><li>实现依赖于抽象，而抽象不依赖于实现</li><li>解除高层组件对低层组件的依赖，是实现开闭原则的重要基础</li></ul><p><strong>5. 接口隔离原则</strong></p><ul><li>ISP，Interface Segregation Principle</li><li>一个类对另外一个类的依赖性应当是建立在最小的接口上</li><li>在特定的使用场合给特定用户提供其需要的方法、屏蔽其不需要的方法</li></ul><p><strong>6. 组合重用原则</strong></p><ul><li>CRP, Composite Reuse Principle,</li><li>尽量使用组合，尽量不用继承</li><li>在新的对象里面使用已有的对象，使之成为新的对象的一部分</li></ul><p><strong>7. 迪米特原则</strong></p><ul><li>LoD，Law of Demeter</li><li>一个对象应该对其他对象又尽可能少的了解</li><li>尽量降低成员的访问权限，提供访问器而不公开成员变量</li></ul><hr><a id="more"></a><blockquote><p>注：<code>C++</code>中只有抽象类的概念，<code>JAVA</code>中既有抽象类的概念，又有接口的概念。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/12/12/nuhOlgtVX1asp7B.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;面向对象设计七大原则&quot;&gt;&lt;a href=&quot;#面向对象设计七大原则&quot; class=&quot;headerlink&quot; title=&quot;面向对象设计七大原则&quot;&gt;&lt;/a&gt;面向对象设计七大原则&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;图：北京航空航天大学&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt; &lt;em&gt;Guderian出品&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;AKA：设计模式七大原则&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;1. 单一职责原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SRP，Single Responsibility Principle&lt;/li&gt;
-&lt;li&gt;每一个对象有且只有一个职责，从而实现”高内聚、低耦合“&lt;/li&gt;
-&lt;li&gt;防止一个类实现多个功能，改变一个功能后影响其他功能的正常运作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. 开放-封闭原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OCP，Open-Closed Principle&lt;/li&gt;
-&lt;li&gt;对拓展开放、对修改关闭&lt;/li&gt;
-&lt;li&gt;需要对程序进行拓展的时候，不能修改原有代码，只能在原有代码的基础上添加&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3. 李氏替换原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;LSP，Liskov Substitution Principle&lt;/li&gt;
-&lt;li&gt;任何基类出现的地方，一定可以用派生类代替&lt;/li&gt;
-&lt;li&gt;派生类可以拓展基类的功能，但不能改变基类的功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;4. 依赖倒置原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DIP，Dependence Inversion Principle&lt;/li&gt;
-&lt;li&gt;实现依赖于抽象，而抽象不依赖于实现&lt;/li&gt;
-&lt;li&gt;解除高层组件对低层组件的依赖，是实现开闭原则的重要基础&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;5. 接口隔离原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ISP，Interface Segregation Principle&lt;/li&gt;
-&lt;li&gt;一个类对另外一个类的依赖性应当是建立在最小的接口上&lt;/li&gt;
-&lt;li&gt;在特定的使用场合给特定用户提供其需要的方法、屏蔽其不需要的方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;6. 组合重用原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CRP, Composite Reuse Principle,&lt;/li&gt;
-&lt;li&gt;尽量使用组合，尽量不用继承&lt;/li&gt;
-&lt;li&gt;在新的对象里面使用已有的对象，使之成为新的对象的一部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;7. 迪米特原则&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;LoD，Law of Demeter&lt;/li&gt;
-&lt;li&gt;一个对象应该对其他对象又尽可能少的了解&lt;/li&gt;
-&lt;li&gt;尽量降低成员的访问权限，提供访问器而不公开成员变量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="面向对象" scheme="https://G-SS-Hacker.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-      <category term="软件工程" scheme="https://G-SS-Hacker.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
     
   </entry>
   

@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">54</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
 
   </li>
         
@@ -447,6 +447,233 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（6）：变量作用域、形参与实参/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（6）：变量作用域、形参与实参/" class="post-title-link" itemprop="url">C语言基础学习笔记（6）：变量作用域、形参与实参</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-18 11:49:13 / 修改时间：12:01:18" itemprop="dateCreated datePublished" datetime="2020-02-18T11:49:13+08:00">2020-02-18</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">790</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2020/02/18/zS7nBNk6Up8GuIj.jpg" alt></p>
+<h1 id="C语言基础学习笔记：变量作用域、形参与实参"><a href="#C语言基础学习笔记：变量作用域、形参与实参" class="headerlink" title="C语言基础学习笔记：变量作用域、形参与实参"></a>C语言基础学习笔记：变量作用域、形参与实参</h1><blockquote>
+<p>图：联盟号飞船（Soyuz）</p>
+</blockquote>
+<p><font color="grey"> <em>Guderian</em>出品 </font></p>
+
+<ol>
+<li><p><code>C</code>语言中，作用域较小的局部变量隐藏作用于较大的局部变量。如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"a = %d, b = %d\n"</span>, a, b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a = %d, b = %d"</span>, a, b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = 3, b = 4</span><br><span class="line">a = 1, b = 2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>C</code>语言中，局部变量隐藏全局变量。形参与全局变量同名不会相互干扰。</p>
+</li>
+<li><p><strong>实参（argument）</strong>：在调用函数时传递给函数的参数，在调用时有确定的值</p>
+<p><strong>形参（parameter）</strong>：在定义函数名和函数体时使用的参数，目的是接收调用该函数时传入的参数。</p>
+</li>
+<li><p>总之，只要同名的变量出现在不同的作用域内二者互不干扰，编译器有能力区分不同作用域中的同名变量。</p>
+</li>
+<li><p>编译器如何区分不同作用域的同名变量呢？编译器没有变量名这个概念，只知道内存地址，通过将同名变量映射到不同的内存地址来实现作用域的划分，如<strong>全局变量</strong>位于<code>RAM</code>中的<strong>静态存储区</strong>，<strong>局部变量</strong>位于<code>RAM</code>中的<strong>动态存储区</strong>。</p>
+<p><img src="https://i.loli.net/2020/02/17/OG7vRc3uqwxijb9.jpg" alt></p>
+<p><strong>（1）只读存储区</strong></p>
+<ul>
+<li>存放机器代码和常量等只读数据</li>
+</ul>
+<p><strong>（2）静态存储区</strong></p>
+<ul>
+<li>存放全局变量和静态变量等</li>
+<li>静态——发生在程序编译或链接时</li>
+</ul>
+<p><strong>（3）动态存储区</strong></p>
+<ul>
+<li>包括堆和栈。其中栈用于保存函数调用时的返回地址、形参、局部变量等</li>
+<li>动态——发生在程序载入和运行时</li>
+</ul>
+</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（6）：变量作用域、形参与实参/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（5）：递归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -492,13 +719,23 @@
                 
               
 
-              <time title="创建时间：2020-02-17 15:45:20 / 修改时间：15:46:40" itemprop="dateCreated datePublished" datetime="2020-02-17T15:45:20+08:00">2020-02-17</time>
+              <time title="创建时间：2020-02-17 15:45:20" itemprop="dateCreated datePublished" datetime="2020-02-17T15:45:20+08:00">2020-02-17</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-18 11:49:55" itemprop="dateModified" datetime="2020-02-18T11:49:55+08:00">2020-02-18</time>
+              </span>
             
           
 
@@ -574,8 +811,7 @@
 <h1 id="C语言基础学习笔记（5）：递归"><a href="#C语言基础学习笔记（5）：递归" class="headerlink" title="C语言基础学习笔记（5）：递归"></a>C语言基础学习笔记（5）：递归</h1><blockquote>
 <p>图：苏35发射空对空导弹</p>
 </blockquote>
-<p><font color="grey"> <em>Guderian</em>出品 </font></p>
-
+<p></p><p><font color="grey"> <em>Guderian</em>出品 </font></p><p></p>
 <ol>
 <li><p>把现成的代码拿来使用就称为<strong>复用</strong>，这么做可以大大提高编写效率。</p>
 </li>
@@ -1310,229 +1546,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/" class="post-title-link" itemprop="url">C语言基础学习笔记（3）：关系运算符与逻辑运算符</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-11 12:54:29" itemprop="dateCreated datePublished" datetime="2020-02-11T12:54:29+08:00">2020-02-11</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-17 15:47:12" itemprop="dateModified" datetime="2020-02-17T15:47:12+08:00">2020-02-17</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">616</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://s2.ax1x.com/2020/02/09/1hZCp6.png" alt></p>
-<h1 id="C语言基础学习笔记（3）：关系运算符与逻辑运算符"><a href="#C语言基础学习笔记（3）：关系运算符与逻辑运算符" class="headerlink" title="C语言基础学习笔记（3）：关系运算符与逻辑运算符"></a>C语言基础学习笔记（3）：关系运算符与逻辑运算符</h1><blockquote>
-<p>图：北极狐（Artic Fox）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<ol>
-<li><p><code>C</code>语言的“短路”特性：若表达式的值可由先计算的左操作数的值单独推导出来，那么将不再计算右操作数的值。“短路”特性有时很有用，如<code>(i != 0) &amp;&amp; (j / i &gt; 0)</code>使得不会发生除<code>0</code>的情况。</p>
-</li>
-<li><p><code>C</code>条件表达式：<code>表达式1 ? 表达式2 : 表达式3</code>：如果<code>表达式1</code>为真，则返回<code>表达式2</code>；否则<code>表达式3</code>。</p>
-</li>
-<li><p>整数的数值溢出——上溢出：<code>|一个数值运算结果| &gt; |类型能表示的最大数|</code>。进位超过最高位而发生进位丢失或进位达到最高位而改变符号位。</p>
-</li>
-<li><p>对于无符号数，不能随意用<code>a - b &lt; 0</code>取代<code>a &lt; b</code>，因为前者可能发生数值溢出，导致判断结果发生错误。</p>
-</li>
-<li><p>浮点数的数值溢出，不仅有<strong>上溢出</strong>还有<strong>下溢出</strong>：</p>
-<p>上溢出：<code>|数值运算结果| &gt; |类型能表示的最大数|</code></p>
-<p>下溢出：<code>|数值运算结果| &lt; |类型能表示的最小数|</code>，此时系统把该结果处理成机器<code>0</code></p>
-<p><img src="https://s2.ax1x.com/2020/02/09/1f2LND.png" alt></p>
-</li>
-<li><p>把<code>float</code>赋值给<code>int</code>会丢失小数（不经四舍五入）。</p>
-</li>
-<li><code>&lt;stdlib.h&gt;</code>中的<code>exit(0)</code>终止整个程序的执行强制返回操作系统。当其参数为<code>0</code>时表示正常退出，非<code>0</code>表示程序出错。</li>
-</ol>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1582,7 +1595,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">54</span>
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1780,7 +1793,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">87k</span>
+    <span title="站点总字数">88k</span>
   
 
   
