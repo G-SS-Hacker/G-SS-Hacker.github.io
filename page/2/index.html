@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">56</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">57</span></a>
 
   </li>
         
@@ -431,6 +431,217 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/" class="post-title-link" itemprop="url">Python-gzip库压缩和解压方法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-13 21:05:19" itemprop="dateCreated datePublished" datetime="2020-02-13T21:05:19+08:00">2020-02-13</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-14 14:12:32" itemprop="dateModified" datetime="2020-02-14T14:12:32+08:00">2020-02-14</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.1k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s2.ax1x.com/2020/02/12/1HpSE9.png" alt></p>
+<h1 id="python-gzip库压缩和解压方法"><a href="#python-gzip库压缩和解压方法" class="headerlink" title="python-gzip库压缩和解压方法"></a>python-gzip库压缩和解压方法</h1><blockquote>
+<p>图：1130近防炮</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<h2 id="使用gzip压缩文件"><a href="#使用gzip压缩文件" class="headerlink" title="使用gzip压缩文件"></a>使用gzip压缩文件</h2><blockquote>
+<p>先用<code>open()</code>打开待压缩文件，再用<code>gzip.opnen()</code>打开压缩文件，最后读入待压缩文件内容并写入压文件中。</p>
+</blockquote>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩文件：文件路径、待压缩文件名、压缩文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compress</span><span class="params">(path,name_in,name_out)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> open(path+name_in,<span class="string">'rb'</span>) <span class="keyword">as</span> f_in:</span><br><span class="line">        <span class="keyword">with</span> gzip.open(path+name_out,<span class="string">'wb'</span>) <span class="keyword">as</span> f_out:</span><br><span class="line">            f_out.write(f_in.read())</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>如果你不喜欢用<code>with</code>语句，还可以这么写（记得<code>close()</code>就行了）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩文件：文件路径、待压缩文件名、压缩文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compress</span><span class="params">(path,name_in,name_out)</span>:</span></span><br><span class="line">    f_in = open(path+name_in,<span class="string">'rb'</span>)</span><br><span class="line">    f_out = gzip.open(path+name_out,<span class="string">'wb'</span>)</span><br><span class="line">    f_out.write(f_in.read())</span><br><span class="line">    f_in.close()</span><br><span class="line">    f_out.close()</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/Python-gzip库压缩和解压方法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1311,228 +1522,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/" class="post-title-link" itemprop="url">C语言基础学习笔记（1）：变量、算术运算与赋值运算</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-07 16:43:47" itemprop="dateCreated datePublished" datetime="2020-02-07T16:43:47+08:00">2020-02-07</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-16 15:20:33" itemprop="dateModified" datetime="2020-02-16T15:20:33+08:00">2020-02-16</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">582</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://s2.ax1x.com/2020/02/07/1gDzsH.png" alt></p>
-<h1 id="C语言基础学习笔记（1）：变量、算术运算与赋值运算"><a href="#C语言基础学习笔记（1）：变量、算术运算与赋值运算" class="headerlink" title="C语言基础学习笔记（1）：变量、算术运算与赋值运算"></a>C语言基础学习笔记（1）：变量、算术运算与赋值运算</h1><blockquote>
-<p>图：西安城墙</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<ol>
-<li><p><code>C</code>中取余运算的结果符号与被除数符号相同。</p>
-</li>
-<li><p><code>C</code>中数字后面带个<code>U</code>， <code>u</code>, <code>L</code>, <code>l</code>, <code>F</code>,<code>f</code>的含义：</p>
-<p><code>U</code>和<code>u</code>表示该数值是<strong>无符号整型</strong>（<code>unsigned int</code>）；<code>L</code>和<code>l</code>表示该数值是<strong>长整型</strong>（<code>long</code>）；<code>F</code>和<code>f</code>表示该数值是<strong>浮点型</strong>（<code>float</code>）。</p>
-</li>
-<li><p><code>C</code>中数字后面带个<code>H</code>, <code>h</code>, <code>B</code>, <code>b</code>或数字前面带个<code>0</code>, <code>0x</code>的含义：</p>
-<p><code>H</code>和<code>h</code>表示该数值是<strong>十六进制数</strong>；<code>B</code>和<code>b</code>表示该数值是<strong>二进制数</strong>；前面带<code>0</code>表示该数值是<strong>八进制数</strong>；前面带<code>0x</code>表示该数值是<strong>十六进制数</strong>。</p>
-</li>
-<li><p><code>C</code>标准常用数学函数：</p>
-<p><img src="https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png" alt></p>
-</li>
-<li><p><code>C</code>中的多重赋值表达式：<strong>变量1 = 变量2 = 表达式</strong>。如<code>a = b = 3</code>，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算<code>b = 3</code>，再执行<code>a = (b = 3)</code>。</p>
-</li>
-<li><code>C</code>的算术表达式中不同类型数据的运算结果的类型是<strong>取值范围较大</strong>的那种类型。<code>C</code>编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为<strong>类型提升（Type Promotion）</strong>。其规则如下：</li>
-</ol>
-<p><img src="https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png" alt></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1582,7 +1571,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1780,7 +1769,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">90k</span>
+    <span title="站点总字数">92k</span>
   
 
   
@@ -1789,7 +1778,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:22</span>
+    <span title="站点阅读时长">1:23</span>
   
 </div>
 
