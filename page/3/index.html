@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">56</span></a>
 
   </li>
         
@@ -431,6 +431,248 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/" class="post-title-link" itemprop="url">机器学习中的评价指标：F1-score</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-06 19:12:29" itemprop="dateCreated datePublished" datetime="2020-02-06T19:12:29+08:00">2020-02-06</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-07 14:12:29" itemprop="dateModified" datetime="2020-02-07T14:12:29+08:00">2020-02-07</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2.5k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg" alt></p>
+<h1 id="机器学习中的评价指标：F1-score"><a href="#机器学习中的评价指标：F1-score" class="headerlink" title="机器学习中的评价指标：F1-score"></a>机器学习中的评价指标：F1-score</h1><blockquote>
+<p>图：西雅图（Seattle）</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<h2 id="回顾：F1-score的计算过程"><a href="#回顾：F1-score的计算过程" class="headerlink" title="回顾：F1-score的计算过程"></a>回顾：F1-score的计算过程</h2><h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><blockquote>
+<p>混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。</p>
+</blockquote>
+<p>在机器学习领域，混淆矩阵用于衡量一个分类器的准确程度。对于二分类问题，将其样例根据真实类别和分类器的预测类别的组合划分为真正例$\mathrm{(True \, Positive)}$、假正例$\mathrm{(False \, Positive)}$、真反例$\mathrm{(True \, Negative)}$、假反例$\mathrm{(False \, Negative)}$四种情形。</p>
+<p>对应混淆矩阵$\mathrm{(Confusion \, Matrix)}$如下表：</p>
+<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-0lax{text-align:left;vertical-align:top}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style></p>
+<table class="tg">
+  <tr>
+    <th class="tg-0lax" rowspan="2"><center>真实情况</center></th>
+    <th class="tg-0lax" colspan="2"><center>预测结果</center></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><center>真</center></td>
+    <td class="tg-0lax"><center>假</center></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><center>真</center></td>
+    <td class="tg-0lax"><center>TP（真正例）</center></td>
+    <td class="tg-0lax"><center>FN（假反例）</center></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><center>假</center></td>
+    <td class="tg-0pky"><center>FP（假正例）</center></td>
+    <td class="tg-0lax"><center>TN（真反例）</center></td>
+  </tr>
+</table>
+
+<h3 id="精确率（Precision）与召回率（Recall）"><a href="#精确率（Precision）与召回率（Recall）" class="headerlink" title="精确率（Precision）与召回率（Recall）"></a>精确率（Precision）与召回率（Recall）</h3><p>根据混淆矩阵，我们可以得到如下定义：</p>
+<ul>
+<li><strong>精确率</strong>$\mathrm{(Precision)}$   <font size="4rem">$\mathrm{P=\frac{TP}{TP+FP} \times 100\%}$</font>，表示<strong>真实情况和预测结果皆为真/预测结果为真</strong></li>
+<li><strong>召回率</strong>$\mathrm{(Recall)}$   <font size="4rem">$\mathrm{R=\frac{TP}{TP+FN} \times 100 \%}$</font>，表示<strong>真实情况和预测结果皆为真/真实情况为真</strong></li>
+</ul>
+<h3 id="F1分数（F1-score）"><a href="#F1分数（F1-score）" class="headerlink" title="F1分数（F1-score）"></a>F1分数（F1-score）</h3><blockquote>
+<p>F1分数（$\mathrm{F1-score}$）即精确率与召回率的调和平均数（$\mathrm{Harmonic \, Mean}$），比算术平均数（$\mathrm{Arithmetic \, Mean}$）的评价效果更好。</p>
+</blockquote>
+<font size="5rem">$\mathrm{F1=\frac{2}{\frac1{P}+\frac1{R}}=\frac{2PR}{P+R}}$</font>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1375,239 +1617,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/UML顺序图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/UML顺序图/" class="post-title-link" itemprop="url">UML建模工具——顺序图</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-01 10:33:40" itemprop="dateCreated datePublished" datetime="2020-02-01T10:33:40+08:00">2020-02-01</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-11 15:37:35" itemprop="dateModified" datetime="2020-02-11T15:37:35+08:00">2020-02-11</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">519</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://images.pexels.com/photos/208589/pexels-photo-208589.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></p>
-<font color="#407600">【面向对象分析UML建模工具全部文章】</font>
-
-<ul>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/">UML建模工具(1)——用例图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E6%B4%BB%E5%8A%A8%E5%9B%BE/">UML建模工具(2)——活动图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%B1%BB%E5%9B%BE/">UML建模工具(3)——类图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%A1%BA%E5%BA%8F%E5%9B%BE/">UML建模工具(4)——顺序图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%80%9A%E4%BF%A1%E5%9B%BE/">UML建模工具(5)——通信图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%8A%B6%E6%80%81%E5%9B%BE/">UML建模工具(6)——状态图</a></li>
-</ul>
-<h1 id="UML建模工具——顺序图"><a href="#UML建模工具——顺序图" class="headerlink" title="UML建模工具——顺序图"></a>UML建模工具——顺序图</h1><blockquote>
-<p>图：旧金山湾区，晚霞下的泛美金字塔（Transamerica Pyramid）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<blockquote>
-<p>顺序图和通信图都属于UML交互图</p>
-<p>顺序图（Sequence）是场景（Scenario）的图形化表示，描述了以时间顺序组织的<strong>对象</strong>之间的交互活动</p>
-</blockquote>
-<h2 id="完整的UML顺序图例子"><a href="#完整的UML顺序图例子" class="headerlink" title="完整的UML顺序图例子"></a>完整的UML顺序图例子</h2><p><img src="https://i.loli.net/2020/01/31/lanCLPDjYKHqd9t.png" alt></p>
-<h2 id="基本建模元素"><a href="#基本建模元素" class="headerlink" title="基本建模元素"></a>基本建模元素</h2><ul>
-<li>对象</li>
-<li>对象生命线</li>
-<li>控制焦点</li>
-<li>消息：调用消息、返回消息、异步消息、自关联消息</li>
-<li>对象销毁</li>
-<li>结构化控制</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/UML顺序图/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><a class="page-number" href="/G-SS-Hacker.github.io/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/G-SS-Hacker.github.io/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/11/">11</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><a class="page-number" href="/G-SS-Hacker.github.io/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/G-SS-Hacker.github.io/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/12/">12</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1652,7 +1666,7 @@
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">56</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1850,7 +1864,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">90k</span>
   
 
   
@@ -1859,7 +1873,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:22</span>
   
 </div>
 
@@ -2373,9 +2387,9 @@
   
     
       
-    
-      
         
+      
+    
       
     
       
