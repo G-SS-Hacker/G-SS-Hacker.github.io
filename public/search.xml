@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言实现选择、插入、冒泡排序算法]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E9%80%89%E6%8B%A9%E3%80%81%E6%8F%92%E5%85%A5%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[C语言实现选择、插入、冒泡排序算法 图：挂载“匕首”导弹的米格31 Guderian出品 完整代码在最下面 准备工作123456789#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]); 主函数1234567891011int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125; 实现两数交换函数123456void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125; 实现选择排序函数1234567891011void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125; 实现插入排序函数1234567891011121314void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125; 实现冒泡排序函数12345678910111213void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 完整代码客官久等了 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]);int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125;void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125;void Sort(int arr[], void(*f)(int *))&#123; (*f)(arr);&#125;void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125;void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125;void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>排序</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C和C++中memcpy用法]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E4%B8%ADmemcpy%E7%94%A8%E6%B3%95%2F</url>
     <content type="text"><![CDATA[C和C++中memcpy()函数 图：中国空军苏35SK战斗机 Guderian出品 头文件 C： &lt;string.h&gt; C++： &lt;cstring&gt; 声明void *memcpy(void *str1, const void *str2, size_t n) 此处size_t变量类型等价于long unsigned int即无符号长整型，在32位机器上为32位，在64位机器为中64位。 注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据 描述从内存 str2 复制 n 个字符到内存 str1 参数 str1 ——指向存储复制内容的目标数组。 str2 ——指向复制目标数组。 n——要被复制的字节数。 返回值返回一个指向存储区str1的指针。 实例12345678910111213#include &lt;stdio.h&gt;#include &lt;string.h&gt; int main ()&#123; char s[50] = "the quick brown fox jumps over the lazy dog"; char t[50]; memcpy(t, s, sizeof(s)); printf("%s\n", t); return(0);&#125; 输出结果： 1the quick brown fox jumps over the lazy dog 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -8,8 +21,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -21,8 +34,8 @@
       </categories>
       <tags>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>排序</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -110,8 +123,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -156,8 +169,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -259,8 +272,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -296,8 +309,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -309,8 +322,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -322,8 +335,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -335,8 +348,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -348,8 +361,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -361,8 +374,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -455,8 +468,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>排序</tag>
+        <tag>算法</tag>
         <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
@@ -502,8 +515,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
         <tag>图论</tag>
@@ -517,8 +530,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>排序</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -606,8 +619,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -629,8 +642,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>C-plus-plus</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
