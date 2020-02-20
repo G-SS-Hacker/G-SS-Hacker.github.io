@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C和C-中memcpy用法]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E4%B8%ADmemcpy%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[C和C++中memcpy()函数 图：中国空军苏35SK战斗机 Guderian出品 头文件 C： &lt;string.h&gt; C++： &lt;cstring&gt; 声明void *memcpy(void *str1, const void *str2, size_t n) 此处size_t变量类型等价于long unsigned int即无符号长整型，在32位机器上为32位，在64位机器为中64位。 注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据 描述从内存 str2 复制 n 个字符到内存 str1 参数 str1 ——指向存储复制内容的目标数组。 str2 ——指向复制目标数组。 n——要被复制的字节数。 返回值返回一个指向存储区str1的指针。 实例12345678910111213#include &lt;stdio.h&gt;#include &lt;string.h&gt; int main ()&#123; char s[50] = "the quick brown fox jumps over the lazy dog"; char t[50]; memcpy(t, s, sizeof(s)); printf("%s\n", t); return(0);&#125; 输出结果： 1the quick brown fox jumps over the lazy dog 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>C-plus-plus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言基础学习笔记（8）：向函数传递数组]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%888%EF%BC%89%EF%BC%9A%E5%90%91%E5%87%BD%E6%95%B0%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[C语言基础学习笔记（8）：向函数传递数组 图：达拉斯（Dallas） Guderian出品 C语言中不允许用变量来定义数组的长度。 一维数组在内存中占用的字节数 = 数组长度 x sizeof（基类型）。 向函数传递一维数组，所传递的是数组的地址。因此，在函数中对形参进行修改，会使原来传入的数组发生变化。在调用函数时，应该使用不带下标的数组名作为函数实参（数组名就相当于数组的首地址）。 如：int func(int a[], int n); 注：通常不指定数组的长度，用另一个形参来制定数组的大小。 向函数传递二维数组，在声明函数的二维数组形参时，不能省略数组第二维的长度，必须知道列数才能正确计算a[i][j]在数组中相对于第一个元素的偏移位置。 如：int func(int a[][M], int n); 注：数组第二维的长度不可省略。 向函数传递一维数组示例：快速排序 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void QuickSort(int arr[], int low, int high);int main()&#123; int a[N] = &#123;1,2,3,9,8,6,5,0,4,7&#125;; QuickSort(a, 0, N); for(int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125;void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125;void QuickSort(int arr[], int low, int high)&#123; if (low &gt;= high) return ; int mid = arr[high]; int left = low, right = high - 1; while(left &lt; right) &#123; while(arr[left] &lt; mid &amp;&amp; left &lt; right) left++; while(arr[right] &gt;= mid &amp;&amp; left &lt; right) right--; swap(&amp;arr[left], &amp;arr[right]); &#125; left += (arr[left] &lt; arr[high]); swap(&amp;arr[left], &amp;arr[high]); QuickSort(arr, low, left-1); QuickSort(arr, left+1, high);&#125; 输出结果为： 10 1 2 3 4 5 6 7 8 9 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -96,8 +108,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>C-plus-plus</tag>
       </tags>
   </entry>
   <entry>
@@ -142,8 +154,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>C-plus-plus</tag>
       </tags>
   </entry>
   <entry>
@@ -488,8 +500,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>C-plus-plus</tag>
         <tag>算法</tag>
         <tag>数据结构</tag>
         <tag>图论</tag>
@@ -592,8 +604,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>C-plus-plus</tag>
       </tags>
   </entry>
   <entry>
@@ -615,8 +627,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>C</tag>
+        <tag>C-plus-plus</tag>
       </tags>
   </entry>
   <entry>
