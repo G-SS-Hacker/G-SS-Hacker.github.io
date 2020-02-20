@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[C和C-中memcpy用法]]></title>
+    <title><![CDATA[C和C++中memcpy用法]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E5%92%8CC-%E4%B8%ADmemcpy%E7%94%A8%E6%B3%95%2F</url>
     <content type="text"><![CDATA[C和C++中memcpy()函数 图：中国空军苏35SK战斗机 Guderian出品 头文件 C： &lt;string.h&gt; C++： &lt;cstring&gt; 声明void *memcpy(void *str1, const void *str2, size_t n) 此处size_t变量类型等价于long unsigned int即无符号长整型，在32位机器上为32位，在64位机器为中64位。 注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据 描述从内存 str2 复制 n 个字符到内存 str1 参数 str1 ——指向存储复制内容的目标数组。 str2 ——指向复制目标数组。 n——要被复制的字节数。 返回值返回一个指向存储区str1的指针。 实例12345678910111213#include &lt;stdio.h&gt;#include &lt;string.h&gt; int main ()&#123; char s[50] = "the quick brown fox jumps over the lazy dog"; char t[50]; memcpy(t, s, sizeof(s)); printf("%s\n", t); return(0);&#125; 输出结果： 1the quick brown fox jumps over the lazy dog 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
       <categories>
