@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">61</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">62</span></a>
 
   </li>
         
@@ -441,6 +441,228 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/" class="post-title-link" itemprop="url">C语言基础学习笔记（1）：变量、算术运算与赋值运算</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-07 16:43:47" itemprop="dateCreated datePublished" datetime="2020-02-07T16:43:47+08:00">2020-02-07</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-16 15:20:33" itemprop="dateModified" datetime="2020-02-16T15:20:33+08:00">2020-02-16</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">582</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s2.ax1x.com/2020/02/07/1gDzsH.png" alt></p>
+<h1 id="C语言基础学习笔记（1）：变量、算术运算与赋值运算"><a href="#C语言基础学习笔记（1）：变量、算术运算与赋值运算" class="headerlink" title="C语言基础学习笔记（1）：变量、算术运算与赋值运算"></a>C语言基础学习笔记（1）：变量、算术运算与赋值运算</h1><blockquote>
+<p>图：西安城墙</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<ol>
+<li><p><code>C</code>中取余运算的结果符号与被除数符号相同。</p>
+</li>
+<li><p><code>C</code>中数字后面带个<code>U</code>， <code>u</code>, <code>L</code>, <code>l</code>, <code>F</code>,<code>f</code>的含义：</p>
+<p><code>U</code>和<code>u</code>表示该数值是<strong>无符号整型</strong>（<code>unsigned int</code>）；<code>L</code>和<code>l</code>表示该数值是<strong>长整型</strong>（<code>long</code>）；<code>F</code>和<code>f</code>表示该数值是<strong>浮点型</strong>（<code>float</code>）。</p>
+</li>
+<li><p><code>C</code>中数字后面带个<code>H</code>, <code>h</code>, <code>B</code>, <code>b</code>或数字前面带个<code>0</code>, <code>0x</code>的含义：</p>
+<p><code>H</code>和<code>h</code>表示该数值是<strong>十六进制数</strong>；<code>B</code>和<code>b</code>表示该数值是<strong>二进制数</strong>；前面带<code>0</code>表示该数值是<strong>八进制数</strong>；前面带<code>0x</code>表示该数值是<strong>十六进制数</strong>。</p>
+</li>
+<li><p><code>C</code>标准常用数学函数：</p>
+<p><img src="https://i.loli.net/2020/02/05/1qDpHvlmyeo8dE7.png" alt></p>
+</li>
+<li><p><code>C</code>中的多重赋值表达式：<strong>变量1 = 变量2 = 表达式</strong>。如<code>a = b = 3</code>，两个赋值运算符的优先级相同，在优先级相同的情况下考虑赋值表达式的结合性，赋值运算符的结合性是右结合的，即从右往左进行计算，即先执行右边的赋值运算<code>b = 3</code>，再执行<code>a = (b = 3)</code>。</p>
+</li>
+<li><code>C</code>的算术表达式中不同类型数据的运算结果的类型是<strong>取值范围较大</strong>的那种类型。<code>C</code>编译器将所有操作数都转换成取值范围较大的操作数的类型，这一过程称为<strong>类型提升（Type Promotion）</strong>。其规则如下：</li>
+</ol>
+<p><img src="https://i.loli.net/2020/02/06/VSHPOLQfYxlgZ5G.png" alt></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（1）：变量、算术运算与赋值运算/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1392,241 +1614,6 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/UML通信图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/UML通信图/" class="post-title-link" itemprop="url">UML建模工具——通信图</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-02 08:40:00" itemprop="dateCreated datePublished" datetime="2020-02-02T08:40:00+08:00">2020-02-02</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-11 15:37:53" itemprop="dateModified" datetime="2020-02-11T15:37:53+08:00">2020-02-11</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">556</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://images.pexels.com/photos/417054/pexels-photo-417054.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt></p>
-<font color="#407600">【面向对象分析UML建模工具全部文章】</font>
-
-<ul>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%94%A8%E4%BE%8B%E5%9B%BE/">UML建模工具(1)——用例图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E6%B4%BB%E5%8A%A8%E5%9B%BE/">UML建模工具(2)——活动图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%B1%BB%E5%9B%BE/">UML建模工具(3)——类图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%A1%BA%E5%BA%8F%E5%9B%BE/">UML建模工具(4)——顺序图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E9%80%9A%E4%BF%A1%E5%9B%BE/">UML建模工具(5)——通信图</a></li>
-<li><a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/UML%E7%8A%B6%E6%80%81%E5%9B%BE/">UML建模工具(6)——状态图</a></li>
-</ul>
-<h1 id="UML建模工具——通信图"><a href="#UML建模工具——通信图" class="headerlink" title="UML建模工具——通信图"></a>UML建模工具——通信图</h1><blockquote>
-<p>图：旧金山湾，黑夜中的金门大桥（Golden Gate Bridge）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<blockquote>
-<p>通信图（Communication diagram）和顺序图都属于UML交互图，与顺序图本质上是一样的，可以互换</p>
-<p>但二者建模的角度不同<sup><a href="#fn_ 1" id="reffn_ 1"> 1</a></sup></p>
-<ul>
-<li><font color="red">通信图 强调随着时间的推移，各对象是如何交互的</font></li>
-<li><font color="red">通信图 强调对象之间的结构关系</font>
-
-</li>
-</ul>
-</blockquote>
-<h2 id="通信图的组成元素"><a href="#通信图的组成元素" class="headerlink" title="通信图的组成元素"></a>通信图的组成元素</h2><ul>
-<li>对象（object）</li>
-<li>链接（link）</li>
-</ul>
-<blockquote>
-<p>注意虽然链接和关联的图形都是一条实线，但是此处的链接是对象之间的关系，而关联是类之间的关系</p>
-</blockquote>
-<ul>
-<li>消息（message）</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/UML通信图/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1676,7 +1663,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1874,7 +1861,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">98k</span>
+    <span title="站点总字数">100k</span>
   
 
   
@@ -1883,7 +1870,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:29</span>
+    <span title="站点阅读时长">1:31</span>
   
 </div>
 
@@ -2397,9 +2384,9 @@ Analytics"></a></div></noscript>
   
     
       
-        
-      
     
+      
+        
       
     
       

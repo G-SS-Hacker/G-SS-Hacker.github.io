@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言基础学习笔记（11）：指针与数组的关系]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89%EF%BC%9A%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%B3%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[C语言基础学习笔记（11）：指针与数组的关系 图： 北英格兰，惠特比港（Whitby Harbour） Guderian出品 指针与一维数组的关系一维数组在内存中是线性排列的。假设存在一个任意的int类型数组a[N]，数组名a代表了数组的首地址&amp;a[0]，则&amp;a[i]等价于(a+i)。注意这里a+1不是加上1个字节，而是取决于a的基类型（这里是int，即为4个字节）：a+1等价于a+sizeof(基类型)。因此我们可以得出一维数组元素的等价引用形式：a[i]等价于*(a+i)。下面举两个例子： 示例一用指针读入一维数组并用指针输出一维数组： 1234567891011121314151617#include &lt;stdio.h&gt;int main()&#123; int a[10], i, *p = NULL; p = a; for (i=0; i&lt;10; i++) scanf("%d", &amp;p[i]); p = a; for (i=0; i&lt;10; i++) printf("%d", p[i]); printf("\n"); return 0;&#125; 示例二示例一的另一种实现方式： 123456789101112131415#include &lt;stdio.h&gt;int main()&#123; int a[10], *p = NULL; for (p=a; p&lt;a+10; p++) scanf("%d", p); for (p=a; p&lt;a+10; p++) printf("%d", *p); printf("\n"); return 0;&#125; 指针与二维数组的关系 兄弟们，做好心理准备，下面的内容对萌新不友好 内存中数据的存储形式都是线性的，二维数组在内存中按行线性存储，但可以用两种方式看待它。 第一种方式：行是列的索引以a[2][3]为例，它的存储结构如图： 想要访问某一行某一列的元素，需要先访问某一行，再访问某一列：首先定义类型为int [3]的行指针int (*p)[3]（不要写成*p[3]，否则就成了有三个元素的指针数组）用于存储a[2][3]的行指针，只需这么做：p = a或者p = &amp;a[0]。 这里要正确理解a和&amp;a[0]的含义，一种较为简单的理解方式是：首先把a看做一个一维数组a[2]，有两个int [3]型元素，那么其首地址就是a或者&amp;a[0]；然后再把a[2]看成一个一维数组a[2][3]，那么其首地址就是a[0]或者*a。a和&amp;a[0]的含义就是第0行的行指针，*a和a[0]和&amp;a[0][0]的含义就是第0行第0列的指针（后面在第二种方式会讲到）。 123456789101112#include &lt;stdio.h&gt;int main()&#123; int a[2][3] = &#123;1,2,3,4,5,6&#125;; int (*p)[3]; p = a; for(int i=0; i&lt;2; i++) for(int j=0; j&lt;3; j++) printf("%d ", *(*(p+i)+j)); return 0;&#125; 输出结果为： 11 2 3 4 5 6 第二种方式：Only one dimension in RAM!这种方式模拟了数组在内存上存储的真实情况，把a[2][3]看做一维数组，先按行分块，每一块再按列排序，要访问一个元素只需计算它内存地址的偏移量即可。定义int *p;并令p = &amp;a[0][0]（或*a或a[0]），那么要访问a[i][j]只需等价于访问*(p+i*2+j)。 123456789101112#include &lt;stdio.h&gt;int main()&#123; int a[2][3] = &#123;1,2,3,4,5,6&#125;; int *p; p = *a; for(int i=0; i&lt;2; i++) for(int j=0; j&lt;3; j++) printf("%d ", *(p+i*2+j)); return 0;&#125; 输出结果为： 11 2 3 4 5 6 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言基础学习笔记（10）：字符串]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8810%EF%BC%89%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
     <content type="text"><![CDATA[C语言基础学习笔记（10）：字符串 图： 第一张黑洞照片（The first image of a black hole published in April 2019） ​ by 事件视野望远镜（Event Horizon Telescope） Guderian出品 C语言中没有专门的字符串数据类型。在定义字符串，字符数组的长度应比字符串长度多1，给\0留个位置： 12#define STR_LEN 80char str[STR_LEN+1]; C语言常用字符串处理操作函数：#include &lt;string.h&gt; （1）strlen(s);返回字符串s的长度 （2）strcpy(s1,s2);复制s2至s1，返回s1的指针 （3）strcat(s1,s2);复制s2接在s1末尾，返回s1的指针 （4）strcmp(s1,s2);比较s2和s1的大小，返回0表示相等，返回值大于零表示s1比s2大，返回值小于零表示s1比s2小。（比较规则：当出现第一对不相等的字符时，由这两个字符决定所在字符串的大小，返回其ASCII码比较的差值。） （5）strncpy(s1,s2,n);复制s2前面最多n个元素至s1中，比strcpy()更安全 （6）strncat(s1,s2,n);复制s2前面最多n个元素至s1末尾，比strcat()更安全 （7）strncmp(s1,s2,n);比较s2和s1前面最多n个元素的大小 向函数传递字符串的两种方法： （1）用字符数组作函数参数 （2）用字符指针作函数参数 用字符数组作函数参数示例：计算实际字符个数 12345678unsigned int MyStrlen(const char str[]) //防止原字符数组被修改&#123; int i; unsigned int len = 0; for (i=0; str[i]!='\0'; i++) len++; return len;&#125; 用字符指针作函数参数示例：计算实际字符个数 1234567unsigned int MyStrlen(const har *pstr) //防止原字符数组被修改&#123; unsigned int len = 0; for (; *pstr!='\0'; pstr++) len++; return len;&#125; 用字符指针作函数参数示例：计算实际字符个数（Optimized versoin） 1234567unsigned int MyStrlen(const char *pstr) //防止原字符数组被修改&#123; const char *start = pstr; while (*pstr) pstr++; return pstr-start;&#125; 用字符数组作函数参数示例：复制字符串 12345678910void MyStrcpy(char dst[], char src[])&#123; int i = 0; while (src[i]!='\0') &#123; dst[i] = src[i]; i++; &#125; dst[i] = '\0';&#125; 用字符指针作函数参数示例：复制字符串 12345678910void MyStrcpy(char *dst, char *src)&#123; while (*src!='\0') &#123; *dst = *src; src++; dst++ &#125; *dst = '\0';&#125; 用字符指针作函数参数示例：复制字符串（Insane versoin!!!） 1234void MyStrcpy(char *dst, const char *src)&#123; while (*dst++ = *src++); //空字符被赋值之后循环才结束&#125; 不要写没人能看懂的代码！第6点、第9点和第12点的代码风格仅供欣赏！DO NOT TRY IT AT HOME! 从函数返回字符指针，如strcpy()和strcat()的函数原型： strcpy()：char *strcpy(char *dstStr, const char *srcStr); strcat()：char *strcat(char *dstStr, const char *srcStr); 编程实现sgrcat()： 123456789101112131415161718192021#include &lt;stdio.h&gt;char *MyStrcat(char *dst, char *src);int main()&#123; char s1[10] = &#123;"123"&#125;; char s2[] = "45"; char *res = NULL; res = MyStrcat(s1,s2); printf("%s",res); return 0;&#125;char *MyStrcat(char *dst, char *src)&#123; char *pstr = dst; while (*dst!='\0') dst++; while (*dst++ = *src++); return pstr;&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -294,8 +305,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -331,8 +342,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -344,8 +355,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -357,8 +368,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -370,8 +381,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -383,8 +394,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -396,8 +407,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
