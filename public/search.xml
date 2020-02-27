@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言实现单向链表]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[C语言实现单向链表 图：武汉加油！中国必赢！ Guderian出品 完整代码 如图所示 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364/* * Presented by G-SS-Hacker * Share it if you like */ #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;//为节点申请内存空间#define NEW(x) NODE *x = (NODE *)malloc(sizeof(NODE))//释放内存空间#define DEL(x) free(x); x = NULL//检查是否成功申请内存#define JUD(x) if(x==NULL) exit(0)typedef struct node //结构体：节点&#123; int data; //数据 char name[20]; //名称 struct node *next; //后继节点指针&#125;NODE;typedef struct list //结构体：链表&#123; NODE *head; //头节点指针 NODE *tail; //尾节点指针 int len; //链表长度&#125;LIST;//初始化链表void InitList(LIST *list); //在链表尾部插入一个节点 void PushBack(LIST *list, int *data, const char name[]);//在链表尾部弹出一个节点 void PopBack(LIST *list);//在指定位置后插入一个节点 void InsertNode(LIST *list, int pos, int *data, const char name[]);//删除指定位置的节点 void DeleteNode(LIST *list, int pos);//访问指定位置的节点 NODE *GetNode(LIST *list, int pos);//打印整个链表 void PrintList(LIST *list);int main()&#123; LIST list = &#123;NULL, NULL, 0&#125;; InitList(&amp;list); /* 对链表的操作 int a1 = 123, a2 = 456; char c1[20] = "汤姆\0", c2[20] = "杰克\0"; PushBack(&amp;list, &amp;a1, c1); PushBack(&amp;list, &amp;a2, c2); NODE *p = GetNode(&amp;list, 1); PopBack(&amp;list); InsertNode(&amp;list, 0, &amp;a2, c2); PushBack(&amp;list, &amp;a2, c2); DeleteNode(&amp;list, 1); PrintList(&amp;list); */ return 0;&#125; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116void InitList(LIST *list)&#123; NEW(node); JUD(node); node-&gt;next = NULL; list-&gt;head = node; list-&gt;tail = node;&#125;void PushBack(LIST *list, int *data, const char name[])&#123; NEW(node); JUD(node); node-&gt;data = *data; strcpy(node-&gt;name, name); node-&gt;next = NULL; list-&gt;tail-&gt;next = node; list-&gt;tail = node; list-&gt;len++;&#125;void PopBack(LIST *list)&#123; //检查非法输入 if (!list-&gt;len) return ; NODE *p = list-&gt;head; while(p-&gt;next!=list-&gt;tail) p = p-&gt;next; DEL(list-&gt;tail); list-&gt;tail = p; list-&gt;tail-&gt;next = NULL; list-&gt;len--;&#125;void InsertNode(LIST *list, int pos, int *data, const char name[])&#123; //检查非法输入 if (list-&gt;len&lt;pos || pos&lt;0) return ; //是否在链表尾部插入节点 if (pos==list-&gt;len) &#123; PushBack(list, data, name); return ; &#125; NODE *p = list-&gt;head; for(;pos;pos--) p = p-&gt;next; NEW(node); JUD(node); node-&gt;data = *data; strcpy(node-&gt;name, name); node-&gt;next = p-&gt;next; p-&gt;next = node; list-&gt;len++;&#125;void DeleteNode(LIST *list, int pos)&#123; //检查非法输入 if (list-&gt;len&lt;pos || !pos) return ; //是否在链表尾部删除节点 if (pos==list-&gt;len) &#123; PopBack(list); return ; &#125; NODE *p = list-&gt;head; for(--pos;pos;pos--) p = p-&gt;next; NODE *tmp = p-&gt;next; p-&gt;next = tmp-&gt;next; DEL(tmp); list-&gt;len--;&#125;NODE *GetNode(LIST *list, int pos)&#123; //检查非法输入 if (list-&gt;len&lt;pos || pos&lt;0) return NULL; printf("第%d个节点为", pos); NODE *p = list-&gt;head; for(;pos;pos--) p = p-&gt;next; printf("%.4d %s\n", p-&gt;data, p-&gt;name); return p; &#125;void PrintList(LIST *list)&#123; //检查非法输入 if (!list-&gt;len) return ; NODE *p = list-&gt;head-&gt;next; while(p!=NULL) &#123; printf("%.4d %s\n", p-&gt;data, p-&gt;name); p = p-&gt;next; &#125;&#125; 取消主函数中的注释，输出结果为： 123第1个节点为0123 汤姆0123 汤姆0456 杰克 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言基础学习笔记（11）：指针与数组的关系]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89%EF%BC%9A%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%B3%E7%B3%BB%2F</url>
     <content type="text"><![CDATA[C语言基础学习笔记（11）：指针与数组的关系 图： 北英格兰，惠特比港（Whitby Harbour） Guderian出品 指针与一维数组的关系一维数组在内存中是线性排列的。假设存在一个任意的int类型数组a[N]，数组名a代表了数组的首地址&amp;a[0]，则&amp;a[i]等价于(a+i)。注意这里a+1不是加上1个字节，而是取决于a的基类型（这里是int，即为4个字节）：a+1等价于a+sizeof(基类型)。因此我们可以得出一维数组元素的等价引用形式：a[i]等价于*(a+i)。下面举两个例子： 示例一用指针读入一维数组并用指针输出一维数组： 1234567891011121314151617#include &lt;stdio.h&gt;int main()&#123; int a[10], i, *p = NULL; p = a; for (i=0; i&lt;10; i++) scanf("%d", &amp;p[i]); p = a; for (i=0; i&lt;10; i++) printf("%d", p[i]); printf("\n"); return 0;&#125; 示例二示例一的另一种实现方式： 123456789101112131415#include &lt;stdio.h&gt;int main()&#123; int a[10], *p = NULL; for (p=a; p&lt;a+10; p++) scanf("%d", p); for (p=a; p&lt;a+10; p++) printf("%d", *p); printf("\n"); return 0;&#125; 指针与二维数组的关系 兄弟们，做好心理准备，下面的内容对萌新不友好 内存中数据的存储形式都是线性的，二维数组在内存中按行线性存储，但可以用两种方式看待它。 第一种方式：行是列的索引以a[2][3]为例，它的存储结构如图： 想要访问某一行某一列的元素，需要先访问某一行，再访问某一列：首先定义类型为int [3]的行指针int (*p)[3]（不要写成*p[3]，否则就成了有三个元素的指针数组）用于存储a[2][3]的行指针，只需这么做：p = a或者p = &amp;a[0]。 这里要正确理解a和&amp;a[0]的含义，一种较为简单的理解方式是：首先把a看做一个一维数组a[2]，有两个int [3]型元素，那么其首地址就是a或者&amp;a[0]；然后再把a[2]看成一个一维数组a[2][3]，那么其首地址就是a[0]或者*a。a和&amp;a[0]的含义就是第0行的行指针，*a和a[0]和&amp;a[0][0]的含义就是第0行第0列的指针（后面在第二种方式会讲到）。 123456789101112#include &lt;stdio.h&gt;int main()&#123; int a[2][3] = &#123;1,2,3,4,5,6&#125;; int (*p)[3]; p = a; for(int i=0; i&lt;2; i++) for(int j=0; j&lt;3; j++) printf("%d ", *(*(p+i)+j)); return 0;&#125; 输出结果为： 11 2 3 4 5 6 第二种方式：Only one dimension in RAM!这种方式模拟了数组在内存上存储的真实情况，把a[2][3]看做一维数组，先按行分块，每一块再按列排序，要访问一个元素只需计算它内存地址的偏移量即可。定义int *p;并令p = &amp;a[0][0]（或*a或a[0]），那么要访问a[i][j]只需等价于访问*(p+i*2+j)。 123456789101112#include &lt;stdio.h&gt;int main()&#123; int a[2][3] = &#123;1,2,3,4,5,6&#125;; int *p; p = *a; for(int i=0; i&lt;2; i++) for(int j=0; j&lt;3; j++) printf("%d ", *(p+i*2+j)); return 0;&#125; 输出结果为： 11 2 3 4 5 6 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -305,8 +317,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -342,8 +354,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -355,8 +367,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -368,8 +380,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -381,8 +393,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -394,8 +406,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -407,8 +419,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -443,8 +455,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -501,9 +513,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
         <tag>排序</tag>
         <tag>算法</tag>
-        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -550,8 +562,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
