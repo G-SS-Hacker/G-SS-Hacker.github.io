@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基尔霍夫定律]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E5%AE%9A%E5%BE%8B%2F</url>
+    <content type="text"><![CDATA[基尔霍夫定律(Kirchhoff laws) Guderian出品 本文的讨论范围仅限于集中参数电路，适用于家庭电路，不适用于2000公里输电线或者洲际海底电缆。 这是什么？想必随便一个有初中文化的人都知道电路中的串联分压，并联分流定律，但是并非谁都知道基尔霍夫定律。基尔霍夫定律规定了电路中，电路结构对电流、电压的约束关系。分别称为基尔霍夫电流定律和基尔霍夫定律。根据基尔霍夫电压定律可以直接导出串联分压定律，根据基尔霍夫电流定律可以直接导出并联分流定律。 古斯塔夫·罗伯特·基尔霍夫（Gustav Robert Kirchhoff，1824～1887），德国物理学家，出生于柯尼斯堡（今俄罗斯加里宁格勒）。其人如图所示： 基尔霍夫电流定律（KCL） 基尔霍夫电流定律：流出（或流入）任一节点的支路电流代数和等于零。 即：$\sum i_k=0$（$i_k$表示第$k$条支路的电流）。规定$i_k$的参考方向为流出节点时，$i_k$取正号；$i_k$的参考方向为流入节点时，$i_k$取负号。 何谓节点？如图红圈所示 推论：广义基尔霍夫电流定律 流出（或流入）任一节点的闭合边界S电流代数和等于零。 这次我们把电路中的任意一个部分抽象为一个“节点”，同样的基尔霍夫电流定律依然成立。 推论：有进必有出 流出任一节点（闭合边界）电流的代数和等于流入该节点电流的代数和。 即：$\sum i_{流出}=\sum i_{流入}$ 性质：独立KCL方程个数 在含有n个节点的电路中，任意n-1个节点的KCL方程是一组独立方程，这些节点称为独立节点。（类似于线性代数中的向量线性无关） 基尔霍夫电压定律（KVL） 基尔霍夫电压定律：沿任一回路各支路电压的代数和等于零。 即：$\sum u_k=0$（$u_k$表示第$k$条支路的电压）。规定$u_k$的参考方向与回路方向相同时取+号，否则取-号。 何谓网孔？如图所示，回路$l1,l2,l3$皆为网孔，但$l4$不是网孔。可以把网孔理解为“最小回路”。 推论：有升必有降 沿任一回路，各支路电压降的代数和等于电压升的代数和。 即：$\sum u_{电压降}=\sum u_{电压升}$ 性质：路径无关性 任意两点之间的电压具有确定值，与计算路径无关。 性质：独立KVL方程个数 设电路有b个支路n个节点，平面电路的网孔数即独立KVL方程的个数等于b-n+1。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>电路</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言实现单向链表]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[C语言实现单向链表 图：武汉加油！中国必赢！ Guderian出品 完整代码 如图所示 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364/* * Presented by G-SS-Hacker * Share it if you like */ #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;//为节点申请内存空间#define NEW(x) NODE *x = (NODE *)malloc(sizeof(NODE))//释放内存空间#define DEL(x) free(x); x = NULL//检查是否成功申请内存#define JUD(x) if(x==NULL) exit(0)typedef struct node //结构体：节点&#123; int data; //数据 char name[20]; //名称 struct node *next; //后继节点指针&#125;NODE;typedef struct list //结构体：链表&#123; NODE *head; //头节点指针 NODE *tail; //尾节点指针 int len; //链表长度&#125;LIST;//初始化链表void InitList(LIST *list); //在链表尾部插入一个节点 void PushBack(LIST *list, int *data, const char name[]);//在链表尾部弹出一个节点 void PopBack(LIST *list);//在指定位置后插入一个节点 void InsertNode(LIST *list, int pos, int *data, const char name[]);//删除指定位置的节点 void DeleteNode(LIST *list, int pos);//访问指定位置的节点 NODE *GetNode(LIST *list, int pos);//打印整个链表 void PrintList(LIST *list);int main()&#123; LIST list = &#123;NULL, NULL, 0&#125;; InitList(&amp;list); /* 对链表的操作 int a1 = 123, a2 = 456; char c1[20] = "汤姆\0", c2[20] = "杰克\0"; PushBack(&amp;list, &amp;a1, c1); PushBack(&amp;list, &amp;a2, c2); NODE *p = GetNode(&amp;list, 1); PopBack(&amp;list); InsertNode(&amp;list, 0, &amp;a2, c2); PushBack(&amp;list, &amp;a2, c2); DeleteNode(&amp;list, 1); PrintList(&amp;list); */ return 0;&#125; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116void InitList(LIST *list)&#123; NEW(node); JUD(node); node-&gt;next = NULL; list-&gt;head = node; list-&gt;tail = node;&#125;void PushBack(LIST *list, int *data, const char name[])&#123; NEW(node); JUD(node); node-&gt;data = *data; strcpy(node-&gt;name, name); node-&gt;next = NULL; list-&gt;tail-&gt;next = node; list-&gt;tail = node; list-&gt;len++;&#125;void PopBack(LIST *list)&#123; //检查非法输入 if (!list-&gt;len) return ; NODE *p = list-&gt;head; while(p-&gt;next!=list-&gt;tail) p = p-&gt;next; DEL(list-&gt;tail); list-&gt;tail = p; list-&gt;tail-&gt;next = NULL; list-&gt;len--;&#125;void InsertNode(LIST *list, int pos, int *data, const char name[])&#123; //检查非法输入 if (list-&gt;len&lt;pos || pos&lt;0) return ; //是否在链表尾部插入节点 if (pos==list-&gt;len) &#123; PushBack(list, data, name); return ; &#125; NODE *p = list-&gt;head; for(;pos;pos--) p = p-&gt;next; NEW(node); JUD(node); node-&gt;data = *data; strcpy(node-&gt;name, name); node-&gt;next = p-&gt;next; p-&gt;next = node; list-&gt;len++;&#125;void DeleteNode(LIST *list, int pos)&#123; //检查非法输入 if (list-&gt;len&lt;pos || !pos) return ; //是否在链表尾部删除节点 if (pos==list-&gt;len) &#123; PopBack(list); return ; &#125; NODE *p = list-&gt;head; for(--pos;pos;pos--) p = p-&gt;next; NODE *tmp = p-&gt;next; p-&gt;next = tmp-&gt;next; DEL(tmp); list-&gt;len--;&#125;NODE *GetNode(LIST *list, int pos)&#123; //检查非法输入 if (list-&gt;len&lt;pos || pos&lt;0) return NULL; printf("第%d个节点为", pos); NODE *p = list-&gt;head; for(;pos;pos--) p = p-&gt;next; printf("%.4d %s\n", p-&gt;data, p-&gt;name); return p; &#125;void PrintList(LIST *list)&#123; //检查非法输入 if (!list-&gt;len) return ; NODE *p = list-&gt;head-&gt;next; while(p!=NULL) &#123; printf("%.4d %s\n", p-&gt;data, p-&gt;name); p = p-&gt;next; &#125;&#125; 取消主函数中的注释，输出结果为： 123第1个节点为0123 汤姆0123 汤姆0456 杰克 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
@@ -455,8 +466,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -513,9 +524,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>数据结构</tag>
         <tag>排序</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -562,8 +573,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
