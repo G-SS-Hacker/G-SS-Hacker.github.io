@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-03-06T14:24:28.687Z</updated>
+  <updated>2020-03-18T09:50:36.320Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三角恒等变换所有公式</title>
+    <link href="https://g-ss-hacker.github.io/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F/"/>
+    <id>https://g-ss-hacker.github.io/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F/</id>
+    <published>2020-03-18T09:50:03.000Z</published>
+    <updated>2020-03-18T09:50:36.320Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/03/18/Qno9rEZAjqbuUl7.png" alt></p><a id="more"></a><blockquote><p>Licensed under cc0 license. Feel free to share it with others.😎</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/03/18/Qno9rEZAjqbuUl7.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
   
   <entry>
     <title>基尔霍夫定律</title>
@@ -888,102 +911,6 @@
       <category term="机器学习" scheme="https://G-SS-Hacker.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="微积分" scheme="https://G-SS-Hacker.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C &amp; C++基本数据类型取值范围</title>
-    <link href="https://g-ss-hacker.github.io/C%E5%92%8CC-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4/"/>
-    <id>https://g-ss-hacker.github.io/C%E5%92%8CC-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4/</id>
-    <published>2020-02-05T09:01:37.000Z</published>
-    <updated>2020-02-09T06:32:17.706Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://images.pexels.com/photos/34609/pexels-photo.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></p><h1 id="C-amp-C-基本数据类型取值范围"><a href="#C-amp-C-基本数据类型取值范围" class="headerlink" title="C &amp; C++基本数据类型取值范围"></a>C &amp; C++基本数据类型取值范围</h1><blockquote><p>图：伦敦（London）</p></blockquote><p></p><p><font color="grey"><em>Guderian</em>出品 </font></p><p></p><p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style></p><table class="tg">  <tr>    <th class="tg-0pky" colspan="2">基本数据类型</th>    <th class="tg-0pky">关键字</th>    <th class="tg-0pky">存储大小</th>    <th class="tg-0pky">取数范围</th>  </tr>  <tr>    <td class="tg-0pky">整型</td>    <td class="tg-0pky">基本整型</td>    <td class="tg-0pky">int</td>    <td class="tg-0pky">4字节</td>    <td class="tg-0pky">-2^31 ~ 2^31-1</td>  </tr>  <tr>    <td class="tg-0pky" rowspan="3">实型</td>    <td class="tg-0pky">长整型</td>    <td class="tg-0pky">long</td>    <td class="tg-0pky">4字节</td>    <td class="tg-0pky">-2^31 ~ 2^31-1</td>  </tr>  <tr>    <td class="tg-0pky">短整型</td>    <td class="tg-0pky">short</td>    <td class="tg-0pky">2字节</td>    <td class="tg-0pky">-2^15 ~ 2^15-1</td>  </tr>  <tr>    <td class="tg-0pky">无符号整型</td>    <td class="tg-0pky">unsigned</td>    <td class="tg-0pky">unsigned int 4字节<br>unsigned long 4字节<br>unsigned short 2字节<br></td>    <td class="tg-0pky">unsigned int : 0 ~ 2^32-1<br>unsigned long : 0 ~ 2^32-1<br>unsigned short : 0 ~ 2^16-1<br></td>  </tr>  <tr>    <td class="tg-0pky" rowspan="3">实型</td>    <td class="tg-0pky">单精度实型</td>    <td class="tg-0pky">float</td>    <td class="tg-0pky">4字节</td>    <td class="tg-0pky">1.2E-38 ~ 3.4E+38 精度6~7位有效数字</td>  </tr>  <tr>    <td class="tg-0pky">双精度实型</td>    <td class="tg-0pky">double</td>    <td class="tg-0pky">8字节</td>    <td class="tg-0pky">2.3E-308 ~ 1.7E+308 精度15~16位有效数字</td>  </tr>  <tr>    <td class="tg-0pky">长双精度实型</td>    <td class="tg-0pky">long double</td>    <td class="tg-0pky">16字节</td>    <td class="tg-0pky">3.4E-4932 ~ 1.1E+4932 精度19位有效数字</td>  </tr>  <tr>    <td class="tg-0pky" colspan="2">字符型</td>    <td class="tg-0pky">char</td>    <td class="tg-0pky">1字节</td>    <td class="tg-0pky">0 ~ 2^8-1</td>  </tr>  <tr>    <td class="tg-0pky" colspan="2">枚举类型</td>    <td class="tg-0pky">enum</td>    <td class="tg-0pky"></td>    <td class="tg-0pky"></td>  </tr></table><a id="more"></a><hr><font color="orange"><strong>我们不管遇到多复杂的数据类型都不要怕，我们戴口罩面对它。消除恐惧的最好办法就是面对恐惧！坚持就是胜利！学好C语言！奥利给！</strong></font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/34609/pexels-photo.jpg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=750&amp;amp;w=1260&quot; alt&gt;&lt;/p&gt;
-&lt;h1 id=&quot;C-amp-C-基本数据类型取值范围&quot;&gt;&lt;a href=&quot;#C-amp-C-基本数据类型取值范围&quot; class=&quot;headerlink&quot; title=&quot;C &amp;amp; C++基本数据类型取值范围&quot;&gt;&lt;/a&gt;C &amp;amp; C++基本数据类型取值范围&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;图：伦敦（London）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;grey&quot;&gt;&lt;em&gt;Guderian&lt;/em&gt;出品 &lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;style type=&quot;text/css&quot;&gt;&lt;br&gt;.tg  {border-collapse:collapse;border-spacing:0;}&lt;br&gt;.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}&lt;br&gt;.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-&lt;/style&gt;&lt;/p&gt;
-&lt;table class=&quot;tg&quot;&gt;
-  &lt;tr&gt;
-    &lt;th class=&quot;tg-0pky&quot; colspan=&quot;2&quot;&gt;基本数据类型&lt;/th&gt;
-    &lt;th class=&quot;tg-0pky&quot;&gt;关键字&lt;/th&gt;
-    &lt;th class=&quot;tg-0pky&quot;&gt;存储大小&lt;/th&gt;
-    &lt;th class=&quot;tg-0pky&quot;&gt;取数范围&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;整型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;基本整型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;int&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;4字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;-2^31 ~ 2^31-1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot; rowspan=&quot;3&quot;&gt;实型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;长整型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;long&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;4字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;-2^31 ~ 2^31-1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;短整型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;short&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;2字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;-2^15 ~ 2^15-1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;无符号整型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;unsigned&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;unsigned int 4字节&lt;br&gt;unsigned long 4字节&lt;br&gt;unsigned short 2字节&lt;br&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;unsigned int : 0 ~ 2^32-1&lt;br&gt;unsigned long : 0 ~ 2^32-1&lt;br&gt;unsigned short : 0 ~ 2^16-1&lt;br&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot; rowspan=&quot;3&quot;&gt;实型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;单精度实型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;float&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;4字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;1.2E-38 ~ 3.4E+38 精度6~7位有效数字&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;双精度实型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;double&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;8字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;2.3E-308 ~ 1.7E+308 精度15~16位有效数字&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;长双精度实型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;long double&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;16字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;3.4E-4932 ~ 1.1E+4932 精度19位有效数字&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot; colspan=&quot;2&quot;&gt;字符型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;char&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;1字节&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;0 ~ 2^8-1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class=&quot;tg-0pky&quot; colspan=&quot;2&quot;&gt;枚举类型&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;enum&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;&lt;/td&gt;
-    &lt;td class=&quot;tg-0pky&quot;&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-    
-    </summary>
-    
-    
-      <category term="总结" scheme="https://G-SS-Hacker.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="C-plus-plus" scheme="https://G-SS-Hacker.github.io/tags/C-plus-plus/"/>
-    
-      <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
     
   </entry>
   
