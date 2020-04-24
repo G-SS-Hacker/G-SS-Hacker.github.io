@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[黎曼积分]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E9%BB%8E%E6%9B%BC%E7%A7%AF%E5%88%86%2F</url>
+    <content type="text"><![CDATA[黎曼积分 图：silhouette of mountains and spectacular view from the mountain top Guderian出品 设$f(p)$是几何形体上的点函数，黎曼积分$\int_\Omega f(p) \mathrm{d} \Omega=\lim_{\lambda \to0} \sum_{i=1}^{n}f(p_i)\Delta\Omega_i$ 具体分为四类： 二重积分x-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)} f(x,y)\mathrm{d}y$ y-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_c^d\mathrm{d}y\int_{x_1(x)}^{x_2(x)} f(x,y)\mathrm{d}x$ 极坐标$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint f(r,\theta)r\mathrm{d}r\mathrm{d}\theta=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r,\theta)r\mathrm{d}r$ 三重积分投影法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\iint_{\sigma_{xy}}\mathrm{d}x\mathrm{d}y\int_{z_1(x,y)}^{z_2(x,y)}f(x,y,z)\mathrm{d}z$ 截面法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_a^b\mathrm{d}x\iint_{\sigma_x}f(x,y,z)\mathrm{d}y\mathrm{d}z$ 柱坐标系变换关系： $x=r\cos\theta$， $y=r\sin\theta$ 体积微元： $\mathrm{d}V=r\mathrm{d}r\mathrm{d}\theta\mathrm{d}z$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}r\mathrm{d}r\int_{z_1(r,\theta)}^{z_2(r,\theta)}f(r\cos\theta,r\sin \theta,z)$ 球坐标系变换关系： $x=\rho\sin\phi\cos\theta$， $y=\rho\sin\phi\sin\theta$， $z=\rho\cos\theta$ 体积微元： $\mathrm{d}V=\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{\phi_1(\theta)}^{\phi_2(\theta)}\sin\phi\mathrm{d}\phi\int_{\rho_1(\theta,\phi)}^{\phi_2{\theta,\phi}}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\theta)\rho^2\mathrm{d}\rho$ 第一型曲线积分$\int_lf(x,y,z)\mathrm{d}s=\int_\alpha^\beta f(x(t),y(t),z(t))\sqrt{x'^2(t)+y'^2(t)+z'^2(t)}\mathrm{d}t$ 第一型曲面积分$\iint_Sf(x,y,z)\mathrm{d}S=\iint_{\sigma_{xy}}f(x,y,z(x,y))\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 黎曼积分的应用曲面面积等价于积分函数为$1$的第一型曲面积分 $S=\iint_S\mathrm{d}S=\iint_{\sigma_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 曲顶柱体体积等价于积分函数为$1$的三重积分 $V=\iiint_V\mathrm{d}V=\iint_{\sigma_{xy}}z(x,y)\mathrm{d}\sigma$ 质心等价于积分函数$\mu(p)$为质量密度（及其与$x,y,z$乘积）的三重积分 $\bar{x}=\frac{\int_\Omega\mu(p)x\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{y}=\frac{\int_\Omega\mu(p)y\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{z}=\frac{\int_\Omega\mu(p)z\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$ 转动惯量仅针对坐标轴，等价于积分函数为质量密度$\mu(p)$与另外两个变量平方和的乘积的三重积分 $I_x=\int_\Omega\mu(p)(y^2+z^2)\mathrm{d}\Omega$，$I_y=\int_\Omega\mu(p)(x^2+z^2)\mathrm{d}\Omega$，$I_z=\int_\Omega\mu(p)(x^2+y^2)\mathrm{d}\Omega$ Presented by Guderian]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[三角恒等变换所有公式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[Licensed under cc0 license. Feel free to share it with others.😎]]></content>
@@ -339,8 +350,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -376,8 +387,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -389,8 +400,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -402,8 +413,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -415,8 +426,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -428,8 +439,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -441,8 +452,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
