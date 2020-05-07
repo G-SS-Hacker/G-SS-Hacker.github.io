@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言常用字符串函数]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[C语言常用字符串函数 图：猎鹰重型🚀，SpaceX Falcon Heavy Guderian出品 用的时候全部都要#include&lt;string.h&gt; 1 计算长度Prototype: int strlen(const *char str) Usage: 返回\0以前的字符串长度。 2 计算占用内存Prototype 1: unsigned int szieof(object) Prototype 2: unsigned int szieof object Prototype 3: unsigned int szieof(type_name) Usage: 返回对象或类型占用内存空间的大小 3 比较字符串 关于字符串大小：https://www.php.cn/faq/415854.html Prototype: int strcmp(const char *str1,const char *str2) Usage: 若str1比str2大，返回值大于0；若str1比str2小，返回值小于0；若str1大小与str2相等，返回值为0 4 复制字符串 可不要写出str1 = str2这样的代码，这可不是在复制数字 Prototype: char *strcpy(char *str1, const char *str2) Usage: 把串str2以\0截止的字符串写入串str1中，返回str1首地址，用的时候注意不要越界 5 拼接字符串Prototype: char *strcpy(char *str1, const char *str2)和char *strcat(char *str1, const char *str2,int n) Usage: 第一种，把str2拼到str1末尾；第二种，把str2前n个字符拼到str1末尾，返回str1首地址 6 字符串匹配Prototype: char *strstr(const char *str1, const char *str2) Usage: 返回在str1中第一次出现str2字符串的位置，如果未找到则返回null Guderian Present]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[黎曼积分]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E9%BB%8E%E6%9B%BC%E7%A7%AF%E5%88%86%2F</url>
-    <content type="text"><![CDATA[黎曼积分 图：silhouette of mountains and spectacular view from the mountain top Guderian出品 设$f(p)$是几何形体上的点函数，黎曼积分$\int_\Omega f(p) \mathrm{d} \Omega=\lim_{\lambda \to0} \sum_{i=1}^{n}f(p_i)\Delta\Omega_i$ 具体分为四类： 二重积分x-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)} f(x,y)\mathrm{d}y$ y-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_c^d\mathrm{d}y\int_{x_1(x)}^{x_2(x)} f(x,y)\mathrm{d}x$ 极坐标$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint f(r,\theta)r\mathrm{d}r\mathrm{d}\theta=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r,\theta)r\mathrm{d}r$ 三重积分投影法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\iint_{\sigma_{xy}}\mathrm{d}x\mathrm{d}y\int_{z_1(x,y)}^{z_2(x,y)}f(x,y,z)\mathrm{d}z$ 截面法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_a^b\mathrm{d}x\iint_{\sigma_x}f(x,y,z)\mathrm{d}y\mathrm{d}z$ 柱坐标系变换关系： $x=r\cos\theta$， $y=r\sin\theta$ 体积微元： $\mathrm{d}V=r\mathrm{d}r\mathrm{d}\theta\mathrm{d}z$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}r\mathrm{d}r\int_{z_1(r,\theta)}^{z_2(r,\theta)}f(r\cos\theta,r\sin \theta,z)$ 球坐标系变换关系： $x=\rho\sin\phi\cos\theta$， $y=\rho\sin\phi\sin\theta$， $z=\rho\cos\theta$ 体积微元： $\mathrm{d}V=\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{\phi_1(\theta)}^{\phi_2(\theta)}\sin\phi\mathrm{d}\phi\int_{\rho_1(\theta,\phi)}^{\phi_2{\theta,\phi}}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\theta)\rho^2\mathrm{d}\rho$ 第一型曲线积分$\int_lf(x,y,z)\mathrm{d}s=\int_\alpha^\beta f(x(t),y(t),z(t))\sqrt{x'^2(t)+y'^2(t)+z'^2(t)}\mathrm{d}t$ 第一型曲面积分$\iint_Sf(x,y,z)\mathrm{d}S=\iint_{\sigma_{xy}}f(x,y,z(x,y))\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 黎曼积分的应用曲面面积等价于积分函数为$1$的第一型曲面积分 $S=\iint_S\mathrm{d}S=\iint_{\sigma_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 曲顶柱体体积等价于积分函数为$1$的三重积分 $V=\iiint_V\mathrm{d}V=\iint_{\sigma_{xy}}z(x,y)\mathrm{d}\sigma$ 质心等价于积分函数$\mu(p)$为质量密度（及其与$x,y,z$乘积）的三重积分 $\bar{x}=\frac{\int_\Omega\mu(p)x\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{y}=\frac{\int_\Omega\mu(p)y\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{z}=\frac{\int_\Omega\mu(p)z\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$ 转动惯量仅针对坐标轴，等价于积分函数为质量密度$\mu(p)$与另外两个变量平方和的乘积的三重积分 $I_x=\int_\Omega\mu(p)(y^2+z^2)\mathrm{d}\Omega$，$I_y=\int_\Omega\mu(p)(x^2+z^2)\mathrm{d}\Omega$，$I_z=\int_\Omega\mu(p)(x^2+y^2)\mathrm{d}\Omega$ Presented by Guderian]]></content>
+    <content type="text"><![CDATA[黎曼积分 图：silhouette of mountains and spectacular view from the mountain top Guderian出品 设$f(p)$是几何形体上的点函数，黎曼积分$\int_\Omega f(p) \mathrm{d} \Omega=\lim_{\lambda \to0} \sum_{i=1}^{n}f(p_i)\Delta\Omega_i$ 具体分为四类： 二重积分x-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)} f(x,y)\mathrm{d}y$ y-型域$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_c^d\mathrm{d}y\int_{x_1(x)}^{x_2(x)} f(x,y)\mathrm{d}x$ 极坐标$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint f(r,\theta)r\mathrm{d}r\mathrm{d}\theta=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r,\theta)r\mathrm{d}r$ 三重积分投影法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\iint_{\sigma_{xy}}\mathrm{d}x\mathrm{d}y\int_{z_1(x,y)}^{z_2(x,y)}f(x,y,z)\mathrm{d}z$ 截面法$\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_a^b\mathrm{d}z\iint_{\sigma_z}f(x,y,z)\mathrm{d}x\mathrm{d}y$ 柱坐标系变换关系： $x=r\cos\theta$， $y=r\sin\theta$ 体积微元： $\mathrm{d}V=r\mathrm{d}r\mathrm{d}\theta\mathrm{d}z$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}r\mathrm{d}r\int_{z_1(r,\theta)}^{z_2(r,\theta)}f(r\cos\theta,r\sin \theta,z) \mathrm{d}z$ 球坐标系变换关系： $x=\rho\sin\phi\cos\theta$， $y=\rho\sin\phi\sin\theta$， $z=\rho\cos\theta$ 体积微元： $\mathrm{d}V=\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta$ $\iiint_V f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z=\int_\alpha^\beta\mathrm{d}\theta\int_{\phi_1(\theta)}^{\phi_2(\theta)}\sin\phi\mathrm{d}\phi\int_{\rho_1(\theta,\phi)}^{\phi_2{\theta,\phi}}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\theta)\rho^2\mathrm{d}\rho$ 第一型曲线积分$\int_lf(x,y,z)\mathrm{d}s=\int_\alpha^\beta f(x(t),y(t),z(t))\sqrt{x'^2(t)+y'^2(t)+z'^2(t)}\mathrm{d}t$ 第一型曲面积分$\iint_Sf(x,y,z)\mathrm{d}S=\iint_{\sigma_{xy}}f(x,y,z(x,y))\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 黎曼积分的应用曲面面积等价于积分函数为$1$的第一型曲面积分 $S=\iint_S\mathrm{d}S=\iint_{\sigma_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma$ 曲顶柱体体积等价于积分函数为$1$的三重积分 $V=\iiint_V\mathrm{d}V=\iint_{\sigma_{xy}}z(x,y)\mathrm{d}\sigma$ 质心等价于积分函数$\mu(p)$为质量密度（及其与$x,y,z$乘积）的三重积分 $\bar{x}=\frac{\int_\Omega\mu(p)x\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{y}=\frac{\int_\Omega\mu(p)y\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$， $\bar{z}=\frac{\int_\Omega\mu(p)z\mathrm{d}\Omega}{\int_\Omega\mu(p)\mathrm{d}\Omega}$ 转动惯量仅针对坐标轴，等价于积分函数为质量密度$\mu(p)$与另外两个变量平方和的乘积的三重积分 $I_x=\int_\Omega\mu(p)(y^2+z^2)\mathrm{d}\Omega$，$I_y=\int_\Omega\mu(p)(x^2+z^2)\mathrm{d}\Omega$，$I_z=\int_\Omega\mu(p)(x^2+y^2)\mathrm{d}\Omega$ Presented by Guderian]]></content>
       <categories>
         <category>总结</category>
       </categories>
@@ -81,7 +92,7 @@
   <entry>
     <title><![CDATA[C语言实现选择、插入、冒泡排序算法]]></title>
     <url>%2FG-SS-Hacker.github.io%2FC%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E9%80%89%E6%8B%A9%E3%80%81%E6%8F%92%E5%85%A5%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[C语言实现选择、插入、冒泡排序算法 Guderian出品 完整代码在最下面 准备工作123456789#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]); 主函数1234567891011int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125; 实现两数交换函数123456void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125; 实现选择排序函数1234567891011void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125; 实现插入排序函数1234567891011121314void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125; 实现冒泡排序函数12345678910111213void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 完整代码客官久等了 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]);int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125;void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125;void Sort(int arr[], void(*f)(int *))&#123; (*f)(arr);&#125;void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125;void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125;void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
+    <content type="text"><![CDATA[C语言实现选择、插入、冒泡排序算法 Guderian出品 准备工作123456789#include &lt;stdio.h&gt;const int N = 10;void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]); 主函数1234567891011int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125; 实现两数交换函数123456void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125; 实现选择排序函数1234567891011void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125; 实现插入排序函数1234567891011121314void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125; 实现冒泡排序函数12345678910111213void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 完整代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374#include &lt;stdio.h&gt;#define N 10void swap(int *x, int *y);void Sort(int arr[], void(*f)(int *));void SelectionSort(int arr[]);void InsertionSort(int arr[]);void BubbleSort(int arr[]);int main()&#123; int a[N] = &#123;2,1,3,9,8,6,5,0,4,7&#125;; Sort(a, InsertionSort); //此处选择排序算法 for (int i = 0; i &lt; N; i++) printf("%d ", a[i]); printf("\n"); return 0;&#125;void swap(int *x, int *y)&#123; int tmp = *x; *x = *y; *y = tmp;&#125;void Sort(int arr[], void(*f)(int *))&#123; (*f)(arr);&#125;void SelectionSort(int arr[])&#123; for (int i = 0; i &lt; N-1; i++) &#123; int min = i; for (int j = i+1; j &lt; N; j++) if (arr[j] &lt; arr[min]) min = j; swap(&amp;arr[i], &amp;arr[min]); &#125;&#125;void InsertionSort(int arr[])&#123; for (int i = 1; i &lt; N; i++) &#123; int j = i-1; int key = arr[i]; while(j &gt;= 0 &amp;&amp; arr[j] &gt;= key) &#123; arr[j+1] = arr[j]; j--; &#125; arr[j+1] = key; &#125;&#125;void BubbleSort(int arr[])&#123; for (int i = 0, exchange = 1; exchange &amp;&amp; i &lt; N-1; i++) &#123; exchange = 0; for (int j = 0; j &lt; N-1-i; j++) if (arr[j] &gt; arr[j+1]) &#123; swap(&amp;arr[j], &amp;arr[j+1]); exchange = 1; &#125; &#125;&#125; 【更多C语言系列】 C &amp; C++基本数据类型取值范围 C &amp; C++ memset 野指针的产生及其危害]]></content>
       <categories>
         <category>总结</category>
       </categories>
@@ -350,8 +361,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -387,8 +398,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -400,8 +411,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -413,8 +424,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -426,8 +437,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -439,8 +450,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -452,8 +463,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>C-plus-plus</tag>
         <tag>OOP</tag>
+        <tag>C-plus-plus</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
