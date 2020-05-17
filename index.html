@@ -502,7 +502,7 @@ Analytics"></a></div></noscript>
                 
               
 
-              <time title="创建时间：2020-05-17 21:30:13 / 修改时间：22:09:06" itemprop="dateCreated datePublished" datetime="2020-05-17T21:30:13+08:00">2020-05-17</time>
+              <time title="创建时间：2020-05-17 21:30:13 / 修改时间：22:19:54" itemprop="dateCreated datePublished" datetime="2020-05-17T21:30:13+08:00">2020-05-17</time>
             </span>
           
 
@@ -585,7 +585,7 @@ Analytics"></a></div></noscript>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>n皇后问题描述为：在一个$n \times n$的棋盘上摆放$n$个皇后，要求任意两个皇后不能冲突，即任意两个皇后不再同一行、同一列、同一斜线上。</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong><font color="#012060">算法设计策略：回溯法</font></strong></p>
 <p>将第$i$个皇后摆放在第$i$行，$i$从$1$开始，每个皇后都从第$1$列开始尝试。尝试时判断再该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆放下一个皇后；如果有冲突，则考虑下一列。</p>
-<p>如果改行没有合适的位置，回溯到上一个皇后，考虑在原来位置的下一个位置上继续尝试摆放皇后，以此类推，知到找到所有合理的摆放方案。</p>
+<p>如果该行没有合适的位置，回溯到上一个皇后，考虑在原来位置的下一个位置上继续尝试摆放皇后，以此类推，直到找到所有合理的摆放方案。</p>
           <!--noindex-->
           
             <div class="post-button text-center">

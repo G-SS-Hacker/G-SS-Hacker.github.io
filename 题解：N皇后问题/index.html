@@ -150,7 +150,7 @@
 <meta property="og:description" content="题解：N皇后问题 Guderian出品  说明n皇后问题描述为：在一个$n \times n$的棋盘上摆放$n$个皇后，要求任意两个皇后不能冲突，即任意两个皇后不再同一行、同一列、同一斜线上。 分析算法设计策略：回溯法 将第$i$个皇后摆放在第$i$行，$i$从$1$开始，每个皇后都从第$1$列开始尝试。尝试时判断再该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆放下">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/17/D8B16OHzsWKGNU5.jpg">
-<meta property="og:updated_time" content="2020-05-17T14:09:06.481Z">
+<meta property="og:updated_time" content="2020-05-17T14:19:54.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题解：N皇后问题">
 <meta name="twitter:description" content="题解：N皇后问题 Guderian出品  说明n皇后问题描述为：在一个$n \times n$的棋盘上摆放$n$个皇后，要求任意两个皇后不能冲突，即任意两个皇后不再同一行、同一列、同一斜线上。 分析算法设计策略：回溯法 将第$i$个皇后摆放在第$i$行，$i$从$1$开始，每个皇后都从第$1$列开始尝试。尝试时判断再该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆放下">
@@ -506,7 +506,7 @@ Analytics"></a></div></noscript>
                 
               
 
-              <time title="创建时间：2020-05-17 21:30:13 / 修改时间：22:09:06" itemprop="dateCreated datePublished" datetime="2020-05-17T21:30:13+08:00">2020-05-17</time>
+              <time title="创建时间：2020-05-17 21:30:13 / 修改时间：22:19:54" itemprop="dateCreated datePublished" datetime="2020-05-17T21:30:13+08:00">2020-05-17</time>
             </span>
           
 
@@ -596,7 +596,7 @@ Analytics"></a></div></noscript>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>n皇后问题描述为：在一个$n \times n$的棋盘上摆放$n$个皇后，要求任意两个皇后不能冲突，即任意两个皇后不再同一行、同一列、同一斜线上。</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong><font color="#012060">算法设计策略：回溯法</font></strong></p>
 <p>将第$i$个皇后摆放在第$i$行，$i$从$1$开始，每个皇后都从第$1$列开始尝试。尝试时判断再该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆放下一个皇后；如果有冲突，则考虑下一列。</p>
-<p>如果改行没有合适的位置，回溯到上一个皇后，考虑在原来位置的下一个位置上继续尝试摆放皇后，以此类推，知到找到所有合理的摆放方案。</p>
+<p>如果该行没有合适的位置，回溯到上一个皇后，考虑在原来位置的下一个位置上继续尝试摆放皇后，以此类推，直到找到所有合理的摆放方案。</p>
 <a id="more"></a>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="解法一-新手回溯：朴素算法"><a href="#解法一-新手回溯：朴素算法" class="headerlink" title="解法一  新手回溯：朴素算法"></a><font color="dark" red>解法一  新手回溯：朴素算法</font></h3><p><strong><font color="#012060">（1）常量和变量说明</font></strong></p>
 <ul>
@@ -623,7 +623,7 @@ Analytics"></a></div></noscript>
 <li>时间复杂度：不超过$O(n!)$</li>
 <li>空间复杂度：$O( n )$</li>
 </ul>
-<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a><font color="dark" red>对比</font></h3><p>当$n$较小时，<font color="dark" red>解法二</font>比<font color="dark" red>解法一</font>快至少20倍。</p>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a><font color="dark" red>对比</font></h3><p>当$n$较小时，<strong><font color="dark" red face="Yahei">解法二</font></strong>比<strong><font color="dark" red face="Yahei">解法一</font></strong>快至少$20$倍。</p>
 
       
     </div>
@@ -648,7 +648,7 @@ Analytics"></a></div></noscript>
   <p><span>本文标题:</span>题解：N皇后问题</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年05月17日 - 21:30:13</p>
-  <p><span>最后更新:</span>2020年05月17日 - 22:09:06</p>
+  <p><span>最后更新:</span>2020年05月17日 - 22:19:54</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/题解：N皇后问题/" title="题解：N皇后问题">https://G-SS-Hacker.github.io/题解：N皇后问题/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/题解：N皇后问题/" aria-label="复制成功！"></i></span>
   </p>
