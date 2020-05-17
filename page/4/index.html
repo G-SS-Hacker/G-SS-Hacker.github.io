@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">67</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">68</span></a>
 
   </li>
         
@@ -441,6 +441,233 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（4）：函数与防御式编程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（4）：函数与防御式编程/" class="post-title-link" itemprop="url">C语言基础学习笔记（4）：函数与防御式编程</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-16 15:38:50" itemprop="dateCreated datePublished" datetime="2020-02-16T15:38:50+08:00">2020-02-16</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-17 13:22:14" itemprop="dateModified" datetime="2020-02-17T13:22:14+08:00">2020-02-17</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">654</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2020/02/16/A81KRsbrM4hy6nX.jpg" alt></p>
+<h1 id="C语言基础学习笔记（4）：函数与防御式编程"><a href="#C语言基础学习笔记（4）：函数与防御式编程" class="headerlink" title="C语言基础学习笔记（4）：函数与防御式编程"></a>C语言基础学习笔记（4）：函数与防御式编程</h1><blockquote>
+<p>图：塔克拉玛干沙漠</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<ol>
+<li><p><code>C</code>语言函数的返回值类型，可以是数组以外的任意一种类型。</p>
+</li>
+<li><p>在函数调用的过程中，<strong>实参</strong>和<strong>形参</strong>占用不同的内存空间，可以同名。</p>
+</li>
+<li><p>当函数定义在函数调用之后，<code>C89</code>标准默认函数返回值类型为<code>int</code>，而<code>C99</code>不再支持隐含的函数声明。</p>
+</li>
+<li><p>把所有函数的定义都放在主函数的前面也不意味着不需要函数原型，因为不一定只有主函数会调用你定义的函数，还是有可能出现函数的调用出现在函数的定义之前的情况。</p>
+</li>
+<li><p>综合<code>3</code>和<code>4</code>，应该在程序开头写清所有的函数原型。</p>
+</li>
+<li><p>函数设计的基本原则：</p>
+<p>（1）函数规模要小</p>
+<p>（2）函数功能要单一</p>
+<p>（3）函数接口定义要清楚</p>
+</li>
+<li><p>断言：<code>assert()</code>为在<code>&lt;assert.h&gt;</code>中定义的宏，可把其“函数原型”视作<code>void assert(int expression)</code>。</p>
+<p>（1）<code>expression</code>为真，pass</p>
+<p>（2）<code>expression</code>为假，中断程序</p>
+<p>可以用<code>if</code>语句代替断言，代价是程序编译后的目标代码体积变大，运行效率下降；使用断言便于在调试程序时发现错误，不影响程序执行效率。断言仅用于<code>debug</code>版本调试程序，不能用作<code>release</code>版本；换句话说只能用它确保预期不会发生的状况的确不会发生，而不能用它检查可能发生的状况是否发生。注意一个<code>assert</code>只能检验一个条件。</p>
+</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（4）：函数与防御式编程/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1290,245 +1517,6 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（2）：格式化输入与输出/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（2）：格式化输入与输出/" class="post-title-link" itemprop="url">C语言基础学习笔记（2）：格式化输入与输出</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-09 12:35:51" itemprop="dateCreated datePublished" datetime="2020-02-09T12:35:51+08:00">2020-02-09</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-16 15:23:33" itemprop="dateModified" datetime="2020-02-16T15:23:33+08:00">2020-02-16</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">1.1k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://s2.ax1x.com/2020/02/09/1faKYV.png" alt></p>
-<h1 id="C语言基础学习笔记（2）：格式化输入与输出"><a href="#C语言基础学习笔记（2）：格式化输入与输出" class="headerlink" title="C语言基础学习笔记（2）：格式化输入与输出"></a>C语言基础学习笔记（2）：格式化输入与输出</h1><blockquote>
-<p>图：乞力马扎罗山（Kilimanjaro）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<ol>
-<li><p><code>C</code>语言格式化屏幕输出：<code>printf(格式控制字符串, 输出值参数表);</code></p>
-<p><code>C</code>语言格式化屏幕输入：<code>scanf(格式控制字符串, 输入地址表);</code></p>
-</li>
-<li><p>问题：<code>printf()</code>用<code>%</code>作为格式字符的标识，那么如何输出<code>%</code>呢？<code>C</code>规定，连续两个百分号出现在格式控制字符串中就表示要输出一个百分号</p>
-</li>
-<li><p>如何分隔多个输入数据？</p>
-<p>1）空格、<code>Tab</code>或回车</p>
-<p>2）达到输入位宽</p>
-<p>3）遇到非法字符</p>
-</li>
-<li><p>如何判断<code>scanf()</code>函数读入了正确的数据项数呢？</p>
-<p>事实上，<code>scanf()</code>是有返回值的，它的返回值就是正确读入的数据项数。现在明白<code>while(scanf(...))</code>为什么正确了吧？</p>
-</li>
-<li><p><code>scanf()</code>格式控制字符串中的普通字符原样输入。注意格式字符为<code>%f, %e</code>为输入<code>float</code>型且不能指定精度，格式字符为<code>%c</code>为一个字符包括空白字符（如空格和制表符）。</p>
-</li>
-<li><p><code>scanf()</code>格式修饰符</p>
-<p><img src="https://i.loli.net/2020/02/08/NJ3vn2TEYZcFXx4.png" alt></p>
-</li>
-<li><p>字符型常量：所有的<code>ASCII</code>码都可以通过转义方式表示，其中<code>\ddd</code>为<code>1</code>到<code>3</code>位八进制<code>ASCII</code>码值所代表的字符，<code>\xhh</code>为<code>1</code>到<code>2</code>为十六进制<code>ASCII</code>码值所代表的字符。如：<code>&#39;B&#39;</code>等价于<code>&#39;\102&#39;</code>等价于<code>&#39;\x42&#39;</code>。</p>
-</li>
-<li><p>大小写英文字母的<code>ASCII</code>值相差<code>32</code>，即<code>大写字母+32=小写字母</code>。</p>
-</li>
-<li><p>单个字符的输入输出：</p>
-<p><code>putchar(ch)</code>：向屏幕输出一个字符，字符型变量<code>ch</code>的值</p>
-<p><code>ch = getchar()</code>：从键盘接受的字符作为<code>getchar()</code>的函数值，无参数</p>
-</li>
-<li><p>用<code>getchar()</code>输入时应注意的问题：<code>getchar()</code>函数并不是直接读取用户输入的字符，而是将输入字符先放在输入缓冲队列中，再从缓冲队列读取字符，直到输入回车符或文件结束符<code>EOF</code>时，程序才认为输入结束；一行输入结束，<code>getchar()</code>才开始从输入缓冲队列读取字符，前面函数没读取的数据仍在缓冲队列中，将被下一个<code>getchar()</code>函数读取。</p>
-</li>
-<li><p>在<code>Linux/Unix</code>下键入<code>Ctrl + D</code>或在<code>Windows</code>下键入<code>Ctrl + Z</code>，<code>getchar()</code>函数的确是会返回<code>-1</code>即<code>EOF</code>（<code>End Of File</code>）的，严格意义上应该用<code>int</code>类型来接收<code>getchar()</code>的返回值。</p>
-</li>
-<li><p>注意用<code>%c</code>格式读入字符时，空格和回车等空白字符都会被当做有效字符读入，在<code>%c</code>前加一个空格可以忽略缓冲区中的空白字符。</p>
-</li>
-</ol>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（2）：格式化输入与输出/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1578,7 +1566,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1778,7 +1766,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">108k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1787,7 +1775,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:40</span>
   
 </div>
 

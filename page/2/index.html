@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">67</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">68</span></a>
 
   </li>
         
@@ -441,6 +441,206 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言实现单向链表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C语言实现单向链表/" class="post-title-link" itemprop="url">C语言实现单向链表</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-27 17:18:18 / 修改时间：17:45:25" itemprop="dateCreated datePublished" datetime="2020-02-27T17:18:18+08:00">2020-02-27</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">3.2k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">3 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1582806308991&amp;di=845f5098180dcf73145af35097896cec&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Fspider2020220%2F200%2Fw1080h720%2F20200220%2F8088-ipvnsze0545653.jpg" alt></p>
+<h1 id="C语言实现单向链表"><a href="#C语言实现单向链表" class="headerlink" title="C语言实现单向链表"></a>C语言实现单向链表</h1><blockquote>
+<p>图：武汉加油！中国必赢！</p>
+</blockquote>
+<p><font color="grey"> <em>Guderian</em>出品 </font></p>
+
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><blockquote>
+<p>如图所示</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Presented by G-SS-Hacker</span></span><br><span class="line"><span class="comment"> * Share it if you like</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//为节点申请内存空间</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NEW(x) NODE *x = (NODE *)malloc(sizeof(NODE))</span></span><br><span class="line"><span class="comment">//释放内存空间</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DEL(x) free(x); x = NULL</span></span><br><span class="line"><span class="comment">//检查是否成功申请内存</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> JUD(x) <span class="meta-keyword">if</span>(x==NULL) exit(0)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span>		//结构体：节点</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;			<span class="comment">//数据</span></span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">20</span>];		<span class="comment">//名称</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span>	<span class="comment">//后继节点指针</span></span><br><span class="line">&#125;NODE;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">list</span>		//结构体：链表</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	NODE *head;			<span class="comment">//头节点指针</span></span><br><span class="line">	NODE *tail; 		<span class="comment">//尾节点指针</span></span><br><span class="line">	<span class="keyword">int</span> len;			<span class="comment">//链表长度</span></span><br><span class="line">&#125;LIST;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化链表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitList</span><span class="params">(LIST *<span class="built_in">list</span>)</span></span>; </span><br><span class="line"><span class="comment">//在链表尾部插入一个节点 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PushBack</span><span class="params">(LIST *<span class="built_in">list</span>, <span class="keyword">int</span> *data, <span class="keyword">const</span> <span class="keyword">char</span> name[])</span></span>;</span><br><span class="line"><span class="comment">//在链表尾部弹出一个节点 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PopBack</span><span class="params">(LIST *<span class="built_in">list</span>)</span></span>;</span><br><span class="line"><span class="comment">//在指定位置后插入一个节点 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertNode</span><span class="params">(LIST *<span class="built_in">list</span>, <span class="keyword">int</span> pos, <span class="keyword">int</span> *data, <span class="keyword">const</span> <span class="keyword">char</span> name[])</span></span>;</span><br><span class="line"><span class="comment">//删除指定位置的节点 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteNode</span><span class="params">(LIST *<span class="built_in">list</span>, <span class="keyword">int</span> pos)</span></span>;</span><br><span class="line"><span class="comment">//访问指定位置的节点 </span></span><br><span class="line"><span class="function">NODE *<span class="title">GetNode</span><span class="params">(LIST *<span class="built_in">list</span>, <span class="keyword">int</span> pos)</span></span>;</span><br><span class="line"><span class="comment">//打印整个链表 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintList</span><span class="params">(LIST *<span class="built_in">list</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	LIST <span class="built_in">list</span> = &#123;<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="number">0</span>&#125;;</span><br><span class="line">	InitList(&amp;<span class="built_in">list</span>);</span><br><span class="line">	<span class="comment">/* 对链表的操作</span></span><br><span class="line"><span class="comment">	int a1 = 123, a2 = 456;</span></span><br><span class="line"><span class="comment">	char c1[20] = "汤姆\0", c2[20] = "杰克\0";</span></span><br><span class="line"><span class="comment">	PushBack(&amp;list, &amp;a1, c1);</span></span><br><span class="line"><span class="comment">	PushBack(&amp;list, &amp;a2, c2);</span></span><br><span class="line"><span class="comment">	NODE *p = GetNode(&amp;list, 1);</span></span><br><span class="line"><span class="comment">	PopBack(&amp;list);</span></span><br><span class="line"><span class="comment">	InsertNode(&amp;list, 0, &amp;a2, c2);</span></span><br><span class="line"><span class="comment">	PushBack(&amp;list, &amp;a2, c2);</span></span><br><span class="line"><span class="comment">	DeleteNode(&amp;list, 1);</span></span><br><span class="line"><span class="comment">	PrintList(&amp;list);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C语言实现单向链表/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1311,225 +1511,6 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C和C-中memcpy用法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C和C-中memcpy用法/" class="post-title-link" itemprop="url">C和C++中memcpy用法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-20 10:29:22" itemprop="dateCreated datePublished" datetime="2020-02-20T10:29:22+08:00">2020-02-20</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-22 09:26:27" itemprop="dateModified" datetime="2020-02-22T09:26:27+08:00">2020-02-22</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">678</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://i.loli.net/2020/02/22/5J6bmYjvsQe37nf.jpg" alt></p>
-<h1 id="C和C-中memcpy-函数"><a href="#C和C-中memcpy-函数" class="headerlink" title="C和C++中memcpy()函数"></a>C和C++中memcpy()函数</h1><p></p><p><font color="grey"> <em>Guderian</em>出品 </font></p><p></p>
-<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
-<li>C：      <code>&lt;string.h&gt;</code></li>
-<li>C++：  <code>&lt;cstring&gt;</code></li>
-</ul>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p><code>void *memcpy(void *str1, const void *str2, size_t n)</code></p>
-<p>此处<code>size_t</code>变量类型等价于<code>long unsigned int</code>即无符号长整型，在32位机器上为32位，在64位机器为中64位。</p>
-<p>注：32位机器指CPU通用寄存器的数据宽度为32位，也就是说CPU一次可以运行32bit数据</p>
-<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>从内存 <strong>str2</strong> 复制 <strong>n</strong> 个字符到内存 <strong>str1</strong></p>
-<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li><code>str1</code> ——指向存储复制内容的目标数组。</li>
-<li><code>str2</code> ——指向复制目标数组。</li>
-<li><code>n</code>——要被复制的字节数。</li>
-</ul>
-<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>返回一个指向存储区<code>str1</code>的指针。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> s[<span class="number">50</span>] = <span class="string">"the quick brown fox jumps over the lazy dog"</span>;</span><br><span class="line">	<span class="keyword">char</span> t[<span class="number">50</span>];</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">memcpy</span>(t, s, <span class="keyword">sizeof</span>(s));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s\n"</span>, t);</span><br><span class="line">   </span><br><span class="line">	<span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the quick brown fox jumps over the lazy dog</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C和C-中memcpy用法/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1579,7 +1560,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1779,7 +1760,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">108k</span>
+    <span title="站点总字数">110k</span>
   
 
   
@@ -1788,7 +1769,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:40</span>
   
 </div>
 
