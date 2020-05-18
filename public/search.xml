@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[题解：切割钢条]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%88%87%E5%89%B2%E9%92%A2%E6%9D%A1%2F</url>
+    <content type="text"><![CDATA[题解：切割钢条 故宫 by Gigi Guderian出品 说明某公司购买长钢条，将其切割后进行出售。切割钢条的成本可以忽略不计，钢条的长度为整英寸。已知价格表$ P$，其中中 $P_i（i＝1，2，…，m）$表示长度为$i$英寸的钢条的价格。现要求解使销售收益最大的切割方案 。 分析算法设计策略：动态规划 假设长钢条的长度为$ n $英寸，最佳切割方案的最左边切割段长度为$ i $英寸，则继续求解剩余长度为$ n－i $英寸钢条的最佳切割方案。考虑所有可能的$ i$，得到的最大收益$ r_n$对应的切割方案即为最佳切割方案。$r_n$的递归定义如下： r_n =\max_{1≤ i ≤n}(p_i +r_{n-i})对此递归式，给出自顶向下和自底向上两种实现方式。 实现（1）常量和变量说明 n：长钢条的长度 p[]：价格数组 （2）C语言程序 123456789101112131415161718192021222324252627282930313233343536373839#include&lt;stdio.h&gt;#define LEN 100int Top_Down_Cut_Rod(int p[],int n)&#123; /*自顶向下*/ int r=0; int i; if(n==0)&#123; return 0; &#125; for(i=1;i&lt;=n;i++)&#123; int tmp=p[i]+Top_Down_Cut_Rod(p,n-i); r= (r&gt;=tmp) ? r : tmp; &#125; return r;&#125;int Bottom_Up_Cut_Rod(int p[],int n)&#123; /*自底向上*/ int r[LEN]=&#123;0&#125;; int temp=0; int i,j; for(j=1;j&lt;=n;j++)&#123; temp=0; for(i=1;i&lt;=j;i++)&#123; temp=(temp&gt;=p[i]+r[j-i]) ? temp : (p[i]+r[j-i]); &#125; r[j]=(temp&gt;=p[j]) ? temp : p[j]; &#125; return r[n];&#125;int main()&#123; /*示例数据*/ int p[11]=&#123;0,1,2,1,8,3,5,2,5,3,9&#125;; int a = Top_Down_Cut_Rod(p,10); int b = Bottom_Up_Cut_Rod(p,10); printf("%d %d\n",a,b); return 0;&#125; （3）复杂度分析 自顶向下（爆搜） 时间复杂度：$O(2^n)$ 空间复杂度：$O(1)$ 自底向上 时间复杂度：$O(n^2)$ 空间复杂度：$O(n)$]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[题解：字符配对]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%AD%97%E7%AC%A6%E9%85%8D%E5%AF%B9%2F</url>
     <content type="text"><![CDATA[题解：字符配对 Aurora Guderian出品 说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件： （1）$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一； （2）$S$中的每对字符之间至少有四个字符将其隔开，即$i&lt;j-4$； （3）$S$中的每一个字符（记为$b_k$）的配对存在两种情况：$b_k$不参与任何配对；$b_k$和$b_t$配对，其中$t&lt;k-4$； （4）（不交叉原则）若$(b_i,b_j)$和$(b_k,b_l)$是$S$种的两个字符对，且$i&lt;k$，则$i&lt;k&lt;j&lt;l$不成立。 $B$的具有最大可能字符对数的二级结构$S$被称为最优配对方案，求解最优配对方案中的字符对数的方法如下： 假设用$C(i,j)$表示字符序列$b_i b_{i+1} \dots b_j$的最优配对方案（即二级结构$S$）中的字符对数，则$C(i,j)$可以递归定义为： C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹配且i]]></content>
@@ -21,8 +33,8 @@
       </categories>
       <tags>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -386,8 +398,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -423,8 +435,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -436,8 +448,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -449,8 +461,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -462,8 +474,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -475,8 +487,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -488,8 +500,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -524,8 +536,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -582,9 +594,9 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
+        <tag>数据结构</tag>
         <tag>排序</tag>
         <tag>算法</tag>
-        <tag>数据结构</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -631,8 +643,8 @@
       <tags>
         <tag>C-plus-plus</tag>
         <tag>C</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
         <tag>图论</tag>
       </tags>
   </entry>
@@ -712,8 +724,8 @@
       </categories>
       <tags>
         <tag>C-plus-plus</tag>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
