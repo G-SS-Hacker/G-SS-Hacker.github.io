@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">68</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">69</span></a>
 
   </li>
         
@@ -441,6 +441,210 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C和C-中rand函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C和C-中rand函数/" class="post-title-link" itemprop="url">C和C++中rand()函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-10 10:15:50 / 修改时间：10:20:08" itemprop="dateCreated datePublished" datetime="2020-02-10T10:15:50+08:00">2020-02-10</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">895</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png" alt></p>
+<h1 id="C和C-中rand-函数"><a href="#C和C-中rand-函数" class="headerlink" title="C和C++中rand()函数"></a>C和C++中rand()函数</h1><blockquote>
+<p>本文遵守<code>cc0</code>协议😎（图片和代码也是）</p>
+</blockquote>
+<p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><p><code>&lt;stdlib.h&gt;</code></p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p><code>int rand(void)</code></p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>生成一个随机数，其大小介于<code>0</code>和<code>RAND_MAX</code>之间。其中<code>RAND_MAX</code>在头文件<code>&lt;stdlib.h</code>和<code>&lt;cstdlib&gt;</code>中宏定义为<code>#define RAND_MAX 0X7fff</code>，十进制形式为<code>32767</code>即<code>(1 &lt;&lt; 15) - 1</code>。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>调用<code>rand()</code>函数应该通过<code>srand(unsigned int)</code>设置随机数种子，一旦设置随机数种子，那么接下来程序将遵循同一个规则产生随机数。如果你没有设置随机数种子，那么程序将自动把随机数种子设置为<code>1</code>。</p>
+<h3 id="设置随机数种子为常数"><a href="#设置随机数种子为常数" class="headerlink" title="设置随机数种子为常数"></a>设置随机数种子为常数</h3><p>如果设置随机数种子为常数（如<code>1</code>），那么不管在什么时间、什么环境下运行程序都将得到相同的随机数。使用方法如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cc0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	srand(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">int</span> randnum = rand();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, randnum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设置随机数种子为系统时间戳"><a href="#设置随机数种子为系统时间戳" class="headerlink" title="设置随机数种子为系统时间戳"></a>设置随机数种子为系统时间戳</h3><p>如果想要得到不同的随机数，一种常用的方法是设置随机数种子为系统时间戳<code>time(NULL)</code>（先包含<code>&lt;time.h&gt;</code>头文件），即从1970年1月1日0时到当前时刻所经过的秒数。使用方法如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cc0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	srand (time(<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">int</span> randnum = rand();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, randnum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C和C-中rand函数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1417,223 +1621,6 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/" class="post-title-link" itemprop="url">Softmax函数反向传播求导详细过程</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-04 22:22:46" itemprop="dateCreated datePublished" datetime="2020-02-04T22:22:46+08:00">2020-02-04</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-06 19:14:56" itemprop="dateModified" datetime="2020-02-06T19:14:56+08:00">2020-02-06</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2.5k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">2 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://s2.ax1x.com/2020/02/05/1rU0Fs.png" alt></p>
-<h1 id="Softmax函数反向传播求导详细过程"><a href="#Softmax函数反向传播求导详细过程" class="headerlink" title="Softmax函数反向传播求导详细过程"></a>Softmax函数反向传播求导详细过程</h1><blockquote>
-<p>图：纽约，曼哈顿（Manhattan, New York）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="回顾：Softmax函数正向传播"><a href="#回顾：Softmax函数正向传播" class="headerlink" title="回顾：Softmax函数正向传播"></a>回顾：Softmax函数正向传播</h2><h3 id="第一步：计算Z函数"><a href="#第一步：计算Z函数" class="headerlink" title="第一步：计算Z函数"></a>第一步：计算Z函数</h3><p>对神经网络输出层（即第<font size="4rem">$ L $</font>层）有<font size="4rem">$Z^{[L]}=W^{[L]}a^{[L-1]}+b^{[L]}$</font>，其中<font size="4rem">$a^{[L-1]}$</font>为上一层输出值。</p>
-<h3 id="第二步：计算Softmax函数"><a href="#第二步：计算Softmax函数" class="headerlink" title="第二步：计算Softmax函数"></a>第二步：计算Softmax函数</h3><font size="4rem," face="consolas">for i in range(1, C + 1):</font> 
-
-<p>​    <font size="5rem">$\quad a_i^{[L]}=\frac{e^{Z_i^{[L]}}}{\sum_{k=1}^C e^{Z_k^{[L]}}}$</font></p>
-<p>其中<font size="4rem">$C$</font>表示要预测的类别数，上式满足<font size="4rem">$\sum_{i=1}^C a_i{[L]}=1$</font>，即输入样本属于各类别的概率和为<font size="4rem">$1$</font>。</p>
-<h3 id="第三步：计算损失函数"><a href="#第三步：计算损失函数" class="headerlink" title="第三步：计算损失函数"></a>第三步：计算损失函数</h3><p>单个样本的损失函数为<font size="4rem">$L(a,y)=-\sum_{i=1}^C y_i\log{a_i}$</font>，其中<font size="4rem">$y$</font>为目标输出。</p>
-<h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><h3 id="第一步：对Softmax函数求导"><a href="#第一步：对Softmax函数求导" class="headerlink" title="第一步：对Softmax函数求导"></a>第一步：对Softmax函数求导</h3><p>​    对<font size="4rem">$\mathrm{Softmax}$</font>函数求导，即求<font size="5rem">$\frac{\partial a_i}{\partial z_j}$</font>：第<font size="4rem">$\mathrm{i}$</font>项输出对第<font size="4rem">$\mathrm{j}$</font>项输入的偏导数。</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}$</font>（省略<font size="4rem">$[ L ]$</font>标记，默认为第<font size="4rem">$ L $</font>层，下同），分类讨论：</p>
-<p>​    $(1)$当<font size="4rem">$\mathrm{i=j}$</font>时，把<font size="4rem">$a_i$</font>分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_j}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_j}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=a_j(1-a_j)$</font></p>
-<p>​    $(2)$当<font size="4rem">$\mathrm{i\ne j}$</font>时，把<font size="4rem">$a_i$</font>分子和分母中除<font size="4rem">$e^{z_j}$</font>项外视作常量</p>
-<p>​    <font size="5rem">$\frac{\partial a_i}{\partial z_j}=\frac{\partial\frac{e^{z_i}}{\sum_{k=1}^C e^{z_k}}}{\partial z_j}=(\frac{e^{z_i}}{e^{z_j}+\sum_{k\ne j}^C e^{z_k}})^\prime=\frac{e^{z_i}e^{z_j}}{\sum_{k=1}^C e^{z_k}}=-a_i a_j$</font></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/Softmax函数反向传播求导详细过程/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1683,7 +1670,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">68</span>
+                    <span class="site-state-item-count">69</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1883,7 +1870,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">110k</span>
+    <span title="站点总字数">111k</span>
   
 
   
@@ -1892,7 +1879,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:40</span>
+    <span title="站点阅读时长">1:41</span>
   
 </div>
 
@@ -2410,9 +2397,9 @@ Analytics"></a></div></noscript>
       
     
       
-        
-      
     
+      
+        
       
     
       
