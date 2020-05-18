@@ -141,19 +141,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="题解：字符配对 Aurora   Guderian出品   说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件：  $S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一">
+  <meta name="description" content="题解：字符配对 Aurora   Guderian出品  说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件： （1）$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之">
 <meta name="keywords" content="C,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解：字符配对">
 <meta property="og:url" content="https://G-SS-Hacker.github.io/题解：字符配对/index.html">
 <meta property="og:site_name" content="G-SS-Hacker">
-<meta property="og:description" content="题解：字符配对 Aurora   Guderian出品   说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件：  $S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一">
+<meta property="og:description" content="题解：字符配对 Aurora   Guderian出品  说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件： （1）$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/18/Z7wS1oQqyAaNkfG.jpg">
-<meta property="og:updated_time" content="2020-05-18T02:34:45.750Z">
+<meta property="og:updated_time" content="2020-05-18T02:39:47.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题解：字符配对">
-<meta name="twitter:description" content="题解：字符配对 Aurora   Guderian出品   说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件：  $S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一">
+<meta name="twitter:description" content="题解：字符配对 Aurora   Guderian出品  说明给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件： （1）$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之">
 <meta name="twitter:image" content="https://i.loli.net/2020/05/18/Z7wS1oQqyAaNkfG.jpg">
 
 
@@ -506,7 +506,7 @@ Analytics"></a></div></noscript>
                 
               
 
-              <time title="创建时间：2020-05-18 10:34:13 / 修改时间：10:34:45" itemprop="dateCreated datePublished" datetime="2020-05-18T10:34:13+08:00">2020-05-18</time>
+              <time title="创建时间：2020-05-18 10:34:13 / 修改时间：10:39:47" itemprop="dateCreated datePublished" datetime="2020-05-18T10:34:13+08:00">2020-05-18</time>
             </span>
           
 
@@ -560,7 +560,7 @@ Analytics"></a></div></noscript>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">599</span>
+              <span title="本文字数">608</span>
             </span>
           
 
@@ -595,15 +595,12 @@ Analytics"></a></div></noscript>
 <h1 id="题解：字符配对"><a href="#题解：字符配对" class="headerlink" title="题解：字符配对"></a>题解：字符配对</h1><blockquote>
 <p>Aurora</p>
 </blockquote>
-<p><font color="grey"> <em>Guderian出品</em> </font></p>
-
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>给定一个字符$B=b_1 b_2\dots b_n$，其中$b_i \in \{A,C,G,U\}$。$B$上的二级结构是一组字符对集合$S=\{(b_i,b_j)\}$，其中$i,j\in \{1,2,\dots ,n\}$，并满足以下四个条件：</p>
-<ol>
-<li>$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一；</li>
-<li>$S$中的每对字符之间至少有四个字符将其隔开，即$i&lt;j-4$；</li>
-<li>$S$中的每一个字符（记为$b_k$）的配对存在两种情况：$b_k$不参与任何配对；$b_k$和$b_t$配对，其中$t&lt;k-4$；</li>
-<li>（不交叉原则）若$(b_i,b_j)$和$(b_k,b_l)$是$S$种的两个字符对，且$i&lt;k$，则$i&lt;k&lt;j&lt;l$不成立。</li>
-</ol>
+<p>（1）$S$中的每对字符是$(A,U),(U,A),(C,G),(G,C)$四种组合之一；</p>
+<p>（2）$S$中的每对字符之间至少有四个字符将其隔开，即$i&lt;j-4$；</p>
+<p>（3）$S$中的每一个字符（记为$b_k$）的配对存在两种情况：$b_k$不参与任何配对；$b_k$和$b_t$配对，其中$t&lt;k-4$；</p>
+<p>（4）（不交叉原则）若$(b_i,b_j)$和$(b_k,b_l)$是$S$种的两个字符对，且$i&lt;k$，则$i&lt;k&lt;j&lt;l$不成立。</p>
 <p>$B$的具有最大可能字符对数的二级结构$S$被称为最优配对方案，求解最优配对方案中的字符对数的方法如下：</p>
 <p>假设用$C(i,j)$表示字符序列$b_i b_{i+1} \dots b_j$的最优配对方案（即二级结构$S$）中的字符对数，则$C(i,j)$可以递归定义为：</p>
 <script type="math/tex; mode=display">
@@ -648,7 +645,7 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
   <p><span>本文标题:</span>题解：字符配对</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年05月18日 - 10:34:13</p>
-  <p><span>最后更新:</span>2020年05月18日 - 10:34:45</p>
+  <p><span>最后更新:</span>2020年05月18日 - 10:39:47</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/题解：字符配对/" title="题解：字符配对">https://G-SS-Hacker.github.io/题解：字符配对/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/题解：字符配对/" aria-label="复制成功！"></i></span>
   </p>
