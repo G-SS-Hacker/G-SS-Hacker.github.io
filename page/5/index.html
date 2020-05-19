@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">70</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">71</span></a>
 
   </li>
         
@@ -441,6 +441,219 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/numpy中random-rand和random-randn函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/numpy中random-rand和random-randn函数/" class="post-title-link" itemprop="url">numpy中random.rand()和random.randn()函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-12 12:29:58" itemprop="dateCreated datePublished" datetime="2020-02-12T12:29:58+08:00">2020-02-12</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-14 14:12:40" itemprop="dateModified" datetime="2020-02-14T14:12:40+08:00">2020-02-14</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s2.ax1x.com/2020/02/11/1TIaid.png" alt></p>
+<h1 id="numpy中random-rand-和random-randn-函数"><a href="#numpy中random-rand-和random-randn-函数" class="headerlink" title="numpy中random.rand()和random.randn()函数"></a>numpy中random.rand()和random.randn()函数</h1><blockquote>
+<p>图：芝加哥（Chicago）</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<h2 id="random-rand"><a href="#random-rand" class="headerlink" title="random.rand()"></a>random.rand()</h2><p><code>random.rand()</code>的作用是产生一个随机数列表，其包含的所有数字的取值范围为<code>[0, 1)</code>且满足随机分布。其参数是用逗号<code>,</code>分隔的若干正整数，正整数的个数为产生列表的维度，每个正整数的大小为该维度列表的大小。不写参数即返回一个随机数。如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"></span><br><span class="line">print(rd.rand())</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.rand(<span class="number">4</span>))</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.rand(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.rand(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>以上代码输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">0.25236670150458973</span><br><span class="line">============================================================</span><br><span class="line">[0.85489794 0.52771465 0.80216108 0.57248852]</span><br><span class="line">============================================================</span><br><span class="line">[[0.73314253 0.51901163 0.77088391 0.56885799]</span><br><span class="line"> [0.46570988 0.34268891 0.06820935 0.37792418]</span><br><span class="line"> [0.07962608 0.98281711 0.18161285 0.8118587 ]]</span><br><span class="line">============================================================</span><br><span class="line">[[[0.87496164 0.68841325]</span><br><span class="line">  [0.56949441 0.16097144]]</span><br><span class="line"></span><br><span class="line"> [[0.46688002 0.34517205]</span><br><span class="line">  [0.22503996 0.59251187]]]</span><br></pre></td></tr></table></figure>
+<h2 id="random-randn"><a href="#random-randn" class="headerlink" title="random.randn()"></a>random.randn()</h2><p><code>random.randn()</code>的作用是产生一个随机数列表，其包含的所有数字满足标准正态分布（高斯分布）。其参数是用逗号<code>,</code>分隔的若干正整数，正整数的个数为产生列表的维度，每个正整数的大小为该维度列表的大小。不写参数即返回一个随机数。如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"></span><br><span class="line">print(rd.randn())</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.randn(<span class="number">4</span>))</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.randn(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">print(<span class="string">'============================================================'</span>)</span><br><span class="line">print(rd.randn(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>以上代码输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">0.5488828975747972</span><br><span class="line">============================================================</span><br><span class="line">[-0.24751502 -0.22512748  0.37969188 -0.11569475]</span><br><span class="line">============================================================</span><br><span class="line">[[-0.1466201   1.76939854 -0.00321878 -0.66646013]</span><br><span class="line"> [-0.77183601 -0.26496068  1.10728223 -1.34873652]</span><br><span class="line"> [ 0.59090275  0.03795507 -0.95272402 -1.20102365]]</span><br><span class="line">============================================================</span><br><span class="line">[[[-0.07904398  0.78989335]</span><br><span class="line">  [ 2.18617751 -0.926691  ]]</span><br><span class="line"></span><br><span class="line"> [[ 0.40184526 -0.79589304]</span><br><span class="line">  [ 0.72023249  1.49161166]]]</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/numpy中random-rand和random-randn函数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1330,253 +1543,11 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/" class="post-title-link" itemprop="url">机器学习中的评价指标：F1-score</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-06 19:12:29" itemprop="dateCreated datePublished" datetime="2020-02-06T19:12:29+08:00">2020-02-06</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-07 14:12:29" itemprop="dateModified" datetime="2020-02-07T14:12:29+08:00">2020-02-07</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2.5k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">2 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://cdn.pixabay.com/photo/2015/08/01/13/47/seattle-870282_1280.jpg" alt></p>
-<h1 id="机器学习中的评价指标：F1-score"><a href="#机器学习中的评价指标：F1-score" class="headerlink" title="机器学习中的评价指标：F1-score"></a>机器学习中的评价指标：F1-score</h1><blockquote>
-<p>图：西雅图（Seattle）</p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="回顾：F1-score的计算过程"><a href="#回顾：F1-score的计算过程" class="headerlink" title="回顾：F1-score的计算过程"></a>回顾：F1-score的计算过程</h2><h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><blockquote>
-<p>混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。</p>
-</blockquote>
-<p>在机器学习领域，混淆矩阵用于衡量一个分类器的准确程度。对于二分类问题，将其样例根据真实类别和分类器的预测类别的组合划分为真正例$\mathrm{(True \, Positive)}$、假正例$\mathrm{(False \, Positive)}$、真反例$\mathrm{(True \, Negative)}$、假反例$\mathrm{(False \, Negative)}$四种情形。</p>
-<p>对应混淆矩阵$\mathrm{(Confusion \, Matrix)}$如下表：</p>
-<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-0lax{text-align:left;vertical-align:top}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style></p>
-<table class="tg">
-  <tr>
-    <th class="tg-0lax" rowspan="2"><center>真实情况</center></th>
-    <th class="tg-0lax" colspan="2"><center>预测结果</center></th>
-  </tr>
-  <tr>
-    <td class="tg-0lax"><center>真</center></td>
-    <td class="tg-0lax"><center>假</center></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"><center>真</center></td>
-    <td class="tg-0lax"><center>TP（真正例）</center></td>
-    <td class="tg-0lax"><center>FN（假反例）</center></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"><center>假</center></td>
-    <td class="tg-0pky"><center>FP（假正例）</center></td>
-    <td class="tg-0lax"><center>TN（真反例）</center></td>
-  </tr>
-</table>
-
-<h3 id="精确率（Precision）与召回率（Recall）"><a href="#精确率（Precision）与召回率（Recall）" class="headerlink" title="精确率（Precision）与召回率（Recall）"></a>精确率（Precision）与召回率（Recall）</h3><p>根据混淆矩阵，我们可以得到如下定义：</p>
-<ul>
-<li><strong>精确率</strong>$\mathrm{(Precision)}$   <font size="4rem">$\mathrm{P=\frac{TP}{TP+FP} \times 100\%}$</font>，表示<strong>真实情况和预测结果皆为真/预测结果为真</strong></li>
-<li><strong>召回率</strong>$\mathrm{(Recall)}$   <font size="4rem">$\mathrm{R=\frac{TP}{TP+FN} \times 100 \%}$</font>，表示<strong>真实情况和预测结果皆为真/真实情况为真</strong></li>
-</ul>
-<h3 id="F1分数（F1-score）"><a href="#F1分数（F1-score）" class="headerlink" title="F1分数（F1-score）"></a>F1分数（F1-score）</h3><blockquote>
-<p>F1分数（$\mathrm{F1-score}$）即精确率与召回率的调和平均数（$\mathrm{Harmonic \, Mean}$），比算术平均数（$\mathrm{Arithmetic \, Mean}$）的评价效果更好。</p>
-</blockquote>
-<font size="5rem">$\mathrm{F1=\frac{2}{\frac1{P}+\frac1{R}}=\frac{2PR}{P+R}}$</font>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/机器学习中的评价指标：F1-score/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/G-SS-Hacker.github.io/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/14/">14</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/G-SS-Hacker.github.io/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/G-SS-Hacker.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/G-SS-Hacker.github.io/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/G-SS-Hacker.github.io/page/15/">15</a><a class="extend next" rel="next" href="/G-SS-Hacker.github.io/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1621,7 +1592,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-count">71</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1821,7 +1792,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">112k</span>
+    <span title="站点总字数">114k</span>
   
 
   
@@ -1830,7 +1801,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:42</span>
+    <span title="站点阅读时长">1:43</span>
   
 </div>
 
@@ -2352,51 +2323,9 @@ Analytics"></a></div></noscript>
       
     
       
-        
-      
     
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
