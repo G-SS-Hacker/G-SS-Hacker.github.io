@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[题解：找出假币]]></title>
+    <url>%2FG-SS-Hacker.github.io%2F%E9%A2%98%E8%A7%A3%EF%BC%9A%E6%89%BE%E5%87%BA%E5%81%87%E5%B8%81%2F</url>
+    <content type="text"><![CDATA[题解：找出假币 Guderian出品 说明假币问题： 有$ n $枚硬币， 其中有一枚是假币， 己知假币的重量较轻。 现只有一个天平， 要求用尽量少的比较次数找出这枚假币。 分析算法设计策略：分治法 将 n 枚硬币分成相等的两部分: (1)当$ n $为偶数时， 将前后两部分， 即$ 1…n/2 $和$ n/2+1…n$， 放在天平的两端， 较轻的一端里有假币， 继续在较轻的这部分硬币中用同样的方法找出假币: (2)当$ n $为奇数时， 将前后两部分， 即$1..(n -1)/2$和$(n+1)/2+1…n$， 放在天平的两端， 较轻的一端里有假币， 继续在较轻的这部分硬币中用同样的方法找出假币； 若两端重量相等， 则中间的硬币， 即第$ (n+1)/2 $枚硬币是假币。 实现（1）常量和变量说明 coins[]：硬币数组 first，last：当前考虑的硬币数组中的第一个和最后一个下标 （2）C语言程序 12345678910111213141516171819202122232425262728293031323334353637383940#include&lt;stdio.h&gt; int getCounterfeitCoin(int coins[],int first,int last)&#123; int firstSum = 0,lastSum = 0; int ì; if(first==last-1)&#123; /*只剩两枚硬币*/ if(coins[first] &lt; coins[last]) return first; return last; &#125; if((last - first + 1) % 2 ==0)&#123; /*偶数枚硬币*/ for(i = first;i &lt;first+(last-first)/2+1;i++)&#123; firstSum += coins[i]; &#125; for(i=first + (last-first) / 2 + 1;i &lt; last +1;i++)&#123; lastSum += coins[i]; &#125; if(firstSum&lt;lastSum)&#123; return getCounterfeitCoin(coins,first,first+(last-first)/2); &#125;else&#123; return getCounterfeitCoin(coins,first+(last-first)/2+1,last); &#125; &#125; else&#123; /*奇数枚硬币*/ for(i=first;i&lt;first+(last-first)/2;i++)&#123; firstSum+=coins[i]; &#125; for(i=first+(last-first)/2+1;i&lt;last+1;i++)&#123; lastSum+=coins[i]; &#125; if(firstSum&lt;lastSum)&#123; return getCounterfeitCoin(coins,first,first+(last-first)/2-1); &#125;else if(firstSum&gt;lastSum)&#123; return getCounterfeitCoin(coins,first+(last-first)/2+1,last); &#125;else&#123; return first+(last-first)/2; &#125; &#125;&#125; 例：若输入的硬币数为30， 则最少的比较次数为2 ， 最多的比较次数为4。 （3）复杂度分析 时间复杂度：$O(n\log n)$ 二分法本身耗时$O(\log n)$，每次顺序求和操作耗时$O(n)$，总计时间复杂度$O(n\log n)$ 空间复杂度：$O( n )$]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[题解：求解无向图上的哈密尔顿回路]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E9%A2%98%E8%A7%A3%EF%BC%9A%E6%B1%82%E8%A7%A3%E6%97%A0%E5%90%91%E5%9B%BE%E4%B8%8A%E7%9A%84%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%2F</url>
     <content type="text"><![CDATA[题解：求解无向图上的哈密尔顿回路 Guderian出品 说明一个无向连通图$ G $点上的哈密尔顿（Hamiltion） 回路是指从图$ G $上的某个顶点出发， 经过图上所有其他顶点一次且仅一次， 最后回到该顶点的路径。 分析算法设计策略：回溯法+深度优先搜索+记忆化搜索 假设图$ G $存在一个从顶点$ V_0 $出发的哈密尔顿回路$ V_1-V_2-V_3-…-V_{n-1}-V_0$。算法从顶点$ V_0 $出发， 访问该顶点的一个未被访问的邻接顶点$ V_1$， 接着从顶点$ V_1 $出发， 访问$ V_1 $一个未被访问的邻接顶点$ V_2$，以此类推。对顶点$ V_i$， 重复进行以下操作： 访问$ V_i $的一个未被访问的邻接接点$ V_{i+1}$； 若$ V_i $的所有邻接顶点均已被访问， 则返回到顶点$ V_{i-1}$， 考虑$V_{i-1} $的下一个未被访问的邻接顶点， 仍记为$ V_i$； 知道找到一条哈密尔顿回路或者找不到哈密尔顿回路， 算法结束。 实现（1）常量和变量说明 n：图$G$中的顶点数 c[][]：图$G$的邻接矩阵 k：统计变量，当前已经访问的顶点数为k+1 x[k]：第k个访问的顶点编号，从0开始 visited[x[k]]：第k个顶点的访问标志，0表示未访问，1表示已访问 （2）C语言程序 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; #define MAX 4 Void Hamilton(int n,int x[MAX],int c[MAX][MAX])&#123; int i; int visited[MAX]; int k; /*初始化x数组和visited数组*/ for(i=0;i&lt;n;i++)&#123; x[i]=0; Visited[i]=0; &#125; /*访问起初顶点*/ k=0; visited[0]=1; x[0]=0; k=k+1; /*访问其它顶点*/ while(k&gt;0)&#123; x[k]=x[k]+1; while(x[k]&lt;n)&#123; if(visited[x[k]]==0 &amp;&amp;c[x[k-1]][x[k]]==1)&#123;/*邻接顶点x[k]未被访问过*/ break; &#125; else&#123; x[k]=x[k]+1; &#125; &#125; if(x[k]&lt;n&amp;&amp;k==n-1&amp;&amp;c[x[0]][x[k]]==1)&#123;/*找到一条哈密尔顿回路*/ for(k=0;k&lt;n;k++)&#123; printf(“%d--”,x[k]);/*输出哈密尔顿回路*/ &#125; printf(“%d\n”,x[0]); return; &#125; else if(x[k]&amp;&amp;k&lt;n-1)&#123;/*设置当前顶点的访问标志，继续下一个顶点*/ visited[x[k]]=1 ; k=k+1; &#125; else &#123;/*没有未被访问过的领接顶点，回退到上一个顶点*/ x[k]=0; visited[x[k]]=0; k=k-1 ; &#125; &#125; &#125; （3）复杂度分析 时间复杂度：$O(n^n)$（爆搜） 空间复杂度：$O( n ^2)$]]></content>
@@ -411,8 +423,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -448,8 +460,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -461,8 +473,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -474,8 +486,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -487,8 +499,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -500,8 +512,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -513,8 +525,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
