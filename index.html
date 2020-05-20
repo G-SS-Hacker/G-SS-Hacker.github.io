@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">72</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">73</span></a>
 
   </li>
         
@@ -441,6 +441,209 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/题解：字符串模式匹配/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/题解：字符串模式匹配/" class="post-title-link" itemprop="url">题解：字符串模式匹配</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-20 10:31:47 / 修改时间：10:33:58" itemprop="dateCreated datePublished" datetime="2020-05-20T10:31:47+08:00">2020-05-20</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.3k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2020/05/20/BTbYxM4zrER3mJH.jpg" alt="批注 2020-05-20 090942.jpg"></p>
+<h1 id="题解：字符串模式匹配"><a href="#题解：字符串模式匹配" class="headerlink" title="题解：字符串模式匹配"></a>题解：字符串模式匹配</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<blockquote>
+<p>前置知识：<a href="https://g-ss-hacker.github.io/G-SS-Hacker.github.io/KMP%E7%AE%97%E6%B3%95/">KMP算法</a></p>
+</blockquote>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>模式匹配是指给定主串<code>t</code>和子串<code>s</code>， 在主串<code>t</code>中寻找子串<code>s</code>的过程， 其中<code>s</code>称为模式。 如果匹配成功， 返回<code>s</code>在<code>t</code>中的位置， 否则返回<code>-1</code>。 </p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><code>KMP</code>算法用 <code>next</code> 数组对匹配过程进行了优化。 <code>KMP</code> 算法的伪代码描述如下：</p>
+<p>1． 在串<code>t</code>和串<code>s</code>中， 分别设比较的起始下标<code>i=j=0</code>。</p>
+<p>2． 如果串<code>t</code>和串<code>s</code>都还有字符， 则循环执行下列操作：</p>
+<p>（1） 如果<code>j=-l</code>或者<code>t[i]=s[j]</code>， 则将<code>i</code>和<code>j</code>分别加<code>1</code>，继续比较<code>t</code>和<code>s</code>的下一个字符；</p>
+<p>（2） 否则， 将<code>j</code>向右滑动到<code>next[j]</code>的位置， 即<code>j=next[j]</code>。</p>
+<p>3． 如果<code>s</code>中所有字符均已比较完毕， 则返回匹配的起始位置（从<code>1</code>开始） ； 否则返回<code>-1</code>．其中， <code>next</code>数组根据子串<code>s</code>求解。 求解<code>next</code>数组的代码已由<code>get_next</code>函数给出。 </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/题解：字符串模式匹配/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1251,213 +1454,6 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/题解：N皇后问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/题解：N皇后问题/" class="post-title-link" itemprop="url">题解：N皇后问题</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-05-17 21:30:13" itemprop="dateCreated datePublished" datetime="2020-05-17T21:30:13+08:00">2020-05-17</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-05-18 10:34:44" itemprop="dateModified" datetime="2020-05-18T10:34:44+08:00">2020-05-18</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2.2k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">2 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://i.loli.net/2020/05/17/D8B16OHzsWKGNU5.jpg" alt="68755095_922332204766510_5658196280891932672_n.jpg"></p>
-<h1 id="题解：N皇后问题"><a href="#题解：N皇后问题" class="headerlink" title="题解：N皇后问题"></a>题解：N皇后问题</h1><p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>n皇后问题描述为：在一个$n \times n$的棋盘上摆放$n$个皇后，要求任意两个皇后不能冲突，即任意两个皇后不再同一行、同一列、同一斜线上。</p>
-<p><img src="https://i.loli.net/2020/05/18/Jtjxh49zop7A5C3.png" alt="图片.png"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong><font color="#012060">算法设计策略：回溯法</font></strong></p>
-<p>将第$i$个皇后摆放在第$i$行，$i$从$1$开始，每个皇后都从第$1$列开始尝试。尝试时判断再该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆放下一个皇后；如果有冲突，则考虑下一列。</p>
-<p>如果该行没有合适的位置，回溯到上一个皇后，考虑在原来位置的下一个位置上继续尝试摆放皇后，以此类推，直到找到所有合理的摆放方案。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/题解：N皇后问题/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1507,7 +1503,7 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">72</span>
+                    <span class="site-state-item-count">73</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1707,7 +1703,7 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">117k</span>
   
 
   
@@ -1716,7 +1712,7 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:45</span>
+    <span title="站点阅读时长">1:46</span>
   
 </div>
 
