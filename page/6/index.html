@@ -341,7 +341,7 @@
       
     
 
-    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">74</span></a>
+    <a href="/G-SS-Hacker.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">75</span></a>
 
   </li>
         
@@ -441,6 +441,229 @@ Analytics"></a></div></noscript>
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/" class="post-title-link" itemprop="url">C语言基础学习笔记（3）：关系运算符与逻辑运算符</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-11 12:54:29" itemprop="dateCreated datePublished" datetime="2020-02-11T12:54:29+08:00">2020-02-11</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-17 15:47:12" itemprop="dateModified" datetime="2020-02-17T15:47:12+08:00">2020-02-17</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">616</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s2.ax1x.com/2020/02/09/1hZCp6.png" alt></p>
+<h1 id="C语言基础学习笔记（3）：关系运算符与逻辑运算符"><a href="#C语言基础学习笔记（3）：关系运算符与逻辑运算符" class="headerlink" title="C语言基础学习笔记（3）：关系运算符与逻辑运算符"></a>C语言基础学习笔记（3）：关系运算符与逻辑运算符</h1><blockquote>
+<p>图：北极狐（Artic Fox）</p>
+</blockquote>
+<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><p></p>
+<ol>
+<li><p><code>C</code>语言的“短路”特性：若表达式的值可由先计算的左操作数的值单独推导出来，那么将不再计算右操作数的值。“短路”特性有时很有用，如<code>(i != 0) &amp;&amp; (j / i &gt; 0)</code>使得不会发生除<code>0</code>的情况。</p>
+</li>
+<li><p><code>C</code>条件表达式：<code>表达式1 ? 表达式2 : 表达式3</code>：如果<code>表达式1</code>为真，则返回<code>表达式2</code>；否则<code>表达式3</code>。</p>
+</li>
+<li><p>整数的数值溢出——上溢出：<code>|一个数值运算结果| &gt; |类型能表示的最大数|</code>。进位超过最高位而发生进位丢失或进位达到最高位而改变符号位。</p>
+</li>
+<li><p>对于无符号数，不能随意用<code>a - b &lt; 0</code>取代<code>a &lt; b</code>，因为前者可能发生数值溢出，导致判断结果发生错误。</p>
+</li>
+<li><p>浮点数的数值溢出，不仅有<strong>上溢出</strong>还有<strong>下溢出</strong>：</p>
+<p>上溢出：<code>|数值运算结果| &gt; |类型能表示的最大数|</code></p>
+<p>下溢出：<code>|数值运算结果| &lt; |类型能表示的最小数|</code>，此时系统把该结果处理成机器<code>0</code></p>
+<p><img src="https://s2.ax1x.com/2020/02/09/1f2LND.png" alt></p>
+</li>
+<li><p>把<code>float</code>赋值给<code>int</code>会丢失小数（不经四舍五入）。</p>
+</li>
+<li><code>&lt;stdlib.h&gt;</code>中的<code>exit(0)</code>终止整个程序的执行强制返回操作系统。当其参数为<code>0</code>时表示正常退出，非<code>0</code>表示程序出错。</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/C语言基础学习笔记（3）：关系运算符与逻辑运算符/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1349,278 +1572,6 @@ Analytics"></a></div></noscript>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/" class="post-title-link" itemprop="url">C & C++基本数据类型取值范围</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-05 17:01:37" itemprop="dateCreated datePublished" datetime="2020-02-05T17:01:37+08:00">2020-02-05</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-09 14:32:17" itemprop="dateModified" datetime="2020-02-09T14:32:17+08:00">2020-02-09</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">1.3k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">1 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://images.pexels.com/photos/34609/pexels-photo.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></p>
-<h1 id="C-amp-C-基本数据类型取值范围"><a href="#C-amp-C-基本数据类型取值范围" class="headerlink" title="C &amp; C++基本数据类型取值范围"></a>C &amp; C++基本数据类型取值范围</h1><blockquote>
-<p>图：伦敦（London）</p>
-</blockquote>
-<p></p><p><font color="grey"><em>Guderian</em>出品 </font></p><p></p>
-<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}<br>.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style></p>
-<table class="tg">
-  <tr>
-    <th class="tg-0pky" colspan="2">基本数据类型</th>
-    <th class="tg-0pky">关键字</th>
-    <th class="tg-0pky">存储大小</th>
-    <th class="tg-0pky">取数范围</th>
-  </tr>
-  <tr>
-    <td class="tg-0pky">整型</td>
-    <td class="tg-0pky">基本整型</td>
-    <td class="tg-0pky">int</td>
-    <td class="tg-0pky">4字节</td>
-    <td class="tg-0pky">-2^31 ~ 2^31-1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" rowspan="3">实型</td>
-    <td class="tg-0pky">长整型</td>
-    <td class="tg-0pky">long</td>
-    <td class="tg-0pky">4字节</td>
-    <td class="tg-0pky">-2^31 ~ 2^31-1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">短整型</td>
-    <td class="tg-0pky">short</td>
-    <td class="tg-0pky">2字节</td>
-    <td class="tg-0pky">-2^15 ~ 2^15-1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">无符号整型</td>
-    <td class="tg-0pky">unsigned</td>
-    <td class="tg-0pky">unsigned int 4字节<br>unsigned long 4字节<br>unsigned short 2字节<br></td>
-    <td class="tg-0pky">unsigned int : 0 ~ 2^32-1<br>unsigned long : 0 ~ 2^32-1<br>unsigned short : 0 ~ 2^16-1<br></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" rowspan="3">实型</td>
-    <td class="tg-0pky">单精度实型</td>
-    <td class="tg-0pky">float</td>
-    <td class="tg-0pky">4字节</td>
-    <td class="tg-0pky">1.2E-38 ~ 3.4E+38 精度6~7位有效数字</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">双精度实型</td>
-    <td class="tg-0pky">double</td>
-    <td class="tg-0pky">8字节</td>
-    <td class="tg-0pky">2.3E-308 ~ 1.7E+308 精度15~16位有效数字</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">长双精度实型</td>
-    <td class="tg-0pky">long double</td>
-    <td class="tg-0pky">16字节</td>
-    <td class="tg-0pky">3.4E-4932 ~ 1.1E+4932 精度19位有效数字</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" colspan="2">字符型</td>
-    <td class="tg-0pky">char</td>
-    <td class="tg-0pky">1字节</td>
-    <td class="tg-0pky">0 ~ 2^8-1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" colspan="2">枚举类型</td>
-    <td class="tg-0pky">enum</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-</table>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/C和C-基本数据类型取值范围/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1670,7 +1621,7 @@ Analytics"></a></div></noscript>
                 
                   <a href="/G-SS-Hacker.github.io/archives/">
                 
-                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1872,7 +1823,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">119k</span>
+    <span title="站点总字数">120k</span>
   
 
   
@@ -1881,7 +1832,7 @@ Analytics"></a></div></noscript>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:48</span>
+    <span title="站点阅读时长">1:49</span>
   
 </div>
 
@@ -2401,9 +2352,9 @@ Analytics"></a></div></noscript>
       
     
       
-        
-      
     
+      
+        
       
     
   
