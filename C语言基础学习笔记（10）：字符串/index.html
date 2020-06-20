@@ -150,7 +150,7 @@
 <meta property="og:description" content="C语言基础学习笔记（10）：字符串 图： 第一张黑洞照片（The first image of a black hole published in April 2019） ​        by 事件视野望远镜（Event Horizon Telescope）   Guderian出品    C语言中没有专门的字符串数据类型。在定义字符串，字符数组的长度应比字符串长度多1，给\0留个位置： 12">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2020/02/21/h8eGkoCcIjUfQBE.jpg">
-<meta property="og:updated_time" content="2020-02-22T01:03:07.656Z">
+<meta property="og:updated_time" content="2020-06-20T02:49:58.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言基础学习笔记（10）：字符串">
 <meta name="twitter:description" content="C语言基础学习笔记（10）：字符串 图： 第一张黑洞照片（The first image of a black hole published in April 2019） ​        by 事件视野望远镜（Event Horizon Telescope）   Guderian出品    C语言中没有专门的字符串数据类型。在定义字符串，字符数组的长度应比字符串长度多1，给\0留个位置： 12">
@@ -506,13 +506,23 @@ Analytics"></a></div></noscript>
                 
               
 
-              <time title="创建时间：2020-02-22 09:02:34 / 修改时间：09:03:07" itemprop="dateCreated datePublished" datetime="2020-02-22T09:02:34+08:00">2020-02-22</time>
+              <time title="创建时间：2020-02-22 09:02:34" itemprop="dateCreated datePublished" datetime="2020-02-22T09:02:34+08:00">2020-02-22</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-20 10:49:58" itemprop="dateModified" datetime="2020-06-20T10:49:58+08:00">2020-06-20</time>
+              </span>
             
           
 
@@ -640,7 +650,7 @@ Analytics"></a></div></noscript>
 <p><code>strcpy()</code>：<code>char *strcpy(char *dstStr, const char *srcStr);</code></p>
 <p><code>strcat()</code>：<code>char *strcat(char *dstStr, const char *srcStr);</code></p>
 </li>
-<li><p>编程实现<code>sgrcat()</code>：</p>
+<li><p>编程实现<code>strcat()</code>：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">MyStrcat</span><span class="params">(<span class="keyword">char</span> *dst, <span class="keyword">char</span> *src)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> s1[<span class="number">10</span>] = &#123;<span class="string">"123"</span>&#125;;</span><br><span class="line">	<span class="keyword">char</span> s2[]   = <span class="string">"45"</span>;</span><br><span class="line">	<span class="keyword">char</span> *res = <span class="literal">NULL</span>;</span><br><span class="line">	res = MyStrcat(s1,s2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>,res);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">MyStrcat</span><span class="params">(<span class="keyword">char</span> *dst, <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> *pstr = dst;</span><br><span class="line">    <span class="keyword">while</span> (*dst!=<span class="string">'\0'</span>) dst++;</span><br><span class="line">    <span class="keyword">while</span> (*dst++ = *src++);</span><br><span class="line">    <span class="keyword">return</span> pstr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -676,7 +686,7 @@ Analytics"></a></div></noscript>
   <p><span>本文标题:</span>C语言基础学习笔记（10）：字符串</p>
   <p><span>文章作者:</span>G-SS-Hacker</p>
   <p><span>发布时间:</span>2020年02月22日 - 09:02:34</p>
-  <p><span>最后更新:</span>2020年02月22日 - 09:03:07</p>
+  <p><span>最后更新:</span>2020年06月20日 - 10:49:58</p>
   <p><span>原始链接:</span><a href="/G-SS-Hacker.github.io/C语言基础学习笔记（10）：字符串/" title="C语言基础学习笔记（10）：字符串">https://G-SS-Hacker.github.io/C语言基础学习笔记（10）：字符串/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://G-SS-Hacker.github.io/C语言基础学习笔记（10）：字符串/" aria-label="复制成功！"></i></span>
   </p>
