@@ -457,6 +457,208 @@ Analytics"></a></div></noscript>
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/题解：求解无向图上的哈密尔顿回路/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="G-SS-Hacker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G-SS-Hacker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/G-SS-Hacker.github.io/题解：求解无向图上的哈密尔顿回路/" class="post-title-link" itemprop="url">题解：求解无向图上的哈密尔顿回路</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-19 21:33:18 / 修改时间：21:37:48" itemprop="dateCreated datePublished" datetime="2020-05-19T21:33:18+08:00">2020-05-19</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.8k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://s1.ax1x.com/2020/05/19/YIykSU.jpg" alt="YIykSU.jpg"></p>
+<h1 id="题解：求解无向图上的哈密尔顿回路"><a href="#题解：求解无向图上的哈密尔顿回路" class="headerlink" title="题解：求解无向图上的哈密尔顿回路"></a>题解：求解无向图上的哈密尔顿回路</h1><p><font color="grey"> <em>Guderian出品</em> </font></p>
+
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>一个无向连通图$ G $点上的哈密尔顿（Hamiltion） 回路是指从图$ G $上的某个顶点出发， 经过图上所有其他顶点一次且仅一次， 最后回到该顶点的路径。  </p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong><font color="#012060">算法设计策略：回溯法+深度优先搜索+记忆化搜索</font></strong></p>
+<p>假设图$ G $存在一个从顶点$ V_0 $出发的哈密尔顿回路$ V_1-V_2-V_3-…-V_{n-1}-V_0$。算法从顶点$ V_0 $出发， 访问该顶点的一个未被访问的邻接顶点$ V_1$， 接着从顶点$ V_1 $出发， 访问$ V_1 $一个未被访问的邻接顶点$ V_2$，以此类推。对顶点$ V_i$， 重复进行以下操作： 访问$ V_i $的一个未被访问的邻接接点$ V_{i+1}$； 若$ V_i $的所有邻接顶点均已被访问， 则返回到顶点$ V_{i-1}$， 考虑$V_{i-1} $的下一个未被访问的邻接顶点， 仍记为$ V_i$； 知道找到一条哈密尔顿回路或者找不到哈密尔顿回路， 算法结束。 </p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><strong><font color="#012060">（1）常量和变量说明</font></strong></p>
+<p><code>n</code>：图$G$中的顶点数</p>
+<p><code>c[][]</code>：图$G$的邻接矩阵</p>
+<p><code>k</code>：统计变量，当前已经访问的顶点数为<code>k+1</code></p>
+<p><code>x[k]</code>：第<code>k</code>个访问的顶点编号，从<code>0</code>开始</p>
+<p><code>visited[x[k]]</code>：第<code>k</code>个顶点的访问标志，<code>0</code>表示未访问，<code>1</code>表示已访问</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/G-SS-Hacker.github.io/题解：求解无向图上的哈密尔顿回路/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/题解：切割钢条/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1228,216 +1430,6 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &b_t和b_j匹�
           
             <div class="post-button text-center">
               <a class="btn" href="/G-SS-Hacker.github.io/C语言常用字符串函数/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://G-SS-Hacker.github.io/G-SS-Hacker.github.io/黎曼积分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="G-SS-Hacker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/G-SS-Hacker.github.io/images/apache.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="G-SS-Hacker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/G-SS-Hacker.github.io/黎曼积分/" class="post-title-link" itemprop="url">黎曼积分</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-24 17:24:50" itemprop="dateCreated datePublished" datetime="2020-04-24T17:24:50+08:00">2020-04-24</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-05-04 15:56:20" itemprop="dateModified" datetime="2020-05-04T15:56:20+08:00">2020-05-04</time>
-              </span>
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/G-SS-Hacker.github.io/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2.8k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">3 分钟</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://i.loli.net/2020/04/24/F9EzJhxudkUG5R6.jpg" alt></p>
-<h1 id="黎曼积分"><a href="#黎曼积分" class="headerlink" title="黎曼积分"></a>黎曼积分</h1><blockquote>
-<p>图：silhouette of mountains and spectacular view from the mountain top </p>
-</blockquote>
-<p></p><p><font color="grey"> <em>Guderian出品</em> </font></p><br>设$f(p)$是几何形体上的点函数，黎曼积分<font size="4rem">$\int_\Omega f(p) \mathrm{d} \Omega=\lim_{\lambda \to0} \sum_{i=1}^{n}f(p_i)\Delta\Omega_i$ </font>具体分为四类：<p></p>
-<h2 id="二重积分"><a href="#二重积分" class="headerlink" title="二重积分"></a>二重积分</h2><h3 id="x-型域"><a href="#x-型域" class="headerlink" title="x-型域"></a>x-型域</h3><font size="4rem">$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)} f(x,y)\mathrm{d}y$</font>
-
-<h3 id="y-型域"><a href="#y-型域" class="headerlink" title="y-型域"></a>y-型域</h3><font size="4rem">$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint_\sigma f(x,y)\mathrm{d}x\mathrm{d}y=\int_c^d\mathrm{d}y\int_{x_1(x)}^{x_2(x)} f(x,y)\mathrm{d}x$</font>
-
-<h3 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h3><font size="4rem">$\iint_\sigma f(x,y)\mathrm{d}\sigma=\iint f(r,\theta)r\mathrm{d}r\mathrm{d}\theta=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r,\theta)r\mathrm{d}r$</font>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/G-SS-Hacker.github.io/黎曼积分/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
