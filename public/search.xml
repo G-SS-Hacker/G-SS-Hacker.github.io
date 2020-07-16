@@ -695,7 +695,7 @@
   <entry>
     <title><![CDATA[导数基本公式]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E5%AF%BC%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[导数基本公式 Guderian出品 $(1)(C)’ = 0$ $(2)(x^a)’=ax^{a-1}$ $(3)(a^x)’=a^x\ln a (a&gt;0且a\not=1)$ $(4)(e^x)’=e^x$ $(5)(\log_ax)’=\frac{1}{x\ln a}(a&gt;0且a\not=1)$ $(6)(\ln x)’=\frac1{x}$ $(7)(\sin x)’=\cos x$ $(8)(\cos x)’=-\sin x$ $(9)(\tan x)’=\frac1{\cos^2x}=\sec^2x$ $(10)(\cot x)’=\frac1{-\sin^x}=-\csc^2x$ $(11)(\sec x)’=\sec x\tan x$ $(12)(\csc x)’=-\csc x\cot x$ $(13)(\arcsin x)’=\frac1{\sqrt{1-x^2}}$ $(14)(\arccos x)’=-\frac1{\sqrt{1-x^2}}$ $(15)(\arctan x)’=\frac1{1+x^2}$ $(16)(\mathrm{arccot} x)’=-\frac1{1+x^2}$]]></content>
+    <content type="text"><![CDATA[导数基本公式 Guderian出品 $(1)(C)’ = 0$ $(2)(x^a)’=ax^{a-1}$ $(3)(a^x)’=a^x\ln a (a&gt;0且a\not=1)$ $(4)(e^x)’=e^x$ $(5)(\log_ax)’=\frac{1}{x\ln a}(a&gt;0且a\not=1)$ $(6)(\ln x)’=\frac1{x}$ $(7)(\sin x)’=\cos x$ $(8)(\cos x)’=-\sin x$ $(9)(\tan x)’=\frac1{\cos^2x}=\sec^2x$ $(10)(\cot x)’=\frac1{-\sin^2 x}=-\csc^2x$ $(11)(\sec x)’=\sec x\tan x$ $(12)(\csc x)’=-\csc x\cot x$ $(13)(\arcsin x)’=\frac1{\sqrt{1-x^2}}$ $(14)(\arccos x)’=-\frac1{\sqrt{1-x^2}}$ $(15)(\arctan x)’=\frac1{1+x^2}$ $(16)(\mathrm{arccot} x)’=-\frac1{1+x^2}$]]></content>
       <categories>
         <category>总结</category>
       </categories>
