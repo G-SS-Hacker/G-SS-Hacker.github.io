@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IP地址分类]]></title>
+    <url>%2FG-SS-Hacker.github.io%2FIP%E5%9C%B0%E5%9D%80%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[.jpg) 图：神奈川冲浪里 IP地址分类 Guderian出品 IP地址分为主要类型A、B、C和特殊类型D、E五类。 IP地址由两部分组成：网络号和主机号。网络号标识了它属于哪一个网络，主机号标识了它属于网络中的哪一台主机。 尽管IP地址主机号的每个域取值0 - 255，但主机号所有域不能都是0或255。 在IP地址3种主要类型里，各保留了3个区域作为私有地址： A类地址：10.0.0.0 - 10.255.255.255 B类地址：172.16.0.0 - 172.31.255.255 C类地址：192.168.0.0 - 192.168.255.255 本机地址：127.0.0.1等价于localhost或本机IP。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[二阶常系数线性微分方程]]></title>
     <url>%2FG-SS-Hacker.github.io%2F%E4%BA%8C%E9%98%B6%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[Licensed under cc0 license. Feel free to share it with others.😎]]></content>
@@ -468,8 +479,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
         <tag>软件工程</tag>
       </tags>
@@ -505,8 +516,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -518,8 +529,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -531,8 +542,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -544,8 +555,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -557,8 +568,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
@@ -570,8 +581,8 @@
         <category>总结</category>
       </categories>
       <tags>
-        <tag>OOP</tag>
         <tag>C-plus-plus</tag>
+        <tag>OOP</tag>
         <tag>面向对象</tag>
       </tags>
   </entry>
