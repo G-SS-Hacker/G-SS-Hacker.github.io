@@ -6,7 +6,7 @@
   <link href="/G-SS-Hacker.github.io/atom.xml" rel="self"/>
   
   <link href="https://g-ss-hacker.github.io/"/>
-  <updated>2020-08-01T04:58:51.434Z</updated>
+  <updated>2020-08-01T05:05:11.617Z</updated>
   <id>https://g-ss-hacker.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://g-ss-hacker.github.io/IP%E5%9C%B0%E5%9D%80%E5%88%86%E7%B1%BB/"/>
     <id>https://g-ss-hacker.github.io/IP%E5%9C%B0%E5%9D%80%E5%88%86%E7%B1%BB/</id>
     <published>2020-08-01T04:28:04.000Z</published>
-    <updated>2020-08-01T04:58:51.434Z</updated>
+    <updated>2020-08-01T05:05:11.617Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/神奈川冲浪里 (定制" alt="神奈川冲浪里 (定制)">.jpg)</p><blockquote><p>图：神奈川冲浪里</p></blockquote><h1 id="IP地址分类"><a href="#IP地址分类" class="headerlink" title="IP地址分类"></a>IP地址分类</h1><p><font color="grey"> <em>Guderian出品</em> </font></p><p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/image-20200801113023708.png" alt="image-20200801113023708"></p><p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/image-20200801122155103.png" alt="image-20200801122155103"></p><ul><li>IP地址分为主要类型A、B、C和特殊类型D、E五类。</li><li>IP地址由两部分组成：网络号和主机号。网络号标识了它属于哪一个网络，主机号标识了它属于网络中的哪一台主机。</li><li>尽管IP地址主机号的每个域取值<code>0 - 255</code>，但主机号所有域不能都是<code>0</code>或<code>255</code>。<a id="more"></a></li><li>在IP地址3种主要类型里，各保留了3个区域作为私有地址：<ul><li>A类地址：<code>10.0.0.0 - 10.255.255.255</code> </li><li>B类地址：<code>172.16.0.0 - 172.31.255.255</code> </li><li>C类地址：<code>192.168.0.0 - 192.168.255.255</code></li></ul></li><li>本机地址：<code>127.0.0.1</code>等价于<code>localhost</code>或本机IP。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/wave.jpg" alt="wave"></p><blockquote><p>图：神奈川冲浪里</p></blockquote><h1 id="IP地址分类"><a href="#IP地址分类" class="headerlink" title="IP地址分类"></a>IP地址分类</h1><p><font color="grey"> <em>Guderian出品</em> </font></p><p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/image-20200801113023708.png" alt="image-20200801113023708"></p><p><img src="https://gitee.com/G-SS-Hacker/images/raw/master/image-20200801122155103.png" alt="image-20200801122155103"></p><ul><li>IP地址分为主要类型A、B、C和特殊类型D、E五类。</li><li>IP地址由两部分组成：网络号和主机号。网络号标识了它属于哪一个网络，主机号标识了它属于网络中的哪一台主机。</li><li>尽管IP地址主机号的每个域取值<code>0 - 255</code>，但主机号所有域不能都是<code>0</code>或<code>255</code>。<a id="more"></a></li><li>在IP地址3种主要类型里，各保留了3个区域作为私有地址：<ul><li>A类地址：<code>10.0.0.0 - 10.255.255.255</code> </li><li>B类地址：<code>172.16.0.0 - 172.31.255.255</code> </li><li>C类地址：<code>192.168.0.0 - 192.168.255.255</code></li></ul></li><li>本机地址：<code>127.0.0.1</code>等价于<code>localhost</code>或本机IP。</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/G-SS-Hacker/images/raw/master/神奈川冲浪里 (定制&quot; alt=&quot;神奈川冲浪里 (定制)&quot;&gt;.jpg)&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/G-SS-Hacker/images/raw/master/wave.jpg&quot; alt=&quot;wave&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图：神奈川冲浪里&lt;/p&gt;
 &lt;/blockquote&gt;
