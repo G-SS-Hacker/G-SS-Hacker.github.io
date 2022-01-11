@@ -299,9 +299,9 @@
     
       <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
     
-      <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -406,9 +406,9 @@ C(i,j)=\begin{cases} \max(C(i,j-1),\max(C(i,t-1)+1+C(t+1,j-1))), &amp;b_t和b_j�
     
       <category term="C" scheme="https://G-SS-Hacker.github.io/tags/C/"/>
     
-      <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="https://G-SS-Hacker.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="https://G-SS-Hacker.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
